@@ -22,25 +22,27 @@ class User < ActiveRecord::Base
 	before_save 						:downcase_email
 	before_create						:create_activation_digest
 
-	validates :name, 					presence: true,
+	validates 	:name, 					presence: true,
 										length: { maximum: 50 }
 
 	VALID_PHONE_NUMBER_REGEX = /\A[1-9]{1}\d{9}\z/
-	validates :phone_number, 			presence: true,
+	validates 	:phone_number, 			presence: true,
 										length: { is: 10 },
 										format: { with: VALID_PHONE_NUMBER_REGEX },
 										uniqueness: true
 	
 	VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
-	validates :email, 					presence: true,
+	validates 	:email, 					presence: true,
 										length: { maximum: 255 },
 										format: { with: VALID_EMAIL_REGEX },
 										uniqueness: { case_sensitive: false }
 
 	has_secure_password
-	validates :password,				presence: true,
+	validates 	:password,				presence: true,
 										length: { minimum: 6 },
 										allow_nil: true
+
+	has_many	:addresses
 
 	# Returns the hash digest of the given string.
 	def User.digest(string)

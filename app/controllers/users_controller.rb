@@ -10,6 +10,8 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @addresses = @user.addresses.all
+    @address = @user.addresses.build if logged_in?
   end
 
   def create
