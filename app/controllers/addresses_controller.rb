@@ -6,9 +6,10 @@ class AddressesController < ApplicationController
 		@address = current_user.addresses.build(address_params)
 		if @address.save
 			flash[:success] = "Address created!"
-			redirect_to user
+			redirect_to @address.user
 		else
-			render 'static_pages/home'
+			flash[:danger] = "Address not created, please try again"
+	    	redirect_to request.referrer || root_url
 		end
 	end
 
@@ -25,7 +26,7 @@ class AddressesController < ApplicationController
 		end
 
 		def correct_user
-		    @address = current_user.address.find_by(id: params[:id])
+		    @address = current_user.addresses.find_by(id: params[:id])
 		    redirect_to current_user if @address.nil?
     	end
 
