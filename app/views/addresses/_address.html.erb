@@ -3,6 +3,7 @@
   <span class="full_address"><%= address.full_address %></span>
   <span class="pincode"><%= address.pincode %></span>
   <% if current_user?(address.user) %>
+  	<%= link_to "edit", edit_address_path(address) %> | 
   	<%= link_to "delete", address, 	method: :delete,
   									data: { confirm: "You sure?" } %>
   <% end %>

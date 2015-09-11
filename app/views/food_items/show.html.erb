@@ -1,0 +1,14 @@
+<% provide(:title, @food_item.name) %>
+
+<h1><%= @food_item.name %></h1>
+
+<div class="row">
+	<%= @food_item.course %><br>
+	<%= @food_item.veg_non_egg %><br>
+	<%= @food_item.description %><br><br>
+	<%= link_to "edit", edit_food_item_path(@food_item) %> | 
+	<%= link_to "delete", @food_item, method: :delete,
+                                  data: { confirm: "You sure?" } %>
+</div>
+
+

@@ -1,0 +1,26 @@
+<% provide(:title, "New food item") %>
+<h1>New food item</h1>
+
+<div class="row">
+	<div class="col-md-6 col-md-offset-3">
+	<%= form_for @food_item do |f| %>
+
+		<%= render 'shared/error_messages', object: f.object %>
+
+		<%= f.label :name %>
+		<%= f.text_field :name, class: 'form-control' %>
+
+		<%= f.label :course %>
+		<%= f.text_field :course, class: 'form-control' %>
+
+		<%= f.label :veg_non_egg %>
+		<%= f.text_field :veg_non_egg, class: 'form-control' %>
+
+		<%= f.label :description %>
+		<%= f.text_area :description, class: 'form-control' %>
+
+		<%= f.submit "Create food item", class: 'btn btn-primary' %>
+	<% end %>
+	</div>
+</div>
+

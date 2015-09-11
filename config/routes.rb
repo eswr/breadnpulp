@@ -1,5 +1,21 @@
 Rails.application.routes.draw do
- 
+
+  get 'food_items/new'
+
+  get 'food_items/show'
+
+  get 'food_items/edit'
+
+  get 'food_items/index'
+
+  # get 'food_items/new'
+
+  # get 'food_items/show'
+
+  # get 'food_items/edit'
+
+  # get 'food_items/index'
+
   root 'static_pages#home'
 
   get 'signup'  => 'users#new'
@@ -12,7 +28,9 @@ Rails.application.routes.draw do
   resources :users
   resources :account_activations, only: [:edit]
   resources :password_resets,     only: [:new, :create, :edit, :update]
-  resources :addresses,           only: [:create, :destroy, :edit]
+  resources :addresses
+  resources :food_items 
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

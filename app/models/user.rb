@@ -14,6 +14,8 @@
 #  activation_digest :string
 #  activated         :boolean          default(FALSE)
 #  activated_at      :datetime
+#  reset_digest      :string
+#  reset_sent_at     :datetime
 #
 
 class User < ActiveRecord::Base

@@ -19,6 +19,21 @@ class AddressesController < ApplicationController
 	    redirect_to request.referrer || root_url
 	end
 
+	def edit
+		@address = Address.find(params[:id])
+	end
+
+	def update
+		@address = Address.find(params[:id])
+		if @address.update_attributes(address_params)
+			flash[:success] = "#{@address.name} updated!"
+			redirect_to @address.user
+		else
+			flash[:danger] = "#{@address.name} no updated! Please try again."
+	    	redirect_to request.referrer || root_url
+		end
+	end
+
 	private
 
 		def address_params

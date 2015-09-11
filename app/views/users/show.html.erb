@@ -10,13 +10,16 @@
         <%= @user.phone_number %>
 	  </p>
     </section>
-    <section class="address_form">
+    <% if current_user?(@user) %>
+      <section class="address_form">
+        <h2>My new address</h2>  
         <%= render 'shared/address_form' %>
       </section>
+    <% end %>
   </aside>
 
   <div class="col-md-4">
-    <h2>My addresses</h2>
+    <h2><%= current_user?(@user)? "My addresses" : "#{@user.name}'s addresses" %></h2>
     <div class="addresses">
       <%= render @addresses %>
     </div>
