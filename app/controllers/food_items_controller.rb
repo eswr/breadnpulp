@@ -1,6 +1,6 @@
 class FoodItemsController < ApplicationController
 
-	before_aciton 		:admin_user
+	before_action 		:admin_user
 	def new
 		@food_item = FoodItem.new
 	end
