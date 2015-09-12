@@ -3,6 +3,7 @@
 <h1><%= @food_item.name %></h1>
 
 <div class="row">
+	<%= image_tag @food_item.image.url :medium %><br>
 	<%= @food_item.course %><br>
 	<%= @food_item.veg_non_egg %><br>
 	<%= @food_item.description %><br><br>
