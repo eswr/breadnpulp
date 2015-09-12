@@ -15,16 +15,6 @@
 #  type               :string
 #
 
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+class Beverage < FoodItem
 
-one:
-  name: MyString
-  course: MyString
-  veg_non_egg: MyString
-  description: MyText
-
-two:
-  name: MyString
-  course: MyString
-  veg_non_egg: MyString
-  description: MyText
+end

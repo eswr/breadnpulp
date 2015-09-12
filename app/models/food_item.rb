@@ -4,7 +4,6 @@
 #
 #  id                 :integer          not null, primary key
 #  name               :string
-#  course             :string
 #  veg_non_egg        :string
 #  description        :text
 #  created_at         :datetime         not null
