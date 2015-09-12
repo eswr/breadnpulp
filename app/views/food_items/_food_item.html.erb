@@ -1,7 +1,4 @@
 <li>
-  <%= link_to food_item.name, food_item %>
-  <% if current_user.admin? %>
-    | <%= link_to "delete", food_item, method: :delete,
-                                  data: { confirm: "You sure?" } %>
-  <% end %>
+  <%= link_to food_item.name, food_item %><br>
+  <%= image_tag food_item.image.url :medium %>
 </li>
