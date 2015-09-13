@@ -11,15 +11,16 @@
 		<%= f.text_field :name, class: 'form-control' %>
 
 		<%= f.label :course %>
-		<%= f.text_field :course, class: 'form-control' %>
+		<%= f.select :course, %w[Main Beverage Salad Side], class: 'form-control' %>
 
 		<%= f.label :veg_non_egg %>
-		<%= f.text_field :veg_non_egg, class: 'form-control' %>
+		<%= f.select :veg_non_egg, %w[Veg Non-Veg Egg], class: 'form-control' %>
 
 		<%= f.label :description %>
 		<%= f.text_area :description, class: 'form-control' %>
 
-		<%= f.label :image %>
+		<%= f.label :image %><br>
+		<%= image_tag @food_item.image.url :medium %>
 		<%= f.file_field :image %>
 
 		<%= f.submit "Save food item", class: 'btn btn-primary' %>

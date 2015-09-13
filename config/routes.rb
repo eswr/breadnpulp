@@ -1,24 +1,8 @@
 Rails.application.routes.draw do
 
-  get 'food_items/new'
-
-  get 'food_items/show'
-
-  get 'food_items/edit'
-
-  get 'food_items/index'
-
-  # get 'food_items/new'
-
-  # get 'food_items/show'
-
-  # get 'food_items/edit'
-
-  # get 'food_items/index'
-
   root 'static_pages#home'
 
-  get 'signup'  => 'users#new'
+  get     'signup'  => 'users#new'
 
   get     'login'   => 'sessions#new'
   post    'login'   => 'sessions#create'
