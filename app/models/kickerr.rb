@@ -13,4 +13,6 @@
 class Kickerr < ActiveRecord::Base
 
 	has_and_belongs_to_many :food_items
+
+	# accepts_nested_attributes_for :food_items, allow_destroy: true, reject_if: :all_blank
 end
