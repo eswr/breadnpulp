@@ -1,0 +1,21 @@
+# == Schema Information
+#
+# Table name: menus
+#
+#  id           :integer          not null, primary key
+#  available_on :date
+#  kickerr_id   :integer
+#  created_at   :datetime         not null
+#  updated_at   :datetime         not null
+#  price        :integer
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  available_on: 2015-09-14
+  kickerr_id: 
+
+two:
+  available_on: 2015-09-14
+  kickerr_id: 
