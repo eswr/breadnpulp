@@ -10,10 +10,10 @@ class MenusController < ApplicationController
   def create
   	@menu = Menu.new(menu_params)
   	if @menu.save
-		flash[:success] = "#{@menu.name} created!"
+		flash[:success] = "Menu created!"
 		redirect_to @menu
 	else
-		flash.now[:danger] = "#{@menu.name} not created, please try again"
+		flash.now[:danger] = "Menu not created, please try again"
 		render 'new'
 	end
   end
@@ -33,16 +33,16 @@ class MenusController < ApplicationController
   def update
   	@menu = Menu.find(params[:id])
   	if @menu.update_attributes(menu_params)
-  		flash[:success] = "#{@menu.name} updated"
+  		flash[:success] = "Menu updated"
   		redirect_to @menu
   	else
-  		flash.now[:danger] = "#{@menu.name} not updated, please try again"
+  		flash.now[:danger] = "Menu not updated, please try again"
   	end
   end
 
   def destroy
   	@menu = Menu.find(params[:id])
-  	flash[:success] = "#{@menu.name} deleted!"
+  	flash[:success] = "Menu deleted!"
   	@menu.destroy
   	redirect_to menus_path
   end

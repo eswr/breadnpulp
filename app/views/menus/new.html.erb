@@ -1,2 +1,24 @@
-<h1>Menus#new</h1>
-<p>Find me in app/views/menus/new.html.erb</p>
+<% provide(:title, "New menu") %>
+<h1>New menu</h1>
+
+<div class="row">
+	<div class="col-md-6 col-md-offset-3">
+	<%= form_for @menu do |f| %>
+
+		<%= render 'shared/error_messages', object: f.object %>
+
+		<%= f.label :available_on %>
+		<%= f.date_field :available_on, class: 'form-control' %>
+
+		<%= f.label "Kickerr" %>
+		<% kickerrs_array = Kickerr.all.map { |kickerr| [kickerr.name, kickerr.id] } %>
+		<%= f.select(:kickerr_id, options_for_select(kickerrs_array)) %>
+
+		<%= f.label :price %>
+		<%= f.text_field :price, class: 'form-control' %>
+
+		<%= f.submit "Create menu", class: 'btn btn-primary' %>
+	<% end %>
+	</div>
+</div>
+
