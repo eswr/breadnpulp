@@ -12,4 +12,6 @@
 
 class Menu < ActiveRecord::Base
   belongs_to :kickerr
+
+  has_and_belongs_to_many :orders
 end

@@ -45,6 +45,7 @@ class User < ActiveRecord::Base
 										allow_nil: true
 
 	has_many	:addresses
+	has_many	:orders
 
 	# Returns the hash digest of the given string.
 	def User.digest(string)

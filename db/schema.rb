@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150914093836) do
+ActiveRecord::Schema.define(version: 20150914164931) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -66,6 +66,34 @@ ActiveRecord::Schema.define(version: 20150914093836) do
 
   add_index "menus", ["kickerr_id"], name: "index_menus_on_kickerr_id", using: :btree
 
+  create_table "menus_orders", id: false, force: :cascade do |t|
+    t.integer "menu_id"
+    t.integer "order_id"
+  end
+
+  add_index "menus_orders", ["menu_id"], name: "index_menus_orders_on_menu_id", using: :btree
+  add_index "menus_orders", ["order_id"], name: "index_menus_orders_on_order_id", using: :btree
+
+  create_table "order_statuses", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.date     "delivery_on"
+    t.integer  "user_id"
+    t.integer  "address_id"
+    t.integer  "total_amount"
+    t.integer  "order_status_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  add_index "orders", ["address_id"], name: "index_orders_on_address_id", using: :btree
+  add_index "orders", ["order_status_id"], name: "index_orders_on_order_status_id", using: :btree
+  add_index "orders", ["user_id"], name: "index_orders_on_user_id", using: :btree
+
   create_table "users", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
@@ -86,4 +114,7 @@ ActiveRecord::Schema.define(version: 20150914093836) do
 
   add_foreign_key "addresses", "users"
   add_foreign_key "menus", "kickerrs"
+  add_foreign_key "orders", "addresses"
+  add_foreign_key "orders", "order_statuses"
+  add_foreign_key "orders", "users"
 end
