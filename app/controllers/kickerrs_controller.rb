@@ -31,39 +31,39 @@ class KickerrsController < ApplicationController
   end
 
   def update
-	@kickerr = Kickerr.find(params[:id])
-	if @kickerr.update_attributes(kickerr_params)
-		flash[:success] = "#{@kickerr.name} updated"
-		redirect_to @kickerr
-	else
-		flash.now[:danger] = "#{@kickerr.name} not updated, please try again"
-	end
+  	@kickerr = Kickerr.find(params[:id])
+  	if @kickerr.update_attributes(kickerr_params)
+  		flash[:success] = "#{@kickerr.name} updated"
+  		redirect_to @kickerr
+  	else
+  		flash.now[:danger] = "#{@kickerr.name} not updated, please try again"
+  	end
   end
 
   def destroy
-	@kickerr = Kickerr.find(params[:id])
-	flash[:success] = "#{@kickerr.name} deleted!"
-	@kickerr.destroy
-	redirect_to kickerrs_path
+  	@kickerr = Kickerr.find(params[:id])
+  	flash[:success] = "#{@kickerr.name} deleted!"
+  	@kickerr.destroy
+  	redirect_to kickerrs_path
   end
 
   private
 
-  	def kickerr_params
-  		params.require(:kickerr).permit(:name, :price, :description, { food_item_ids: [] })
-  	end
-
-  	def admin_user
-		redirect_to root_path unless current_user.admin?
+	def kickerr_params
+		params.require(:kickerr).permit(:name, :price, :description, { food_item_ids: [] })
 	end
 
+	def admin_user
+    redirect_to root_path unless current_user.admin?
+  end
+
 	# Confirms a logged-in user.
-    def logged_in_user
-      unless logged_in?
-        store_location
-        flash[:danger] = "Please log in."
-        redirect_to login_path
-      end
+  def logged_in_user
+    unless logged_in?
+      store_location
+      flash[:danger] = "Please log in."
+      redirect_to login_path
     end
+  end
 
 end
