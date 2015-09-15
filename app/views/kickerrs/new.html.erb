@@ -20,46 +20,18 @@
 			<div class="field">
 		        <div class="field_head">Food items</div>
 	        	<%= hidden_field_tag("kickerr[food_item_ids][]", nil) %>
-	        	<div class="col-md-3">
-	        		<h3>Mains</h3>
-					<% FoodItem.where(course: 'Main').each do |food_item| %>
-						<label>
-							<%= check_box_tag "kickerr[food_item_ids][]", food_item.id, food_item.id.in?(@kickerr.food_items.collect(&:id)) %>
-							<%= food_item.name %><br>
-							<%= image_tag food_item.image.url :thumb %>
-						</label><br>
-					<% end %>
-				</div>
-				<div class="col-md-3">
-	        		<h3>Beverages</h3>
-					<% FoodItem.where(course: 'Beverage').each do |food_item| %>
-						<label>
-							<%= check_box_tag "kickerr[food_item_ids][]", food_item.id, food_item.id.in?(@kickerr.food_items.collect(&:id)) %>
-							<%= food_item.name %><br>
-							<%= image_tag food_item.image.url :thumb %>
-						</label><br>
-					<% end %>
-				</div>
-				<div class="col-md-3">
-	        		<h3>Salads</h3>
-					<% FoodItem.where(course: 'Salad').each do |food_item| %>
-						<label>
-							<%= check_box_tag "kickerr[food_item_ids][]", food_item.id, food_item.id.in?(@kickerr.food_items.collect(&:id)) %>
-							<%= food_item.name %><br>
-							<%= image_tag food_item.image.url :thumb %>
-						</label><br>
-					<% end %>
-				</div>
-				<div class="col-md-3">
-	        		<h3>Sides</h3>
-					<% FoodItem.where(course: 'Side').each do |food_item| %>
-						<label>
-							<%= check_box_tag "kickerr[food_item_ids][]", food_item.id, food_item.id.in?(@kickerr.food_items.collect(&:id)) %>
-							<%= food_item.name %><br>
-							<%= image_tag food_item.image.url :thumb %>
-						</label><br>
-					<% end %>
-				</div>
+	        	<% ['Main', 'Beverage', 'Salad', 'Side'].each.do |c| %>
+		        	<div class="col-md-3">
+		        		<h3><% c %></h3>
+						<% FoodItem.where(course: c).each do |food_item| %>
+							<label>
+								<%= check_box_tag "kickerr[food_item_ids][]", food_item.id, food_item.id.in?(@kickerr.food_items.collect(&:id)) %>
+								<%= food_item.name %><br>
+								<%= image_tag food_item.image.url :thumb %>
+							</label><br>
+						<% end %>
+					</div>
+				<% end %>
 			</div>
 
 			<%= f.submit "Create kickerr", class: 'btn btn-primary' %>
