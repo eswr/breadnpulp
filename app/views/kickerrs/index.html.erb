@@ -1,2 +1,11 @@
-<h1>Kickerrs#index</h1>
-<p>Find me in app/views/kickerrs/index.html.erb</p>
+<% provide(:title, "All kickerrs") %>
+
+<h1>All kickerrs</h1>
+
+<%= will_paginate %>
+
+<ul class="kickerrs">
+	<%= render @kickerrs %>
+</ul>
+
+<%= will_paginate %>
