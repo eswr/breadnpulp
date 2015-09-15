@@ -20,12 +20,46 @@
 			<div class="field">
 		        <div class="field_head">Food items</div>
 	        	<%= hidden_field_tag("kickerr[food_item_ids][]", nil) %>
-				<% FoodItem.all.each do |food_item| %>
-					<label>
-						<%= check_box_tag "kickerr[food_item_ids][]", food_item.id, food_item.id.in?(@kickerr.food_items.collect(&:id)) %>
-						<%= food_item.name %>
-					</label><br>
-				<% end %>
+				<div class="col-md-3">
+	        		<h3>Mains</h3>
+					<% FoodItem.where(course: 'Main').each do |food_item| %>
+						<label>
+							<%= check_box_tag "kickerr[food_item_ids][]", food_item.id, food_item.id.in?(@kickerr.food_items.collect(&:id)) %>
+							<%= food_item.name %><br>
+							<%= image_tag food_item.image.url :thumb %>
+						</label><br>
+					<% end %>
+				</div>
+				<div class="col-md-3">
+	        		<h3>Beverages</h3>
+					<% FoodItem.where(course: 'Beverage').each do |food_item| %>
+						<label>
+							<%= check_box_tag "kickerr[food_item_ids][]", food_item.id, food_item.id.in?(@kickerr.food_items.collect(&:id)) %>
+							<%= food_item.name %><br>
+							<%= image_tag food_item.image.url :thumb %>
+						</label><br>
+					<% end %>
+				</div>
+				<div class="col-md-3">
+	        		<h3>Salads</h3>
+					<% FoodItem.where(course: 'Salad').each do |food_item| %>
+						<label>
+							<%= check_box_tag "kickerr[food_item_ids][]", food_item.id, food_item.id.in?(@kickerr.food_items.collect(&:id)) %>
+							<%= food_item.name %><br>
+							<%= image_tag food_item.image.url :thumb %>
+						</label><br>
+					<% end %>
+				</div>
+				<div class="col-md-3">
+	        		<h3>Sides</h3>
+					<% FoodItem.where(course: 'Side').each do |food_item| %>
+						<label>
+							<%= check_box_tag "kickerr[food_item_ids][]", food_item.id, food_item.id.in?(@kickerr.food_items.collect(&:id)) %>
+							<%= food_item.name %><br>
+							<%= image_tag food_item.image.url :thumb %>
+						</label><br>
+					<% end %>
+				</div>
 			</div>
 
 			<%= f.submit "Update #{@kickerr.name}", class: 'btn btn-primary' %>
