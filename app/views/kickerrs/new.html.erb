@@ -24,6 +24,7 @@
 					<label>
 						<%= check_box_tag "kickerr[food_item_ids][]", food_item.id, food_item.id.in?(@kickerr.food_items.collect(&:id)) %>
 						<%= food_item.name %>
+						<%= image_tag food_item.image.url :thumb %>
 					</label><br>
 				<% end %>
 			</div>
