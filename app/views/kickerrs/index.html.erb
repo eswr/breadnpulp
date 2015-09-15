@@ -2,13 +2,17 @@
 
 <h1>All kickerrs</h1>
 <div class="center">
-<small><%= link_to "New kickerr", new_kickerr_path %></small>
+	<small><%= link_to "New kickerr", new_kickerr_path %></small>
 </div>
-
-<%= will_paginate %>
+<div class="row">
+	<% courses_array = ['Main', 'Beverage', 'Salad', 'Side'] %>
+	<% courses_array.each do |c| %>
+		<div class="col-md-3">
+			<%= c %>
+		</div>
+	<% end %>
+</div>
 
 <ul class="kickerrs">
 	<%= render @kickerrs %>
 </ul>
-
-<%= will_paginate %>
