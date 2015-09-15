@@ -20,11 +20,17 @@
 			<div class="field">
 		        <div class="field_head">Food items</div>
 	        	<%= hidden_field_tag("kickerr[food_item_ids][]", nil) %>
-				<% FoodItem.all.each do |food_item| %>
-					<label>
-						<%= check_box_tag "kickerr[food_item_ids][]", food_item.id, food_item.id.in?(@kickerr.food_items.collect(&:id)) %>
-						<%= food_item.name %>
-					</label><br>
+				<% ['Main', 'Beverage', 'Salad', 'Side'].each.do |c| %>
+		        	<div class="col-md-3">
+		        		<h3><% c %></h3>
+						<% FoodItem.where(course: c).each do |food_item| %>
+							<label>
+								<%= check_box_tag "kickerr[food_item_ids][]", food_item.id, food_item.id.in?(@kickerr.food_items.collect(&:id)) %>
+								<%= food_item.name %><br>
+								<%= image_tag food_item.image.url :thumb %>
+							</label><br>
+						<% end %>
+					</div>
 				<% end %>
 			</div>
 
