@@ -25,7 +25,7 @@
 					<% FoodItem.where(course: 'Main').each do |food_item| %>
 						<label>
 							<%= check_box_tag "kickerr[food_item_ids][]", food_item.id, food_item.id.in?(@kickerr.food_items.collect(&:id)) %>
-							<%= food_item.name %>
+							<%= food_item.name %><br>
 							<%= image_tag food_item.image.url :thumb %>
 						</label><br>
 					<% end %>
@@ -35,7 +35,7 @@
 					<% FoodItem.where(course: 'Beverage').each do |food_item| %>
 						<label>
 							<%= check_box_tag "kickerr[food_item_ids][]", food_item.id, food_item.id.in?(@kickerr.food_items.collect(&:id)) %>
-							<%= food_item.name %>
+							<%= food_item.name %><br>
 							<%= image_tag food_item.image.url :thumb %>
 						</label><br>
 					<% end %>
@@ -45,7 +45,7 @@
 					<% FoodItem.where(course: 'Salad').each do |food_item| %>
 						<label>
 							<%= check_box_tag "kickerr[food_item_ids][]", food_item.id, food_item.id.in?(@kickerr.food_items.collect(&:id)) %>
-							<%= food_item.name %>
+							<%= food_item.name %><br>
 							<%= image_tag food_item.image.url :thumb %>
 						</label><br>
 					<% end %>
@@ -55,7 +55,7 @@
 					<% FoodItem.where(course: 'Side').each do |food_item| %>
 						<label>
 							<%= check_box_tag "kickerr[food_item_ids][]", food_item.id, food_item.id.in?(@kickerr.food_items.collect(&:id)) %>
-							<%= food_item.name %>
+							<%= food_item.name %><br>
 							<%= image_tag food_item.image.url :thumb %>
 						</label><br>
 					<% end %>
