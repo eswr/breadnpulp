@@ -1,6 +1,7 @@
 <% provide(:title, "All food items") %>
 
 <h1>All food items</h1>
+<small><%= link_to "New food item", new_food_item_path %></small>
 <% courses_array = ['Main', 'Beverage', 'Salad', 'Side'] %>
 <% courses_array.each do |c| %>
 	<div class="col-md-3">
