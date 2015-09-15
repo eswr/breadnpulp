@@ -1,13 +1,13 @@
 <li>
 	<div class="row">
 		<div class="row">
-			<%= kickerr.name %>
+			<%= link_to kickerr.name, edit_kickerr_path(kickerr) %>
 		</div>
 	  	<% courses_array = ['Main', 'Beverage', 'Salad', 'Side'] %>
 		<% courses_array.each do |c| %>
 			<div class="col-md-3">
 				<% kickerr.food_items.where(course: c).each do |food_item| %>
-					<%= link_to food_item.name, edit_kickerr_path(kickerr) %><br>
+					<%= food_item.name %><br>
 					<%= image_tag food_item.image.url :thumb %>
 				<% end %>
 			</div>
