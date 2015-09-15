@@ -1,14 +1,16 @@
 <li>
 	<div class="row">
-	<%= kickerr.name %>
-	</div>
-  	<% courses_array = ['Main', 'Beverage', 'Salad', 'Side'] %>
-	<% courses_array.each do |c| %>
-		<div class="col-md-3">
-			<% kickerr.food_items.where(course: c).each do |food_item| %>
-				<%= food_item.name %><br>
-				<%= image_tag food_item.image.url :thumb %>
-			<% end %>
+		<div class="row">
+			<%= kickerr.name %>
 		</div>
-	<% end %>
+	  	<% courses_array = ['Main', 'Beverage', 'Salad', 'Side'] %>
+		<% courses_array.each do |c| %>
+			<div class="col-md-3">
+				<% kickerr.food_items.where(course: c).each do |food_item| %>
+					<%= food_item.name %><br>
+					<%= image_tag food_item.image.url :thumb %>
+				<% end %>
+			</div>
+		<% end %>
+	</div>
 </li>
