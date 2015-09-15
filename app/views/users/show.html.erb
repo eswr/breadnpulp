@@ -19,7 +19,7 @@
   </aside>
 
   <div class="col-md-4">
-    <h2><%= current_user?(@user)? "My addresses" : "#{@user.name}'s addresses" %></h2>
+    <h2><%= current_user?(@user)? "My delivery addresses" : "#{@user.name}'s addresses" %></h2>
     <div class="addresses">
       <%= render @addresses %>
     </div>

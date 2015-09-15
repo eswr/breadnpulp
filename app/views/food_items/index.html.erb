@@ -1,11 +1,12 @@
 <% provide(:title, "All food items") %>
 
 <h1>All food items</h1>
-
-<%= will_paginate %>
-
-<ul class="food_items">
-	<%= render @food_items %>
-</ul>
-
-<%= will_paginate %>
+<% courses_array = ['Main', 'Beverage', 'Salad', 'Salad'] %>
+<% courses_array.each do |c| %>
+	<div class="col-md-3">
+		<ul class="food_items">
+			<h3><%= c %></h3>
+			<%= render @food_items.where(course: c) %>
+		</ul>
+	</div>
+<% end %>
