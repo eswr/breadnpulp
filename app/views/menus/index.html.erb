@@ -6,8 +6,8 @@
 <ul>
 <% @all_dates.each do |date| %>
 	<li>
-		<%= date %>
-		<% menu_on(date).each do |menu| %>
+		<%= @date = date %>
+		<% @menus.each do |menu| %>
 			<%= render menu.kickerr %>
 		<% end %>
 	</li>

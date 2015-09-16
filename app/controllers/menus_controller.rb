@@ -28,7 +28,7 @@ class MenusController < ApplicationController
 
   def index
     @all_dates = Menu.select(:available_on).map(&:available_on).uniq
-  	menu_on(@date) = Menu.where(available_on: date)
+  	@menus = menus_on(@date)
   end
 
   def update
@@ -65,6 +65,10 @@ class MenusController < ApplicationController
       flash[:danger] = "Please log in."
       redirect_to login_path
     end
+  end
+
+  def menus_on(date)
+    Menu.where(available_on: date)
   end
 
 end
