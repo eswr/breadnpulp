@@ -3,12 +3,11 @@
 <h1>All Menus</h1>
 <div class="center"><small><%= link_to "New menu", new_menu_path %></small></div>
 
-<% all_dates = Menu.select(:available_on).map(&:available_on).uniq %>
 <ul>
-<% all_dates.each do |date| %>
+<% @all_dates.each do |date| %>
 	<li>
 		<%= date %>
-		<% Menu.where(available_on: date).each do |menu| %>
+		<% menu_on(date).each do |menu| %>
 			<%= render menu.kickerr %>
 		<% end %>
 	</li>

@@ -27,7 +27,8 @@ class MenusController < ApplicationController
   end
 
   def index
-  	@menu = Menu.paginate(page: params[:page])
+    @all_dates = Menu.select(:available_on).map(&:available_on).uniq
+  	menu_on(@date) = Menu.where(available_on: date)
   end
 
   def update
