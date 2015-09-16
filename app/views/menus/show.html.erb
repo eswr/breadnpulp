@@ -1,2 +1,20 @@
-<h1>Menus#show</h1>
-<p>Find me in app/views/menus/show.html.erb</p>
+<% provide(:title, "Menu") %>
+
+<h1>Menu</h1>
+
+<div class="row">
+	<h3><%= @menu.kickerr.name %> is available on <%= @menu.available_on %> for Rs. <%= @menu.price %></h3>
+</div>
+
+<div class="row">
+	<% courses_array = ['Main', 'Beverage', 'Salad', 'Side'] %>
+	<% courses_array.each do |c| %>
+		<div class="col-md-3">
+			<%= c %>
+		</div>
+	<% end %>
+</div>
+
+<div class="kickerr">
+	<%= render @menu.kickerr %>
+</div>
