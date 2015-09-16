@@ -9,3 +9,11 @@
 
   <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
 </div>
+
+<div>
+	<% menus_on(Date.today).each do |menu| %>
+		<div class="col-md-3">
+			<%= render menu.kickerr %>
+		</div>
+	<% end %>
+</div>
