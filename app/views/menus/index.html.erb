@@ -7,7 +7,7 @@
 <% @all_dates.each do |date| %>
 	<li>
 		<%= @date = date %>
-		<% @menus.each do |menu| %>
+		<% menus_on(date).each do |menu| %>
 			<%= render menu.kickerr %>
 		<% end %>
 	</li>
