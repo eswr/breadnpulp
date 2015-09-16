@@ -3,6 +3,15 @@
 <h1>All Menus</h1>
 <div class="center"><small><%= link_to "New menu", new_menu_path %></small></div>
 
+<div class="row">
+	<% courses_array = ['Main', 'Beverage', 'Salad', 'Side'] %>
+	<% courses_array.each do |c| %>
+		<div class="col-md-3">
+			<%= c %>
+		</div>
+	<% end %>
+</div>
+
 <ul>
 <% @all_dates.each do |date| %>
 	<li>
