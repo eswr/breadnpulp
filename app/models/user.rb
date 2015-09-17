@@ -45,7 +45,8 @@ class User < ActiveRecord::Base
 										allow_nil: true
 
 	has_many	:addresses
-	has_many	:orders
+	has_many	:deliveries
+	has_many	:packs, through: :deliveries
 
 	# Returns the hash digest of the given string.
 	def User.digest(string)
@@ -104,7 +105,7 @@ class User < ActiveRecord::Base
 	def password_reset_expired?
 		reset_sent_at < 2.hours.ago
 	end
-	
+
   	private
 	  	# Converts email to all lower-case.
 	    def downcase_email
