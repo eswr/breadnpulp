@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150915080347) do
+ActiveRecord::Schema.define(version: 20150916225036) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,19 @@ ActiveRecord::Schema.define(version: 20150915080347) do
   end
 
   add_index "addresses", ["user_id"], name: "index_addresses_on_user_id", using: :btree
+
+  create_table "deliveries", force: :cascade do |t|
+    t.date     "on"
+    t.time     "at"
+    t.integer  "collect"
+    t.integer  "user_id"
+    t.integer  "address_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "deliveries", ["address_id"], name: "index_deliveries_on_address_id", using: :btree
+  add_index "deliveries", ["user_id"], name: "index_deliveries_on_user_id", using: :btree
 
   create_table "food_items", force: :cascade do |t|
     t.string   "name"
@@ -66,6 +79,17 @@ ActiveRecord::Schema.define(version: 20150915080347) do
 
   add_index "menus", ["kickerr_id"], name: "index_menus_on_kickerr_id", using: :btree
 
+  create_table "packs", force: :cascade do |t|
+    t.integer  "quantity"
+    t.integer  "menu_id"
+    t.integer  "delivery_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "packs", ["delivery_id"], name: "index_packs_on_delivery_id", using: :btree
+  add_index "packs", ["menu_id"], name: "index_packs_on_menu_id", using: :btree
+
   create_table "users", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
@@ -85,5 +109,9 @@ ActiveRecord::Schema.define(version: 20150915080347) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
 
   add_foreign_key "addresses", "users"
+  add_foreign_key "deliveries", "addresses"
+  add_foreign_key "deliveries", "users"
   add_foreign_key "menus", "kickerrs"
+  add_foreign_key "packs", "deliveries"
+  add_foreign_key "packs", "menus"
 end

@@ -13,5 +13,6 @@
 class Menu < ActiveRecord::Base
   belongs_to :kickerr
 
-  has_and_belongs_to_many :orders
+  has_many :packs
+  has_many :deliveries, through: :packs
 end

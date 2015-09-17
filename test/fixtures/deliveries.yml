@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  'on': 2015-09-17
+  at: 2015-09-17 04:18:55
+  collect: 1
+  user_id: 
+  address_id: 
+
+two:
+  'on': 2015-09-17
+  at: 2015-09-17 04:18:55
+  collect: 1
+  user_id: 
+  address_id: 
