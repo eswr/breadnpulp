@@ -10,12 +10,14 @@
 	<% available_menus.each do |available_menu| %>
 		<%= f.fields_for :packs do |ff| %>
 					<%= ff.label available_menu.kickerr.name %><br>
+					<div class="row">
 						<% available_menu.kickerr.food_items.each do |food_item| %>
 							<div class="col-md-3">
 								<%= food_item.name %><br>
 								<%= image_tag food_item.image.url :thumb %>
 							</div>
 						<% end %>
+					</div>
 					<%= ff.label :quantity %>
 					<%= ff.text_field :quantity, class: 'form-control' %>
 			<%= ff.hidden_field :menu_id, value: available_menu.id %>
