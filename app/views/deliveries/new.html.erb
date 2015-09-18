@@ -12,8 +12,8 @@
 			
 			<div class="row">
 				<%= ff.label available_menu.kickerr.name %><br>
-				<% available_menu.kickerr.food_items.each do |food_item| %>
-					<div class="row">
+				<div class="row">
+					<% available_menu.kickerr.food_items.each do |food_item| %>
 						<div class="col-md-3">
 							<%= food_item.name %><br>
 							<%= image_tag food_item.image.url :thumb %>
