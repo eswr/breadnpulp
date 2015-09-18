@@ -18,8 +18,12 @@
 							</div>
 						<% end %>
 					</div>
-					<%= ff.label :quantity %>
-					<%= ff.text_field :quantity, class: 'form-control' %>
+					<div class="row">
+						<%= ff.label :quantity %>
+						<div class="col-md-2">
+							<%= ff.text_field :quantity, class: 'form-control' %>
+						</div>
+					</div>
 			<%= ff.hidden_field :menu_id, value: available_menu.id %>
 		<% end %>
 	<% end %>
