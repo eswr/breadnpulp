@@ -9,23 +9,13 @@
 	
 	<% available_menus.each do |available_menu| %>
 		<%= f.fields_for :packs do |ff| %>
-			<div class="row">
-				<div class="row col-md-12">
 					<%= ff.label available_menu.kickerr.name %><br>
-					<div class="row col-md-12">
 						<% available_menu.kickerr.food_items.each do |food_item| %>
-							<div class="col-md-3">
 								<%= food_item.name %><br>
 								<%= image_tag food_item.image.url :thumb %>
-							</div>
-						</div>
-					<% end %>
-				</div>
-				<div class="col-md-4">
+						<% end %>
 					<%= ff.label :quantity %>
 					<%= ff.text_field :quantity, class: 'form-control' %>
-				</div>
-			</div>
 			<%= ff.hidden_field :menu_id, value: available_menu.id %>
 		<% end %>
 	<% end %>
