@@ -2,14 +2,15 @@
 #
 # Table name: deliveries
 #
-#  id         :integer          not null, primary key
-#  on         :date
-#  at         :time
-#  collect    :integer
-#  user_id    :integer
-#  address_id :integer
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
+#  id                 :integer          not null, primary key
+#  on                 :date
+#  at                 :time
+#  collect            :integer
+#  user_id            :integer
+#  address_id         :integer
+#  created_at         :datetime         not null
+#  updated_at         :datetime         not null
+#  delivery_status_id :integer
 #
 
 class Delivery < ActiveRecord::Base
@@ -20,4 +21,9 @@ class Delivery < ActiveRecord::Base
   has_many :packs
   has_many :menus, through: :packs
 
+  accepts_nested_attributes_for :packs
+
+  def change_status(status_name)
+  	update_attribute(:delivery_status, DeliveryStatus.find_by(name: status_name))
+  end
 end

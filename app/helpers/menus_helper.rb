@@ -8,4 +8,8 @@ module MenusHelper
 		Time.now.hour < 10 ? Date.today : Date.tomorrow
 	end
 
+	def available_menus
+		menus_on(active_menu_date)
+	end
+
 end

@@ -1,0 +1,31 @@
+<% provide(:title, "Edit Delivery") %>
+
+<h1>Edit Delivery</h1>
+
+<%= form_for(@delivery) do |f| %>
+
+	
+	<%= render 'shared/error_messages', object: f.object %>
+	
+	<% available_menus.each do |available_menu| %>
+		<%= f.fields_for :pack do |ff| %>
+			
+			<%= ff.label available_menu.kickerr.name %>
+
+			<%= ff.label :quantity %>
+			<%= ff.text_field :quantity, class: 'form-control' %>
+		<% end %>
+	<% end %>
+
+	<%= f.label :at %>
+	<%= f.time_field :at, class: 'form-control' %>
+
+	<% if logged_in? %>
+		<% current_user.addresses.each do |address| %>
+			<%= f.radio_button :address_id, address.id %>
+			<%= address.name %>
+		<% end %>
+	<% end %>
+
+	<%= f.submit "Update order", class: 'btn btn-primary' %>
+<% end %>

@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  get 'packs/new'
+
+  get 'packs/edit'
+
+  get 'packs/index'
+
   root 'static_pages#home'
 
   get     'signup'  => 'users#new'
@@ -16,6 +22,7 @@ Rails.application.routes.draw do
   resources :food_items 
   resources :kickerrs
   resources :menus
+  resources :deliveries
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

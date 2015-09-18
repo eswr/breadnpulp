@@ -7,7 +7,11 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 DeliveryStatus.delete_all
-DeliveryStatus.create! id: 1, name: "In Progress"
-DeliveryStatus.create! id: 2, name: "Placed"
-DeliveryStatus.create! id: 3, name: "Shipped"
-DeliveryStatus.create! id: 4, name: "Cancelled"
+DeliveryStatus.create! id: 1, name: "Confirmed"
+DeliveryStatus.create! id: 2, name: "Processing"
+DeliveryStatus.create! id: 3, name: "Despatched"
+DeliveryStatus.create! id: 4, name: "Delivered"
+DeliveryStatus.create! id: 5, name: "Payment Complete"
+DeliveryStatus.create! id: 6, name: "Returned"
+DeliveryStatus.create! id: 7, name: "Cancelled"
+DeliveryStatus.create! id: 8, name: "Deactivated"
