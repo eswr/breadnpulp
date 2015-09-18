@@ -1,7 +1,5 @@
 class DeliveriesController < ApplicationController
 
-	before_action :editable_delivery,		only: [:edit, :update, :destroy]
-
 	def new
 		logged_in? ? @user = current_user : @user = User.new
 		@delivery = @user.deliveries.new
@@ -45,7 +43,7 @@ class DeliveriesController < ApplicationController
 		params.require(:delivery).permit(:on, :at, :collect, :address_id, { packs_attributes: [:id, :quantity, :menu_id] })
 	end
 
-	def editable_delivery
-		redirect_to new_delivery_path if Delivery.find(params[:id]).delivery_status.id > 2
-end
+	# def editable_delivery
+	# 	redirect_to new_delivery_path if Delivery.find(params[:id]).delivery_status.id > 2
+	# end
 end
