@@ -9,8 +9,8 @@
 	
 	<% available_menus.each do |available_menu| %>
 		<%= f.fields_for :packs do |ff| %>
-			<%= ff.label available_menu.kickerr.name %><br>
 			<div id="menu">
+				<h3><%= ff.label available_menu.kickerr.name %></h3>
 				<div class="col-md-12">
 				<% available_menu.kickerr.food_items.each do |food_item| %>
 					<div class="col-md-3">
