@@ -22,7 +22,7 @@
 				<div class="row">
 					<%= ff.label :quantity %>
 					<div class="col-md-2">
-						<%= ff.text_field :quantity, class: 'form-control' %>
+						<%= ff.select :quantity, ((0..10).map {|i| [i,i] }) %>
 					</div>
 				</div>
 			</div>

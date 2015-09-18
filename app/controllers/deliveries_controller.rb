@@ -11,6 +11,7 @@ class DeliveriesController < ApplicationController
 	def create
 		logged_in? ? @user = current_user : @user = User.new
 		@delivery = @user.deliveries.new(delivery_params)
+		@delivery.delivery_status = DeliveryStatus.find_by(name: 'Confirmed')
 		@delivery.save
 		redirect_to @delivery
 	end
@@ -20,6 +21,7 @@ class DeliveriesController < ApplicationController
 	end
 
 	def edit
+		logged_in? ? @user = current_user : @user = User.new
 		@delivery = Delivery.find(params[:id])
 	end
 
