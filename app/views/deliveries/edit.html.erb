@@ -8,12 +8,24 @@
 	<%= render 'shared/error_messages', object: f.object %>
 	
 	<% available_menus.each do |available_menu| %>
-		<%= f.fields_for :pack do |ff| %>
+		<%= f.fields_for :packs do |ff| %>
 			
-			<%= ff.label available_menu.kickerr.name %>
-
-			<%= ff.label :quantity %>
-			<%= ff.text_field :quantity, class: 'form-control' %>
+			<div class="row">
+				<%= ff.label available_menu.kickerr.name %><br>
+				<% available_menu.kickerr.food_items.each do |food_item| %>
+					<div class="row">
+						<div class="col-md-3">
+							<%= food_item.name %><br>
+							<%= image_tag food_item.image.url :thumb %>
+						</div>
+					</div>
+				<% end %>
+				<div class="col-md-4">
+					<%= ff.label :quantity %>
+					<%= ff.text_field :quantity, class: 'form-control' %>
+				</div>
+					<%= ff.hidden_field :menu_id, value: available_menu.id %>
+			</div>
 		<% end %>
 	<% end %>
 
@@ -21,9 +33,14 @@
 	<%= f.time_field :at, class: 'form-control' %>
 
 	<% if logged_in? %>
-		<% current_user.addresses.each do |address| %>
+		<%= @user.name %><br>
+		<% @user.addresses.each do |address| %>
 			<%= f.radio_button :address_id, address.id %>
 			<%= address.name %>
+		<% end %>
+	<% else %>
+		<%= fields_for @user do |ff| %>
+
 		<% end %>
 	<% end %>
 
