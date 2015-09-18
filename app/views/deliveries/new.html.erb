@@ -11,7 +11,7 @@
 		<%= f.fields_for :packs do |ff| %>
 					<%= ff.label available_menu.kickerr.name %><br>
 						<% available_menu.kickerr.food_items.each do |food_item| %>
-							<div class="col-md-12">
+							<div class="col-md-3">
 								<%= food_item.name %><br>
 								<%= image_tag food_item.image.url :thumb %>
 							</div>
