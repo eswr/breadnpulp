@@ -1,10 +1,14 @@
 class DeliveriesController < ApplicationController
 
+	before_action :logged_in_user
+	before_action :admin_user,			only: [:index]
+	before_action :correct_user,		only: [:create, :edit, :update, :destroy ]
+
 	def new
 		logged_in? ? @user = current_user : @user = User.new
 		@delivery = @user.deliveries.new
 		@available_menus = Menu.where(available_on: active_menu_date).map { |menu| [menu.kickerr.name, menu.id] }
-		3.times { @delivery.packs.build }
+		@available_menus.count.times { @delivery.packs.build }
 	end
 
 	def create
@@ -51,4 +55,24 @@ class DeliveriesController < ApplicationController
 	def active_menu_date
 		Time.now.hour < 12 ? Date.today : Date.tomorrow
 	end
+
+	def admin_user
+		redirect_to root_path unless current_user.admin?
+	end
+
+		# Confirms a logged-in user.
+	def logged_in_user
+		unless logged_in?
+		  store_location
+		  flash[:danger] = "Please log in."
+		  redirect_to login_path
+		end
+	end
+
+	def correct_user
+		return true if current_user.admin?
+		user = Delivery.find(params[:id]).user
+		redirect_to root_path unless current_user(@user)
+	end
+
 end

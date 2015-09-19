@@ -1,12 +1,10 @@
-<% provide(:title, "New Delivery") %>
+<% provide(:title, "New Order") %>
 
-<h1>New Delivery</h1>
+<h1>New Order</h1>
 
 <div class="row">
 	<% menus_on(active_menu_date).each do |menu| %>
-		<div class="col-md-3">
-			<%= render menu.kickerr %>
-		</div>
+		<%= render menu.kickerr %>
 	<% end %>
 </div>	
 

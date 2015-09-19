@@ -1,18 +1,22 @@
-<li>
-	<div class="row">
-		<div class="row">
-			<%= link_to kickerr.name, edit_kickerr_path(kickerr) %>
-		</div>
-	  	<% courses_array = ['Main', 'Beverage', 'Salad', 'Side'] %>
-		<div class="row">
-			<% courses_array.each do |c| %>
-				<div class="col-md-3">
-					<% kickerr.food_items.where(course: c).each do |food_item| %>
-						<%= food_item.name %><br>
-						<%= image_tag food_item.image.url :thumb %>
+<div class="col-md-6 col-md-offest-1">	
+	<div id="kickerr">
+		<li>
+			<div class="row">
+				<div class="row center">
+					<h3><%= kickerr.name %></h3>
+				</div>
+			  	<% courses_array = ['Main', 'Beverage', 'Salad', 'Side'] %>
+				<div class="row center">
+					<% courses_array.each do |c| %>
+						<div class="col-md-4">
+							<% kickerr.food_items.where(course: c).each do |food_item| %>
+								<%= food_item.name %><br>
+								<%= image_tag food_item.image.url :thumb %>
+							<% end %>
+						</div>
 					<% end %>
 				</div>
-			<% end %>
-		</div>
+			</div>
+		</li>
 	</div>
-</li>
+</div>

@@ -1,19 +1,15 @@
 Rails.application.routes.draw do
 
-  get 'packs/new'
-
-  get 'packs/edit'
-
-  get 'packs/index'
-
   root 'static_pages#home'
+  get     'profile'   => 'users#show'
 
-  get     'signup'  => 'users#new'
+  get     'signup'    => 'users#new'
 
-  get     'login'   => 'sessions#new'
-  post    'login'   => 'sessions#create'
-  delete  'logout'  => 'sessions#destroy'
-  get     'profile' => 'users#show'
+  get     'login'     => 'sessions#new'
+  post    'login'     => 'sessions#create'
+  delete  'logout'    => 'sessions#destroy'
+
+  get     'new_order' => 'deliveries#new'
 
   resources :users
   resources :account_activations, only: [:edit]

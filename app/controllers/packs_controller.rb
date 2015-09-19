@@ -14,7 +14,7 @@ class PacksController < ApplicationController
 
 	def update
 		@pack = Pack.find(params[:id])
-		@pack.save
+		@pack.update_attributes(pack_params)
 	end
 
 	def index

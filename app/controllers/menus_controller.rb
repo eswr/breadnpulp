@@ -1,7 +1,7 @@
 class MenusController < ApplicationController
 
-	before_action :logged_in_user
-	before_action :admin_user
+	before_action :logged_in_user, except: :index
+	before_action :admin_user,     except: :index
 
   def new
   	@menu = Menu.new
