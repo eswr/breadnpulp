@@ -2,48 +2,30 @@
 
 <h1>New Delivery</h1>
 
-<%= form_for(@delivery) do |f| %>
+<div class="row">
+	<% menus_on(active_menu_date).each do |menu| %>
+		<div class="col-md-3">
+			<%= render menu.kickerr %>
+		</div>
+	<% end %>
+</div>	
+
+<%= form_for @delivery do |delivery_form| %>
+	
+	<%= render 'shared/error_messages', object: delivery_form.object %>
+	
+	<div class="row">
+		<%= delivery_form.fields_for :packs do |pack_fields| %>
+			<%= render 'packs/pack', f: pack_fields %>
+		<% end %>
+	</div>
+
+	<%= delivery_form.label :at %>
+	<%= delivery_form.time_field :at, class: 'form-control' %>
+
+	<%= hidden_field_tag :on, value: active_menu_date %>
 
 	
-	<%= render 'shared/error_messages', object: f.object %>
-	
-	<% available_menus.each do |available_menu| %>
-		<%= f.fields_for :packs do |ff| %>
-			<div id="menu">
-				<h3><%= ff.label available_menu.kickerr.name %></h3>
-				<div class="col-md-12">
-				<% available_menu.kickerr.food_items.each do |food_item| %>
-					<div class="col-md-3">
-						<%= food_item.name %><br>
-						<%= image_tag food_item.image.url :thumb %>
-					</div>
-				<% end %>
-				</div>
-				<div class="row">
-					<%= ff.label :quantity %>
-					<div class="col-md-2">
-						<%= ff.select :quantity, ((0..10).map {|i| [i,i] }) %>
-					</div>
-				</div>
-			</div>
-			<%= ff.hidden_field :menu_id, value: available_menu.id %>
-		<% end %>
-	<% end %>
 
-	<%= f.label :at %>
-	<%= f.time_field :at, class: 'form-control' %>
-
-	<% if logged_in? %>
-		<%= @user.name %><br>
-		<% @user.addresses.each do |address| %>
-			<%= f.radio_button :address_id, address.id %>
-			<%= address.name %>
-		<% end %>
-	<% else %>
-		<%= fields_for @user do |ff| %>
-
-		<% end %>
-	<% end %>
-
-	<%= f.submit "Confirm order", class: 'btn btn-primary' %>
+	<%= delivery_form.submit "Confirm order", class: 'btn btn-primary' %>
 <% end %>

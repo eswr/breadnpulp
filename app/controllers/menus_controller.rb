@@ -5,6 +5,7 @@ class MenusController < ApplicationController
 
   def new
   	@menu = Menu.new
+    @kickerrs_array = Kickerr.all.map { |kickerr| [kickerr.name, kickerr.id] }
   end
 
   def create

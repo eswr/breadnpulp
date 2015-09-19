@@ -3,7 +3,8 @@ class DeliveriesController < ApplicationController
 	def new
 		logged_in? ? @user = current_user : @user = User.new
 		@delivery = @user.deliveries.new
-		@delivery.packs.build
+		@available_menus = Menu.where(available_on: active_menu_date).map { |menu| [menu.kickerr.name, menu.id] }
+		3.times { @delivery.packs.build }
 	end
 
 	def create
@@ -19,8 +20,8 @@ class DeliveriesController < ApplicationController
 	end
 
 	def edit
-		logged_in? ? @user = current_user : @user = User.new
 		@delivery = Delivery.find(params[:id])
+		@available_menus = Menu.where(available_on: Date.today).map { |menu| [menu.kickerr.name, menu.id] }
 	end
 
 	def update
@@ -40,10 +41,14 @@ class DeliveriesController < ApplicationController
 	private
 
 	def delivery_params
-		params.require(:delivery).permit(:on, :at, :collect, :address_id, { packs_attributes: [:id, :quantity, :menu_id] })
+		params.require(:delivery).permit(:on, :at, :collect, :address_id, packs_attributes: [:id, :quantity, :menu_id] )
 	end
 
 	# def editable_delivery
 	# 	redirect_to new_delivery_path if Delivery.find(params[:id]).delivery_status.id > 2
 	# end
+
+	def active_menu_date
+		Time.now.hour < 12 ? Date.today : Date.tomorrow
+	end
 end

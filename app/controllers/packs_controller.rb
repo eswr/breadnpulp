@@ -9,6 +9,12 @@ class PacksController < ApplicationController
 	end
 
 	def edit
+		@pack = Pack.find(params[:id])
+	end
+
+	def update
+		@pack = Pack.find(params[:id])
+		@pack.save
 	end
 
 	def index

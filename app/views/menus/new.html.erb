@@ -11,8 +11,7 @@
 		<%= f.date_field :available_on, class: 'form-control' %>
 
 		<%= f.label "Kickerr" %>
-		<% kickerrs_array = Kickerr.all.map { |kickerr| [kickerr.name, kickerr.id] } %>
-		<%= f.select(:kickerr_id, options_for_select(kickerrs_array)) %>
+		<%= f.select(:kickerr_id, options_for_select(@kickerrs_array)) %>
 
 		<%= f.label :price %>
 		<%= f.text_field :price, class: 'form-control' %>

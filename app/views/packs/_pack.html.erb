@@ -1,0 +1,7 @@
+<div class="col-md-3">
+	<h4>Kickerr</h4>
+	<%= f.select(:menu_id, options_for_select(@available_menus)) %>
+
+	<h5>Quantity</h5>
+	<%= f.select(:quantity, ((0..10).map {|i| [i,i] })) %>
+</div>

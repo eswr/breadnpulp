@@ -13,4 +13,5 @@
 class Pack < ActiveRecord::Base
   belongs_to :menu
   belongs_to :delivery
+  belongs_to :kickerr
 end
