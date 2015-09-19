@@ -26,7 +26,7 @@ class DeliveriesController < ApplicationController
 
 	def update
 		@delivery = Delivery.find(params[:id])
-		@delivery.save
+		@delivery.update_attributes(delivery_params)
 		redirect_to @delivery
 	end
 
@@ -41,7 +41,7 @@ class DeliveriesController < ApplicationController
 	private
 
 	def delivery_params
-		params.require(:delivery).permit(:on, :at, :collect, :address_id, packs_attributes: [:id, :quantity, :menu_id] )
+		params.require(:delivery).permit(:on, :at, :collect, :address_id, packs_attributes: [:id, :quantity, :menu_id])
 	end
 
 	# def editable_delivery
