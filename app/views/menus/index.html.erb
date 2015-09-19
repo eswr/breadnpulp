@@ -11,15 +11,17 @@
 			<%= c %>
 		</div>
 	<% end %>
-</div>
 
-<ul>
-<% @all_dates.each do |date| %>
-	<li>
-		<%= @date = date %>
-		<% menus_on(date).each do |menu| %>
-			<%= render menu.kickerr %>
-		<% end %>
-	</li>
-<% end %>
-</ul>
+	<ul>
+	<% @all_dates.each do |date| %>
+		<li>
+			<%= @date = date %>
+			<% menus_on(date).each do |menu| %>
+				<%= render menu.kickerr %>
+			<% end %>
+		</li>
+	<% end %>
+	</ul>
+
+
+</div>
