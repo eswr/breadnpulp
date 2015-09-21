@@ -3,6 +3,7 @@ class DeliveriesController < ApplicationController
 	before_action :logged_in_user
 	before_action :admin_user,			only: [:index]
 	before_action :correct_user,		only: [:create, :edit, :update, :destroy ]
+	before_action :editable_delivery,	only: [:edit, :update]
 
 	def new
 		logged_in? ? @user = current_user : @user = User.new
@@ -48,9 +49,9 @@ class DeliveriesController < ApplicationController
 		params.require(:delivery).permit(:on, :at, :collect, :address_id, packs_attributes: [:id, :quantity, :menu_id])
 	end
 
-	# def editable_delivery
-	# 	redirect_to new_delivery_path if Delivery.find(params[:id]).delivery_status.id > 2
-	# end
+	def editable_delivery
+		redirect_to new_delivery_path if Delivery.find(params[:id]).delivery_status.name = 'Confirmed'
+	end
 
 	def active_menu_date
 		Time.now.hour < 12 ? Date.today : Date.tomorrow

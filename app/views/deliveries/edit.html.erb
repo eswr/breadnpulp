@@ -1,12 +1,10 @@
-<% provide(:title, "New Delivery") %>
+<% provide(:title, "New Order") %>
 
-<h1>New Delivery</h1>
+<h1>New Order</h1>
 
 <div class="row">
 	<% menus_on(active_menu_date).each do |menu| %>
-		<div class="col-md-3">
-			<%= render menu.kickerr %>
-		</div>
+		<%= render menu.kickerr %>
 	<% end %>
 </div>	
 
@@ -20,10 +18,23 @@
 		<% end %>
 	</div>
 
-	<%= delivery_form.label :at %>
-	<%= delivery_form.time_field :at, class: 'form-control' %>
+	<div class="row">
+		<div class="col-md-4">
+			<%= delivery_form.label 'delivery_time' %>
+			<%= delivery_form.time_field :at, class: 'form-control' %>
+		</div>
 
-	
+		<div class="col-md-4">
+			<h3>Delivery address</h3>
+			<% @delivery.user.addresses.each do |address| %>
+				<%= delivery_form.collection_radio_buttons :address_id, @delivery.user.addresses.all, :id, :name %>
+				<p><%= address.full_address %></p>
+				<p><%= address.pincode %></p>
+			<% end %>
+		</div>
+	</div>
+
+	<%= delivery_form.hidden_field :on, value: active_menu_date %>
 
 	<%= delivery_form.submit "Confirm order", class: 'btn btn-primary' %>
 <% end %>

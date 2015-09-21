@@ -21,7 +21,7 @@ class Delivery < ActiveRecord::Base
   has_many :packs
   has_many :menus, through: :packs
 
-  accepts_nested_attributes_for :packs
+  accepts_nested_attributes_for :packs, reject_if: proc { |attributes| attributes[:quantity] = 0 }
 
   def change_status(status_name)
   	update_attribute(:delivery_status, DeliveryStatus.find_by(name: status_name))

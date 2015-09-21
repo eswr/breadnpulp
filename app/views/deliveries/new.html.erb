@@ -18,12 +18,19 @@
 		<% end %>
 	</div>
 
-	<%= delivery_form.label :at %>
-	<%= delivery_form.time_field :at, class: 'form-control' %>
+	<div class="row">
+		<div class="col-md-4">
+			<h3>Delivery time</h3>
+			<%= delivery_form.time_field :at, class: 'form-control' %>
+		</div>
 
-	<%= hidden_field_tag :on, value: active_menu_date %>
+		<div class="col-md-4">
+			<h3>Delivery address</h3>
+			<%= delivery_form.collection_radio_buttons :address_id, @delivery.user.addresses.all, :id, :postal_address %>
+		</div>
+	</div>
 
-	
+	<%= delivery_form.hidden_field :on, value: active_menu_date %>
 
 	<%= delivery_form.submit "Confirm order", class: 'btn btn-primary' %>
 <% end %>

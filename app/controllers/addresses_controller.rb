@@ -14,6 +14,7 @@ class AddressesController < ApplicationController
 	end
 
 	def destroy
+		@address = Address.find(params[:id])
 	    @address.destroy
 	    flash[:success] = "Address deleted"
 	    redirect_to request.referrer || root_url

@@ -77,16 +77,4 @@ class UsersController < ApplicationController
     def admin_user
       redirect_to(root_url) unless current_user.admin?
     end
-
-    # Send sms to admin
-    def send_sms_to(number, text)
-      url = URI.parse("http://trx.orangesms.net/api/sendmsg.php?user=breadnpulp&pass=qweqwe&sender=BRDPLP" +
-        "&phone=#{number}" +
-        "&text=#{text}" +
-        "&priority=ndnd&stype=normal")
-      req = Net::HTTP::Get.new(url.to_s)
-      res = Net::HTTP.start(url.host, url.port) {|http|
-        http.request(req)
-      }
-    end
 end

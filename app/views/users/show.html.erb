@@ -28,7 +28,8 @@
   <div class="col-md-4">
     <h2>My Deliveries</h2>
     <% @user.deliveries.each do |d| %>
-      <%= d.on %><p>dd</p>
+      <br><%= d.on %><br>
+      <%= d.at.in_time_zone(TZInfo::Timezone.get('Asia/Kolkata')).strftime("%I:%M%p") %><br>
       <%= d.delivery_status.name %><br>
         <% d.packs.each do |p| %>
           <%= p.menu.kickerr.name %>

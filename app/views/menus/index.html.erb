@@ -1,27 +1,23 @@
 <% provide(:title, "All menus") %>
 
 <h1>All Menus</h1>
-<%if logged_in? && current_user.admin? %>
-	<div class="center"><small><%= link_to "New menu", new_menu_path %></small></div>
+<%if logged_in? && current_user.admin? %><small><%= link_to "New menu", new_menu_path %></small>
 <% end %>
-<div class="row">
 	<% courses_array = ['Main', 'Beverage', 'Salad', 'Side'] %>
 	<% courses_array.each do |c| %>
-		<div class="col-md-3">
+		
 			<%= c %>
-		</div>
+		
 	<% end %>
 
 	<ul>
 	<% @all_dates.each do |date| %>
 		<li>
-			<%= @date = date %>
+			<%= date %>
 			<% menus_on(date).each do |menu| %>
 				<%= render menu.kickerr %>
+				<%= render "kickerr2", object: menu.kickerr %>
 			<% end %>
 		</li>
 	<% end %>
 	</ul>
-
-
-</div>

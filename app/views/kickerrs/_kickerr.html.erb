@@ -2,11 +2,11 @@
 	<div id="kickerr">
 		<li>
 			<div class="row">
-				<div class="row center">
+				<div class="center">
 					<h3><%= kickerr.name %></h3>
 				</div>
 			  	<% courses_array = ['Main', 'Beverage', 'Salad', 'Side'] %>
-				<div class="row center">
+				<div class="row">
 					<% courses_array.each do |c| %>
 						<div class="col-md-4">
 							<% kickerr.food_items.where(course: c).each do |food_item| %>

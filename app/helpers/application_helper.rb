@@ -15,6 +15,4 @@ module ApplicationHelper
 	def active_menu_date
 		Time.now.hour < 12 ? Date.today : Date.tomorrow
 	end
-
-	
 end
