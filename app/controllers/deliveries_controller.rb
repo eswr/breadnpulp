@@ -13,7 +13,7 @@ class DeliveriesController < ApplicationController
 	end
 
 	def create
-		logged_in? ? @user = current_user : @user = User.new
+		@user = current_user
 		@delivery = @user.deliveries.new(delivery_params)
 		if !current_user.admin?
 			@delivery.delivery_status = DeliveryStatus.find_by(name: 'Tentative')
@@ -41,9 +41,10 @@ class DeliveriesController < ApplicationController
 		if !current_user.admin?
 			params[:delivery_status] = DeliveryStatus.find_by(name: 'Tentative')
 		end
-		@delivery.update_attributes(delivery_params)
-		send_sms @delivery
-		redirect_to @delivery.user
+		if @delivery.update_attributes(delivery_params)
+			send_sms @delivery
+			redirect_to @delivery.user
+		end
 	end
 
 	def index
