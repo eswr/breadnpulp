@@ -78,12 +78,6 @@ class User < ActiveRecord::Base
     	BCrypt::Password.new(digest).is_password?(token)
   	end
 
-
-  	def send_sms(message)
-  		send_sms_to(:phone_number, message)
-  	end
-
-
   	# Activates an account.
   	def activate
 	    update_attribute(:activated,    true)
@@ -124,17 +118,5 @@ class User < ActiveRecord::Base
 	      self.activation_digest = User.digest(activation_token)
 	    end
 
-	    def send_sms_to(number, text)
-	    	require 'net/http'
-
-			url = URI.parse("http://trx.orangesms.net/api/sendmsg.php?user=breadnpulp&pass=qweqwe&sender=BRDPLP" +
-				"&phone=#{number}" +
-				"&text=#{text}" +
-				"&priority=ndnd&stype=normal")
-			req = Net::HTTP::Get.new(url.to_s)
-			res = Net::HTTP.start(url.host, url.port) {|http|
-			http.request(req)
-}
-	    end
-										
+	    
 end

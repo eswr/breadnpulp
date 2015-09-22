@@ -1,40 +1,62 @@
 <% provide(:title, @user.name) %>
-<div class="row">
-  <aside class="col-md-4">
-    <section class="user_info">
-      <h1>
-        <%= @user.name %>
-      </h1>
-      <p>
-        <%= @user.email %>
-        <%= @user.phone_number %>
-      </p>
+<aside class="col-md-4">
+  <section class="user_info">
+    <h1>
+      <%= @user.name %>
+    </h1>
+    <p>
+      <%= @user.email %>
+      <%= @user.phone_number %>
+    </p>
+  </section>
+  <% if current_user?(@user) %>
+    <section class="address_form">
+      <h2>My new address</h2>  
+      <%= render 'shared/address_form' %>
     </section>
-    <% if current_user?(@user) %>
-      <section class="address_form">
-        <h2>My new address</h2>  
-        <%= render 'shared/address_form' %>
-      </section>
-    <% end %>
-  </aside>
-
-  <div class="col-md-4">
-    <h2><%= current_user?(@user)? "My delivery addresses" : "#{@user.name}'s addresses" %></h2>
+    <h2>
+      <%= current_user?(@user)? "My delivery addresses" : "#{@user.name}'s addresses" %>
+    </h2>
     <div class="addresses">
       <%= render @addresses %>
     </div>
+  <% end %>
+</aside>
+
+<div class="col-xs-12 col-sm-12 col-md-8">
+  <div class="center">
+    <h3>My deliveries</h3>
   </div>
-
-  <div class="col-md-4">
-    <h2>My Deliveries</h2>
-    <% @user.deliveries.each do |d| %>
-      <br><%= d.on %><br>
-      <%= d.at.in_time_zone(TZInfo::Timezone.get('Asia/Kolkata')).strftime("%I:%M%p") %><br>
-      <%= d.delivery_status.name %><br>
-        <% d.packs.each do |p| %>
-          <%= p.menu.kickerr.name %>
-          <%= p.quantity %><br>
-        <% end %>
-    <% end %>
+  <div class="row">
+    <% @deliveries.each do |delivery| %>
+    <div class="col-xs-12 col-md-6 col-sm-6">
+      <div class="thumbnail">
+        <div class="container col-md-12 col-sm-12 col-xs-12">
+          <h4>MUM1001</h4><small><%= link_to "edit", edit_delivery_path(delivery) %></small>
+          <table class="table table-hover">
+              <tr> 
+                  <th>Kickers</th> 
+                  <th>Qty</th> 
+                  <th>Cost</th>
+     
+              </tr>
+              <% delivery.packs.each do |pack| %>
+                <tr>  
+                    <td><%= pack.menu.kickerr.name %></td> 
+                    <td><%= pack.quantity %></td>
+                    <td><%= pack.quantity * pack.menu.kickerr.price %></td>
+         
+                </tr>
+              <% end %>
+          </table>
+        </div>
+        <ul>
+        <li class="text-left" style="list-style: none;"><%= delivery.on %></li>
+        <li class="text-left" style="list-style: none;"><%= delivery.address.postal_address %></li>
+        <li class="text-left" style="list-style: none;"><%= delivery.at.strftime("at %I:%M%p") %></li>
+        <li class="text-left" style="list-style: none;"><%= delivery.delivery_status.name %></li>
+    </div>
+  </div>
+  <% end %>
 </div>
-
+</div>
