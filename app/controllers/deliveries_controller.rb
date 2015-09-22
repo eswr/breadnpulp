@@ -97,7 +97,7 @@ class DeliveriesController < ApplicationController
 		url = URI.parse("http://trx.orangesms.net/api/sendmsg.php?user=breadnpulp&pass=qweqwe&sender=BRDPLP" +
 			"&phone=#{delivery.user.phone_number}" +
 			"&text=Hi #{delivery.user.name.split(' ').first}! Your order for #{delivery.on}: #{delivery.delivery_status.name}." +
-			"&priority=ndnd&stype=normal")
+			"&priority=ndnd&stype=normal").gsub(' ', '%20')
 		req = Net::HTTP::Get.new(url.to_s)
 		res = Net::HTTP.start(url.host, url.port) {|http| http.request(req)}
     end
