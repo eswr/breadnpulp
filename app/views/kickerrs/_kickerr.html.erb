@@ -1,22 +1,14 @@
-<div class="col-md-6 col-md-offest-1">	
-	<div id="kickerr">
-		<li>
-			<div class="row">
-				<div class="center">
-					<h3><%= kickerr.name %></h3>
-				</div>
-			  	<% courses_array = ['Main', 'Beverage', 'Salad', 'Side'] %>
-				<div class="row">
-					<% courses_array.each do |c| %>
-						<div class="col-md-4">
-							<% kickerr.food_items.where(course: c).each do |food_item| %>
-								<%= food_item.name %><br>
-								<%= image_tag food_item.image.url :thumb %>
-							<% end %>
-						</div>
-					<% end %>
-				</div>
+<div class="col-md-4 col-sm-6 portfolio-item">
+	<a href="new_delivery_path" class="portfolio-link" data-toggle="modal">
+		<div class="portfolio-hover">
+			<div class="portfolio-hover-content">
+				<i class="fa fa-plus fa-3x"></i>
 			</div>
-		</li>
+		</div>
+		<%= image_tag kickerr.food_items.where(course: 'Main').first.image.url %>
+	</a>
+	<div class="portfolio-caption">
+		<h4><%= kickerr.name %></h4>
+		<p class="text-muted"><%= kickerr.description %></p>
 	</div>
 </div>

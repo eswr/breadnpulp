@@ -1,10 +1,10 @@
-<li id="address-<%= address.id %>">
-  <span class="address_name"><%= address.name %></span>
-  <span class="full_address"><%= address.full_address %></span>
-  <span class="pincode"><%= address.pincode %></span>
+<li id="address-<%= address.id %>" style="list-style: none;">
+  <h6><span class="address_name"><%= address.name %></span></h6>
+  <span class="full_address"><%= address.full_address %></span><br>
+  <span class="pincode"><%= address.pincode %></span><br>
   <% if current_user?(address.user) %>
-  	<%= link_to "edit", edit_address_path(address) %> | 
-  	<%= link_to "delete", address, 	method: :delete,
-  									data: { confirm: "You sure?" } %>
+  	<%= link_to "edit", edit_address_path(address), class: "btn btn-warning btn-xs", style: "background-color: #fed136; border-color: #ffffff"; %> | 
+  	<%= link_to "delete", address, class: "btn btn-warning btn-xs", style: "background-color: #fed136; border-color: #ffffff;", method: :delete,
+  									data: { confirm: "You sure?" } %><br>
   <% end %>
 </li>

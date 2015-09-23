@@ -1,26 +1,25 @@
 <% provide(:title, @user.name) %>
+<div class="container">
 <aside class="col-md-4">
-  <section class="user_info">
-    <h1>
-      <%= @user.name %>
+  <section class="user_info" style="padding:0px 0px;margin-top:10vh">
+    <h1 align="center">
+      Syed Fazil Basheer
     </h1>
-    <p>
-      <%= @user.email %>
-      <%= @user.phone_number %>
+    <p align="center">
+      basheer@breadnpulp.com<br>
+      9820392422
     </p>
   </section>
-  <% if current_user?(@user) %>
-    <section class="address_form">
-      <h2>My new address</h2>  
+    <section class="address_form form-group" style="padding:5vh 0px;">
+      <h3 align="center">My new address</h3>  
       <%= render 'shared/address_form' %>
     </section>
-    <h2>
-      <%= current_user?(@user)? "My delivery addresses" : "#{@user.name}'s addresses" %>
-    </h2>
+    <h3 align="center">
+      <%= current_user?(@user)? "My addresses" : "#{@user.name}'s addresses" %>
+    </h3>
     <div class="addresses">
       <%= render @addresses %>
     </div>
-  <% end %>
 </aside>
 
 <div class="col-xs-12 col-sm-12 col-md-8">
@@ -55,8 +54,10 @@
         <li class="text-left" style="list-style: none;"><%= delivery.address.postal_address %></li>
         <li class="text-left" style="list-style: none;"><%= delivery.at.strftime("at %I:%M%p") %></li>
         <li class="text-left" style="list-style: none;"><%= delivery.delivery_status.name %></li>
+        </ul>
     </div>
   </div>
   <% end %>
+</div>
 </div>
 </div>
