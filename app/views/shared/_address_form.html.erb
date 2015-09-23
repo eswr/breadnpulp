@@ -1,6 +1,6 @@
 <%= form_for(@address) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
-  <div class="field">
+  <div class="field" >
   	<%= f.text_field :name, placeholder: "Address name...", style: "margin:5px; width: 50%;" %><br>
     <%= f.text_area :full_address, placeholder: "Add a new address...", style: "margin:5px; width: 100%;" %><br>
     <%= f.text_field :pincode, placeholder: "Pincode...", style: "width:50%;margin:5px;" %><br>
