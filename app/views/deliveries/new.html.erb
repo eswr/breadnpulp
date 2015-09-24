@@ -14,8 +14,14 @@
 	<%= render 'shared/error_messages', object: delivery_form.object %>
 	
 	<div class="row">
-		<%= delivery_form.fields_for :packs do |pack_fields| %>
-			<%= render 'packs/pack', f: pack_fields %>
+		<% menus_on(active_menu_date).each do |menu| %>
+			<%= delivery_form.fields_for :packs do |pack_fields| %>
+				<%= pack_fields.label menu.kickerr.name %>
+				<%= pack_fields.hidden_field :menu_id, value: menu.id %>
+				<p><%= menu.kickerr.description %></p>
+				<h5>Quantity</h5>
+				<%= f.select(:quantity, ((0..10).map {|i| [i,i] })) %>
+			<% end %>
 		<% end %>
 	</div>
 

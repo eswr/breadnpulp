@@ -19,3 +19,5 @@ Rails.application.config.assets.version = '1.0'
  Rails.application.config.assets.precompile += %w( agency.js )
  Rails.application.config.assets.precompile += %w( cbpAnimatedHeader.min.js )
  Rails.application.config.assets.precompile += %w( bootstrap.min.js )
+ Rails.application.config.assets.precompile += %w( jquery-2.1.4.js )
+ Rails.application.config.assets.precompile += %w( jquery-2.1.4.min.js )
