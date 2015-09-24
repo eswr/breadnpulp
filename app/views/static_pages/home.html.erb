@@ -4,8 +4,12 @@
         <div class="intro-text">
             <div class="intro-lead-in" style="margin-bottom:150px">Healthy breakfast at your doorstep!</div>
             <!--<div class="intro-heading">It's Nice To Meet You</div>-->
-            <a href="signup" class="page-scroll btn btn-xl" style="padding:10px 40px !important;margin-bottom:10px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sign Up&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-    <a href="#portfolio" class="page-scroll btn btn-xl" style="padding:10px 40px !important;margin-bottom:10px;">Todays Menu</a>
+            <% if logged_in? %>
+                <a href="#portfolio" class="page-scroll btn btn-xl" style="padding:10px 40px !important;margin-bottom:10px;">Todays Menu</a>
+            <% else %>
+                <a href="signup" class="page-scroll btn btn-xl" style="padding:10px 40px !important;margin-bottom:10px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sign Up&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                <a href="#portfolio" class="page-scroll btn btn-xl" style="padding:10px 40px !important;margin-bottom:10px;">Todays Menu</a>
+            <% end %>
         </div>
     </div>
 </header>

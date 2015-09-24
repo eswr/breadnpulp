@@ -3,15 +3,17 @@
 <aside class="col-md-4">
   <section class="user_info" style="padding:0px 0px;margin-top:10vh">
     <h1 align="center">
-      Syed Fazil Basheer
+      <%= @user.name %>
     </h1>
     <p align="center">
-      basheer@breadnpulp.com<br>
-      9820392422
+      <%= @user.email %><br>
+      <%= @user.phone_number %>
     </p>
   </section>
     <section class="address_form form-group" style="padding:5vh 0px;">
-      <h3 align="center">My new address</h3>  
+      <h3 align="center">
+      <%= current_user?(@user)? "My new addresses" : "#{@user.name}'s addresses" %>
+    </h3>
       <%= render 'shared/address_form' %>
     </section>
     <h3 align="center">
