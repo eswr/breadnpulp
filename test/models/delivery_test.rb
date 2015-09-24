@@ -3,7 +3,7 @@
 # Table name: deliveries
 #
 #  id                 :integer          not null, primary key
-#  on                 :date
+#  delivery_date      :date
 #  at                 :time
 #  collect            :integer
 #  user_id            :integer

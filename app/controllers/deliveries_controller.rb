@@ -8,7 +8,7 @@ class DeliveriesController < ApplicationController
 	def new
 		logged_in? ? @user = current_user : @user = User.new
 		@delivery = @user.deliveries.new
-		@available_menus = Menu.where(available_on: active_menu_date).map { |menu| [menu.kickerr.name, menu.id] }
+		@available_menus = Menu.where(available_on: active_menu_date)
 		@available_menus.count.times { @delivery.packs.build }
 	end
 
@@ -33,7 +33,8 @@ class DeliveriesController < ApplicationController
 
 	def edit
 		@delivery = Delivery.find(params[:id])
-		@available_menus = Menu.where(available_on: @delivery.on).map { |menu| [menu.kickerr.name, menu.id] }
+		@available_menus = Menu.where(available_on: @delivery.delivery_date)
+		@delivery_statuses = DeliveryStatus.all
 	end
 
 	def update
@@ -48,17 +49,29 @@ class DeliveriesController < ApplicationController
 	end
 
 	def index
-		@deliveries = Delivery.all
+		@deliveries = Delivery.order(delivery_date: :desc, at: :asc)
 	end
 
 	def destroy
 		Delivery.find(params[:id]).destroy
 	end
 
+	def todays_orders
+		@deliveries = Delivery.where("delivery_date = ?", Date.today).order(at: :asc)
+	end
+
+	def future_orders
+		@deliveries = Delivery.where("delivery_date < ?", Date.today).order(delivery_date: :asc, at: :asc)
+	end
+
+	def past_orders
+		@deliveries = Delivery.where("delivery_date > ?", Date.today).order(delivery_date: :desc, at: :desc)
+	end
+
 	private
 
 	def delivery_params
-		params.require(:delivery).permit(:on, :at, :collect, :address_id, packs_attributes: [:id, :quantity, :menu_id])
+		params.require(:delivery).permit(:delivery_date, :at, :collect, :address_id, :delivery_status_id, packs_attributes: [:id, :quantity, :menu_id])
 	end
 
 	def editable_delivery
@@ -96,7 +109,7 @@ class DeliveriesController < ApplicationController
 	def send_sms (delivery)
 		url = URI.parse(URI.encode("http://trx.orangesms.net/api/sendmsg.php?user=breadnpulp&pass=qweqwe&sender=BRDPLP" +
 			"&phone=#{delivery.user.phone_number}" +
-			"&text=Hi #{delivery.user.name.split(' ').first}! Your order for #{delivery.on}: #{delivery.delivery_status.name}." +
+			"&text=Hi #{delivery.user.name.split(' ').first}! Your order for #{delivery.delivery_date}: #{delivery.delivery_status.name}." +
 			"&priority=ndnd&stype=normal"))
 		req = Net::HTTP::Get.new(url.to_s)
 		res = Net::HTTP.start(url.host, url.port) {|http| http.request(req)}

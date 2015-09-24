@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150918061142) do
+ActiveRecord::Schema.define(version: 20150924151132) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20150918061142) do
   add_index "addresses", ["user_id"], name: "index_addresses_on_user_id", using: :btree
 
   create_table "deliveries", force: :cascade do |t|
-    t.date     "on"
+    t.date     "delivery_date"
     t.time     "at"
     t.integer  "collect"
     t.integer  "user_id"
