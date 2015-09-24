@@ -39,12 +39,13 @@ class DeliveriesController < ApplicationController
 
 	def update
 		@delivery = Delivery.find(params[:id])
-		if !current_user.admin?
-			params[:delivery_status] = DeliveryStatus.find_by(name: 'Tentative')
-		end
 		if @delivery.update_attributes(delivery_params)
 			send_sms @delivery
 			redirect_to @delivery.user
+			if !current_user.admin?
+				@delivery.delivery_status = DeliveryStatus.find_by(name: 'Tentative')
+				@delivery.save
+			end
 		end
 	end
 
