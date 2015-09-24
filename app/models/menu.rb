@@ -14,5 +14,10 @@ class Menu < ActiveRecord::Base
   belongs_to :kickerr
 
   has_many :packs
+
   has_many :deliveries, through: :packs
+
+  validates :available_on, 			presence: true
+  validates :kickerr_id,			presence: true
+  validates :price,					presence: true
 end

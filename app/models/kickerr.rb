@@ -18,5 +18,11 @@ class Kickerr < ActiveRecord::Base
 
 	has_many :packs, through: :menus
 
-	# accepts_nested_attributes_for :food_items, allow_destroy: true, reject_if: :all_blank
+	validates :name,			presence: true,
+								uniqueness: { case_sensitive: false }
+	validates :price,			presence: true,
+								numericality: true
+
+	validates :description,		presence: true,
+								length: { maximum: 150 }
 end

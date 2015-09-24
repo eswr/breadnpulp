@@ -21,7 +21,6 @@ class UsersController < ApplicationController
       @user.send_activation_email
       flash[:info] = "Please check your email to activate your account."
       redirect_to root_url
-      send_sms_to "9820392422", "Test%20SMS"
     else
       render 'new'
     end

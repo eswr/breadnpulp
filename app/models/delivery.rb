@@ -21,6 +21,10 @@ class Delivery < ActiveRecord::Base
   has_many :packs
   has_many :menus, through: :packs
 
+  validates :delivery_date,			presence: true
+  validates :at,					presence: true
+  validates :address_id,			presence: true
+
   accepts_nested_attributes_for :packs, reject_if: lambda { |attributes| attributes[:quantity].to_f < 1 }
 
 end
