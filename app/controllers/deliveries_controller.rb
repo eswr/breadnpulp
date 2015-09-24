@@ -65,7 +65,7 @@ class DeliveriesController < ApplicationController
 		@deliveries = Delivery.where("delivery_date < ?", Date.today).order(delivery_date: :asc, at: :asc)
 	end
 
-	def past_orders
+	def recent_orders
 		@deliveries = Delivery.where("delivery_date > ?", Date.today).order(delivery_date: :desc, at: :desc)
 	end
 

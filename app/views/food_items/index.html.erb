@@ -1,19 +1,36 @@
 <% provide(:title, "All food items") %>
-<div class="container">
 
-<h1>All food items</h1>
-<% if logged_in? %>
-	<% if current_user.admin? %>
-		<div class="center"><small><%= link_to "New food item", new_food_item_path %></small></div>
+<h1>All Food Items</h1>
+
+<table class="table table-hover">
+	<tr>
+		<th>
+			Name
+		</th>
+		<th>
+			Veg/Non-Veg/Egg
+		</th>
+		<th>
+			Description
+		</th>
+		<th>
+			Actions
+		</th>
+	</tr>
+	<% @food_items.each do |food_item| %>
+		<tr>
+			<td>
+				<%= food_item.name %>
+			</td>
+			<td>
+				<%= food_item.veg_non_egg %>
+			</td>
+			<td>
+				<%= food_item.description %>
+			</td>
+			<td>
+				<%= link_to "edit", edit_food_item_path(food_item) %>
+			</td>
+		</tr>
 	<% end %>
-<% end %>
-<% courses_array = ['Main', 'Beverage', 'Salad', 'Side'] %>
-<% courses_array.each do |c| %>
-	<div class="col-md-3">
-		<ul class="food_items">
-			<h3><%= c %></h3>
-			<%= render @food_items.where(course: c) %>
-		</ul>
-	</div>
-<% end %>
-</div>
+</table>

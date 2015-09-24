@@ -1,24 +1,74 @@
 <% provide(:title, "All menus") %>
-<div class="container">
 
 <h1>All Menus</h1>
-<%if logged_in? && current_user.admin? %><small><%= link_to "New menu", new_menu_path %></small>
-<% end %>
-	<% courses_array = ['Main', 'Beverage', 'Salad', 'Side'] %>
-	<% courses_array.each do |c| %>
-		
-			<%= c %>
-		
-	<% end %>
 
-	<ul>
-	<% @all_dates.each do |date| %>
-		<li>
-			<%= date %>
-			<% menus_on(date).each do |menu| %>
-				<%= render menu.kickerr %>
-			<% end %>
-		</li>
+<table class="table table-hover">
+	<tr>
+		<th>
+			Available on
+		</th>
+		<th>
+			Kickerr name
+		</th>
+		<th>
+			Price
+		</th>
+		<th>
+			Kickerr description
+		</th>
+		<th>
+			Main course(s)
+		</th>
+		<th>
+			Beverage(s)
+		</th>
+		<th>
+			Salad(s)
+		</th>
+		<th>
+			Side(s)
+		</th>
+		<th>
+			Action(s)
+		</th>
+	</tr>
+	<% @menus.each do |menu| %>
+		<tr>
+			<td>
+				<%= menu.available_on %>
+			</td>
+			<td>
+				<%= menu.kickerr.name %>
+			</td>
+			<td>
+				<%= menu.price %>
+			</td>
+			<td>
+				<%= menu.kickerr.description %>
+			</td>
+			<td>
+				<% menu.kickerr.food_items.where(course: 'Main').each do |food_item| %>
+					<%= food_item.name %><br>
+				<% end %>
+			</td>
+			<td>
+				<% menu.kickerr.food_items.where(course: 'Beverage').each do |food_item| %>
+					<%= food_item.name %><br>
+				<% end %>
+			</td>
+			<td>
+				<% menu.kickerr.food_items.where(course: 'Salad').each do |food_item| %>
+					<%= food_item.name %><br>
+				<% end %>
+			</td>
+			<td>
+				<% menu.kickerr.food_items.where(course: 'Side').each do |food_item| %>
+					<%= food_item.name %><br>
+				<% end %>
+			</td>
+			<td>
+				<%= link_to "edit", edit_menu_path(menu) %>
+			</td>
+		</tr>
 	<% end %>
-	</ul>
-</div>
+</table>

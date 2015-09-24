@@ -1,20 +1,68 @@
 <% provide(:title, "All kickerrs") %>
-<div class="container">
 
-<h1>All kickerrs</h1>
-<div class="center">
-	<small><%= link_to "New kickerr", new_kickerr_path %></small>
-</div>
-<div class="row">
-	<% courses_array = ['Main', 'Beverage', 'Salad', 'Side'] %>
-	<% courses_array.each do |c| %>
-		<div class="col-md-3">
-			<%= c %>
-		</div>
+<h1>All Kickerrs</h1>
+
+<table class="table table-hover">
+	<tr>
+		<th>
+			Name
+		</th>
+		<th>
+			Main(s)
+		</th>
+		<th>
+			Beverage(s)
+		</th>
+		<th>
+			Salad(s)
+		</th>
+		<th>
+			Side(s)
+		</th>
+		<th>
+			Description
+		</th>
+		<th>
+			Price
+		</th>
+		<th>
+			Actions
+		</th>
+	</tr>
+	<% @kickerrs.each do |kickerr| %>
+		<tr>
+			<td>
+				<%= kickerr.name %>
+			</td>
+			<td>
+				<% kickerr.food_items.where(course: 'Main').each do |food_item| %>
+					<%= food_item.name %><br>
+				<% end %>
+			</td>
+			<td>
+				<% kickerr.food_items.where(course: 'Beverage').each do |food_item| %>
+					<%= food_item.name %><br>
+				<% end %>
+			</td>
+			<td>
+				<% kickerr.food_items.where(course: 'Salad').each do |food_item| %>
+					<%= food_item.name %><br>
+				<% end %>
+			</td>
+			<td>
+				<% kickerr.food_items.where(course: 'Side').each do |food_item| %>
+					<%= food_item.name %><br>
+				<% end %>
+			</td>
+			<td>
+				<%= kickerr.price %>
+			</td>
+			<td>
+				<%= kickerr.description %>
+			</td>
+			<td>
+				<%= link_to "edit", edit_kickerr_path(kickerr) %>
+			</td>
+		</tr>
 	<% end %>
-</div>
-
-<ul class="kickerrs">
-	<%= render @kickerrs %>
-</ul>
-</div>
+</table>

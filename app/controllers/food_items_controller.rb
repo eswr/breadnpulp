@@ -1,7 +1,8 @@
 class FoodItemsController < ApplicationController
 
-	before_action		:logged_in_user,		except: :index
-	before_action 		:admin_user,			except: :index
+	before_action		:logged_in_user
+	before_action 		:admin_user
+	
 	def new
 		@food_item = FoodItem.new
 	end

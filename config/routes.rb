@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   get     'future_orders' => 'deliveries#future_orders'
   get     'todays_orders' => 'deliveries#todays_orders'
-  get     'past_orders' => 'deliveries#past_orders'
+  get     'recent_orders' => 'deliveries#recent_orders'
 
   resources :users
   resources :account_activations, only: [:edit]

@@ -1,7 +1,7 @@
 class MenusController < ApplicationController
 
-	before_action :logged_in_user, except: :index
-	before_action :admin_user,     except: :index
+	before_action :logged_in_user
+	before_action :admin_user
 
   def new
   	@menu = Menu.new
@@ -28,7 +28,7 @@ class MenusController < ApplicationController
   end
 
   def index
-    @all_dates = Menu.select(:available_on).map(&:available_on).uniq
+    @menus = Menu.order(available_on: :desc)
   end
 
   def update

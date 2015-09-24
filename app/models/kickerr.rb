@@ -25,4 +25,16 @@ class Kickerr < ActiveRecord::Base
 
 	validates :description,		presence: true,
 								length: { maximum: 150 }
+
+	def veg_type
+		veg_non_eggs = self.food_items.map { |fi| fi.veg_non_egg }
+		if "Non-Veg".in?(veg_non_eggs)
+			"Non-Veg"
+		elsif "Egg".in?(veg_non_eggs)
+			"Egg"
+		else
+			"Veg"
+		end
+	end
+			
 end
