@@ -19,7 +19,7 @@ class DeliveriesController < ApplicationController
 		if !current_user.admin?
 			@delivery.delivery_status = DeliveryStatus.find_by(name: 'Tentative')
 			@delivery.packs.each do |pack|
-				pack.unit_price = @pack.menu.get_price
+				pack.unit_price = pack.menu.get_price
 			end
 			flash[:success] = "Order successfully placed. We'll confirm it shorly."
 		else
@@ -50,7 +50,7 @@ class DeliveriesController < ApplicationController
 			if !current_user.admin?
 				@delivery.delivery_status = DeliveryStatus.find_by(name: 'Tentative')
 				@delivery.packs.each do |pack|
-					pack.unit_price = @pack.menu.get_price
+					pack.unit_price = pack.menu.get_price
 				end
 				@delivery.save
 			end
