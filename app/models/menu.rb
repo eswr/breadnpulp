@@ -20,4 +20,8 @@ class Menu < ActiveRecord::Base
   validates :available_on, 			presence: true
   validates :kickerr_id,			presence: true
   validates :price,					presence: true
+
+  def get_price
+  	self.price.nil? ? self.kickerr.price : self.price
+  end
 end

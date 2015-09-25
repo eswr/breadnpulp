@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150924151132) do
+ActiveRecord::Schema.define(version: 20150925080044) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +36,8 @@ ActiveRecord::Schema.define(version: 20150924151132) do
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
     t.integer  "delivery_status_id"
+    t.date     "payment_date"
+    t.string   "payment_mode"
   end
 
   add_index "deliveries", ["address_id"], name: "index_deliveries_on_address_id", using: :btree
@@ -92,6 +94,7 @@ ActiveRecord::Schema.define(version: 20150924151132) do
     t.integer  "delivery_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "unit_price"
   end
 
   add_index "packs", ["delivery_id"], name: "index_packs_on_delivery_id", using: :btree

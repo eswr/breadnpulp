@@ -4,8 +4,8 @@
 <h1>New Order</h1>
 
 <div class="row">
-	<% menus_on(active_menu_date).each do |menu| %>
-		<%= render menu.kickerr %>
+	<% @available_menus.each do |menu| %>
+		<%= render menu %>
 	<% end %>
 </div>	
 
@@ -17,9 +17,14 @@
 		<div class="col-md-4">
 			<h3>Cart</h3>
 			<%= delivery_form.fields_for :packs do |pack_fields| %>
-				<%= pack_fields.select(:menu_id, ((@available_menus).map { |menu| [menu.kickerr.name, menu.id] })) %>
-				<h7>Quantity</h7>
-				<%= pack_fields.select(:quantity, ((0..10).map {|i| [i,i] })) %><br><br>
+				<%= pack_fields.label :pack %>
+				<%= pack_fields.select(:menu_id, ((@available_menus).map { |menu| [menu.kickerr.name, menu.id] })) %><br>
+				<%= pack_fields.label :quantity %>
+				<%= pack_fields.select(:quantity, ((0..10).map {|i| [i,i] })) %><br>
+				<% if current_user.admin? %>
+					<%= pack_fields.label :unit_price %>
+					<%= pack_fields.text_field :unit_price %><br>
+				<% end %><br>
 			<% end %><br>
 		</div>
 		<div class="col-md-4">
@@ -34,6 +39,17 @@
 	</div>
 
 	<%= delivery_form.hidden_field :delivery_date, value: active_menu_date %>
+
+	<div class="row">
+		<% if current_user.admin? %>
+			<h4>Edit status</h4>
+			<%= delivery_form.select(:delivery_status_id, ((@delivery_statuses).map { |status| [status.name, status.id] })) %><br>
+			<%= delivery_form.label :payment_date %>
+			<%= delivery_form.date_field :payment_date %><br>
+			<%= delivery_form.label :payment_mode %>
+			<%= delivery_form.text_field :payment_mode %><br>
+		<% end %>
+	</div>
 
 	<div class="col-md-4 col-md-offset-4" style="margin-top: 30px;">
 		<%= delivery_form.submit "Confirm order", class: 'btn btn-primary', style: "color: black;" %>

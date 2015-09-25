@@ -5,10 +5,10 @@
             <div class="intro-lead-in" style="margin-bottom:150px"></div>
             <!--<div class="intro-heading">It's Nice To Meet You</div>-->
             <% if logged_in? %>
-                <a href="#portfolio" class="page-scroll btn btn-xl" style="padding:10px 40px !important;margin-bottom:10px; color: black;">Todays Menu</a>
+                <a href="#portfolio" class="page-scroll btn btn-xl" style="padding:10px 40px !important;margin-bottom:10px; color: black;"><%= active_day Date.yesterday %>'s Menu</a>
             <% else %>
                 <a href="signup" class="page-scroll btn btn-xl" style="padding:10px 40px !important;margin-bottom:10px; color: black;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sign Up&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-                <a href="#portfolio" class="page-scroll btn btn-xl" style="padding:10px 40px !important;margin-bottom:10px; color: black;">Todays Menu</a>
+                <a href="#portfolio" class="page-scroll btn btn-xl" style="padding:10px 40px !important;margin-bottom:10px; color: black;"><%= active_day active_menu_date %>'s Menu</a>
             <% end %>
         </div>
     </div>
@@ -24,7 +24,7 @@
             </div>
             <div class="row">
                 <% menus_on(active_menu_date).each do |menu| %>
-                    <%= render menu.kickerr %>
+                    <%= render menu %>
                 <% end %>
             </div>
         </div>

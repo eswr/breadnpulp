@@ -11,6 +11,8 @@
 #  created_at         :datetime         not null
 #  updated_at         :datetime         not null
 #  delivery_status_id :integer
+#  payment_date       :date
+#  payment_mode       :string
 #
 
 require 'test_helper'

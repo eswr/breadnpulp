@@ -1,7 +1,7 @@
 class DeliveriesController < ApplicationController
 
 	before_action :logged_in_user
-	before_action :admin_user,			only: [:index]
+	before_action :admin_user,			only: [:edit, :update, :index, :destroy]
 	before_action :correct_user,		only: [:edit, :update, :destroy ]
 	before_action :editable_delivery,	only: [:edit, :update]
 
@@ -17,6 +17,9 @@ class DeliveriesController < ApplicationController
 		@delivery = @user.deliveries.new(delivery_params)
 		if !current_user.admin?
 			@delivery.delivery_status = DeliveryStatus.find_by(name: 'Tentative')
+			@delivery.packs.each do |pack|
+				pack.unit_price = @pack.menu.get_price
+			end
 			flash[:success] = "Order successfully placed. We'll confirm it shorly."
 		else
 			@delivery.delivery_status = DeliveryStatus.find_by(name: 'Confirmed')
@@ -35,6 +38,7 @@ class DeliveriesController < ApplicationController
 		@delivery = Delivery.find(params[:id])
 		@available_menus = Menu.where(available_on: @delivery.delivery_date)
 		@delivery_statuses = DeliveryStatus.all
+		@delivery.packs.build
 	end
 
 	def update
@@ -44,6 +48,9 @@ class DeliveriesController < ApplicationController
 			redirect_to @delivery.user
 			if !current_user.admin?
 				@delivery.delivery_status = DeliveryStatus.find_by(name: 'Tentative')
+				@delivery.packs.each do |pack|
+					pack.unit_price = @pack.menu.get_price
+				end
 				@delivery.save
 			end
 		end
@@ -72,7 +79,7 @@ class DeliveriesController < ApplicationController
 	private
 
 	def delivery_params
-		params.require(:delivery).permit(:delivery_date, :at, :collect, :address_id, :delivery_status_id, packs_attributes: [:id, :quantity, :menu_id])
+		params.require(:delivery).permit(:delivery_date, :at, :collect, :address_id, :delivery_status_id, packs_attributes: [:id, :quantity, :menu_id, :unit_price, :payment_date, :payment_mode])
 	end
 
 	def editable_delivery

@@ -11,6 +11,8 @@
 #  created_at         :datetime         not null
 #  updated_at         :datetime         not null
 #  delivery_status_id :integer
+#  payment_date       :date
+#  payment_mode       :string
 #
 
 class Delivery < ActiveRecord::Base
@@ -26,5 +28,13 @@ class Delivery < ActiveRecord::Base
   validates :address_id,			presence: true
 
   accepts_nested_attributes_for :packs, reject_if: lambda { |attributes| attributes[:quantity].to_f < 1 }
+
+  def get_total_amount
+  	total_amount = 0
+  	self.packs.each do |pack|
+  		total_amount = pack.get_unit_price * pack.quantity
+  	end
+  	total_amount
+  end
 
 end

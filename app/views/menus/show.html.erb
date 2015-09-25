@@ -1,22 +1,10 @@
 <% provide(:title, "Menu") %>
 <div class="container">
-
-<h1>Menu</h1>
-
-<div class="row">
-	<h3><%= @menu.kickerr.name %> is available on <%= @menu.available_on %> for Rs. <%= @menu.price %></h3>
-</div>
-
-<div class="row">
-	<% courses_array = ['Main', 'Beverage', 'Salad', 'Side'] %>
-	<% courses_array.each do |c| %>
-		<div class="col-md-3">
-			<%= c %>
-		</div>
-	<% end %>
-</div>
-
-<div class="kickerr">
-	<%= render @menu.kickerr %>
-</div>
+	<h1>Menu</h1>
+	<div class="row">
+		<p><%= @menu.kickerr.name %> is available on <%= @menu.available_on %> for Rs. <%= @menu.get_price %></p>
+	</div>
+	<div class="kickerr">
+		<%= render @menu.kickerr %>
+	</div>
 </div>
