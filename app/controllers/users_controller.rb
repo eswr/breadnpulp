@@ -12,7 +12,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @addresses = @user.addresses.all
     @address = @user.addresses.build if logged_in?
-    @deliveries = @user.deliveries.order(at: :asc).order(delivery_date: :desc)
+    @deliveries = @user.deliveries.order(delivery_date: :desc).order(at: :asc)
   end
 
   def create
