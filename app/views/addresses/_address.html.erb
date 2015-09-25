@@ -3,8 +3,8 @@
   <span class="full_address"><%= address.full_address %></span><br>
   <span class="pincode"><%= address.pincode %></span><br>
   <% if current_user?(address.user) %>
-  	<%= link_to "edit", edit_address_path(address), class: "btn btn-warning btn-xs", style: "background-color: #fed136; border-color: #ffffff"; %> | 
-  	<%= link_to "delete", address, class: "btn btn-warning btn-xs", style: "background-color: #fed136; border-color: #ffffff;", method: :delete,
+  	<%= link_to "edit", edit_address_path(address), class: "btn btn-warning btn-xs", style: "background-color: #fed136; border-color: #ffffff; color: black;" %> | 
+  	<%= link_to "delete", address, class: "btn btn-warning btn-xs", style: "background-color: #fed136; border-color: #ffffff; color: black;", method: :delete,
   									data: { confirm: "You sure?" } %><br>
   <% end %>
 </li>
