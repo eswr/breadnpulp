@@ -16,6 +16,7 @@
 #  activated_at      :datetime
 #  reset_digest      :string
 #  reset_sent_at     :datetime
+#  source            :string
 #
 
 class User < ActiveRecord::Base

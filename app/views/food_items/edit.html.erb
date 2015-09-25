@@ -9,20 +9,23 @@
 		<%= render 'shared/error_messages', object: f.object %>
 
 		<%= f.label :name %>
-		<%= f.text_field :name, class: 'form-control' %>
+		<%= f.text_field :name, class: 'form-control' %><br>
 
 		<%= f.label :course %>
-		<%= f.select :course, %w[Main Beverage Salad Side], class: 'form-control' %>
+		<%= f.select :course, %w[Main Beverage Salad Side], class: 'form-control' %><br>
 
 		<%= f.label :veg_non_egg %>
-		<%= f.select :veg_non_egg, %w[Veg Non-Veg Egg], class: 'form-control' %>
+		<%= f.select :veg_non_egg, %w[Veg Non-Veg Egg], class: 'form-control' %><br>
 
 		<%= f.label :description %>
-		<%= f.text_area :description, class: 'form-control' %>
+		<%= f.text_area :description, class: 'form-control' %><br>
 
 		<%= f.label :image %><br>
-		<%= image_tag @food_item.image.url :medium %>
-		<%= f.file_field :image %>
+		<%= image_tag @food_item.image.url :medium %><br>
+		<%= f.file_field :image %><br>
+
+		<%= f.label :show? %><br>
+		<%= f.check_box :show %><br>
 
 		<%= f.submit "Save food item", class: 'btn btn-primary' %>
 	<% end %>

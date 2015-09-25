@@ -16,6 +16,7 @@
 #  activated_at      :datetime
 #  reset_digest      :string
 #  reset_sent_at     :datetime
+#  source            :string
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

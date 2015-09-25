@@ -13,6 +13,7 @@
 #  image_file_size    :integer
 #  image_updated_at   :datetime
 #  course             :string
+#  show               :boolean
 #
 
 class FoodItem < ActiveRecord::Base
