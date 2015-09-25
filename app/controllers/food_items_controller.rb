@@ -50,7 +50,7 @@ class FoodItemsController < ApplicationController
 	private
 
 		def food_item_params
-			params.require(:food_item).permit(:name, :veg_non_egg, :description, :image, :course, :show)
+			params.require(:food_item).permit(:name, :veg_non_egg, :description, :image, :course, :show_image)
 		end
 
 		def admin_user

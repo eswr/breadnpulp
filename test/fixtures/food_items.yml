@@ -13,7 +13,7 @@
 #  image_file_size    :integer
 #  image_updated_at   :datetime
 #  course             :string
-#  show               :boolean
+#  show_image         :boolean
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
