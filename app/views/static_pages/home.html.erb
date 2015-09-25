@@ -5,7 +5,7 @@
             <div class="intro-lead-in" style="margin-bottom:150px"></div>
             <!--<div class="intro-heading">It's Nice To Meet You</div>-->
             <% if logged_in? %>
-                <a href="#portfolio" class="page-scroll btn btn-xl" style="padding:10px 40px !important;margin-bottom:10px; color: black;"><%= active_day Date.yesterday %>'s Menu</a>
+                <a href="#portfolio" class="page-scroll btn btn-xl" style="padding:10px 40px !important;margin-bottom:10px; color: black;"><%= active_day active_menu_date %>'s Menu</a>
             <% else %>
                 <a href="signup" class="page-scroll btn btn-xl" style="padding:10px 40px !important;margin-bottom:10px; color: black;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sign Up&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
                 <a href="#portfolio" class="page-scroll btn btn-xl" style="padding:10px 40px !important;margin-bottom:10px; color: black;"><%= active_day active_menu_date %>'s Menu</a>
@@ -36,7 +36,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading" style="color: #fed136;">Contact Us... Anytime!!</h2>
+                    <h2 class="section-heading" style="color: #fed136;">Contact Us</h2>
                     <h3 class="section-subheading text-muted">praveen@breadnpulp.com | 75062 44659 | facebook.com/breadnpulp</h3>
                 </div>
             </div>
