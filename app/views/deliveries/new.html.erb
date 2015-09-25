@@ -42,7 +42,8 @@
 
 	<div class="row">
 		<% if current_user.admin? %>
-			<h4>Edit status</h4>
+			<h3>Admin controls</h3>
+			<%= delivery_form.label :delivery_status %>
 			<%= delivery_form.select(:delivery_status_id, ((@delivery_statuses).map { |status| [status.name, status.id] })) %><br>
 			<%= delivery_form.label :payment_date %>
 			<%= delivery_form.date_field :payment_date %><br>
