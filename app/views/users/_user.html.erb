@@ -1,7 +1,20 @@
-<li>
-  <%= link_to user.name, user %>
-  <% if current_user.admin? && !current_user?(user) %>
-    | <%= link_to "delete", user, method: :delete,
-                                  data: { confirm: "You sure?" } %>
-  <% end %>
-</li>
+<tr>
+	<td>
+		<%= user.id %>
+	</td>
+	<td>
+		<%= user.name %>
+	</td>
+	<td>
+		<%= user.phone_number %>
+	</td>
+	<td>
+		<%= user.email %>
+	</td>
+	<td>
+		<%= user.source %>
+	</td>
+	<td>
+		<%= user.created_at %>
+	</td>
+</tr>

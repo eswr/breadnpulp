@@ -36,12 +36,13 @@ class UsersController < ApplicationController
       flash[:success] = "Profile updated"
       redirect_to @user
     else
+      flash.now[:danger] = "Profile not updated. Please try again."
       render 'edit'
     end
   end
 
   def index
-    @users = User.paginate(page: params[:page])
+    @users = User.all
   end
 
   def destroy
@@ -53,8 +54,7 @@ class UsersController < ApplicationController
   private
 
     def user_params
-      params.require(:user).permit(:name, :email, :password,
-                                   :password_confirmation, :phone_number)
+      params.require(:user).permit(:name, :email, :password, :password_confirmation, :phone_number, :source)
     end
 
     # Confirms a logged-in user.

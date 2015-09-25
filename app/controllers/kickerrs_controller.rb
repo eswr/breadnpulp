@@ -10,12 +10,12 @@ class KickerrsController < ApplicationController
   def create
   	@kickerr = Kickerr.new(kickerr_params)
   	if @kickerr.save
-		flash[:success] = "#{@kickerr.name} created!"
-		redirect_to @kickerr
-	else
-		flash.now[:danger] = "#{@kickerr.name} not created, please try again"
-		render 'new'
-	end
+  		flash[:success] = "#{@kickerr.name} created!"
+  		redirect_to @kickerr
+  	else
+  		flash.now[:danger] = "#{@kickerr.name} not created, please try again"
+  		render 'new'
+  	end
   end
 
   def edit

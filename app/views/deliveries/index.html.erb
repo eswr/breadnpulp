@@ -1,6 +1,9 @@
 <% provide(:title, "All orders") %>
 
 <h1>All Orders</h1>
+<% if current_user.admin? %>
+	<%= link_to "New order", new_delivery_path, class: "btn btn-xs", style: "background-color: #fed136; border-color: #ffffff; color: black;" %>
+<% end %>
 
 <table class="table table-hover">
 	<tr>

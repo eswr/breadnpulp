@@ -11,11 +11,11 @@ class MenusController < ApplicationController
   def create
   	@menu = Menu.new(menu_params)
   	if @menu.save
-		flash[:success] = "Menu created!"
-		redirect_to @menu
-	else
-		flash.now[:danger] = "Menu not created, please try again"
-		render 'new'
+  		flash[:success] = "Menu created!"
+  		redirect_to @menu
+  	else
+  		flash.now[:danger] = "Menu not created, please try again"
+  		render 'new'
 	end
   end
 

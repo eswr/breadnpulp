@@ -1,6 +1,9 @@
 <% provide(:title, "All menus") %>
 
 <h1>All Menus</h1>
+<% if current_user.admin? %>
+	<%= link_to "New menu", new_menu_path, class: "btn btn-xs", style: "background-color: #fed136; border-color: #ffffff; color: black;" %>
+<% end %>
 
 <table class="table table-hover">
 	<tr>
