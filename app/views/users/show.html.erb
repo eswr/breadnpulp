@@ -57,7 +57,7 @@
         <div style="padding: 15px;">
         <li class="text-left" style="list-style: none;"><%= delivery.address.postal_address %></li>
         <li class="text-left" style="list-style: none;"><%= delivery.at.strftime("at %I:%M%p") %></li>
-        <b><li class="text-left" style="list-style: none;"><%= delivery.delivery_status.name %></li></b>
+        <b><li class="text-left" style="list-style: none; color: <%= delivery.delivery_status.colorize %>"><%= delivery.delivery_status.name %></li></b>
         </div>
     </div>
   </div>

@@ -45,7 +45,9 @@ class DeliveriesController < ApplicationController
 	def update
 		@delivery = Delivery.find(params[:id])
 		if @delivery.update_attributes(delivery_params)
-			send_sms @delivery
+			if @delivery.delivery_status.name.in? ["Confirmed", "Despatched"]
+				send_sms @delivery
+			end
 			redirect_to @delivery.user
 			if !current_user.admin?
 				@delivery.delivery_status = DeliveryStatus.find_by(name: 'Tentative')

@@ -16,11 +16,11 @@ class DeliveryStatus < ActiveRecord::Base
 						uniqueness: { case_sensitive: false }
 
 	def colorize
-		if self.name = "Tentative"
+		if self.name == "Tentative"
 			"pink"
-		elsif self.name = "Confirmed"
+		elsif self.name == "Confirmed"
 			"green"
-		elsif self.name = "Cancelled"
+		elsif self.name == "Cancelled"
 			"black"
 		else
 			"blue"
