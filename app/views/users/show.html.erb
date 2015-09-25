@@ -26,8 +26,9 @@
 </aside>
 
 <div class="col-xs-12 col-sm-12 col-md-8">
-  <div class="center">
+  <div class="col-md-4 col-md-offset-4">
     <h3>My orders</h3>
+    <h4><%= link_to "Make a new order", new_delivery_path %></h4>
   </div>
   <div class="row">
     <% @deliveries.each do |delivery| %>
