@@ -14,4 +14,16 @@ class DeliveryStatus < ActiveRecord::Base
 
 	validates :name, 	presence: true,
 						uniqueness: { case_sensitive: false }
+
+	def colorize
+		if self.name = "Tentative"
+			"pink"
+		elsif self.name = "Confirmed"
+			"green"
+		elsif self.name = "Cancelled"
+			"black"
+		else
+			"blue"
+		end
+	end
 end
