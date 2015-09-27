@@ -8,7 +8,7 @@ class DeliveriesController < ApplicationController
 	def new
 		logged_in? ? @user = current_user : @user = User.new
 		@delivery = @user.deliveries.new
-		@available_menus = Menu.where(available_on: active_menu_date)
+		@available_menus = menus_on(active_menu_date)
 		@delivery_statuses = DeliveryStatus.all
 		@available_menus.count.times { @delivery.packs.build }
 	end
