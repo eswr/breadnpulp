@@ -35,7 +35,7 @@
 
 		<div class="col-md-4">
 			<h3>Delivery address</h3>
-			<%= delivery_form.select(:address_id, ((@delivery.user.addresses.all).map { |addr| [addr.postal_address, addr.id] })) %>
+			<%= delivery_form.select(:address_id, ((@delivery.user.addresses.all).map { |addr| [addr.postal_address.split('').first(40).join + '...', addr.id] })) %>
 		</div>
 	</div>
 
