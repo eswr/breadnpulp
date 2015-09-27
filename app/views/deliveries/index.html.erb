@@ -6,28 +6,6 @@
 <% end %>
 
 <table class="table table-hover">
-	<tr>
-		<th>
-			Order number
-		</th>
-		<th>
-			Despatch time
-		</th>
-		<th>
-			User details
-		</th>
-		<th>
-			Delivery address
-		</th>
-		<th>
-			Payment details
-		</th>
-		<th>
-			Kickerr details
-		</th>
-		<th>
-			<%= "actions" %>
-		</th>
-	</tr>
+	<%= render 'deliveries/header' %>
 	<%= render @deliveries %>
 </table>

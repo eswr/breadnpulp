@@ -1,6 +1,6 @@
 <tr>
 	<td>
-		<%= delivery.id %><br><%= delivery.delivery_status.name %>
+		<%= delivery.id %><br><%= delivery.delivery_status.name %><br><%= link_to "edit", edit_delivery_path(delivery) %>
 	</td>
 	<td>
 		<%= delivery.delivery_date %><br><%= (delivery.at - 45.minutes).strftime("%I:%M%p") %>
@@ -18,8 +18,5 @@
 		<% delivery.packs.each do |pack| %>
 			<%= pack.menu.kickerr.name %> : <%= pack.quantity %><br>
 		<% end %>
-	</td>
-	<td>
-		<%= link_to "edit", edit_delivery_path(delivery) %>
 	</td>
 </tr>
