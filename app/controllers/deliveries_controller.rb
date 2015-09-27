@@ -9,7 +9,7 @@ class DeliveriesController < ApplicationController
 		logged_in? ? @user = current_user : @user = User.new
 		@delivery = @user.deliveries.new
 		@delivery_statuses = DeliveryStatus.all
-		menus_on(active_menu_date + 1.day).times { @delivery.packs.build }
+		menus_on(active_menu_date).times { @delivery.packs.build }
 	end
 
 	def create
