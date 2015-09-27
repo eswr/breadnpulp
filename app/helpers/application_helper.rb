@@ -14,7 +14,7 @@ module ApplicationHelper
 
 	def active_menu_date
 		Time.zone = 'Chennai'
-		Time.zone.current.hour < 12 ? Date.today : Date.tomorrow
+		Time.current.hour < 12 ? Date.today : Date.tomorrow
 	end
 
 	def active_day(date)
