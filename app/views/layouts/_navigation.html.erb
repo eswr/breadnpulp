@@ -24,7 +24,7 @@
                         <li><%= link_to "Menu", menus_path %></li>
                       <% end %>
                         <li><%= link_to "New order", new_order_path %></li>
-                        <li><%= link_to "Profile", current_user %></li>
+                        <li><%= link_to "#{current_user.name.split(' ').first}", current_user %></li>
                         <li><%= link_to "Log out", logout_path, method: "delete" %></li>
                     <% else %>
                       <li><%= link_to "Log in", login_path %></li>
