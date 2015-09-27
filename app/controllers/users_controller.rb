@@ -42,7 +42,7 @@ class UsersController < ApplicationController
   end
 
   def index
-    @users = User.all
+    @users = User.order(created_at: :asc)
   end
 
   def destroy

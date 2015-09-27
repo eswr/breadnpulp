@@ -23,6 +23,15 @@
                 </div>
             </div>
             <div class="row">
+                <% if menus_on(active_menu_date).count == 1 %>
+                    <% offset = 4 %>
+                <% elsif menus_on(active_menu_date).count == 2 %>
+                    <% offset = 2 %>
+                <% else %>
+                    <% offset = 0 %>
+                <% end %>
+                <div class="col-md-offset-<%= offset %>">                
+
                 <% menus_on(active_menu_date).each do |menu| %>
                     <%= render menu %>
                 <% end %>
