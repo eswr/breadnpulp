@@ -53,7 +53,6 @@ class DeliveriesController < ApplicationController
 			if @delivery.delivery_status.name.in? ["Confirmed", "Despatched"]
 				send_sms @delivery
 			end
-			redirect_to @delivery.user
 			if !current_user.admin?
 				@delivery.delivery_status = DeliveryStatus.find_by(name: 'Tentative')
 				@delivery.packs.each do |pack|
