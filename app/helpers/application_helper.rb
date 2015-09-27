@@ -13,7 +13,7 @@ module ApplicationHelper
 	end
 
 	def active_menu_date
-		(Time.now + 5.hours + 30.minutes).hour < 12 ? Date.today : Date.tomorrow
+		Time.now.hour < 12 ? Date.today : Date.tomorrow
 	end
 
 	def active_day(date)
