@@ -62,7 +62,7 @@ class DeliveriesController < ApplicationController
 			end
 			if @delivery.update_attributes delivery_params
 				flash[:success] = "Order updated"
-				redirect_to @user
+				redirect_to @delivery.user
 			else
 				flash[:danger] = "Order not updated. Please try again"
 				redirect_to request.referrer || root_url
