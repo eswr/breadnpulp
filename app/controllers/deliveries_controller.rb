@@ -23,7 +23,7 @@ class DeliveriesController < ApplicationController
 			flash[:success] = "Order successfully placed"
 			redirect_to @user
 		else
-			flash.now[:danger] = "Order not placed. Please try again"
+			flash[:danger] = "Order not placed. Please try again"
 			redirect_to request.referrer || root_url
 		end
 	end
