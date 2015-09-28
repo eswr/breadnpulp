@@ -2,6 +2,8 @@
 <div class="container">
 
 <h1><%= active_day active_menu_date %> menu</h2>
+<h3><%= active_menu_date %></h3>
+<h3><%= @temp_date %></h3>
 
 <div class="row">
 	<% menus_on(active_menu_date).each do |menu| %>
