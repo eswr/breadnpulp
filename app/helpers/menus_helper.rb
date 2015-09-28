@@ -1,6 +1,7 @@
 module MenusHelper
 
 	def menus_on(date)
+		Time.zone = 'Chennai'
 		Menu.where(available_on: date)
 	end
 
