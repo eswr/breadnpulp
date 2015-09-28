@@ -2,11 +2,9 @@
 <div class="container">
 
 <h1><%= active_day active_menu_date %> menu</h2>
-<h3><%= active_menu_date %></h3>
-<h3><%= @temp_date %></h3>
 
 <div class="row">
-	<% menus_on(active_menu_date).each do |menu| %>
+	<% @menus.each do |menu| %>
 		<%= render menu %>
 	<% end %>
 </div>	
@@ -20,7 +18,7 @@
 			<h3>Cart</h3>
 			<%= delivery_form.fields_for :packs do |pack_fields| %>
 				<%= pack_fields.label :kickerr %>
-				<%= pack_fields.select(:menu_id, ((menus_on(active_menu_date)).map { |menu| [menu.kickerr.name, menu.id] })) %><br>
+				<%= pack_fields.select(:menu_id, (@menus.map { |menu| [menu.kickerr.name, menu.id] })) %><br>
 				<%= pack_fields.label :quantity %>
 				<%= pack_fields.select(:quantity, ((0..10).map {|i| [i,i] })) %><br>
 				<% if current_user.admin? %>
