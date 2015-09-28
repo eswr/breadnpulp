@@ -36,7 +36,7 @@ class Delivery < ActiveRecord::Base
   def get_total_amount
   	total_amount = 0
   	self.packs.each do |pack|
-  		total_amount = pack.get_unit_price * pack.quantity
+  		total_amount += pack.get_unit_price * pack.quantity
   	end
   	total_amount
   end
