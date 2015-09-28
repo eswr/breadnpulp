@@ -10,6 +10,7 @@ class DeliveriesController < ApplicationController
 		@delivery = @user.deliveries.new
 		@delivery_statuses = DeliveryStatus.all
 		menus_on(active_menu_date).count.times { @delivery.packs.build }
+		menus_on(Date.today)
 		@menus = menus_on(active_menu_date)
 	end
 
