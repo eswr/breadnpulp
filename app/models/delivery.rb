@@ -43,7 +43,7 @@ class Delivery < ActiveRecord::Base
 
   def get_b_no
     counter = Delivery.where(delivery_date: self.delivery_date).count + 1
-    booking_no = "MUM001#{self.delivery_date.strftime("%y%m%d")}#{counter}"
+    "MUM001#{self.delivery_date.strftime("%y%m%d")}#{counter}"
   end
 
 end
