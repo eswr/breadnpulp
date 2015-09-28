@@ -13,9 +13,13 @@
 #  delivery_status_id :integer
 #  payment_date       :date
 #  payment_mode       :string
+#  booking_no         :string
 #
 
 class Delivery < ActiveRecord::Base
+
+  
+
   belongs_to :user
   belongs_to :address
   belongs_to :delivery_status
@@ -35,6 +39,11 @@ class Delivery < ActiveRecord::Base
   		total_amount = pack.get_unit_price * pack.quantity
   	end
   	total_amount
+  end
+
+  def get_b_no
+    counter = Delivery.where(delivery_date: self.delivery_date).count.to_s
+    booking_no = "MUM001#{self.delivery_date.strftime("%y%m%d")}#{counter}"
   end
 
 end

@@ -10,11 +10,13 @@ class DeliveriesController < ApplicationController
 		@delivery = @user.deliveries.new
 		@delivery_statuses = DeliveryStatus.all
 		menus_on(active_menu_date).count.times { @delivery.packs.build }
+		@temp_date = active_menu_date
 	end
 
 	def create
 		@user = current_user
 		@delivery = @user.deliveries.new(delivery_params)
+		@delivery.booking_no = @delivery.get_b_no
 		if !current_user.admin?
 			@delivery.delivery_status = DeliveryStatus.find_by(name: 'Tentative')
 			@delivery.packs.each do |pack|
@@ -91,7 +93,7 @@ class DeliveriesController < ApplicationController
 	private
 
 	def delivery_params
-		params.require(:delivery).permit(:delivery_date, :at, :collect, :address_id, :delivery_status_id, packs_attributes: [:id, :quantity, :menu_id, :unit_price, :payment_date, :payment_mode])
+		params.require(:delivery).permit(:delivery_date, :at, :collect, :address_id, :delivery_status_id, :payment_date, :payment_mode, packs_attributes: [:id, :quantity, :menu_id, :unit_price, :payment_date, :payment_mode])
 	end
 
 	# def editable_delivery
@@ -104,6 +106,7 @@ class DeliveriesController < ApplicationController
 	# end
 
 	def active_menu_date
+		Time.zone = 'Chennai'
 		Time.now.hour < 12 ? Date.today : Date.tomorrow
 	end
 

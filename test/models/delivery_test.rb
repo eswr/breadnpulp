@@ -13,6 +13,7 @@
 #  delivery_status_id :integer
 #  payment_date       :date
 #  payment_mode       :string
+#  booking_no         :string
 #
 
 require 'test_helper'
