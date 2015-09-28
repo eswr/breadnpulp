@@ -18,17 +18,7 @@ class DeliveriesController < ApplicationController
 		@user = current_user
 		@delivery = @user.deliveries.new(delivery_params)
 		@delivery.booking_no = @delivery.get_b_no
-		if !current_user.admin?
-			@delivery.delivery_status = DeliveryStatus.find_by(name: 'Tentative')
-			@delivery.packs.each do |pack|
-				pack.unit_price = pack.menu.get_price
-			end
-			flash[:info] = "Order tentative. We'll confirm it asap."
-		else
-			@delivery.delivery_status = DeliveryStatus.find_by(name: 'Confirmed')
-			flash[:info] = "Order confirmed!"
-			send_sms @delivery
-		end
+		@delivery.delivery_status = DeliveryStatus.find_by(name: 'Tentative')
 		if @delivery.save
 			flash[:success] = "Order successfully placed"
 			redirect_to @user
