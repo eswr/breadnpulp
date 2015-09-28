@@ -13,12 +13,10 @@ module ApplicationHelper
 	end
 
 	def active_menu_date
-		Time.zone = 'Chennai'
 		Time.current.hour < 12 ? Date.today : Date.tomorrow
 	end
 
 	def active_day(date)
-		Time.zone = 'Chennai'
 		if date == Date.today
 			"Today's"
 		elsif date == Date.tomorrow

@@ -4,7 +4,6 @@ class StaticPagesController < ApplicationController
 	end
 
 	def active_menu_date
-		Time.zone = 'Chennai'
 		Time.now.hour < 12 ? Date.today : Date.tomorrow
 	end
 end
