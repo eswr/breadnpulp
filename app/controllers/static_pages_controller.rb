@@ -6,6 +6,6 @@ class StaticPagesController < ApplicationController
 
 	def active_menu_date
 		Time.zone = 'Chennai'
-		Time.now.hour < 11 ? Time.now.to_date : Time.now.to_date.tomorrow
+		Time.zone.now.hour < 11 ? Time.zone.now.to_date : Time.zone.now.to_date.tomorrow
 	end
 end
