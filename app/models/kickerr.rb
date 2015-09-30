@@ -31,7 +31,7 @@ class Kickerr < ActiveRecord::Base
 		if self.veg_type == "Non-Veg"
 			"red"
 		elsif self.veg_type == "Egg"
-			"yellow"
+			"#fed136"
 		else
 			"green"
 		end
