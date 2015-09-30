@@ -13,8 +13,6 @@
 
 class Kickerr < ActiveRecord::Base
 
-	after_create :set_veg_type
-
 	has_and_belongs_to_many :food_items
 
 	has_many :menus
@@ -38,9 +36,6 @@ class Kickerr < ActiveRecord::Base
 			"green"
 		end
 	end
-				
-
-	private
 
 	def set_veg_type
 		veg_non_eggs = self.food_items.map { |fi| fi.veg_non_egg }
@@ -51,6 +46,7 @@ class Kickerr < ActiveRecord::Base
 		else
 			self.veg_type = "Veg"
 		end
+		self.save
 	end
 			
 end

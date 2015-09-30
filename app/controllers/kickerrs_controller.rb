@@ -11,6 +11,7 @@ class KickerrsController < ApplicationController
   	@kickerr = Kickerr.new(kickerr_params)
   	if @kickerr.save
   		flash[:success] = "#{@kickerr.name} created!"
+      @kickerr.set_veg_type
   		redirect_to @kickerr
   	else
   		flash.now[:danger] = "#{@kickerr.name} not created, please try again"
