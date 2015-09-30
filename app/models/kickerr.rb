@@ -8,9 +8,12 @@
 #  description :text
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  veg_type    :string
 #
 
 class Kickerr < ActiveRecord::Base
+
+	after_create :set_veg_type
 
 	has_and_belongs_to_many :food_items
 
@@ -26,14 +29,27 @@ class Kickerr < ActiveRecord::Base
 	validates :description,		presence: true,
 								length: { maximum: 150 }
 
-	def veg_type
+	def colorize
+		if self.veg_type == "Non-Veg"
+			"red"
+		elsif self.veg_type == "Egg"
+			"yellow"
+		else
+			"green"
+		end
+	end
+				
+
+	private
+
+	def set_veg_type
 		veg_non_eggs = self.food_items.map { |fi| fi.veg_non_egg }
 		if "Non-Veg".in?(veg_non_eggs)
-			"Non-Veg"
+			self.veg_type = "Non-Veg"
 		elsif "Egg".in?(veg_non_eggs)
-			"Egg"
+			self.veg_type = "Egg"
 		else
-			"Veg"
+			self.veg_type = "Veg"
 		end
 	end
 			
