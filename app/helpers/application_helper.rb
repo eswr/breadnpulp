@@ -13,13 +13,14 @@ module ApplicationHelper
 	end
 
 	def active_menu_date
-		Time.current.hour < 12 ? Date.today : Date.tomorrow
+		Time.zone = "Chennai"
+		Time.current.hour < 12 ? Time.now.to_date : Date.tomorrow
 	end
 
 	def active_day(date)
-		if date == Date.today
+		if date == Time.now.to_date
 			"Today's"
-		elsif date == Date.tomorrow
+		elsif date == Time.now.to_date.tomorrow
 			"Tomorrow's"
 		else
 			"Next"

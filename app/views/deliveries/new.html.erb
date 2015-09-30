@@ -38,7 +38,7 @@
 		</div>
 	</div>
 
-	<%= delivery_form.hidden_field :delivery_date, value: active_menu_date %>
+	<%= delivery_form.hidden_field :delivery_date, value: @date %>
 
 	<div class="row">
 		<% if current_user.admin? %>
