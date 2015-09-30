@@ -25,4 +25,5 @@ module ApplicationHelper
 			"Next"
 		end
 	end
+
 end

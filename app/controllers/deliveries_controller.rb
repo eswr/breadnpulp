@@ -22,9 +22,13 @@ class DeliveriesController < ApplicationController
 		if @delivery.save
 			flash[:success] = "Order successfully placed"
 			redirect_to @user
+			send_sms_to_admin flash[:success] + ", " + @delivery.user.name, "praveen@breadnpulp.com"
+			send_sms_to_admin flash[:success] + ", " + @delivery.user.name, "shubham@breadnpulp.com"
 		else
 			flash[:danger] = "Order not placed. Please try again"
 			redirect_to request.referrer || root_url
+			send_sms_to_admin flash[:danger] + ", " + @delivery.user.name, "praveen@breadnpulp.com"
+			send_sms_to_admin flash[:danger] + ", " + @delivery.user.name, "shubham@breadnpulp.com"
 		end
 	end
 
@@ -44,6 +48,7 @@ class DeliveriesController < ApplicationController
 		if @delivery.update_attributes(delivery_params)
 			if @delivery.delivery_status.name.in? ["Confirmed", "Despatched"]
 				send_sms @delivery
+				send_sms_to_admin "Order confirmed for #{@delivery.user.name}", "arvind@breadnpulp.com"
 			end
 			if !current_user.admin?
 				@delivery.delivery_status = DeliveryStatus.find_by(name: 'Tentative')
@@ -123,6 +128,15 @@ class DeliveriesController < ApplicationController
 		url = URI.parse(URI.encode("http://trx.orangesms.net/api/sendmsg.php?user=breadnpulp&pass=qweqwe&sender=BRDPLP" +
 			"&phone=#{delivery.user.phone_number}" +
 			"&text=Hi #{delivery.user.name.split(' ').first}! Your order for #{delivery.delivery_date}: #{delivery.delivery_status.name}." +
+			"&priority=ndnd&stype=normal"))
+		req = Net::HTTP::Get.new(url.to_s)
+		res = Net::HTTP.start(url.host, url.port) {|http| http.request(req)}
+    end
+
+    def send_sms_to_admin (message, admin_email)
+		url = URI.parse(URI.encode("http://trx.orangesms.net/api/sendmsg.php?user=breadnpulp&pass=qweqwe&sender=BRDPLP" +
+			"&phone=#{User.find_by(email: admin_email).phone_number}" +
+			"&text=#{message}" +
 			"&priority=ndnd&stype=normal"))
 		req = Net::HTTP::Get.new(url.to_s)
 		res = Net::HTTP.start(url.host, url.port) {|http| http.request(req)}
