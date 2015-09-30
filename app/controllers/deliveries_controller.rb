@@ -22,13 +22,13 @@ class DeliveriesController < ApplicationController
 		if @delivery.save
 			flash[:success] = "Order successfully placed"
 			redirect_to @user
-			send_sms_to_admin flash[:success] + ", " + @delivery.user.name + ", " + @delivery.user.phone_number + ", " + @delivery.at, "praveen@breadnpulp.com"
-			send_sms_to_admin flash[:success] + ", " + @delivery.user.name + ", " + @delivery.user.phone_number + ", " + @delivery.at, "shubham@breadnpulp.com"
+			send_sms_to_admin flash[:success] + ", " + @delivery.user.name + ", " + @delivery.user.phone_number + ", " + @delivery.at.to_s, "praveen@breadnpulp.com"
+			send_sms_to_admin flash[:success] + ", " + @delivery.user.name + ", " + @delivery.user.phone_number + ", " + @delivery.at.to_s, "shubham@breadnpulp.com"
 		else
 			flash[:danger] = "Order not placed. Please try again"
 			redirect_to request.referrer || root_url
-			send_sms_to_admin flash[:danger] + ", " + @delivery.user.name + ", " + @delivery.user.phone_number + ", " + @delivery.at, "praveen@breadnpulp.com"
-			send_sms_to_admin flash[:danger] + ", " + @delivery.user.name + ", " + @delivery.user.phone_number + ", " + @delivery.at, "shubham@breadnpulp.com"
+			send_sms_to_admin flash[:danger] + ", " + @delivery.user.name + ", " + @delivery.user.phone_number + ", " + @delivery.at.to_s, "praveen@breadnpulp.com"
+			send_sms_to_admin flash[:danger] + ", " + @delivery.user.name + ", " + @delivery.user.phone_number + ", " + @delivery.at.to_s, "shubham@breadnpulp.com"
 		end
 	end
 
@@ -48,7 +48,7 @@ class DeliveriesController < ApplicationController
 		if @delivery.update_attributes(delivery_params)
 			if @delivery.delivery_status.name.in? ["Confirmed", "Despatched"]
 				send_sms @delivery
-				send_sms_to_admin "Order confirmed for #{@delivery.user.name}, #{@delivery.user.phone_number}, #{@delivery.at}", "arvind@breadnpulp.com"
+				send_sms_to_admin "Order confirmed for #{@delivery.user.name}, #{@delivery.user.phone_number}, #{@delivery.at.to_s}", "arvind@breadnpulp.com"
 			end
 			if !current_user.admin?
 				@delivery.delivery_status = DeliveryStatus.find_by(name: 'Tentative')
