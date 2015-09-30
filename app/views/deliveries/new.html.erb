@@ -1,7 +1,7 @@
 <% provide(:title, "New Order") %>
 <div class="container">
 
-<h1><%= active_day active_menu_date %> menu</h2>
+<h1><%= active_day @date %> menu</h2>
 
 <div class="row">
 	<% @menus.each do |menu| %>
