@@ -35,9 +35,10 @@ class KickerrsController < ApplicationController
   	@kickerr = Kickerr.find(params[:id])
   	if @kickerr.update_attributes(kickerr_params)
   		flash[:success] = "#{@kickerr.name} updated"
-  		redirect_to @kickerr
+  		redirect_to kickerrs_path
   	else
-  		flash.now[:danger] = "#{@kickerr.name} not updated, please try again"
+  		flash[:danger] = "#{@kickerr.name} not updated, please try again"
+      redirect_to edit_kickerr_path(@kickerr)
   	end
   end
 
