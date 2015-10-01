@@ -25,7 +25,7 @@ class Kickerr < ActiveRecord::Base
 								numericality: true
 
 	validates :description,		presence: true,
-								length: { maximum: 150 }
+								length: { maximum: 200 }
 
 	def colorize
 		if self.veg_type == "Non-Veg"
