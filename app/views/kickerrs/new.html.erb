@@ -2,42 +2,41 @@
 
 <div class="container">
 
-<h1>New Kickerr</h1>
+	<h1>New Kickerr</h1>
 
-<div class="row">
-	<div class="col-md-12">
-
+	<div class="row">
 		<%= form_for (@kickerr) do |f| %>
-			<%= render 'shared/error_messages', object: f.object %>
+			<div class="col-md-12">
+				<%= render 'shared/error_messages', object: f.object %>
 
-			<%= f.label :name %>
-			<%= f.text_field :name, class: 'form-control' %>
+				<%= f.label :name %>
+				<%= f.text_field :name, class: 'form-control' %>
 
-			<%= f.label :price %>
-			<%= f.text_field :price, class: 'form-control' %>
+				<%= f.label :price %>
+				<%= f.text_field :price, class: 'form-control' %>
 
-			<%= f.label :description %>
-			<%= f.text_area :description, class: 'form-control' %>
-	</div>
-		<div class="col-md-12">
-			<div class="field">
-		        <div class="field_head">Food items</div>
-	        	<%= hidden_field_tag("kickerr[food_item_ids][]", nil) %>
-	        	<% courses_array = ['Main', 'Beverage', 'Salad', 'Side'] %>
-	        	<% courses_array.each do |c| %>
-		        	<div class="col-md-3">
-		        		<h3><%= c %></h3>
-						<% FoodItem.where(course: c).each do |food_item| %>
-							<label>
-								<%= check_box_tag "kickerr[food_item_ids][]", food_item.id, food_item.id.in?(@kickerr.food_items.collect(&:id)) %>
-								<%= food_item.name %><br>
-							</label><br>
-						<% end %>
-					</div>
-				<% end %>
+				<%= f.label :description %>
+				<%= f.text_area :description, class: 'form-control' %>
 			</div>
-		</div>
-		<%= f.submit "Create kickerr", class: 'btn btn-primary col-md-4 col-md-offset-4' %>
-	</div>
+			<div class="col-md-12">
+				<div class="field">
+			        <div class="field_head">Food items</div>
+		        	<%= hidden_field_tag("kickerr[food_item_ids][]", nil) %>
+		        	<% courses_array = ['Main', 'Beverage', 'Salad', 'Side'] %>
+		        	<% courses_array.each do |c| %>
+			        	<div class="col-md-3">
+			        		<h3><%= c %></h3>
+							<% FoodItem.where(course: c).each do |food_item| %>
+								<label>
+									<%= check_box_tag "kickerr[food_item_ids][]", food_item.id, food_item.id.in?(@kickerr.food_items.collect(&:id)) %>
+									<%= food_item.name %><br>
+								</label><br>
+							<% end %>
+						</div>
+					<% end %>
+				</div>
+			</div>
+			<%= f.submit "Create kickerr", class: 'btn btn-primary col-md-4 col-md-offset-4' %>
 		<% end %>
+	</div>
 </div>
