@@ -14,6 +14,8 @@
             <div class="row" style="margin:-70px !important;">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading"><%= active_day @date %> Menu</h2>
+                    <br>
+                    <br>
                     <h3 class="section-subheading text-muted"></h3>
                 </div>
             </div>
@@ -26,12 +28,12 @@
                     <% offset = 0 %>
                 <% end %>
                 <div class="col-md-offset-<%= offset %>">                
+                    <% @menus.each do |menu| %>
+                        <%= render menu %>
+                    <% end %>
 
-                <% @menus.each do |menu| %>
-                    <%= render menu %>
-                <% end %>
-
-                <div class="col-md-<%= offset %>">
+                    <div class="col-md-<%= offset %>">
+                    </div>
                 </div>
             </div>
             <div style="text-align: center;">
