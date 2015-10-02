@@ -22,18 +22,22 @@
             <div class="row">
                 <% if @menus.count == 1 %>
                     <% offset = 4 %>
+                    <% margin = "50px" %>
                 <% elsif @menus.count == 2 %>
                     <% offset = 2 %>
+                    <% margin = "50px" %>
                 <% else %>
                     <% offset = 0 %>
+                    <% margin = "0px" %>
                 <% end %>
                 <div class="col-md-offset-<%= offset %>">                
                     <% @menus.each do |menu| %>
-                        <%= render menu %>
+                        <div class="col-md-4 col-sm-6 portfolio-item" style="text-align: center; margin-left: <%= margin %>;">
+                            <%= render menu %>
+                        </div>
+                        <div class="col-md-offset-<%= offset %>">
+                        </div>
                     <% end %>
-
-                    <div class="col-md-<%= offset %>">
-                    </div>
                 </div>
             </div>
             <div style="text-align: center;">
