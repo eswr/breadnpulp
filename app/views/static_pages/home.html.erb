@@ -21,27 +21,26 @@
             </div>
             <div class="row">
                 <% if @menus.count == 1 %>
-                    <% offset = 4 %>
-                    <% margin = "50px" %>
+                    <% md = 12 %>
+                    <% lg = 12 %>
                 <% elsif @menus.count == 2 %>
-                    <% offset = 2 %>
-                    <% margin = "50px" %>
+                    <% md = 6 %>
+                    <% lg = 6 %>
                 <% else %>
-                    <% offset = 0 %>
-                    <% margin = "0px" %>
+                    <% md = 4 %>
+                    <% lg = 4 %>
                 <% end %>
-                <div class="col-md-offset-<%= offset %>">                
-                    <% @menus.each do |menu| %>
-                        <div class="col-md-4 col-sm-6 portfolio-item" style="text-align: center; margin-left: <%= margin %>;">
-                            <%= render menu %>
-                        </div>
-                        <div class="col-md-offset-<%= offset %>">
-                        </div>
-                    <% end %>
-                </div>
+                <% @menus.each do |menu| %>
+                  
+                    <div class="col-xs-12 col-sm-12 col-md-<%= md %> col-lg-<%= lg %> portfolio-item" style="text-align: center;">
+                        <%= render menu %>
+                    </div>
+
+                <% end %>
+                
             </div>
             <div style="text-align: center;">
-                <div class="col-md-4 col-md-offset-4">
+               
                     <%= link_to "Make an order", new_delivery_path, class: "btn btn-xl text-center", style: "color: black;" %>
                 </div>
             </div>
