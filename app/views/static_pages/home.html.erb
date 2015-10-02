@@ -21,22 +21,33 @@
             </div>
             <div class="row">
                 <% if @menus.count == 1 %>
-                    <% md = 12 %>
-                    <% lg = 12 %>
+                    <% offset = 4%>
+                    <% xs = 12 %>
+                    <% sm = 12 %>
+                    <% md = 4 %>
+                    <% lg = 4 %>
                 <% elsif @menus.count == 2 %>
-                    <% md = 6 %>
-                    <% lg = 6 %>
+                    <% offset = 2%>
+                    <% xs = 12 %>
+                    <% sm = 12 %>
+                    <% md = 4 %>
+                    <% lg = 4 %>
                 <% else %>
+                    <% offset = 0 %>
+                    <% xs = 12 %>
+                    <% sm = 12 %>
                     <% md = 4 %>
                     <% lg = 4 %>
                 <% end %>
+                <div class="col-xs-<%= offset %> col-sm-<%= offset %> col-md-<%= offset %> col-lg-<%= offset %>"></div>
                 <% @menus.each do |menu| %>
-                  
-                    <div class="col-xs-12 col-sm-12 col-md-<%= md %> col-lg-<%= lg %> portfolio-item" style="text-align: center;">
+    
+                    <div class="col-xs-<%= xs %> col-sm-<%= sm %> col-md-<%= md %> col-lg-<%= lg %> portfolio-item" style="text-align: center;">
                         <%= render menu %>
                     </div>
 
                 <% end %>
+                <div class="col-xs-<%= offset %> col-sm-<%= offset %> col-md-<%= offset %> col-lg-<%= offset %>"></div>
                 
             </div>
             <div style="text-align: center;">
