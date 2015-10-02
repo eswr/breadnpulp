@@ -41,9 +41,7 @@
                 <% end %>
                 <div class="col-xs-<%= offset %> col-sm-<%= offset %> col-md-<%= offset %> col-lg-<%= offset %>"></div>
                 <% @menus.each do |menu| %>
-                    <div class="col-xs-<%= xs %> col-sm-<%= sm %> col-md-<%= md %> col-lg-<%= lg %> portfolio-item" style="text-align: center;">
                     <%= render menu %>
-                    </div>
                 <% end %>
                 <div class="col-xs-<%= offset %> col-sm-<%= offset %> col-md-<%= offset %> col-lg-<%= offset %>"></div>
                 
