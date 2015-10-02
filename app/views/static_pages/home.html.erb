@@ -30,6 +30,9 @@
                 <% @menus.each do |menu| %>
                     <%= render menu %>
                 <% end %>
+
+                <div class="col-md-<%= offset %>">
+                </div>
             </div>
             <div class="col-md-4 col-md-offset-4">
                 <%= link_to "Make an order", new_delivery_path, class: "btn btn-xl text-center", style: "color: black;" %>
