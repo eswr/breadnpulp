@@ -15,7 +15,10 @@
 		<%= user.source %>
 	</td>
 	<td>
-		<%= user.created_at + 5.hours + 30.minutes %>
+		<%= user.created_at %>
+	</td>
+	<td>
+		<%= user.activated? %>
 	</td>
 	<td>
 		<%= user.admin? %>
