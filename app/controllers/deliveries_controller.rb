@@ -22,6 +22,7 @@ class DeliveriesController < ApplicationController
 		@delivery = @user.deliveries.new(delivery_params)
 		@delivery.booking_no = @delivery.get_b_no
 		@delivery.delivery_status = DeliveryStatus.find_by(name: 'Tentative')
+		@delivery.payment_status = PaymentStatus.find_by(name: 'Payment Due')
 		if @delivery.save
 			flash[:success] = "Order successfully placed"
 			redirect_to @user
@@ -56,6 +57,7 @@ class DeliveriesController < ApplicationController
 			end
 			if !current_user.admin?
 				@delivery.delivery_status = DeliveryStatus.find_by(name: 'Tentative')
+				@delivery.payment_status = PaymentStatus.find_by(name: 'Payment Due')
 				@delivery.packs.each do |pack|
 					pack.unit_price = pack.menu.get_price
 				end

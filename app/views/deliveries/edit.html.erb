@@ -44,6 +44,7 @@
 			<%= delivery_form.label :delivery_status %>
 			<%= delivery_form.select(:delivery_status_id, ((@delivery_statuses).map { |status| [status.name, status.id] })) %>
 			<br>
+			<%= delivery_form.label :payment_status %>
 			<%= delivery_form.select(:payment_status_id, ((@payment_statuses).map { |status| [status.name, status.id] })) %>
 			<br>
 			<%= delivery_form.label :payment_date %>
