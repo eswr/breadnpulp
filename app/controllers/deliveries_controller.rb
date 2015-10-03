@@ -12,7 +12,7 @@ class DeliveriesController < ApplicationController
 		menus_on(active_menu_date).count.times { @delivery.packs.build }
 		@menus = menus_on(active_menu_date)
 		@date = active_menu_date
-		send_sms_to_admin "User on new order, " + @delivery.user.name, "praveen@breadnpulp.com"
+		send_sms_to_admin "User on new order, " + @delivery.user.name, "basheer@breadnpulp.com"
 		send_sms_to_admin "User on new order, " + @delivery.user.name, "shubham@breadnpulp.com"
 	end
 
@@ -24,12 +24,12 @@ class DeliveriesController < ApplicationController
 		if @delivery.save
 			flash[:success] = "Order successfully placed"
 			redirect_to @user
-			send_sms_to_admin flash[:success] + ", " + @delivery.user.name + ", " + @delivery.user.phone_number + ", " + @delivery.at.to_s, "praveen@breadnpulp.com"
+			send_sms_to_admin flash[:success] + ", " + @delivery.user.name + ", " + @delivery.user.phone_number + ", " + @delivery.at.to_s, "basheer@breadnpulp.com"
 			send_sms_to_admin flash[:success] + ", " + @delivery.user.name + ", " + @delivery.user.phone_number + ", " + @delivery.at.to_s, "shubham@breadnpulp.com"
 		else
 			flash[:danger] = "Order not placed. Please enter time and select an address"
 			redirect_to request.referrer || root_url
-			send_sms_to_admin flash[:danger] + ", " + @delivery.user.name + ", " + @delivery.user.phone_number + ", " + @delivery.at.to_s, "praveen@breadnpulp.com"
+			send_sms_to_admin flash[:danger] + ", " + @delivery.user.name + ", " + @delivery.user.phone_number + ", " + @delivery.at.to_s, "basheer@breadnpulp.com"
 			send_sms_to_admin flash[:danger] + ", " + @delivery.user.name + ", " + @delivery.user.phone_number + ", " + @delivery.at.to_s, "shubham@breadnpulp.com"
 		end
 	end
