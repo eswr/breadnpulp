@@ -9,6 +9,7 @@ class DeliveriesController < ApplicationController
 		logged_in? ? @user = current_user : @user = User.new
 		@delivery = @user.deliveries.new
 		@delivery_statuses = DeliveryStatus.all
+		@payment_statuses = PaymentStatus.all
 		menus_on(active_menu_date).count.times { @delivery.packs.build }
 		@menus = menus_on(active_menu_date)
 		@date = active_menu_date
@@ -42,6 +43,7 @@ class DeliveriesController < ApplicationController
 		@delivery = Delivery.find(params[:id])
 		@available_menus = Menu.where(available_on: @delivery.delivery_date)
 		@delivery_statuses = DeliveryStatus.all
+		@payment_statuses = PaymentStatus.all
 		@delivery.packs.build
 	end
 
@@ -91,7 +93,7 @@ class DeliveriesController < ApplicationController
 	private
 
 	def delivery_params
-		params.require(:delivery).permit(:delivery_date, :at, :collect, :address_id, :delivery_status_id, :payment_date, :payment_mode, packs_attributes: [:id, :quantity, :menu_id, :unit_price, :payment_date, :payment_mode])
+		params.require(:delivery).permit(:delivery_date, :at, :collect, :address_id, :delivery_status_id, :payment_status_id, :payment_date, :payment_mode, packs_attributes: [:id, :quantity, :menu_id, :unit_price, :payment_date, :payment_mode])
 	end
 
 	# def editable_delivery
