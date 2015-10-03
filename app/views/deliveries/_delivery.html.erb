@@ -12,7 +12,7 @@
 		<%= delivery.address.postal_address %>
 	</td>
 	<td>
-		<%= delivery.payment_status %><br><%= delivery.payment_date %><br><%= delivery.payment_mode %><br>Rs. <%= delivery.get_total_amount %>
+		<%= delivery.payment_status.name %><br><%= delivery.payment_date %><br><%= delivery.payment_mode %><br>Rs. <%= delivery.get_total_amount %>
 	</td>
 	<td>
 		<% delivery.packs.each do |pack| %>
