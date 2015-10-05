@@ -1,7 +1,7 @@
 <% provide(:title, "New Order") %>
 <div class="container">
 
-<h1><%= active_day @date %> menu</h2>
+<h1><%= dayify @date %> menu</h2>
 
 <div class="row">
 	<% @menus.each do |menu| %>
@@ -28,8 +28,8 @@
 			<% end %><br>
 		</div>
 		<div class="col-md-4">
-			<h3>Delivery time</h3>
-			<%= delivery_form.time_field :at, class: 'form-control' %>
+			<h3>Deliver before</h3>
+			<%= delivery_form.select(:at, available_slots.map { |slot| [slot.strftime("%l:%M %p"), slot]}) %>
 		</div>
 
 		<div class="col-md-4">
@@ -37,8 +37,6 @@
 			<%= delivery_form.select(:address_id, ((@delivery.user.addresses.all).map { |addr| [addr.postal_address.split('').first(40).join + '...', addr.id] })) %>
 		</div>
 	</div>
-
-	<%= delivery_form.hidden_field :delivery_date, value: @date %>
 
 	<div class="row">
 		<% if current_user.admin? %>

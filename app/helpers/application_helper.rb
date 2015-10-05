@@ -1,6 +1,7 @@
 module ApplicationHelper
 
 	require 'net/http'
+	Time.zone = 'Chennai'
 
 	# Returns the full title on a per-page basis.       # Documentation comment
 	def full_title(page_title = '')                     # Method def, optional arg
@@ -13,15 +14,13 @@ module ApplicationHelper
 	end
 
 	def active_menu_date
-		Time.zone = "Chennai"
-		Time.current.hour < 11 ? Time.zone.now.to_date : Date.zone.tomorrow
+		Time.zone.now.hour < 11 ? Time.zone.today : Time.zone.tomorrow
 	end
 
-	def active_day(date)
-		Time.zone = 'Chennai'
-		if date == Time.zone.now.to_date
+	def dayify(date)
+		if date == Time.zone.today
 			"Today's"
-		elsif date == Time.zone.now.to_date.tomorrow
+		elsif date == Time.zone.tomorrow
 			"Tomorrow's"
 		else
 			"Next"

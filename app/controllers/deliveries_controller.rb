@@ -13,26 +13,27 @@ class DeliveriesController < ApplicationController
 		menus_on(active_menu_date).count.times { @delivery.packs.build }
 		@menus = menus_on(active_menu_date)
 		@date = active_menu_date
-		send_sms_to_admin "User on new order, " + @delivery.user.name, "basheer@breadnpulp.com"
-		send_sms_to_admin "User on new order, " + @delivery.user.name, "shubham@breadnpulp.com"
+		# send_sms_to_admin "User on new order, " + @delivery.user.name, "basheer@breadnpulp.com"
+		# send_sms_to_admin "User on new order, " + @delivery.user.name, "shubham@breadnpulp.com"
 	end
 
 	def create
 		@user = current_user
 		@delivery = @user.deliveries.new(delivery_params)
+		@delivery.delivery_date = active_menu_date
 		@delivery.booking_no = @delivery.get_b_no
 		@delivery.delivery_status = DeliveryStatus.find_by(name: 'Tentative')
 		@delivery.payment_status = PaymentStatus.find_by(name: 'Payment Due')
 		if @delivery.save
 			flash[:success] = "Order successfully placed"
 			redirect_to @user
-			send_sms_to_admin flash[:success] + ", " + @delivery.user.name + ", " + @delivery.user.phone_number + ", " + @delivery.at.to_s, "basheer@breadnpulp.com"
-			send_sms_to_admin flash[:success] + ", " + @delivery.user.name + ", " + @delivery.user.phone_number + ", " + @delivery.at.to_s, "shubham@breadnpulp.com"
+			# send_sms_to_admin flash[:success] + ", " + @delivery.user.name + ", " + @delivery.user.phone_number + ", " + @delivery.at.to_s, "basheer@breadnpulp.com"
+			# send_sms_to_admin flash[:success] + ", " + @delivery.user.name + ", " + @delivery.user.phone_number + ", " + @delivery.at.to_s, "shubham@breadnpulp.com"
 		else
 			flash[:danger] = "Order not placed. Please enter time and select an address"
 			redirect_to request.referrer || root_url
-			send_sms_to_admin flash[:danger] + ", " + @delivery.user.name + ", " + @delivery.user.phone_number + ", " + @delivery.at.to_s, "basheer@breadnpulp.com"
-			send_sms_to_admin flash[:danger] + ", " + @delivery.user.name + ", " + @delivery.user.phone_number + ", " + @delivery.at.to_s, "shubham@breadnpulp.com"
+			# send_sms_to_admin flash[:danger] + ", " + @delivery.user.name + ", " + @delivery.user.phone_number + ", " + @delivery.at.to_s, "basheer@breadnpulp.com"
+			# send_sms_to_admin flash[:danger] + ", " + @delivery.user.name + ", " + @delivery.user.phone_number + ", " + @delivery.at.to_s, "shubham@breadnpulp.com"
 		end
 	end
 
@@ -52,8 +53,8 @@ class DeliveriesController < ApplicationController
 		@delivery = Delivery.find(params[:id])
 		if @delivery.update_attributes(delivery_params)
 			if @delivery.delivery_status.name.in? ["Confirmed", "Despatched"]
-				send_sms @delivery
-				send_sms_to_admin "Order confirmed for #{@delivery.user.name}, #{@delivery.user.phone_number}, #{@delivery.at.to_s}", "arvind@breadnpulp.com"
+				# send_sms @delivery
+				# send_sms_to_admin "Order confirmed for #{@delivery.user.name}, #{@delivery.user.phone_number}, #{@delivery.at.to_s}", "arvind@breadnpulp.com"
 			end
 			if !current_user.admin?
 				@delivery.delivery_status = DeliveryStatus.find_by(name: 'Tentative')
