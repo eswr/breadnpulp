@@ -9,8 +9,8 @@ module DeliveriesHelper
 		slot = get_first_slot Time.zone.now if Time.zone.now > slot - 45.minutes
 		loop do
 			slots << slot
+			break if slot = last_slot
 			slot += 15.minutes
-			break if slot > last_slot
 		end
 		slots
 	end
