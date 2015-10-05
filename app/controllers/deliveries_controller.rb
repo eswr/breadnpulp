@@ -14,7 +14,7 @@ class DeliveriesController < ApplicationController
 		@menus = menus_on(active_menu_date)
 		@date = active_menu_date
 		send_sms_to_admin "User on new order, " + @delivery.user.name, "basheer@breadnpulp.com"
-		send_sms_to_admin "User on new order, " + @delivery.user.name, "shubham@breadnpulp.com"
+		# send_sms_to_admin "User on new order, " + @delivery.user.name, "shubham@breadnpulp.com"
 	end
 
 	def create
@@ -28,12 +28,12 @@ class DeliveriesController < ApplicationController
 			flash[:success] = "Order successfully placed"
 			redirect_to @user
 			send_sms_to_admin flash[:success] + ", " + @delivery.user.name + ", " + @delivery.user.phone_number + ", " + @delivery.at.to_s, "basheer@breadnpulp.com"
-			send_sms_to_admin flash[:success] + ", " + @delivery.user.name + ", " + @delivery.user.phone_number + ", " + @delivery.at.to_s, "shubham@breadnpulp.com"
+			# send_sms_to_admin flash[:success] + ", " + @delivery.user.name + ", " + @delivery.user.phone_number + ", " + @delivery.at.to_s, "shubham@breadnpulp.com"
 		else
 			flash[:danger] = "Order not placed. Please enter time and select an address"
 			redirect_to request.referrer || root_url
 			send_sms_to_admin flash[:danger] + ", " + @delivery.user.name + ", " + @delivery.user.phone_number + ", " + @delivery.at.to_s, "basheer@breadnpulp.com"
-			send_sms_to_admin flash[:danger] + ", " + @delivery.user.name + ", " + @delivery.user.phone_number + ", " + @delivery.at.to_s, "shubham@breadnpulp.com"
+			# send_sms_to_admin flash[:danger] + ", " + @delivery.user.name + ", " + @delivery.user.phone_number + ", " + @delivery.at.to_s, "shubham@breadnpulp.com"
 		end
 	end
 
@@ -54,7 +54,7 @@ class DeliveriesController < ApplicationController
 		if @delivery.update_attributes(delivery_params)
 			if @delivery.delivery_status.name.in? ["Confirmed", "Despatched"]
 				send_sms @delivery
-				send_sms_to_admin "Order confirmed for #{@delivery.user.name}, #{@delivery.user.phone_number}, #{@delivery.at.to_s}", "arvind@breadnpulp.com"
+				# send_sms_to_admin "Order confirmed for #{@delivery.user.name}, #{@delivery.user.phone_number}, #{@delivery.at.to_s}", "arvind@breadnpulp.com"
 			end
 			if !current_user.admin?
 				@delivery.delivery_status = DeliveryStatus.find_by(name: 'Tentative')
@@ -135,7 +135,9 @@ class DeliveriesController < ApplicationController
 	def send_sms (delivery)
 		url = URI.parse(URI.encode("http://trx.orangesms.net/api/sendmsg.php?user=breadnpulp&pass=qweqwe&sender=BRDPLP" +
 			"&phone=#{delivery.user.phone_number}" +
-			"&text=Hi #{delivery.user.name.split(' ').first}! Your order for #{delivery.delivery_date}: #{delivery.delivery_status.name}." +
+			"&text=Hi #{delivery.user.name.split(' ').first}!" +
+			"Your order for #{delivery.delivery_date}: #{delivery.delivery_status.name}." +
+			" Thank you for choosing to eat with us. Congratulations on another step towards a healthy diet." +
 			"&priority=ndnd&stype=normal"))
 		req = Net::HTTP::Get.new(url.to_s)
 		res = Net::HTTP.start(url.host, url.port) {|http| http.request(req)}
