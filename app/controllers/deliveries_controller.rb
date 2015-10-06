@@ -82,15 +82,15 @@ class DeliveriesController < ApplicationController
 	end
 
 	def todays_orders
-		@deliveries = Delivery.where("delivery_date = ?", Date.today).order(at: :asc)
+		@deliveries = Delivery.where("delivery_date = ?", Date.today).where.not("delivery_status_id = ? OR delivery_status_id = ?", DeliveryStatus.find_by(name: 'Deactivated'), DeliveryStatus.find_by(name: 'Cancelled')).order(at: :asc)
 	end
 
 	def future_orders
-		@deliveries = Delivery.where("delivery_date < ?", Date.today).order(delivery_date: :asc, at: :asc)
+		@deliveries = Delivery.where("delivery_date > ?", Date.today).order(delivery_date: :asc, at: :asc)
 	end
 
 	def recent_orders
-		@deliveries = Delivery.where("delivery_date > ?", Date.today).order(delivery_date: :desc, at: :desc)
+		@deliveries = Delivery.where("delivery_date < ?", Date.today).order(delivery_date: :desc, at: :desc)
 	end
 
 	private
