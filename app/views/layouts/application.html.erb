@@ -20,17 +20,25 @@
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-
-    <style>
-    .fa-stack-1x {
-        top: -1.1px;
-    }
-    .onimg{
-    position:absolute;
-    }
-    </style>
   </head>
   <body id="page-top" class="index">
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+              appId      : '1021697821214681',
+              xfbml      : true,
+              version    : 'v2.4'
+            });
+        };
+
+        (function(d, s, id){
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {return;}
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
     <%= render 'layouts/navigation' %>
     <div style="margin-top: 100px;">
         <% flash.each do |key, value| %>

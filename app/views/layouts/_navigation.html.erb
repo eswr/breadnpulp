@@ -1,45 +1,51 @@
 <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top" style="background-color: #333; border-color: #e7e7e7;">
-        <div class="container" style="margin-top: 0px;">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <% if current_user.nil? || !current_user.admin? %>
-                    <%= link_to "breadnpulp", root_path, id: "logo", class: "navbar-brand page-scroll"  %>
-                <% end %>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <% if logged_in? %>
-                      <% if current_user.admin? %>
-                        <li><%= link_to "Users", users_path %></li>
-                        <li><%= link_to "Recent", recent_orders_path %></li>
-                        <li><%= link_to "Today's", todays_orders_path %></li>
-                        <li><%= link_to "Future", future_orders_path %></li>
-                        <li><%= link_to "All orders", deliveries_path %></li>
-                        <li><%= link_to "Food items", food_items_path %></li>
-                        <li><%= link_to "Kickerrs", kickerrs_path %></li>
-                        <li><%= link_to "Menu", menus_path %></li>
-                      <% else %>
-                        <li><a>Call us: 750-62-44-659</a></li>
-                        <li><%= link_to "New order", new_order_path %></li>
-                        <li><%= link_to "#{current_user.name.split(' ').first}", current_user %></li>
-                      <% end %>
-                        <li><%= link_to "Log out", logout_path, method: "delete" %></li>
-                    <% else %>
-                      <li><%= link_to "Log in", login_path %></li>
-                      <li><%= link_to "Sign up", signup_path %></li>
-                    <% end %>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
+<nav class="navbar navbar-default navbar-fixed-top" style="background-color: #333; border-color: #e7e7e7;">
+    <div class="container" style="margin-top: 0px;">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <% if current_user.nil? || !current_user.admin? %>
+                <%= link_to "breadnpulp", root_path, id: "logo", class: "navbar-brand page-scroll"  %>
+            <% end %>
         </div>
-        <!-- /.container-fluid -->
-    </nav>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <% if logged_in? %>
+                  <% if current_user.admin? %>
+                    <li><%= link_to "Users", users_path %></li>
+                    <li><%= link_to "Recent", recent_orders_path %></li>
+                    <li><%= link_to "Today's", todays_orders_path %></li>
+                    <li><%= link_to "Future", future_orders_path %></li>
+                    <li><%= link_to "All orders", deliveries_path %></li>
+                    <li><%= link_to "Food items", food_items_path %></li>
+                    <li><%= link_to "Kickerrs", kickerrs_path %></li>
+                    <li><%= link_to "Menu", menus_path %></li>
+                  <% else %>
+                    <li><a>Call us: 750-62-44-659</a></li>
+                    <li><%= link_to "New order", new_order_path %></li>
+                    <li><%= link_to "#{current_user.name.split(' ').first}", current_user %></li>
+                  <% end %>
+                    <li><%= link_to "Log out", logout_path, method: "delete" %></li>
+                <% else %>
+                  <li><%= link_to "Log in", login_path %></li>
+                  <li><%= link_to "Sign up", signup_path %></li>
+                <% end %>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+    <div
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+</div>
+</nav>
