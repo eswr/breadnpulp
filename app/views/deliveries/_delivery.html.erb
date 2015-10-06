@@ -1,18 +1,32 @@
 <tr>
 	<td>
-		<%= delivery.booking_no %><br><%= delivery.delivery_status.name %><br><%= link_to "edit", edit_delivery_path(delivery) %>
+		<%= delivery.booking_no %>
+		<br>
+		<b style="color: <%= delivery.delivery_status.colorize %>"><%= delivery.delivery_status.name %></b>
+		<br>
+		<%= link_to "edit", edit_delivery_path(delivery) %>
 	</td>
 	<td>
-		<%= delivery.delivery_date %><br><%= (delivery.at - 45.minutes).strftime("%I:%M%p") %>
+		<%= delivery.delivery_date %>
+		<br>
+		<%= (delivery.at - 45.minutes).strftime("%I:%M%p") %>
 	</td>
 	<td>
-		<%= delivery.user.name %><br><%= delivery.user.phone_number %>
+		<%= delivery.user.name %>
+		<br>
+		<%= delivery.user.phone_number %>
 	</td>
 	<td>
 		<%= delivery.address.postal_address %>
 	</td>
 	<td>
-		<%= delivery.payment_status.name %><br><%= delivery.payment_date %><br><%= delivery.payment_mode %><br>Rs. <%= delivery.get_total_amount %>
+		<%= delivery.payment_status.name %>
+		<br>
+		<%= delivery.payment_date %>
+		<br>
+		<%= delivery.payment_mode %>
+		<br>
+		Rs. <%= delivery.get_total_amount %>
 	</td>
 	<td>
 		<% delivery.packs.each do |pack| %>

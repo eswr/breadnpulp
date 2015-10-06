@@ -11,12 +11,12 @@
       <%= link_to "edit", edit_user_path(@user) %>
     </p>
   </section>
-    <section class="address_form form-group" style="padding:5vh 0px;">
-      <h3 align="center">
-      <%= current_user?(@user)? "My new addresses" : "#{@user.name}'s addresses" %>
-    </h3>
-      <%= render 'shared/address_form' %>
-    </section>
+  <section class="address_form form-group" style="padding:5vh 0px;">
+    <h3 align="center">
+    <%= current_user?(@user)? "My new addresses" : "#{@user.name}'s addresses" %>
+  </h3>
+    <%= render 'shared/address_form' %>
+  </section>
     <h3 align="center">
       <%= current_user?(@user)? "My addresses" : "#{@user.name}'s addresses" %>
     </h3>
@@ -58,7 +58,8 @@
         <div style="padding: 15px;">
         <li class="text-left" style="list-style: none;"><%= delivery.address.postal_address %></li>
         <li class="text-left" style="list-style: none;"><%= delivery.at.strftime("at %I:%M%p") %></li>
-        <b><li class="text-left" style="list-style: none; color: <%= delivery.delivery_status.colorize %>"><%= delivery.delivery_status.name %></li></b>
+        <b><li class="text-left" style="list-style: none; color: <%= delivery.delivery_status.colorize %>">Order: <%= delivery.delivery_status.name %></li></b>
+        <li class="text-left" style="list-style: none;"><%= delivery.payment_status.name %></li>
         </div>
     </div>
   </div>
