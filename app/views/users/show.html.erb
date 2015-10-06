@@ -35,7 +35,12 @@
     <div class="col-xs-12 col-md-12 col-sm-12">
       <div class="thumbnail">
         <div class="container col-md-12 col-sm-12 col-xs-12" style="margin-top: 0px;">
-          <h5><%= delivery.booking_no %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= delivery.delivery_date.strftime("%a %e %b %Y") %></h5>
+            <div class="row">
+              <h5 class="col-sm-6 col-md-3"><%= delivery.booking_no %></h5>
+              <h5 class="col-sm-6 col-md-3"><%= delivery.delivery_date.strftime("%a %e %b %Y") %></h5>
+              <h5 class="col-sm-6 col-md-3" style="list-style: none; color: <%= delivery.delivery_status.colorize %>"><%= delivery.delivery_status.name %></h5>
+              <h5 class="col-sm-6 col-md-3">Rs. <%= delivery.get_total_amount %></h5>
+            </div>
           <% if current_user.admin? %>
             <small><%= link_to "edit", edit_delivery_path(delivery) %></small>
           <% end %>
@@ -45,7 +50,6 @@
                   <th>Items</th> 
                   <th>Qty</th> 
                   <th>Cost</th>
-     
               </tr>
               <% delivery.packs.each do |pack| %>
                 <tr>  
@@ -64,7 +68,6 @@
         <div style="padding: 15px;">
         <li class="text-left" style="list-style: none;"><%= delivery.address.postal_address %></li>
         <li class="text-left" style="list-style: none;"><%= delivery.at.strftime("at %I:%M%p") %></li>
-        <b><li class="text-left" style="list-style: none; color: <%= delivery.delivery_status.colorize %>">Order: <%= delivery.delivery_status.name %></li></b>
         <li class="text-left" style="list-style: none;"><%= delivery.payment_status.name %></li>
         </div>
     </div>
