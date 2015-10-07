@@ -24,7 +24,7 @@
 		<br>
 		Rs. <%= delivery.get_total_amount %>
 		<br>
-		<%= link_to "mark as payment completed", delivery_path(delivery, "delivery[payment_status_id]" => PaymentStatus.find_by(name: 'Payment Completed').id), method: :put, data: { :confirm => "Are you sure you have collected #{delivery.user.name}'s payment?" }, class: 'btn btn-danger btn-xs' %>
+		<%= link_to "mark as payment completed", delivery_path(delivery, "delivery[payment_status_id]" => PaymentStatus.find_by(name: 'Payment Complete').id), method: :put, data: { :confirm => "Are you sure you have collected #{delivery.user.name}'s payment?" }, class: 'btn btn-danger btn-xs' %>
 	</td>
 	<td>
 		<%= delivery.user.name %>
