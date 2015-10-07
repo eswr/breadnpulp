@@ -4,12 +4,16 @@
 		<br>
 		<b style="color: <%= delivery.delivery_status.colorize %>"><%= delivery.delivery_status.name %></b>
 		<br>
-		<%= link_to "edit", edit_delivery_path(delivery) %>
+		<br>
+		<%= link_to "edit", edit_delivery_path(delivery), class: 'btn btn-danger btn-xs' %>
 	</td>
 	<td>
 		<%= delivery.delivery_date %>
 		<br>
 		<%= (delivery.at - 45.minutes).strftime("%I:%M%p") %>
+		<br>
+		<br>
+		<%= link_to "mark as despatched", delivery_path(delivery, "delivery[delivery_status_id]" => DeliveryStatus.find_by(name: 'Despatched').id), method: :put, data: { :confirm => "Are you sure you have despatched #{delivery.user.name}'s order?" }, class: 'btn btn-info btn-xs', style: 'color: black;' %>
 	</td>
 	<td>
 		<%= delivery.user.name %>
