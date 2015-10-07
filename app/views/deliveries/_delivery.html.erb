@@ -13,7 +13,9 @@
 		<%= (delivery.at - 45.minutes).strftime("%I:%M%p") %>
 		<br>
 		<br>
-		<%= link_to "mark as despatched", delivery_path(delivery, "delivery[delivery_status_id]" => DeliveryStatus.find_by(name: 'Despatched').id), method: :put, data: { :confirm => "Are you sure you have despatched #{delivery.user.name}'s order?" }, class: 'btn btn-danger btn-xs' %>
+		<% if delivery.delivery_status.name != 'Despatched' %>
+			<%= link_to "mark as despatched", delivery_path(delivery, "delivery[delivery_status_id]" => DeliveryStatus.find_by(name: 'Despatched').id), method: :put, data: { :confirm => "Are you sure you have despatched #{delivery.user.name}'s order?" }, class: 'btn btn-danger btn-xs' %>
+		<% end %>
 	</td>
 	<td>
 		<%= delivery.payment_status.name %>
@@ -24,7 +26,9 @@
 		<br>
 		Rs. <%= delivery.get_total_amount %>
 		<br>
-		<%= link_to "mark as payment completed", delivery_path(delivery, "delivery[payment_status_id]" => PaymentStatus.find_by(name: 'Payment Complete').id), method: :put, data: { :confirm => "Are you sure you have collected #{delivery.user.name}'s payment?" }, class: 'btn btn-danger btn-xs' %>
+		<% if delivery.payment_status.name == 'Payment Due' %>
+			<%= link_to "mark as payment completed", delivery_path(delivery, "delivery[payment_status_id]" => PaymentStatus.find_by(name: 'Payment Complete').id), method: :put, data: { :confirm => "Are you sure you have collected #{delivery.user.name}'s payment?" }, class: 'btn btn-danger btn-xs' %>
+		<% end %>
 	</td>
 	<td>
 		<%= delivery.user.name %>
