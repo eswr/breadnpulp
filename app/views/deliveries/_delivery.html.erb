@@ -5,7 +5,7 @@
 		<b style="color: <%= delivery.delivery_status.colorize %>"><%= delivery.delivery_status.name %></b>
 		<br>
 		<br>
-		<%= link_to "edit", edit_delivery_path(delivery), class: 'btn btn-danger btn-xs' %>
+		<%= link_to "edit", edit_delivery_path(delivery), class: 'btn btn-warning btn-xs' %>
 	</td>
 	<td>
 		<%= delivery.delivery_date %>
@@ -13,15 +13,7 @@
 		<%= (delivery.at - 45.minutes).strftime("%I:%M%p") %>
 		<br>
 		<br>
-		<%= link_to "mark as despatched", delivery_path(delivery, "delivery[delivery_status_id]" => DeliveryStatus.find_by(name: 'Despatched').id), method: :put, data: { :confirm => "Are you sure you have despatched #{delivery.user.name}'s order?" }, class: 'btn btn-info btn-xs', style: 'color: black;' %>
-	</td>
-	<td>
-		<%= delivery.user.name %>
-		<br>
-		<%= delivery.user.phone_number %>
-	</td>
-	<td>
-		<%= delivery.address.postal_address %>
+		<%= link_to "mark as despatched", delivery_path(delivery, "delivery[delivery_status_id]" => DeliveryStatus.find_by(name: 'Despatched').id), method: :put, data: { :confirm => "Are you sure you have despatched #{delivery.user.name}'s order?" }, class: 'btn btn-danger btn-xs' %>
 	</td>
 	<td>
 		<%= delivery.payment_status.name %>
@@ -31,6 +23,16 @@
 		<%= delivery.payment_mode %>
 		<br>
 		Rs. <%= delivery.get_total_amount %>
+		<br>
+		<%= link_to "mark as payment completed", delivery_path(delivery, "delivery[payment_status_id]" => PaymentStatus.find_by(name: 'Payment Completed').id), method: :put, data: { :confirm => "Are you sure you have collected #{delivery.user.name}'s payment?" }, class: 'btn btn-danger btn-xs' %>
+	</td>
+	<td>
+		<%= delivery.user.name %>
+		<br>
+		<%= delivery.user.phone_number %>
+	</td>
+	<td>
+		<%= delivery.address.postal_address %>
 	</td>
 	<td>
 		<% delivery.packs.each do |pack| %>
