@@ -18,23 +18,28 @@
 			<h3>Cart</h3>
 			<%= delivery_form.fields_for :packs do |pack_fields| %>
 				<%= pack_fields.label :kickerr %>
-				<%= pack_fields.select(:menu_id, (@menus.map { |menu| [menu.kickerr.name, menu.id] })) %><br>
+				<%= pack_fields.select(:menu_id, (@menus.map { |menu| [menu.kickerr.name, menu.id] }), {}, { :class => 'form-control' }) %>
+				<br>
 				<%= pack_fields.label :quantity %>
-				<%= pack_fields.select(:quantity, ((0..10).map {|i| [i,i] })) %><br>
+				<%= pack_fields.select(:quantity, ((0..10).map {|i| [i,i] }), {}, { :class => 'form-control' }) %>
+				<br>
+				<br>
 				<% if current_user.admin? %>
 					<%= pack_fields.label :unit_price %>
-					<%= pack_fields.text_field :unit_price %><br>
-				<% end %><br>
+					<%= pack_fields.text_field :unit_price %>
+					<br>
+				<% end %>
+
 			<% end %><br>
 		</div>
 		<div class="col-md-4">
 			<h3>Deliver before</h3>
-			<%= delivery_form.select(:at, available_slots.map { |slot| [slot.strftime("%l:%M %p"), slot]}) %>
+			<%= delivery_form.select(:at, available_slots.map { |slot| [slot.strftime("%l:%M %p"), slot]}, {}, { :class => 'form-control' }) %>
 		</div>
 
 		<div class="col-md-4">
 			<h3>Delivery address</h3>
-			<%= delivery_form.select(:address_id, ((@delivery.user.addresses.all).map { |addr| [addr.postal_address.split('').first(40).join + '...', addr.id] })) %>
+			<%= delivery_form.select(:address_id, ((@delivery.user.addresses.all).map { |addr| [addr.postal_address.split('').first(40).join + '...', addr.id] }), {}, { :class => 'form-control' }) %>
 		</div>
 	</div>
 

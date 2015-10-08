@@ -10,7 +10,9 @@ class DeliveriesController < ApplicationController
 		@delivery = @user.deliveries.new
 		@delivery_statuses = DeliveryStatus.all
 		@payment_statuses = PaymentStatus.all
-		menus_on(active_menu_date).count.times { @delivery.packs.build }
+		menus_on(active_menu_date).each do |menu|
+			@delivery.packs.build(menu_id: menu.id)
+		end
 		@menus = menus_on(active_menu_date)
 		@date = active_menu_date
 		send_sms_to_admin "User on new order, " + @delivery.user.name, "basheer@breadnpulp.com"
