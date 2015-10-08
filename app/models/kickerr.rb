@@ -43,8 +43,10 @@ class Kickerr < ActiveRecord::Base
 			self.veg_type = "Non-Veg"
 		elsif "Egg".in?(veg_non_eggs)
 			self.veg_type = "Egg"
-		else
+		elsif "Veg".in?(veg_non_eggs)
 			self.veg_type = "Veg"
+		else
+			self.veg_type = "NA"
 		end
 		self.save
 	end
