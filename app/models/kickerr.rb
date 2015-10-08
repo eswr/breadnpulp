@@ -27,6 +27,8 @@ class Kickerr < ActiveRecord::Base
 	validates :description,		presence: true,
 								length: { maximum: 200 }
 
+	after_update :set_veg_type
+
 	def colorize
 		if self.veg_type == "Non-Veg"
 			"red"
