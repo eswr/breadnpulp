@@ -50,29 +50,30 @@
 				<%= menu.kickerr.description %>
 			</td>
 			<td>
-				<% if menu.kickerr.food_items.present? %>
-					<% menu.kickerr.food_items.where(course: 'Main').each do |food_item| %>
+				<% food_items = menu.kickerr.food_items %>
+				<% if food_items.present? %>
+					<% food_items.where(course: 'Main').each do |food_item| %>
 						<%= food_item.name %><br>
 					<% end %>
 				<% end %>
 			</td>
 			<td>
-				<% if menu.kickerr.food_items.present? %>
-					<% menu.kickerr.food_items.where(course: 'Beverage').each do |food_item| %>
+				<% if food_items.present? %>
+					<% food_items.where(course: 'Beverage').each do |food_item| %>
 						<%= food_item.name %><br>
 					<% end %>
 				<% end %>
 			</td>
 			<td>
-				<% if menu.kickerr.food_items.present? %>
-					<% menu.kickerr.food_items.where(course: 'Salad').each do |food_item| %>
+				<% if food_items.present? %>
+					<% food_items.where(course: 'Salad').each do |food_item| %>
 						<%= food_item.name %><br>
 					<% end %>
 				<% end %>
 			</td>
 			<td>
-				<% if menu.kickerr.food_items.present? %>
-					<% menu.kickerr.food_items.where(course: 'Side').each do |food_item| %>
+				<% if food_items.present? %>
+					<% food_items.where(course: 'Side').each do |food_item| %>
 						<%= food_item.name %><br>
 					<% end %>
 				<% end %>
