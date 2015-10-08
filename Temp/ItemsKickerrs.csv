@@ -1,30 +1,4 @@
-2,1,VSandBFProGreek,2,Black Forest Protein Shake
-3,1,VSandBFProGreek,3,Greek Salad
-4,2,PanCkBFProGreek,4,Pancakes
-5,2,PanCkBFProGreek,2,Black Forest Protein Shake
-6,2,PanCkBFProGreek,3,Greek Salad
-7,3,EggBBFProGreek,5,Eggs Benedict
-8,3,EggBBFProGreek,2,Black Forest Protein Shake
-9,3,EggBBFProGreek,3,Greek Salad
-10,4,CheOmOatCrud,6,Veggie Cheese Omelette
-11,4,CheOmOatCrud,7,Oatmeal Smoothie
-12,4,CheOmOatCrud,8,Veg Crudites
-13,5,AlooPLassCrud,9,Aloo Parantha
-14,5,AlooPLassCrud,10,Lassi
-15,5,AlooPLassCrud,8,Veg Crudites
-16,6,KathiWatermeCole,11,Kathi Roll
-17,6,KathiWatermeCole,12,Watermelon Gazpacho
-18,6,KathiWatermeCole,13,Coleslaw Salad
-19,7,ScramWatermeCole,12,Watermelon Gazpacho
-20,7,ScramWatermeCole,13,Coleslaw Salad
-21,7,ScramWatermeCole,14,Scrambled Egg
-22,8,OatCrud,7,Oatmeal Smoothie
-23,8,OatCrud,8,Veg Crudites
-24,9,WatermeCole,12,Watermelon Gazpacho
-25,9,WatermeCole,13,Coleslaw Salad
-26,10,IdliCarrotChef,15,Veg Stuffed Idli
-27,10,IdliCarrotChef,16,Chef's Style Salad
-28,10,IdliCarrotChef,17,Carrot juice
+28,10,IdliCarrotChef,17,Carrot Juice
 29,11,EggBBanamelChef,5,Eggs Benedict
 30,11,EggBBanamelChef,16,Chef's Style Salad
 31,11,EggBBanamelChef,18,Banana Melon Punch
@@ -50,7 +24,7 @@
 51,19,UttapBeetGriTom,29,Beetroot Juice
 52,20,VsandCarrotGreek,1,Gourmet Club Sandwich
 53,20,VsandCarrotGreek,3,Greek Salad
-54,20,VsandCarrotGreek,17,Carrot juice
+54,20,VsandCarrotGreek,17,Carrot Juice
 55,21,VchOmleBFProGreek,6,Veggie Cheese Omelette
 56,21,VchOmleBFProGreek,2,Black Forest Protein Shake
 57,21,VchOmleBFProGreek,3,Greek Salad
@@ -82,7 +56,7 @@
 83,30,ChSandChikooPotato,34,Chikoo Shake
 84,30,ChSandChikooPotato,35,Potato and capsicum salad
 85,31,PastaCarrotChef,16,Chef's Style Salad
-86,31,PastaCarrotChef,17,Carrot juice
+86,31,PastaCarrotChef,17,Carrot Juice
 87,31,PastaCarrotChef,19,Penne Arrabiata Pasta
 88,32,FrenchTBforestChef,2,Black Forest Protein Shake
 89,32,FrenchTBforestChef,16,Chef's Style Salad
@@ -124,7 +98,7 @@
 125,44,CheOmBFprotGreek,2,Black Forest Protein Shake
 126,45,UttapCarrotPotatoSal,25,Uttapam
 127,45,UttapCarrotPotatoSal,35,Potato and capsicum salad
-128,45,UttapCarrotPotatoSal,17,Carrot juice
+128,45,UttapCarrotPotatoSal,17,Carrot Juice
 129,46,CSandBanMelPotaSal,22,Rockford Chicken Sandwich
 130,46,CSandBanMelPotaSal,18,Banana Melon Punch
 131,46,CSandBanMelPotaSal,35,Potato and capsicum salad
