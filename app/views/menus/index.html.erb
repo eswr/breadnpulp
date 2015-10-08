@@ -20,16 +20,7 @@
 			Kickerr description
 		</th>
 		<th>
-			Main course(s)
-		</th>
-		<th>
-			Beverage(s)
-		</th>
-		<th>
-			Salad(s)
-		</th>
-		<th>
-			Side(s)
+			Food Items
 		</th>
 		<th>
 			Action(s)
@@ -50,36 +41,8 @@
 				<%= menu.kickerr.description %>
 			</td>
 			<td>
-				<% food_items = menu.kickerr.food_items %>
-				<% if food_items.present? %>
-					<% food_items.where(course: 'Main').each do |food_item| %>
-						<%= food_item.name %><br>
-						<% puts "main load" %>
-					<% end %>
-				<% end %>
-			</td>
-			<td>
-				<% if food_items.present? %>
-					<% food_items.where(course: 'Beverage').each do |food_item| %>
-						<%= food_item.name %><br>
-						<% puts "bev load" %>
-					<% end %>
-				<% end %>
-			</td>
-			<td>
-				<% if food_items.present? %>
-					<% food_items.where(course: 'Salad').each do |food_item| %>
-						<%= food_item.name %><br>
-						<% puts "salada load" %>
-					<% end %>
-				<% end %>
-			</td>
-			<td>
-				<% if food_items.present? %>
-					<% food_items.where(course: 'Side').each do |food_item| %>
-						<%= food_item.name %><br>
-						<% puts "side load" %>
-					<% end %>
+				<% kickerr.food_items.each do |food_item| %>
+					<%= food_item.name %> (<%= food_item.course %>)<br>
 				<% end %>
 			</td>
 			<td>

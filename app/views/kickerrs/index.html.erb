@@ -11,19 +11,10 @@
 			Name
 		</th>
 		<th>
-			Veg_Type
+			Veg Type
 		</th>
 		<th>
-			Main(s)
-		</th>
-		<th>
-			Beverage(s)
-		</th>
-		<th>
-			Salad(s)
-		</th>
-		<th>
-			Side(s)
+			Food Items
 		</th>
 		<th>
 			Description
@@ -44,31 +35,8 @@
 				<%= kickerr.veg_type %>
 			</td>
 			<td>
-				<% if kickerr.food_items.present? %>
-					<% kickerr.food_items.where(course: 'Main').each do |food_item| %>
-						<%= food_item.name %><br>
-					<% end %>
-				<% end %>
-			</td>
-			<td>
-				<% if kickerr.food_items.present? %>
-					<% kickerr.food_items.where(course: 'Beverage').each do |food_item| %>
-						<%= food_item.name %><br>
-					<% end %>
-				<% end %>
-			</td>
-			<td>
-				<% if kickerr.food_items.present? %>
-					<% kickerr.food_items.where(course: 'Salad').each do |food_item| %>
-						<%= food_item.name %><br>
-					<% end %>
-				<% end %>
-			</td>
-			<td>
-				<% if kickerr.food_items.present? %>
-					<% kickerr.food_items.where(course: 'Side').each do |food_item| %>
-						<%= food_item.name %><br>
-					<% end %>
+				<% kickerr.food_items.each do |food_item| %>
+					<%= food_item.name %> (<%= food_item.course %>)<br>
 				<% end %>
 			</td>
 			<td>
