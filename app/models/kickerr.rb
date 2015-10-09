@@ -19,8 +19,7 @@ class Kickerr < ActiveRecord::Base
 
 	has_many :packs, through: :menus
 
-	validates :name,			presence: true,
-								uniqueness: { case_sensitive: false }
+	validates :name,			presence: true
 	validates :price,			presence: true,
 								numericality: true
 
