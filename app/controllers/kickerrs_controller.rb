@@ -28,7 +28,7 @@ class KickerrsController < ApplicationController
   end
 
   def index
-  	@kickerrs = Kickerr.all
+  	@kickerrs = Kickerr.paginate(:page => params[:page])
   end
 
   def update

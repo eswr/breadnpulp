@@ -16,7 +16,7 @@ class FoodItemsController < ApplicationController
 	end
 
 	def index
-		@food_items = FoodItem.all
+		@food_items = FoodItem.paginate(:page => params[:page])
 	end
 
 	def create

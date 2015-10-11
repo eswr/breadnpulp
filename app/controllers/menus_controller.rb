@@ -28,7 +28,7 @@ class MenusController < ApplicationController
   end
 
   def index
-    @menus = Menu.order(available_on: :desc)
+    @menus = Menu.paginate(:page => params[:page]).order(available_on: :desc)
   end
 
   def update
