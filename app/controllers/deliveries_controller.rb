@@ -1,7 +1,7 @@
 class DeliveriesController < ApplicationController
 
 	before_action :logged_in_user
-	before_action :admin_user,			only: [:edit, :update, :index, :destroy]
+	before_action :admin_user,			only: [:edit, :update, :index, :destroy, :todays_orders, :recent_orders, :future_orders]
 	# before_action :correct_user,		only: [:edit, :update, :destroy ]
 	# before_action :editable_delivery,	only: [:edit, :update]
 
@@ -93,7 +93,7 @@ class DeliveriesController < ApplicationController
 	end
 
 	def recent_orders
-		@deliveries = Delivery.where("delivery_date < ?", Date.today).order(delivery_date: :desc, at: :desc)
+		@deliveries = Delivery.paginate(:page => params[:page]).where("delivery_date < ?", Date.today).order(delivery_date: :desc, at: :desc)
 	end
 
 	private
