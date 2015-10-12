@@ -5,7 +5,7 @@ class MenusController < ApplicationController
 
   def new
   	@menu = Menu.new
-    @kickerrs_array = Kickerr.all.map { |kickerr| [kickerr.name, kickerr.id] }
+    @kickerrs_array = Kickerr.all.map { |kickerr| [kickerr.name + kickerr.created_at.strftime("created at: %a %e %b %Y %I:%M%p"), kickerr.id] }
   end
 
   def create
