@@ -35,7 +35,7 @@ class MenusController < ApplicationController
   	@menu = Menu.find(params[:id])
   	if @menu.update_attributes(menu_params)
   		flash[:success] = "Menu updated"
-  		redirect_to @menu
+  		redirect_to menus_path
   	else
   		flash.now[:danger] = "Menu not updated, please try again"
   	end
