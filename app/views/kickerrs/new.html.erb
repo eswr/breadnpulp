@@ -29,7 +29,7 @@
 							<% FoodItem.where(course: c).each do |food_item| %>
 								<label>
 									<%= check_box_tag "kickerr[food_item_ids][]", food_item.id, food_item.id.in?(@kickerr.food_items.collect(&:id)) %>
-									<%= food_item.name %><br>
+									<strong style="color: <%= food_item.colorize %>;"><%= food_item.name %></strong><br>
 								</label><br>
 							<% end %>
 						</div>
