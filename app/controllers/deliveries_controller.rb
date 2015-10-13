@@ -57,7 +57,7 @@ class DeliveriesController < ApplicationController
 		if @delivery.update_attributes(delivery_params)
 			if @delivery.delivery_status.name.in? ["Confirmed", "Despatched"]
 				send_sms @delivery if old_satus != @delivery.delivery_status
-				send_sms_to_admin "Order #{@delivery.status.name} for #{@delivery.user.name}, #{@delivery.user.phone_number}, #{@delivery.at.to_s}", "arvind@breadnpulp.com"
+				send_sms_to_admin "Order #{@delivery.delivery_status.name} for #{@delivery.user.name}, #{@delivery.user.phone_number}, #{@delivery.at.to_s}", "arvind@breadnpulp.com"
 			end
 			if !current_user.admin?
 				@delivery.delivery_status = DeliveryStatus.find_by(name: 'Tentative')
@@ -94,6 +94,21 @@ class DeliveriesController < ApplicationController
 
 	def recent_orders
 		@deliveries = Delivery.paginate(:page => params[:page]).where("delivery_date < ?", Date.today).order(delivery_date: :desc, at: :desc)
+	end
+
+	def chef_view
+		deliveries = Delivery.where("delivery_date > ?", Date.today).order(delivery_date: :asc, at: :asc)
+		time_slots = deliveries.all.map { |delivery| [delivery.at] }.uniq
+		time_slots.each do |time_slot|
+			time_slot_string = time_slot.strftime("%I:%M%p")
+			deliveries.where(at: time_slot).each do |delivery|
+				delivery.packs.each do |pack|
+					pack.menu.kickerr.food_items.each do |food_item|
+						instance_variable_set "@#{food_item.name}", 
+					end
+				end
+			end
+		end
 	end
 
 	private

@@ -1,0 +1,9 @@
+<% provide(:title, "chef view") %>
+
+<h1>Chef View</h1>
+
+<table class="table table-hover">
+	<%= render 'deliveries/chef_view_header' %>
+	<%= will_paginate @deliveries %>
+	<%= render @deliveries %>
+</table>
