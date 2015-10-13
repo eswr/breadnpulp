@@ -97,9 +97,16 @@ class DeliveriesController < ApplicationController
 	end
 
 	def chef_view
-		@deliveries = Delivery.where(delivery_date: active_menu_date).where.not("delivery_status_id = ? OR delivery_status_id = ?", DeliveryStatus.find_by(name: 'Deactivated'), DeliveryStatus.find_by(name: 'Cancelled')).order(at: :asc)
+		deliveries = Delivery.where(delivery_date: active_menu_date).where.not("delivery_status_id = ? OR delivery_status_id = ?", DeliveryStatus.find_by(name: 'Deactivated'), DeliveryStatus.find_by(name: 'Cancelled')).order(at: :asc)
 		@time_slots = @deliveries.map { |delivery| [delivery.at]}.uniq
-		@food_items = Delivery.
+		@food_item_names = []
+		@deliveries.packs.each do |pack|
+			pack.menu.kickerr.food_items.each do |food_item|
+				@food_item_names << food_item.name
+			end
+		end
+		@food_item_names.uniq!
+		
 	end
 
 	private

@@ -4,6 +4,11 @@
 
 <table class="table table-hover">
 	<%= render 'deliveries/chef_view_header' %>
-	<%= will_paginate @deliveries %>
-	<%= render @deliveries %>
+	<% @time_slots.each do |time_slot| %>
+		<tr>
+			<td>
+				
+			</td>
+		</tr>
+	<% end %>
 </table>
