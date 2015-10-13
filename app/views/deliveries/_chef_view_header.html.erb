@@ -1,11 +1,9 @@
 <tr>
 	<th>
-		Time slot
 	</th>
-	<th>
-		Food Item
-	</th>
-	<th>
-		Quantity
-	</th>
+	<% @food_items.each do |food_item| %>
+		<th>
+			<%= food_item.name %>
+		</th>
+	<% end %>
 </tr>

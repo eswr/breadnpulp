@@ -96,6 +96,12 @@ class DeliveriesController < ApplicationController
 		@deliveries = Delivery.paginate(:page => params[:page]).where("delivery_date < ?", Date.today).order(delivery_date: :desc, at: :desc)
 	end
 
+	def chef_view
+		@deliveries = Delivery.where(delivery_date: active_menu_date).where.not("delivery_status_id = ? OR delivery_status_id = ?", DeliveryStatus.find_by(name: 'Deactivated'), DeliveryStatus.find_by(name: 'Cancelled')).order(at: :asc)
+		@time_slots = @deliveries.map { |delivery| [delivery.at]}.uniq
+		@food_items = Delivery.
+	end
+
 	private
 
 	def delivery_params
