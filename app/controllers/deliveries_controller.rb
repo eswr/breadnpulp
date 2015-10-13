@@ -96,21 +96,6 @@ class DeliveriesController < ApplicationController
 		@deliveries = Delivery.paginate(:page => params[:page]).where("delivery_date < ?", Date.today).order(delivery_date: :desc, at: :desc)
 	end
 
-	def chef_view
-		deliveries = Delivery.where("delivery_date > ?", Date.today).order(delivery_date: :asc, at: :asc)
-		time_slots = deliveries.all.map { |delivery| [delivery.at] }.uniq
-		time_slots.each do |time_slot|
-			time_slot_string = time_slot.strftime("%I:%M%p")
-			deliveries.where(at: time_slot).each do |delivery|
-				delivery.packs.each do |pack|
-					pack.menu.kickerr.food_items.each do |food_item|
-						instance_variable_set "@#{food_item.name}", 
-					end
-				end
-			end
-		end
-	end
-
 	private
 
 	def delivery_params
