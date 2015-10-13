@@ -24,7 +24,7 @@ class Delivery < ActiveRecord::Base
   belongs_to :delivery_status
   belongs_to :payment_status
 
-  has_many :packs
+  has_many :packs, dependent: :destroy
   has_many :menus, through: :packs
 
   validates :delivery_date,		   presence: true
