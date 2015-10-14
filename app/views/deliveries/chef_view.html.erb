@@ -7,7 +7,7 @@
 	<% @rows.each do |row| %>
 		<tr>
 			<td>
-				<%= row.first.strftime("%I:%m %p") %>
+				<%= row.first.strftime("%I:%M%p") %>
 			</td>
 			<td>
 				<% row.second.each do |subrow| %>
