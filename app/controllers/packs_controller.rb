@@ -17,9 +17,6 @@ class PacksController < ApplicationController
 		@pack.update_attributes(pack_params)
 	end
 
-	def index
-	end
-
 	private
 
 	def pack_params

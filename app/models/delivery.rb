@@ -26,6 +26,8 @@ class Delivery < ActiveRecord::Base
 
   has_many :packs, dependent: :destroy
   has_many :menus, through: :packs
+  has_many :kickerrs, through: :menus
+  has_many :food_items, through: :kickerrs
 
   validates :delivery_date,		   presence: true
   validates :at,					       presence: true
@@ -44,6 +46,25 @@ class Delivery < ActiveRecord::Base
   def get_b_no
     counter = Delivery.where(delivery_date: self.delivery_date).where.not(booking_no: nil).count + 1
     "MUM001#{self.delivery_date.strftime("%y%m%d")}#{counter}"
+  end
+
+  def Delivery.get_chef_view_rows(deliveries)
+    times = {}
+    deliveries.each do |delivery|
+      delivery.packs.each do |pack|
+        if !times[delivery.at]
+          times[delivery.at] = {}
+        end
+        pack.menu.kickerr.food_items.each do |food_item|
+          if times[delivery.at][food_item.name]
+            times[delivery.at][food_item.name] += pack.quantity
+          else
+            times[delivery.at][food_item.name] = pack.quantity
+          end
+        end
+      end
+    end
+    times
   end
 
 end

@@ -4,10 +4,20 @@
 
 <table class="table table-hover">
 	<%= render 'deliveries/chef_view_header' %>
-	<% @time_slots.each do |time_slot| %>
+	<% @rows.each do |row| %>
 		<tr>
 			<td>
-				
+				<%= row.first %>
+			</td>
+			<td>
+				<% row.second.each do |subrow| %>
+					<%= subrow.first %><br>
+				<% end %>
+			</td>
+			<td>
+				<% row.second.each do |subrow| %>
+					<%= subrow.second %><br>
+				<% end %>
 			</td>
 		</tr>
 	<% end %>
