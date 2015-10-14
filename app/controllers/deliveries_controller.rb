@@ -48,36 +48,33 @@ class DeliveriesController < ApplicationController
 		@available_menus = Menu.where(available_on: @delivery.delivery_date)
 		@delivery_statuses = DeliveryStatus.all
 		@payment_statuses = PaymentStatus.all
-		@delivery.packs.build
 	end
 
 	def update
 		@delivery = Delivery.find(params[:id])
 		old_satus = @delivery.delivery_status
+		if !current_user.admin?
+			@delivery.delivery_status = DeliveryStatus.find_by(name: 'Tentative')
+			@delivery.payment_status = PaymentStatus.find_by(name: 'Payment Due')
+			@delivery.packs.each do |pack|
+				pack.unit_price = pack.menu.get_price
+			end
+		end
 		if @delivery.update_attributes(delivery_params)
 			if @delivery.delivery_status.name.in? ["Confirmed", "Despatched"]
 				send_sms @delivery if old_satus != @delivery.delivery_status
 				send_sms_to_admin "Order #{@delivery.delivery_status.name} for #{@delivery.user.name}, #{@delivery.user.phone_number}, #{@delivery.at.to_s}", "arvind@breadnpulp.com"
 			end
-			if !current_user.admin?
-				@delivery.delivery_status = DeliveryStatus.find_by(name: 'Tentative')
-				@delivery.payment_status = PaymentStatus.find_by(name: 'Payment Due')
-				@delivery.packs.each do |pack|
-					pack.unit_price = pack.menu.get_price
-				end
-			end
-			if @delivery.update_attributes delivery_params
-				flash[:success] = "Order updated"
-				redirect_to future_orders_path
-			else
-				flash[:danger] = "Order not updated. Please try again"
-				redirect_to request.referrer || root_url
-			end
+			flash[:success] = "Order updated"
+			redirect_to future_orders_path
+		else
+			flash[:danger] = "Order not updated. Please try again"
+			redirect_to request.referrer || root_url
 		end
 	end
 
 	def index
-		@deliveries = Delivery.order(delivery_date: :desc, at: :asc)
+		@deliveries = Delivery.paginate(:page => params[:page]).order(delivery_date: :desc, at: :asc)
 	end
 
 	def destroy

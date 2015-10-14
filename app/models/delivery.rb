@@ -33,7 +33,7 @@ class Delivery < ActiveRecord::Base
   validates :at,					       presence: true
   validates :address_id,			   presence: true
 
-  accepts_nested_attributes_for :packs, reject_if: lambda { |attributes| attributes[:quantity].to_f < 1 }
+  accepts_nested_attributes_for :packs#, reject_if: lambda { |attributes| attributes[:quantity].to_f < 1 }
 
   def get_total_amount
   	total_amount = 0
