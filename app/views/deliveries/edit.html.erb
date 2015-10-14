@@ -24,6 +24,7 @@
 				<% if current_user.admin? %>
 					<%= pack_fields.label :unit_price %>
 					<%= pack_fields.text_field :unit_price %><br>
+					<%= pack_fields.check_box '_destroy' %>  <%= pack_fields.label "Destroy" %>
 				<% end %><br>
 			<% end %><br>
 		</div>
