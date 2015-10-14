@@ -15,8 +15,8 @@ class DeliveriesController < ApplicationController
 		end
 		@menus = menus_on(active_menu_date)
 		@date = active_menu_date
-		# send_sms_to_admin "User on new order, " + @delivery.user.name, "praveen@breadnpulp.com"
-		# send_sms_to_admin "User on new order, " + @delivery.user.name, "shubham@breadnpulp.com"
+		send_sms_to_admin "User on new order, " + @delivery.user.name, "praveen@breadnpulp.com"
+		send_sms_to_admin "User on new order, " + @delivery.user.name, "shubham@breadnpulp.com"
 	end
 
 	def create
@@ -29,13 +29,13 @@ class DeliveriesController < ApplicationController
 		if @delivery.save
 			flash[:success] = "Order successfully placed"
 			redirect_to @user
-			# send_sms_to_admin flash[:success] + ", " + @delivery.user.name + ", " + @delivery.user.phone_number + ", " + @delivery.at.to_s, "praveen@breadnpulp.com"
-			# send_sms_to_admin flash[:success] + ", " + @delivery.user.name + ", " + @delivery.user.phone_number + ", " + @delivery.at.to_s, "shubham@breadnpulp.com"
+			send_sms_to_admin flash[:success] + ", " + @delivery.user.name + ", " + @delivery.user.phone_number + ", " + @delivery.at.to_s, "praveen@breadnpulp.com"
+			send_sms_to_admin flash[:success] + ", " + @delivery.user.name + ", " + @delivery.user.phone_number + ", " + @delivery.at.to_s, "shubham@breadnpulp.com"
 		else
 			flash.now[:danger] = "Order not placed. Please enter time and select an address"
 			render 'new'
-			# send_sms_to_admin flash[:danger] + ", " + @delivery.user.name + ", " + @delivery.user.phone_number + ", " + @delivery.at.to_s, "praveen@breadnpulp.com"
-			# send_sms_to_admin flash[:danger] + ", " + @delivery.user.name + ", " + @delivery.user.phone_number + ", " + @delivery.at.to_s, "shubham@breadnpulp.com"
+			send_sms_to_admin flash[:danger] + ", " + @delivery.user.name + ", " + @delivery.user.phone_number + ", " + @delivery.at.to_s, "praveen@breadnpulp.com"
+			send_sms_to_admin flash[:danger] + ", " + @delivery.user.name + ", " + @delivery.user.phone_number + ", " + @delivery.at.to_s, "shubham@breadnpulp.com"
 		end
 	end
 
@@ -57,7 +57,7 @@ class DeliveriesController < ApplicationController
 		if @delivery.update_attributes(delivery_params)
 			if @delivery.delivery_status.name.in? ["Confirmed", "Despatched"]
 				send_sms @delivery if old_satus != @delivery.delivery_status
-				# send_sms_to_admin "Order #{@delivery.delivery_status.name} for #{@delivery.user.name}, #{@delivery.user.phone_number}, #{@delivery.at.to_s}", "arvind@breadnpulp.com"
+				send_sms_to_admin "Order #{@delivery.delivery_status.name} for #{@delivery.user.name}, #{@delivery.user.phone_number}, #{@delivery.at.to_s}", "arvind@breadnpulp.com"
 			end
 			if !current_user.admin?
 				@delivery.delivery_status = DeliveryStatus.find_by(name: 'Tentative')
@@ -97,7 +97,7 @@ class DeliveriesController < ApplicationController
 	end
 
 	def chef_view
-		deliveries = Delivery.where(delivery_date: active_menu_date).where.not("delivery_status_id = ? OR delivery_status_id = ?", DeliveryStatus.find_by(name: 'Deactivated'), DeliveryStatus.find_by(name: 'Cancelled')).order(at: :asc)
+		deliveries = Delivery.where(delivery_date: Date.today).where.not("delivery_status_id = ? OR delivery_status_id = ?", DeliveryStatus.find_by(name: 'Deactivated'), DeliveryStatus.find_by(name: 'Cancelled')).order(at: :asc)
 		@rows = Delivery.get_chef_view_rows(deliveries)
 	end
 
