@@ -67,10 +67,10 @@ class DeliveriesController < ApplicationController
 				send_sms_to_admin "Order #{@delivery.delivery_status.name} for #{@delivery.user.name}, #{@delivery.user.phone_number}, #{@delivery.at.to_s}", "arvind@breadnpulp.com"
 			end
 			flash[:success] = "Order updated"
-			redirect_to future_orders_path
+			redirect_to todays_orders_path
 		else
 			flash[:danger] = "Order not updated. Please try again"
-			redirect_to request.referrer || root_url
+			redirect_to todays_orders_path
 		end
 	end
 
