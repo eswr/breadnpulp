@@ -91,7 +91,7 @@ class DeliveriesController < ApplicationController
 	end
 
 	def recent_orders
-		@deliveries = Delivery.paginate(:page => params[:page]).where("delivery_date > ?", Date.today).order(delivery_date: :desc, at: :desc)
+		@deliveries = Delivery.paginate(:page => params[:page]).where("delivery_date < ?", Date.today).order(delivery_date: :desc, at: :desc)
 	end
 
 	def chef_view
