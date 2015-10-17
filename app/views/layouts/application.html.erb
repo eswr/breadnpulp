@@ -28,8 +28,8 @@
     <%= render 'layouts/navigation' %>
     <div style="margin-top: 100px;">
         <% flash.each do |key, value| %>
-            <div class="alert alert-<%= key %>"><%= value %></div>
-      <% end %>
+            <div class="alert alert-<%= key %>"><strong><%= value %></strong></div>
+        <% end %>
     <%= yield %>
     </div>
     <%= render 'layouts/footer' %>

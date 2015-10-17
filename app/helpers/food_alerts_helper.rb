@@ -1,0 +1,2 @@
+module FoodAlertsHelper
+end

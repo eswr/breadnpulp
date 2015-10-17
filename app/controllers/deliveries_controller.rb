@@ -6,7 +6,7 @@ class DeliveriesController < ApplicationController
 	# before_action :editable_delivery,	only: [:edit, :update]
 
 	def new
-		logged_in? ? @user = current_user : @user = User.new
+		@user = current_user
 		@delivery = @user.deliveries.new
 		@delivery_statuses = DeliveryStatus.all
 		@payment_statuses = PaymentStatus.all

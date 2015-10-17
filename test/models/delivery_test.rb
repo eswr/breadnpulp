@@ -15,6 +15,7 @@
 #  payment_mode       :string
 #  booking_no         :string
 #  payment_status_id  :integer
+#  subscription_id    :integer
 #
 
 require 'test_helper'

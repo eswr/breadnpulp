@@ -24,6 +24,7 @@ class User < ActiveRecord::Base
 
 	before_save 						:downcase_email
 	before_create						:create_activation_digest
+	after_create						:create_food_alert
 
 	validates 	:name, 					presence: true,
 										length: { maximum: 50 }
@@ -48,6 +49,8 @@ class User < ActiveRecord::Base
 	has_many	:addresses
 	has_many	:deliveries
 	has_many	:packs, through: :deliveries
+
+	has_one		:food_alert
 
 	# Returns the hash digest of the given string.
 	def User.digest(string)
@@ -107,7 +110,12 @@ class User < ActiveRecord::Base
 		reset_sent_at < 2.hours.ago
 	end
 
+	def create_food_alert
+    	self.build_food_alert.save
+    end
+
   	private
+
 	  	# Converts email to all lower-case.
 	    def downcase_email
 	      self.email = email.downcase
@@ -118,6 +126,4 @@ class User < ActiveRecord::Base
 	      self.activation_token  = User.new_token
 	      self.activation_digest = User.digest(activation_token)
 	    end
-
-	    
 end

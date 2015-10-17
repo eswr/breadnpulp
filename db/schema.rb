@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151003132550) do
+ActiveRecord::Schema.define(version: 20151016202223) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 20151003132550) do
     t.string   "payment_mode"
     t.string   "booking_no"
     t.integer  "payment_status_id"
+    t.integer  "subscription_id"
   end
 
   add_index "deliveries", ["address_id"], name: "index_deliveries_on_address_id", using: :btree
@@ -50,6 +51,22 @@ ActiveRecord::Schema.define(version: 20151003132550) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "food_alerts", force: :cascade do |t|
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "food_alerts", ["user_id"], name: "index_food_alerts_on_user_id", using: :btree
+
+  create_table "food_alerts_items", id: false, force: :cascade do |t|
+    t.integer "food_item_id"
+    t.integer "food_alert_id"
+  end
+
+  add_index "food_alerts_items", ["food_alert_id"], name: "index_food_alerts_items_on_food_alert_id", using: :btree
+  add_index "food_alerts_items", ["food_item_id"], name: "index_food_alerts_items_on_food_item_id", using: :btree
 
   create_table "food_items", force: :cascade do |t|
     t.string   "name"
@@ -106,6 +123,14 @@ ActiveRecord::Schema.define(version: 20151003132550) do
 
   create_table "payment_statuses", force: :cascade do |t|
     t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "subscriptions", force: :cascade do |t|
+    t.integer  "user_id"
+    t.time     "at"
+    t.integer  "address_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

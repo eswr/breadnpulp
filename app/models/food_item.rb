@@ -35,6 +35,7 @@ class FoodItem < ActiveRecord::Base
 	validates_attachment_content_type :image, 	content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"]
 
 	has_and_belongs_to_many :kickerrs
+	has_and_belongs_to_many :food_alerts
 
 	def colorize
 		if self.veg_non_egg == "Non-Veg"

@@ -13,6 +13,7 @@ class UsersController < ApplicationController
     @addresses = @user.addresses.all
     @address = @user.addresses.build if logged_in?
     @deliveries = @user.deliveries.order(delivery_date: :desc).order(at: :asc)
+    @food_alert = @user.food_alert
   end
 
   def create

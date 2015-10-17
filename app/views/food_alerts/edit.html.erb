@@ -1,0 +1,34 @@
+<% provide(:title, "My Alerts") %>
+
+<div class="container">
+
+	<h1>My Alerts</h1>
+	<h5>We'll notify you when we have your favorite food item on the menu. Let us know what they are.</h4>
+
+	<div class="row">
+		<%= form_for (@food_alert) do |f| %>
+			<div class="col-md-12">
+				<%= render 'shared/error_messages', object: f.object %>
+			</div>
+
+			<div class="col-md-12">
+				<div class="field">
+		        	<%= hidden_field_tag("food_alert[food_item_ids][]", nil) %>
+		        	<% courses_array = ['Main', 'Beverage', 'Salad', 'Side'] %>
+		        	<% courses_array.each do |c| %>
+			        	<div class="col-md-3">
+			        		<h3><%= c %></h3>
+							<% FoodItem.where(course: c).each do |food_item| %>
+								<label>
+									<%= check_box_tag "food_alert[food_item_ids][]", food_item.id, food_item.id.in?(@food_alert.food_items.collect(&:id)) %>
+									<strong style="color: <%= food_item.colorize %>;"><%= food_item.name %></strong><br>
+								</label><br>
+							<% end %>
+						</div>
+					<% end %>
+				</div>
+			</div>
+			<%= f.submit "Create alert", class: 'btn btn-primary col-md-4 col-md-offset-4' %>
+		<% end %>
+	</div>
+</div>

@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   root 'static_pages#home'
   get     'profile'   => 'users#show'
-
+  get     'my_alerts' => 'users#my_alerts'
   get     'signup'    => 'users#new'
 
   get     'login'     => 'sessions#new'
@@ -20,7 +20,8 @@ Rails.application.routes.draw do
   resources :account_activations, only: [:edit]
   resources :password_resets,     only: [:new, :create, :edit, :update]
   resources :addresses
-  resources :food_items 
+  resources :food_items
+  resources :food_alerts
   resources :kickerrs
   resources :menus
   resources :deliveries

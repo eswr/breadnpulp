@@ -1,8 +1,18 @@
 <% provide(:title, @user.name) %>
 <div class="container">
-  <div class="col-xs-12 col-sm-12 col-md-8">
-    <div class="col-md-4 col-md-offset-4">
-      <h3>My orders</h3>
+  <div class="col-xs-12 col-sm-12 col-md-4">
+    <section class="user_info" style="padding:0px 0px;margin-top:10vh">
+        <h1 align="center">
+          <%= @user.name %>
+        </h1>
+        <p align="center">
+          <%= @user.email %><br>
+          <%= @user.phone_number %><br>
+          <%= link_to "edit", edit_user_path(@user) %>
+        </p>
+      </section>
+    <div class="col-md-12 col-md-offset-0">
+      <h3><%= current_user?(@user)? "My orders" : "#{@user.name}'s orders" %></h3>
       <h4><%= link_to "Make a new order", new_delivery_path %></h4>
     </div>
     <div class="row">
@@ -11,10 +21,10 @@
         <div class="thumbnail">
           <div class="container col-md-12 col-sm-12 col-xs-12" style="margin-top: 0px;">
               <div class="row">
-                <h5 class="col-sm-6 col-md-3"><%= delivery.booking_no %></h5>
-                <h5 class="col-sm-6 col-md-3"><%= delivery.delivery_date.strftime("%a %e %b %Y") %></h5>
-                <h5 class="col-sm-6 col-md-3" style="list-style: none; color: <%= delivery.delivery_status.colorize %>"><%= delivery.delivery_status.name %></h5>
-                <h5 class="col-sm-6 col-md-3">Rs. <%= delivery.get_total_amount %></h5>
+                <h5 class="col-sm-6 col-md-6"><%= delivery.booking_no %></h5>
+                <h5 class="col-sm-6 col-md-6"><%= delivery.delivery_date.strftime("%a %e %b %Y") %></h5>
+                <h5 class="col-sm-6 col-md-6" style="list-style: none; color: <%= delivery.delivery_status.colorize %>"><%= delivery.delivery_status.name %></h5>
+                <h5 class="col-sm-6 col-md-6">Rs. <%= delivery.get_total_amount %></h5>
               </div>
             <% if current_user.admin? %>
               <small><%= link_to "edit", edit_delivery_path(delivery) %></small>
@@ -50,16 +60,6 @@
   </div>
 
   <aside class="col-md-4">
-    <section class="user_info" style="padding:0px 0px;margin-top:10vh">
-      <h1 align="center">
-        <%= @user.name %>
-      </h1>
-      <p align="center">
-        <%= @user.email %><br>
-        <%= @user.phone_number %><br>
-        <%= link_to "edit", edit_user_path(@user) %>
-      </p>
-    </section>
     <h3 align="center">
       <%= current_user?(@user)? "My addresses" : "#{@user.name}'s addresses" %>
     </h3>
@@ -72,5 +72,24 @@
       </h4>
       <%= render 'shared/address_form' %>
     </section>
+  </aside>
+  <aside class="col-md-4">
+    <h3 align="center">
+      <%= current_user?(@user)? "My FoodieCalls" : "#{@user.name}'s FoodieCalls" %>
+      <small>
+        <%= link_to "edit", edit_food_alert_path(@food_alert), class: "btn btn-xs", style: "background-color: #fed136; border-color: #ffffff; color: black;" %>
+      </small>
+    </h3>
+    <div class="food_alert">
+      <% if @user.food_alert.food_items.any? %>
+        <%= render @food_alert %>
+      <% else %>
+        <p>
+          Love pancakes? Get notified when we put your favorite food item on the menu.
+          <br>
+          Click on "EDIT" to customize your foodiecalls. 
+        </p>
+      <% end %>
+    </div>
   </aside>
 </div>
