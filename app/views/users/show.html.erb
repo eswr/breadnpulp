@@ -1,65 +1,65 @@
 <% provide(:title, @user.name) %>
 <div class="container">
   <div class="col-xs-12 col-sm-12 col-md-4">
-    <section class="user_info" style="padding:0px 0px;margin-top:10vh">
-      <h1 align="center">
-        <%= @user.name %>
-      </h1>
-      <p align="center">
-        <%= @user.email %><br>
-        <%= @user.phone_number %><br>
-        <%= link_to "edit", edit_user_path(@user) %>
-      </p>
-    </section>
+    <div class="user_info" style="padding:0px 0px;margin-top:10vh">
+        <h1 align="center">
+          <%= @user.name %>
+        </h1>
+        <p align="center">
+          <%= @user.email %><br>
+          <%= @user.phone_number %><br>
+          <%= link_to "edit", edit_user_path(@user), class: "btn btn-xs" %>
+        </p>
+    </div>
     <div class="col-md-12 col-md-offset-0">
       <h3><%= current_user?(@user)? "My orders" : "#{@user.name}'s orders" %></h3>
       <h4><%= link_to "Make a new order", new_delivery_path %></h4>
     </div>
     <div class="row">
       <% @deliveries.each do |delivery| %>
-        <div class="col-xs-12 col-md-12 col-sm-12">
-          <div class="thumbnail">
-            <div class="container col-md-12 col-sm-12 col-xs-12" style="margin-top: 0px;">
-                <div class="row">
-                  <h5 class="col-sm-6 col-md-6"><%= delivery.booking_no %></h5>
-                  <h5 class="col-sm-6 col-md-6"><%= delivery.delivery_date.strftime("%a %e %b %Y") %></h5>
-                  <h5 class="col-sm-6 col-md-6" style="list-style: none; color: <%= delivery.delivery_status.colorize %>"><%= delivery.delivery_status.name %></h5>
-                  <h5 class="col-sm-6 col-md-6">Rs. <%= delivery.get_total_amount %></h5>
-                </div>
-                <% if current_user.admin? %>
-                  <small><%= link_to "edit", edit_delivery_path(delivery) %></small>
-                <% end %>
-                <table class="table table-hover">
-                  <tr> 
+      <div class="col-xs-12 col-md-12 col-sm-12">
+        <div class="thumbnail">
+          <div class="container col-md-12 col-sm-12 col-xs-12" style="margin-top: 0px;">
+              <div class="row">
+                <h5 class="col-sm-6 col-md-6"><%= delivery.booking_no %></h5>
+                <h5 class="col-sm-6 col-md-6"><%= delivery.delivery_date.strftime("%a %e %b %Y") %></h5>
+                <h5 class="col-sm-6 col-md-6" style="list-style: none; color: <%= delivery.delivery_status.colorize %>"><%= delivery.delivery_status.name %></h5>
+                <h5 class="col-sm-6 col-md-6">Rs. <%= delivery.get_total_amount %></h5>
+              </div>
+            <% if current_user.admin? %>
+              <small><%= link_to "edit", edit_delivery_path(delivery) %></small>
+            <% end %>
+            <table class="table table-hover">
+                <tr> 
                     <th>Items</th> 
                     <th>Qty</th> 
                     <th>Cost</th>
-                  </tr>
-                  <% delivery.packs.each do |pack| %>
-                    <tr>
+                </tr>
+                <% delivery.packs.each do |pack| %>
+                  <tr>
                       <% food_items = [] %>
                       <% pack.menu.kickerr.food_items.each do |food_item| %>
                         <% food_items << food_item.name %>
                       <% end %>
-                      <td><%= food_items.join(', ') %></td>
+                      <td><%= food_items.join(', ') %>
                       <td><%= pack.quantity %></td>
                       <td><%= pack.quantity * pack.get_unit_price %></td>
-                    </tr>
-                  <% end %>
-                </table>
-            </div>
+                  </tr>
+                <% end %>
+            </table>
           </div>
           <div style="padding: 15px;">
-            <li class="text-left" style="list-style: none;"><%= delivery.address.postal_address %></li>
-            <li class="text-left" style="list-style: none;"><%= delivery.at.strftime("at %I:%M%p") %></li>
-            <li class="text-left" style="list-style: none;"><%= delivery.payment_status.name %></li>
+          <li class="text-left" style="list-style: none;"><%= delivery.address.postal_address %></li>
+          <li class="text-left" style="list-style: none;"><%= delivery.at.strftime("at %I:%M%p") %></li>
+          <li class="text-left" style="list-style: none;"><%= delivery.payment_status.name %></li>
           </div>
-        </div>
-      <% end %>
+      </div>
     </div>
+    <% end %>
+  </div>
   </div>
 
-  <aside class="col-md-4">
+  <div class="col-md-4">
     <h3 align="center">
       <%= current_user?(@user)? "My addresses" : "#{@user.name}'s addresses" %>
     </h3>
@@ -72,8 +72,8 @@
       </h4>
       <%= render 'shared/address_form' %>
     </section>
-  </aside>
-  <aside class="col-md-4">
+  </div>
+  <div class="col-md-4">
     <h3 align="center">
       <%= current_user?(@user)? "My FoodieCalls" : "#{@user.name}'s FoodieCalls" %>
       <small>
@@ -91,5 +91,5 @@
         </p>
       <% end %>
     </div>
-  </aside>
+  </div>
 </div>
