@@ -30,7 +30,7 @@
                     <li><%= link_to "Chef View", chef_view_path %></li>
                   <% else %>
                     <li><a>Call us: 750-62-44-659</a></li>
-                    <li><%= link_to "New order", new_order_path %></li>
+                    <li><%= link_to "New order", new_order_path(:delivery => { user_id: @user.id }) %></li>
                     <li><%= link_to "#{current_user.name.split(' ').first}", current_user %></li>
                   <% end %>
                     <li><%= link_to "Log out", logout_path, method: "delete" %></li>
