@@ -2,6 +2,7 @@ class StaticPagesController < ApplicationController
 	def home
 		@menus = menus_on(active_menu_date)
 		@date = active_menu_date
+		@user = current_user
 	end
 
 	def active_menu_date
