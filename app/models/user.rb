@@ -114,6 +114,14 @@ class User < ActiveRecord::Base
     	self.build_food_alert.save
     end
 
+    def User.get_from_ids(ids)
+    	users = []
+    	ids.each do |id|
+    		users << User.find(id)
+    	end
+    	users
+    end
+
   	private
 
 	  	# Converts email to all lower-case.

@@ -15,6 +15,15 @@ class FoodAlertsController < ApplicationController
 		end
 	end
 
+	def index
+		@food_alerts = FoodAlert.get_food_alerts
+		user_ids = @food_alerts.map{ |key, value| key }.uniq
+		@users = User.get_from_ids(user_ids)
+	end
+
+	def show
+	end
+
 	private
 
 		def food_alert_params

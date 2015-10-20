@@ -1,0 +1,12 @@
+<% @users.each do |user| %>
+	<tr>
+		<td>
+			<%= user.name %>
+		</td>
+		<td>
+			<% @food_alerts[user.id].each do |food_item| %>
+				<%= food_item.name %><br>
+			<% end %>
+		</td>
+	</tr>
+<% end %>
