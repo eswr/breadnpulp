@@ -1,5 +1,9 @@
 class FoodAlertsController < ApplicationController
 
+	before_action :logged_in_user
+	before_action :correct_user
+	before_action :admin_user, only: :index
+
 	def edit
 		@food_alert = FoodAlert.find(params[:id])
 	end
@@ -29,4 +33,25 @@ class FoodAlertsController < ApplicationController
 		def food_alert_params
 			params.require(:food_alert).permit(:user_id, food_item_ids: [])
 		end
+
+		# Confirms a logged-in user.
+	    def logged_in_user
+	      unless logged_in?
+	        store_location
+	        flash[:danger] = "Please log in."
+	        redirect_to login_path
+	      end
+	    end
+
+	    # Confirms the correct user.
+	    def correct_user
+	      return true if current_user.admin?
+	      @user = User.find(params[:id])
+	      redirect_to(root_url) unless current_user?(@user)
+	    end
+	    
+	    # Confirms an admin user.
+	    def admin_user
+	      redirect_to(root_url) unless current_user.admin?
+	    end
 end
