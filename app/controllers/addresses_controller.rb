@@ -3,7 +3,7 @@ class AddressesController < ApplicationController
 	before_action	:correct_user,			only: :destroy
 
 	def create
-		@address = current_user.addresses.build(address_params)
+		@address = Address.new(address_params)
 		if @address.save
 			flash[:success] = "Address created!"
 			redirect_to @address.user
@@ -38,7 +38,7 @@ class AddressesController < ApplicationController
 	private
 
 		def address_params
-			params.require(:address).permit(:name, :full_address, :pincode)
+			params.require(:address).permit(:user_id, :name, :full_address, :pincode)
 		end
 
 		def correct_user
