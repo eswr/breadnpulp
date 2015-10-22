@@ -18,6 +18,8 @@ Rails.application.routes.draw do
 
   get     'foodiecalls'   => 'food_alerts#index'
 
+  get     'assign_packs'  => 'subscriptions#assign_packs_to_subscriptions'
+
   resources :users
   resources :account_activations, only: [:edit]
   resources :password_resets,     only: [:new, :create, :edit, :update]
@@ -27,6 +29,7 @@ Rails.application.routes.draw do
   resources :kickerrs
   resources :menus
   resources :deliveries
+  resources :subscriptions
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

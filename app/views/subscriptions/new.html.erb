@@ -1,0 +1,54 @@
+<% provide(:title, "New Subscription") %>
+
+<div class="container">
+	<h1>New Subscription</h1>
+
+	<%= form_for @subscription do |subscription_form| %>
+		<div class="row">
+			<%= subscription_form.hidden_field :user_id, value: @subscription.user_id %>
+			<h3><small>for </small><%= subscription_form.label @subscription.user.name %></h3>
+
+			<div class="col-md-4">
+				<h4>Dates, Time and Location</h4>
+				<h6><%= subscription_form.label :start_date %></h6>
+				<%= subscription_form.date_field :start_date, class: 'form-control' %><br>
+
+				<h6><%= subscription_form.label :no_of_days %></h6>
+				<%= subscription_form.select(:no_of_days, ([3, 5, 7, 14, 30].map {|i| [i.to_s + " days",i] }), {}, { :class => 'form-control' }) %><br>
+
+				<h6><%= subscription_form.label :delivery_time %></h6>
+				<%= subscription_form.select(:at, available_slots.map { |slot| [slot.strftime("%l:%M %p"), slot]}, {}, { :class => 'form-control' }) %><br>
+
+				<h6>Delivery address</h6>
+				<%= subscription_form.select(:address_id, ((@subscription.user.addresses.all).map { |addr| [addr.postal_address.split('').first(40).join + '...', addr.id] }), {}, { :class => 'form-control' }) %>
+			</div>
+
+			<div class="col-md-4">
+				<h4>Preference</h4>
+				<h6><%= subscription_form.label "Veg" %></h6>
+				<%= subscription_form.select(:veg_qty, ((0..10).map {|i| [i,i] }), {}, { :class => 'form-control' }) %><br>
+
+				<h6><%= subscription_form.label "Egg" %></h6>
+				<%= subscription_form.select(:egg_qty, ((0..10).map {|i| [i,i] }), {}, { :class => 'form-control' }) %><br>
+
+				<h6><%= subscription_form.label "Non-Veg" %></h6>
+				<%= subscription_form.select(:non_veg_qty, ((0..10).map {|i| [i,i] }), {}, { :class => 'form-control' }) %><br>
+			</div>
+
+			<div class="col-md-4">
+				<h6>A note<small> for the subscriber</small></h6>
+				<p>
+					Veg: Only veg products will be served<br><br><br>
+					Egg: Veg products will be served if no egg products on menu<br><br><br>
+					Non-Veg: Egg products will be served if no non-veg products on menu, Veg products will be served if no egg-products on menu
+				</p>
+			</div>
+		</div>
+
+		<div class="text-center">
+			<%= subscription_form.submit "Submit", class: 'btn btn-primary' %>
+		</div>
+
+	<% end %>
+</div>
+

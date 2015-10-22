@@ -20,10 +20,13 @@
 
 class Delivery < ActiveRecord::Base
 
+  after_create :set_booking_no
+
   belongs_to :user
   belongs_to :address
   belongs_to :delivery_status
   belongs_to :payment_status
+  belongs_to :subscription
 
   has_many :packs, dependent: :destroy
   has_many :menus, through: :packs
@@ -67,6 +70,10 @@ class Delivery < ActiveRecord::Base
       end
     end
     times
+  end
+
+  def set_booking_no
+    self.update_attribute :booking_no, self.get_b_no
   end
 
 end

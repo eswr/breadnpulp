@@ -3,12 +3,6 @@
 
 <h1>Edit Order</h1>
 
-<div class="row">
-	<% @available_menus.each do |menu| %>
-		<%= render menu.kickerr %>
-	<% end %>
-</div>	
-
 <%= form_for @delivery do |delivery_form| %>
 	
 	<%= render 'shared/error_messages', object: delivery_form.object %>
@@ -20,7 +14,7 @@
 				<%= pack_fields.label :kickerr %>
 				<%= pack_fields.select(:menu_id, (@available_menus.map { |menu| [menu.kickerr.name, menu.id] })) %><br>
 				<%= pack_fields.label :quantity %>
-				<%= pack_fields.select(:quantity, ((0..10).map {|i| [i,i] })) %><br>
+				<%= pack_fields.select(:quantity, ((0..10).map {|i| [i,i] }), {}, { :class => 'form-control' }) %><br>
 				<% if current_user.admin? %>
 					<%= pack_fields.label :unit_price %>
 					<%= pack_fields.text_field :unit_price %><br>

@@ -14,6 +14,7 @@
     <div class="col-md-12 col-md-offset-0">
       <h3><%= current_user?(@user)? "My orders" : "#{@user.name}'s orders" %></h3>
       <h4><%= link_to "Make a new order", new_delivery_path(:delivery => { user_id: @user.id }) %></h4>
+      <h4><%= link_to "Make a new subscription", new_subscription_path(:subscription => { user_id: @user.id }) %></h4>
     </div>
     <div class="row">
       <% @deliveries.each do |delivery| %>
