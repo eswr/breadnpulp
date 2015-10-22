@@ -1,6 +1,5 @@
 class CreateSubscriptions < ActiveRecord::Migration
   def change
-    drop_table :subscriptions
     create_table :subscriptions do |t|
       t.integer :user_id
       t.time :at
