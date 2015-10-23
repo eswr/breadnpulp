@@ -10,13 +10,15 @@ class DeliveriesController < ApplicationController
 		@user = @delivery.user
 		@delivery_statuses = DeliveryStatus.all
 		@payment_statuses = PaymentStatus.all
+		@address = @user.addresses.build(name: "New Address", full_address: "Create a new address")
+		@addresses = @user.addresses.map { |addr| [addr.postal_address.split('').first(40).join + '...', addr.id] }
 		menus_on(active_menu_date).each do |menu|
 			@delivery.packs.build(menu_id: menu.id)
 		end
 		@menus = menus_on(active_menu_date)
 		@date = active_menu_date
-		send_sms_to_admin "User on new order, " + @delivery.user.name, "praveen@breadnpulp.com"
-		send_sms_to_admin "User on new order, " + @delivery.user.name, "shubham@breadnpulp.com"
+		# send_sms_to_admin "User on new order, " + @delivery.user.name, "praveen@breadnpulp.com"
+		# send_sms_to_admin "User on new order, " + @delivery.user.name, "shubham@breadnpulp.com"
 	end
 
 	def create
@@ -24,16 +26,17 @@ class DeliveriesController < ApplicationController
 		@delivery.delivery_date = active_menu_date
 		@delivery.delivery_status = DeliveryStatus.find_by(name: 'Tentative')
 		@delivery.payment_status = PaymentStatus.find_by(name: 'Payment Due')
+		if @delivery.add
 		if @delivery.save
 			flash[:success] = "Order successfully placed"
 			redirect_to @delivery.user
-			send_sms_to_admin flash[:success] + ", " + @delivery.user.name + ", " + @delivery.user.phone_number + ", " + @delivery.at.to_s, "praveen@breadnpulp.com"
-			send_sms_to_admin flash[:success] + ", " + @delivery.user.name + ", " + @delivery.user.phone_number + ", " + @delivery.at.to_s, "shubham@breadnpulp.com"
+			# send_sms_to_admin flash[:success] + ", " + @delivery.user.name + ", " + @delivery.user.phone_number + ", " + @delivery.at.to_s, "praveen@breadnpulp.com"
+			# send_sms_to_admin flash[:success] + ", " + @delivery.user.name + ", " + @delivery.user.phone_number + ", " + @delivery.at.to_s, "shubham@breadnpulp.com"
 		else
 			flash[:danger] = "Order not placed. Please make sure you've added an address first."
 			redirect_to @delivery.user
-			send_sms_to_admin flash[:danger] + ", " + @delivery.user.name + ", " + @delivery.user.phone_number + ", " + @delivery.at.to_s, "praveen@breadnpulp.com"
-			send_sms_to_admin flash[:danger] + ", " + @delivery.user.name + ", " + @delivery.user.phone_number + ", " + @delivery.at.to_s, "shubham@breadnpulp.com"
+			# send_sms_to_admin flash[:danger] + ", " + @delivery.user.name + ", " + @delivery.user.phone_number + ", " + @delivery.at.to_s, "praveen@breadnpulp.com"
+			# send_sms_to_admin flash[:danger] + ", " + @delivery.user.name + ", " + @delivery.user.phone_number + ", " + @delivery.at.to_s, "shubham@breadnpulp.com"
 		end
 	end
 
@@ -100,7 +103,9 @@ class DeliveriesController < ApplicationController
 	private
 
 	def delivery_params
-		params.require(:delivery).permit(:user_id, :delivery_date, :at, :collect, :address_id, :delivery_status_id, :payment_status_id, :payment_date, :payment_mode, packs_attributes: [:id, :quantity, :menu_id, :unit_price, :payment_date, :payment_mode, :_destroy])
+		params.require(:delivery).permit(:user_id, :delivery_date, :at, :collect, :address_id, :delivery_status_id, :payment_status_id, :payment_date, :payment_mode,
+										packs_attributes: [:id, :quantity, :menu_id, :unit_price, :payment_date, :payment_mode, :_destroy],
+										addresses_attributes: [:id, :name, :full_address, :pincode])
 	end
 
 	# def editable_delivery
@@ -139,8 +144,8 @@ class DeliveriesController < ApplicationController
 	def send_sms (delivery)
 		url = URI.parse(URI.encode("http://trx.orangesms.net/api/sendmsg.php?user=breadnpulp&pass=qweqwe&sender=BRDPLP" +
 			"&phone=#{delivery.user.phone_number}" +
-			"&text=Hi #{delivery.user.name.split(' ').first}!" +
-			"Your order for #{delivery.delivery_date}: #{delivery.delivery_status.name}." +
+			"&text=Hi #{delivery.user.name.split(' ').first}! " +
+			"Your order for #{delivery.delivery_date.strftime("%a %e %b %Y")}: #{delivery.delivery_status.name}." +
 			" Thank you for choosing to eat with us. Congratulations on another step towards a healthy diet." +
 			"&priority=ndnd&stype=normal"))
 		req = Net::HTTP::Get.new(url.to_s)

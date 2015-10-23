@@ -26,7 +26,7 @@ class Address < ActiveRecord::Base
 										format: { with: VALID_PINCODE_REGEX }
 
 	def postal_address
-		"#{full_address} - #{pincode}"
+		"#{name}: #{full_address} - #{pincode}"
 	end
 
 end

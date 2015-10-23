@@ -40,7 +40,15 @@
 		<div class="col-md-4">
 			<%= delivery_form.hidden_field :user_id, :value => @user.id %>
 			<h3>Delivery address</h3>
-			<%= delivery_form.select(:address_id, ((@delivery.user.addresses.all).map { |addr| [addr.postal_address.split('').first(40).join + '...', addr.id] }), {}, { :class => 'form-control' }) %>
+			<%= delivery_form.select(:address_id, @addresses, {}, { :class => 'form-control' }) %>
+			<%= delivery_form.fields_for @address do |address_fields| %>
+			<br>
+			<br>
+			<p>If you have selected "New Address" please provide the details</p>
+				<%= address_fields.text_field :name, placeholder: 'Address Name', class: 'form-control' %><br>
+				<%= address_fields.text_area :full_address, placeholder: 'The full address goes here...', class: 'form-control' %><br>
+				<%= address_fields.text_field :pincode, placeholder: 'Pincode', class: 'form-control' %>
+			<% end %>
 		</div>
 	</div>
 

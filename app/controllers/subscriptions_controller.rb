@@ -1,6 +1,7 @@
 class SubscriptionsController < ApplicationController
   def new
   	@subscription = Subscription.new(subscription_params)
+  	@user = @subscription.user
   end
 
   def create
