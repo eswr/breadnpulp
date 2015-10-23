@@ -39,7 +39,6 @@ class Delivery < ActiveRecord::Base
 
   accepts_nested_attributes_for :packs, reject_if: lambda { |attributes| attributes[:quantity].to_f < 1 },
                                         allow_destroy: true
-  accepts_nested_attributes_for :address, reject_if: lambda { |attributes| attributes[:full_address].nil? }
 
   def get_total_amount
   	total_amount = 0
