@@ -47,7 +47,7 @@ class SubscriptionsController < ApplicationController
 							v: subscription.veg_qty }
 
 			for i in 0..2
-				if !types[i].in? availability
+				if availability[types[i]].nil?
 					requirement[types[i-1]] += requirement[types[i]]
 					requirement[types[i]] = 0
 				end
