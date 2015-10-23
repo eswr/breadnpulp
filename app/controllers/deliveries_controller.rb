@@ -17,8 +17,8 @@ class DeliveriesController < ApplicationController
 		end
 		@menus = menus_on(active_menu_date)
 		@date = active_menu_date
-		# send_sms_to_admin "User on new order, " + @delivery.user.name, "praveen@breadnpulp.com"
-		# send_sms_to_admin "User on new order, " + @delivery.user.name, "shubham@breadnpulp.com"
+		send_sms_to_admin "User on new order, " + @delivery.user.name, "praveen@breadnpulp.com"
+		send_sms_to_admin "User on new order, " + @delivery.user.name, "shubham@breadnpulp.com"
 	end
 
 	def create
@@ -26,17 +26,16 @@ class DeliveriesController < ApplicationController
 		@delivery.delivery_date = active_menu_date
 		@delivery.delivery_status = DeliveryStatus.find_by(name: 'Tentative')
 		@delivery.payment_status = PaymentStatus.find_by(name: 'Payment Due')
-		if @delivery.add
 		if @delivery.save
 			flash[:success] = "Order successfully placed"
 			redirect_to @delivery.user
-			# send_sms_to_admin flash[:success] + ", " + @delivery.user.name + ", " + @delivery.user.phone_number + ", " + @delivery.at.to_s, "praveen@breadnpulp.com"
-			# send_sms_to_admin flash[:success] + ", " + @delivery.user.name + ", " + @delivery.user.phone_number + ", " + @delivery.at.to_s, "shubham@breadnpulp.com"
+			send_sms_to_admin flash[:success] + ", " + @delivery.user.name + ", " + @delivery.user.phone_number + ", " + @delivery.at.to_s, "praveen@breadnpulp.com"
+			send_sms_to_admin flash[:success] + ", " + @delivery.user.name + ", " + @delivery.user.phone_number + ", " + @delivery.at.to_s, "shubham@breadnpulp.com"
 		else
 			flash[:danger] = "Order not placed. Please make sure you've added an address first."
 			redirect_to @delivery.user
-			# send_sms_to_admin flash[:danger] + ", " + @delivery.user.name + ", " + @delivery.user.phone_number + ", " + @delivery.at.to_s, "praveen@breadnpulp.com"
-			# send_sms_to_admin flash[:danger] + ", " + @delivery.user.name + ", " + @delivery.user.phone_number + ", " + @delivery.at.to_s, "shubham@breadnpulp.com"
+			send_sms_to_admin flash[:danger] + ", " + @delivery.user.name + ", " + @delivery.user.phone_number + ", " + @delivery.at.to_s, "praveen@breadnpulp.com"
+			send_sms_to_admin flash[:danger] + ", " + @delivery.user.name + ", " + @delivery.user.phone_number + ", " + @delivery.at.to_s, "shubham@breadnpulp.com"
 		end
 	end
 
