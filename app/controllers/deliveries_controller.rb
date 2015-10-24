@@ -27,7 +27,7 @@ class DeliveriesController < ApplicationController
 		@delivery.delivery_status = DeliveryStatus.find_by(name: 'Tentative')
 		@delivery.payment_status = PaymentStatus.find_by(name: 'Payment Due')
 		if @delivery.address_id.nil?
-			address = @delivery.user.addresses.create(delivery_params[:addresses_attributes])
+			address = @delivery.user.addresses.new(delivery_params[:addresses_attributes])
 			@delivery.address_id = address.id
 		end
 		if @delivery.save
@@ -89,19 +89,19 @@ class DeliveriesController < ApplicationController
 	end
 
 	def todays_orders
-		@deliveries = Delivery.where("delivery_date = ?", Date.today).where.not("delivery_status_id = ? OR delivery_status_id = ?", DeliveryStatus.find_by(name: 'Deactivated'), DeliveryStatus.find_by(name: 'Cancelled')).order(at: :asc)
+		@deliveries = Delivery.where("delivery_date = ?", Time.zone.today).where.not("delivery_status_id = ? OR delivery_status_id = ?", DeliveryStatus.find_by(name: 'Deactivated'), DeliveryStatus.find_by(name: 'Cancelled')).order(at: :asc)
 	end
 
 	def future_orders
-		@deliveries = Delivery.where("delivery_date > ?", Date.today).order(delivery_date: :asc, at: :asc)
+		@deliveries = Delivery.where("delivery_date > ?", Time.zone.today).order(delivery_date: :asc, at: :asc)
 	end
 
 	def recent_orders
-		@deliveries = Delivery.paginate(:page => params[:page]).where("delivery_date < ?", Date.today).order(delivery_date: :desc, at: :desc)
+		@deliveries = Delivery.paginate(:page => params[:page]).where("delivery_date < ?", Time.zone.today).order(delivery_date: :desc, at: :desc)
 	end
 
 	def chef_view
-		deliveries = Delivery.where(delivery_date: Date.today).where.not("delivery_status_id = ? OR delivery_status_id = ?", DeliveryStatus.find_by(name: 'Deactivated'), DeliveryStatus.find_by(name: 'Cancelled')).order(at: :asc)
+		deliveries = Delivery.where(delivery_date: Time.zone.today).where.not("delivery_status_id = ? OR delivery_status_id = ?", DeliveryStatus.find_by(name: 'Deactivated'), DeliveryStatus.find_by(name: 'Cancelled')).order(at: :asc)
 		@rows = Delivery.get_chef_view_rows(deliveries)
 	end
 
