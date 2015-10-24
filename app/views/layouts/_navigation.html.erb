@@ -20,6 +20,7 @@
                 <% if logged_in? %>
                   <% if current_user.admin? %>
                     <li><%= link_to "Users", users_path %></li>
+                    <li><%= link_to "Foodiecalls", foodiecalls_path %></li>
                     <li><%= link_to "Orders", todays_orders_path %></li>
                     <li><%= link_to "Food items", food_items_path %></li>
                     <li><%= link_to "Kickerrs", kickerrs_path %></li>
