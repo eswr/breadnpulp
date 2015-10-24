@@ -49,6 +49,7 @@ class DeliveriesController < ApplicationController
 
 	def edit
 		@delivery = Delivery.find(params[:id])
+		@user = @delivery.user
 		@available_menus = Menu.where(available_on: @delivery.delivery_date)
 		@delivery_statuses = DeliveryStatus.all
 		@payment_statuses = PaymentStatus.all
