@@ -22,7 +22,7 @@ class Delivery < ActiveRecord::Base
 
   after_create :set_booking_no
 
-  belongs_to :user
+  belongs_to :user, counter_cache: true
   belongs_to :address
   belongs_to :delivery_status
   belongs_to :payment_status

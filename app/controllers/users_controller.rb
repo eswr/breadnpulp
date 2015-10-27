@@ -44,6 +44,10 @@ class UsersController < ApplicationController
 
   def index
     @users = User.order(created_at: :asc)
+    respond_to do |format|
+      format.html
+      format.csv { render text: @users.to_csv}
+    end
   end
 
   def destroy

@@ -123,6 +123,15 @@ class User < ActiveRecord::Base
     	users
     end
 
+    def self.to_csv
+    	CSV.generate do |csv|
+    		csv << column_names
+    		all.each do |user|
+    			csv << [user.name, user.phone_number, user.source, user.deliveries_count]
+    		end
+    	end
+    end
+
   	private
 
 	  	# Converts email to all lower-case.
@@ -135,4 +144,8 @@ class User < ActiveRecord::Base
 	      self.activation_token  = User.new_token
 	      self.activation_digest = User.digest(activation_token)
 	    end
+
+	    def accessible_attributes
+	    	[name, phone_number]
+		end
 end
