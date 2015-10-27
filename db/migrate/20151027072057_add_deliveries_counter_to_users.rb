@@ -3,7 +3,7 @@ class AddDeliveriesCounterToUsers < ActiveRecord::Migration
   	add_column :users, :deliveries_count, :integer, default: 0
   	User.reset_column_information
   	User.all.each do |user|
-  		user.update_attribute :deliveries_count, user.deliveries.length
+  		User.reset_counters user.id, :deliveries
   	end
   end
 end
