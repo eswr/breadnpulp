@@ -46,7 +46,8 @@ class FoodAlertsController < ApplicationController
 	    # Confirms the correct user.
 	    def correct_user
 	      return true if current_user.admin?
-	      @user = User.find(params[:id])
+	      @food_alert = FoodAlert.find(params[:id])
+	      @user = @food_alert.user
 	      redirect_to(root_url) unless current_user?(@user)
 	    end
 	    
