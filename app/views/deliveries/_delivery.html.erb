@@ -13,7 +13,7 @@
 		<%= (delivery.at - 45.minutes).strftime("%I:%M%p") %>
 		<br>
 		<br>
-		<% if delivery.delivery_status.name != 'Despatched' %>
+		<% if delivery.delivery_status.name == 'Confirmed' %>
 			<%= link_to "mark as despatched", delivery_path(delivery, "delivery[delivery_status_id]" => DeliveryStatus.find_by(name: 'Despatched').id), method: :put, data: { :confirm => "Are you sure you have despatched #{delivery.user.name}'s order?" }, class: 'btn btn-danger btn-xs' %>
 		<% end %>
 	</td>
