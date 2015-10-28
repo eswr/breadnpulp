@@ -1,9 +1,11 @@
 module SubscriptionsHelper
 	def available_slots
-		slot = Time.new(1, 1, 1, 8, 15, 0)
-		last_slot = Time.new(1, 1, 1, 11, 45, 0)
+		slot = Time.new(active_menu_date.year, active_menu_date.month, active_menu_date.day, 8, 15, 0, "+05:30")
+		last_slot = Time.new(active_menu_date.year, active_menu_date.month, active_menu_date.day, 11, 45, 0, "+05:30")
 		# empty time slots
 		slots = []
+		# getting first available slot
+		slot = get_first_slot Time.zone.now.at_beginning_of_minute if Time.zone.now > slot - 45.minutes
 		loop do
 			slots << slot
 			slot += 15.minutes
@@ -11,4 +13,10 @@ module SubscriptionsHelper
 		end
 		slots
 	end
+
+	private
+
+		def get_first_slot(time)
+			time = time - (time.min % 15).minutes + 1.hour
+		end
 end

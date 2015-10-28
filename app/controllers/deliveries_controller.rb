@@ -17,8 +17,8 @@ class DeliveriesController < ApplicationController
 		end
 		@menus = menus_on(active_menu_date)
 		@date = active_menu_date
-		send_sms_to_admin "User on new order, " + @delivery.user.name, "praveen@breadnpulp.com"
-		send_sms_to_admin "User on new order, " + @delivery.user.name, "shubham@breadnpulp.com"
+		# send_sms_to_admin "User on new order, " + @delivery.user.name, "praveen@breadnpulp.com"
+		# send_sms_to_admin "User on new order, " + @delivery.user.name, "shubham@breadnpulp.com"
 	end
 
 	def create
