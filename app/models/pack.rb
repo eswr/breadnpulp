@@ -22,9 +22,9 @@ class Pack < ActiveRecord::Base
 
 	def self.to_csv
 		CSV.generate do |csv|
-			csv << ["Quantity", "Kickerr", "Date", "Price"]
+			csv << ["Quantity", "Menu id", "delivery id", "Price"]
 			all.each do |pack|
-				csv << [pack.quantity, pack.menu.kickerr.name, pack.delivery.delivery_date, pack.menu.price]
+				csv << [pack.quantity, pack.menu_id, pack.delivery_id, pack.get_unit_price]
 			end
 		end
 	end
