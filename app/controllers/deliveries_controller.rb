@@ -82,6 +82,10 @@ class DeliveriesController < ApplicationController
 
 	def index
 		@deliveries = Delivery.paginate(:page => params[:page]).order(delivery_date: :desc, at: :asc)
+		respond_to do |format|
+			format.html
+			format.csv { render text: Delivery.all.to_csv }
+		end
 	end
 
 	def destroy

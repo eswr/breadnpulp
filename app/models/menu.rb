@@ -24,4 +24,13 @@ class Menu < ActiveRecord::Base
   def get_price
   	self.price.nil? ? self.kickerr.price : self.price
   end
+
+	def self.to_csv
+		CSV.generate do |csv|
+			csv << ["Id", "Kickerr name", "Price"]
+			all.each do |menu|
+				csv << [menu.id, menu.kickerr.name, menu.price]
+			end
+		end
+	end
 end

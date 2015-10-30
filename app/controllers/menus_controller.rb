@@ -29,6 +29,10 @@ class MenusController < ApplicationController
 
   def index
     @menus = Menu.paginate(:page => params[:page]).order(available_on: :desc)
+    respond_to do |format|
+      format.html
+      format.csv { render text: Menu.all.to_csv }
+    end
   end
 
   def update

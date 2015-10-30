@@ -73,6 +73,15 @@ class Delivery < ActiveRecord::Base
     times
   end
 
+  def self.to_csv
+    CSV.generate do |csv|
+      csv << ["Id", "Date"]
+      all.each do |delivery|
+        csv << [delivery.id, delivery.delivery_date]
+      end
+    end
+  end
+
   def set_booking_no
     self.update_attribute :booking_no, self.get_b_no
   end
