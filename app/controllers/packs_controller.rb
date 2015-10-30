@@ -17,6 +17,13 @@ class PacksController < ApplicationController
 		@pack.update_attributes(pack_params)
 	end
 
+	def index
+		@packs = Pack.all
+		respond_to do |format|
+			format.csv { render text: @packs.to_csv }
+		end
+	end
+
 	private
 
 	def pack_params

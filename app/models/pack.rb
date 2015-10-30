@@ -19,4 +19,13 @@ class Pack < ActiveRecord::Base
   def get_unit_price
   	self.unit_price.nil? ? self.menu.get_price : self.unit_price
   end
+
+	def self.to_csv
+		CSV.generate do |csv|
+			csv << ["Quantity", "Kickerr", "Date", "Price"]
+			all.each do |pack|
+				csv << [pack.quantity, pack.menu.kickerr.name, pack.delivery.delivery_date, pack.menu.price]
+			end
+		end
+	end
 end
