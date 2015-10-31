@@ -10,7 +10,7 @@
 	<td>
 		<%= delivery.delivery_date %>
 		<br>
-		<%= (delivery.at - 45.minutes).strftime("%I:%M%p") %>
+		<%= (delivery.at - 30.minutes).strftime("%I:%M%p") %>
 		<br>
 		<br>
 		<% if delivery.delivery_status.name == 'Confirmed' %>
