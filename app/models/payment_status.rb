@@ -15,12 +15,10 @@ class PaymentStatus < ActiveRecord::Base
 						uniqueness: { case_sensitive: false }
 
 	def colorize
-		if self.name == "Tentative"
-			"pink"
-		elsif self.name == "Confirmed"
+		if self.name == "Payment Due"
+			"red"
+		elsif self.name == "Payment Complete"
 			"green"
-		elsif self.name == "Cancelled"
-			"black"
 		else
 			"blue"
 		end
