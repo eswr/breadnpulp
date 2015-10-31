@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="Rails breadnpulp: development" uuid="64f7fa91-567e-4a75-967f-03e410049305">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source name="Rails breadnpulp: test" uuid="ad745cfb-7a22-4785-a0c2-8bf2a79ef43d">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source name="Rails breadnpulp: production" uuid="8fbb377f-d05b-4b4e-b6f7-8312f4905a60">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+</component>

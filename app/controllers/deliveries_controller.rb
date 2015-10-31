@@ -93,8 +93,7 @@ class DeliveriesController < ApplicationController
 	end
 
 	def chef_view
-		deliveries = Delivery.where(delivery_date: Time.zone.today).where.not("delivery_status_id = ? OR delivery_status_id = ?", DeliveryStatus.find_by(name: 'Deactivated'), DeliveryStatus.find_by(name: 'Cancelled')).order(at: :asc)
-		@rows = Delivery.get_chef_view_rows(deliveries)
+		@rows = Delivery.get_chef_view_rows
 	end
 
 	private

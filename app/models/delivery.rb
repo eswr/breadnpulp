@@ -54,7 +54,8 @@ class Delivery < ActiveRecord::Base
     "MUM001#{self.delivery_date.strftime("%y%m%d")}#{counter}"
   end
 
-  def Delivery.get_chef_view_rows(deliveries)
+  def Delivery.get_chef_view_rows
+    deliveries = Delivery.where(delivery_date: Time.zone.today).where.not("delivery_status_id = ? OR delivery_status_id = ?", DeliveryStatus.find_by(name: 'Deactivated'), DeliveryStatus.find_by(name: 'Cancelled')).order(at: :asc)
     times = {}
     deliveries.each do |delivery|
       delivery.packs.each do |pack|
