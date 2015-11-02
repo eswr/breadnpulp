@@ -58,7 +58,7 @@ class UsersController < ApplicationController
 
   def show_orders
     @user = User.find(params[:id])
-    @deliveries = @user.deliveries
+    @deliveries = @user.deliveries.order(delivery_date: :desc)
   end
 
   private
