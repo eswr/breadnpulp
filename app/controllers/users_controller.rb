@@ -56,6 +56,11 @@ class UsersController < ApplicationController
     redirect_to users_url
   end
 
+  def show_orders
+    @user = User.find(params[:id])
+    @deliveries = @user.deliveries
+  end
+
   private
 
     def user_params

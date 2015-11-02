@@ -17,6 +17,7 @@
       <h4><%= link_to "Make a new subscription", new_subscription_path(:subscription => { user_id: @user.id }) %></h4>
     </div>
     <div class="row">
+    <%= link_to "All Orders", my_orders_path(id: @user) %>
       <% @deliveries.each do |delivery| %>
       <div class="col-xs-12 col-md-12 col-sm-12">
         <div class="thumbnail">

@@ -8,17 +8,7 @@
 		<br>
 		<%= delivery.delivery_date %>
 		<br>
-		<% color = 'black' %>
-		<% if (delivery.at - 60.minutes).strftime("%H%M%S%N") < Time.zone.now.strftime("%H%M%S%N") %>
-			<% color = 'red' %>
-		<% elsif (delivery.at - 45.minutes).strftime("%H%M%S%N") < Time.zone.now.strftime("%H%M%S%N") %>
-			<% color = 'yellow' %>
-		<% elsif (delivery.at - 30.minutes).strftime("%H%M%S%N") < Time.zone.now.strftime("%H%M%S%N") %>
-			<% color = 'green' %>
-		<% else %>
-			<% color = 'blue' %>
-		<% end %>
-		<h5 style='color: <%= color %>'><%= (delivery.at - 30.minutes).strftime("%I:%M%p") %></h5>
+		<h5><%= (delivery.at - 30.minutes).strftime("%I:%M%p") %></h5>
 		<br>
 		<% if delivery.delivery_status.name == 'Confirmed' %>
 			<%= link_to "mark as despatched", delivery_path(delivery, "delivery[delivery_status_id]" => DeliveryStatus.find_by(name: 'Despatched').id), method: :put, data: { :confirm => "Are you sure you have despatched #{delivery.user.name}'s order?" }, class: 'btn btn-danger btn-xs' %>

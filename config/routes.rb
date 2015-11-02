@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get     'profile'   => 'users#show'
   get     'my_alerts' => 'users#my_alerts'
   get     'signup'    => 'users#new'
+  get     'my_orders' => 'users#show_orders'
 
   get     'login'     => 'sessions#new'
   post    'login'     => 'sessions#create'
