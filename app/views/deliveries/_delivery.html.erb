@@ -4,14 +4,22 @@
 		<br>
 		<b style="color: <%= delivery.delivery_status.colorize %>"><%= delivery.delivery_status.name %></b>
 		<br>
-		<br>
 		<%= link_to "edit", edit_delivery_path(delivery), class: 'btn btn-warning btn-xs' %>
-	</td>
-	<td>
+		<br>
 		<%= delivery.delivery_date %>
 		<br>
-		<%= (delivery.at - 30.minutes).strftime("%I:%M%p") %>
-		<br>
+		<% color = 'black' %>
+		<% time_diff = delivery.at - 30.minutes - Time.zone.now %>
+		<% if time_diff < 0 %>
+			<% color = 'red' %>
+		<% elsif time_diff < 15.minutes %>
+			<% color = 'yellow' %>
+		<% elsif time_diff < 30.minutes %>
+			<% color = 'green' %>
+		<% else %>
+			<% color = 'blue' %>
+		<% end %>
+		<h5 style='color: <%= color %>'><%= (delivery.at - 30.minutes).strftime("%I:%M%p") %></h5>
 		<br>
 		<% if delivery.delivery_status.name == 'Confirmed' %>
 			<%= link_to "mark as despatched", delivery_path(delivery, "delivery[delivery_status_id]" => DeliveryStatus.find_by(name: 'Despatched').id), method: :put, data: { :confirm => "Are you sure you have despatched #{delivery.user.name}'s order?" }, class: 'btn btn-danger btn-xs' %>
@@ -20,7 +28,7 @@
 	<td>
 		<%= delivery.payment_status.name %>
 		<br>
-		<%= delivery.payment_date %>
+		<%= delivery.payment_date || "Payment date not mentioned" %>
 		<br>
 		<%= delivery.payment_mode %>
 		<br>
@@ -34,9 +42,8 @@
 		<%= delivery.user.name %>
 		<br>
 		<%= delivery.user.phone_number %>
-	</td>
-	<td>
-		<%= delivery.address.postal_address %>
+		<br>
+		<small><%= delivery.address.postal_address %></small>
 	</td>
 	<td>
 		<% delivery.packs.each do |pack| %>
