@@ -9,12 +9,12 @@
 		<%= delivery.delivery_date %>
 		<br>
 		<% color = 'black' %>
-		<% time_diff = delivery.at - 30.minutes - Time.now %>
-		<% if time_diff < 0 %>
+		<% time_diff = delivery.at.strftime( "%H%M%S%N" ) - Time.zone.now.strftime( "%H%M%S%N" ) %>
+		<% if time_diff < 30.minutes %>
 			<% color = 'red' %>
-		<% elsif time_diff < 15.minutes %>
+		<% elsif time_diff < 45.minutes %>
 			<% color = 'yellow' %>
-		<% elsif time_diff < 30.minutes %>
+		<% elsif time_diff < 60.minutes %>
 			<% color = 'green' %>
 		<% else %>
 			<% color = 'blue' %>
