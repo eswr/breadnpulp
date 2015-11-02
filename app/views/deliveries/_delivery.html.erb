@@ -9,11 +9,11 @@
 		<%= delivery.delivery_date %>
 		<br>
 		<% color = 'black' %>
-		<% if (delivery.at - 60.minutes).strftime("%H%M%S%N") < Time.now.strftime("%H%M%S%N") %>
+		<% if (delivery.at - 60.minutes).strftime("%H%M%S%N") < Time.zone.now.strftime("%H%M%S%N") %>
 			<% color = 'red' %>
-		<% elsif (delivery.at - 45.minutes).strftime("%H%M%S%N") < Time.now.strftime("%H%M%S%N") %>
+		<% elsif (delivery.at - 45.minutes).strftime("%H%M%S%N") < Time.zone.now.strftime("%H%M%S%N") %>
 			<% color = 'yellow' %>
-		<% elsif (delivery.at - 30.minutes).strftime("%H%M%S%N") < Time.now.strftime("%H%M%S%N") %>
+		<% elsif (delivery.at - 30.minutes).strftime("%H%M%S%N") < Time.zone.now.strftime("%H%M%S%N") %>
 			<% color = 'green' %>
 		<% else %>
 			<% color = 'blue' %>
