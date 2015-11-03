@@ -10,15 +10,14 @@ class DeliveriesController < ApplicationController
 		@user = @delivery.user
 		@delivery_statuses = DeliveryStatus.all
 		@payment_statuses = PaymentStatus.all
-		@address = @user.addresses.build(name: "New Address")
 		@addresses = @user.addresses.map { |addr| [addr.postal_address.split('').first(40).join + '...', addr.id] }
 		menus_on(active_menu_date).each do |menu|
 			@delivery.packs.build(menu_id: menu.id)
 		end
 		@menus = menus_on(active_menu_date)
 		@date = active_menu_date
-		# send_sms_to_admin "User on new order, " + @delivery.user.name, "praveen@breadnpulp.com"
-		# send_sms_to_admin "User on new order, " + @delivery.user.name, "shubham@breadnpulp.com"
+		send_sms_to_admin "User on new order, " + @delivery.user.name, "praveen@breadnpulp.com"
+		send_sms_to_admin "User on new order, " + @delivery.user.name, "shubham@breadnpulp.com"
 	end
 
 	def create
@@ -81,7 +80,7 @@ class DeliveriesController < ApplicationController
 	end
 
 	def todays_orders
-		@deliveries = Delivery.where("delivery_date = ?", Time.zone.today).where.not("delivery_status_id = ? OR delivery_status_id = ?", DeliveryStatus.find_by(name: 'Deactivated'), DeliveryStatus.find_by(name: 'Cancelled')).order(at: :asc)
+		@deliveries = Delivery.where("delivery_date = ?", Time.zone.today).where("delivery_status_id = ? OR delivery_status_id = ?", DeliveryStatus.find_by(name: 'Tentative'), DeliveryStatus.find_by(name: 'Confirmed')).order(at: :asc)
 	end
 
 	def future_orders
@@ -99,8 +98,7 @@ class DeliveriesController < ApplicationController
 	private
 
 	def delivery_params
-		params.require(:delivery).permit(:user_id, :delivery_date, :at, :collect, :address_id, :delivery_status_id, :payment_status_id, :payment_date, :payment_mode, packs_attributes: [:id, :quantity, :menu_id, :unit_price, :payment_date, :payment_mode, :_destroy], addresses_attributes: [:id, :name, :full_address, :pincode])
-	end
+		params.require(:delivery).permit(:user_id, :delivery_date, :at, :collect, :address_id, :delivery_status_id, :payment_status_id, :payment_date, :payment_mode, packs_attributes: [:id, :quantity, :menu_id, :unit_price, :payment_date, :payment_mode, :_destroy])
 
 	# def editable_delivery
 	# 	return true if current_user.admin?

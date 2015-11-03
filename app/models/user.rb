@@ -53,6 +53,7 @@ class User < ActiveRecord::Base
 
 	has_one		:food_alert
 
+  	# accepts_nested_attributes_for :addresses, reject_if: lambda { |attributes| attributes[:full_address].nil? }
 	# Returns the hash digest of the given string.
 	def User.digest(string)
 	  cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
