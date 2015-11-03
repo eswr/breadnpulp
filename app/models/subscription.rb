@@ -27,7 +27,7 @@ class Subscription < ActiveRecord::Base
 
 	private
 		def create_deliveries
-			for date in self.start_date..(self.start_date + self.no_of_days.day)
+			for date in self.start_date..(self.start_date + ((self.no_of_days) - 1).day)
 				self.deliveries.create(	delivery_date: date, at: self.at,
 										user_id: self.user_id, address_id: self.address_id,
 										delivery_status: DeliveryStatus.find_by(name: 'Confirmed'),

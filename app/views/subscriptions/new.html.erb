@@ -20,7 +20,7 @@
 				<%= subscription_form.select(:at, available_slots.map { |slot| [slot.strftime("%l:%M %p"), slot]}, {}, { :class => 'form-control' }) %><br>
 
 				<h6>Delivery address</h6>
-				<%= subscription_form.select(:address_id, ((@subscription.user.addresses.all).map { |addr| [addr.postal_address.split('').first(40).join + '...', addr.id] }), {}, { :class => 'form-control' }) %>
+				<%= subscription_form.select(:address_id, ((@user.addresses.all).map { |addr| [addr.postal_address.split('').first(40).join + '...', addr.id] }), {}, { :class => 'form-control' }) %>
 			</div>
 
 			<div class="col-md-4">
