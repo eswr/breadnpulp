@@ -23,7 +23,7 @@
 		<br>
 		Rs. <%= delivery.get_total_amount %>
 		<br>
-		<% if delivery.payment_status.name == 'Payment Due' || delivery.payment_date != nil %>
+		<% if delivery.payment_status.name == 'Payment Due' && delivery.payment_date != nil %>
 			<%= link_to "mark as payment completed", delivery_path(delivery, "delivery[payment_status_id]" => PaymentStatus.find_by(name: 'Payment Complete').id), method: :put, data: { :confirm => "Are you sure you have collected #{delivery.user.name}'s payment?" }, class: 'btn btn-danger btn-xs' %>
 		<% end %>
 	</td>
