@@ -1,0 +1,769 @@
+phone_number,full_address,at,unit_price,created_on,created_at,payment_status,delivery_status,delivery_date,payment_date,kickerr_name,quantity
+9820453336,"Unit No. 4, B Wing, Krislon House, Opposite Marwah Center, Mumbai",10:30:00,0,21-Aug-2015,15:30:00,Cleared,Done,24-Aug-2015,24-Aug-2015,VG-VSandBFProGreek,10
+9820453336,"Unit No. 4, B Wing, Krislon House, Opposite Marwah Center, Mumbai",10:30:00,0,21-Aug-2015,15:30:00,Cleared,Done,24-Aug-2015,24-Aug-2015,EG-PanCkBFProGreek,10
+9619642473,"A-005/006, Boomerang, Chandivali, Chandivali Farm Road, Andheri E",11:30:00,0,22-Aug-2015,16:00:00,Cleared,Done,24-Aug-2015,24-Aug-2015,VG-VSandBFProGreek,4
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",10:30:00,60,23-Aug-2015,18:00:00,Due,Done,24-Aug-2015,24-Aug-2015,VG-VSandBFProGreek,1
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",10:30:00,60,23-Aug-2015,18:00:00,Due,Done,24-Aug-2015,24-Aug-2015,EG-PanCkBFProGreek,2
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",10:30:00,60,23-Aug-2015,18:00:00,Due,Done,24-Aug-2015,24-Aug-2015,EG-EggBBFProGreek,2
+8422840723,"Town Center 1, 503, Andheri East",10:00:00,0,20-Aug-2015,16:30:00,Cleared,Done,24-Aug-2015,24-Aug-2015,VG-VSandBFProGreek,3
+8422840723,"Town Center 1, 503, Andheri East",10:00:00,0,20-Aug-2015,16:30:00,Cleared,Done,24-Aug-2015,24-Aug-2015,EG-PanCkBFProGreek,3
+7738776725,"2201, Excel Tower, IIT Market, Opp IIT Main Gate",9:00:00,110,23-Aug-2015,20:00:00,Cleared,Done,24-Aug-2015,24-Aug-2015,EG-PanCkBFProGreek,1
+9699399980,"B-306, Trikutta Towers, Suncity, Powai",8:30:00,100,8-Aug-2015,20:00:00,cleared,Done,24-Aug-2015,31-Aug-2015,EG-PanCkBFProGreek,1
+9699399980,"B-306, Trikutta Towers, Suncity, Powai",8:30:00,100,8-Aug-2015,20:00:00,cleared,Done,25-Aug-2015,31-Aug-2015,VG-AlooPLassCrud,1
+9699399980,"B-306, Trikutta Towers, Suncity, Powai",8:30:00,100,8-Aug-2015,20:00:00,cleared,Done,26-Aug-2015,31-Aug-2015,EG-ScramWatermeCole,1
+9699399980,"B-306, Trikutta Towers, Suncity, Powai",8:30:00,100,8-Aug-2015,20:00:00,cleared,Done,27-Aug-2015,31-Aug-2015,VG-IdliCarrotChef,1
+9699399980,"B-306, Trikutta Towers, Suncity, Powai",8:30:00,100,8-Aug-2015,20:00:00,cleared,Done,28-Aug-2015,31-Aug-2015,NVG-RockLimeSprout,1
+9699399980,"B-306, Trikutta Towers, Suncity, Powai",8:30:00,100,8-Aug-2015,20:00:00,cleared,Done,29-Aug-2015,31-Aug-2015,VG-PohaFruitSalad,1
+9699399980,"B-306, Trikutta Towers, Suncity, Powai",8:30:00,100,8-Aug-2015,20:00:00,cleared,Done,30-Aug-2015,31-Aug-2015,VG-UttapamMango,1
+9699399980,"B-306, Trikutta Towers, Suncity, Powai",8:30:00,100,8-Aug-2015,20:00:00,cleared,Done,31-Aug-2015,31-Aug-2015,EG-PanckOatmealGriTom,1
+9699399980,"B-306, Trikutta Towers, Suncity, Powai",8:30:00,100,8-Aug-2015,20:00:00,cleared,Done,1-Sep-2015,31-Aug-2015,VG-VsandCarrotGreek,1
+9930132297,"301, ICC Chambers, Saki Vihar Road, Andheri East (Near Gurukripa Hotel)",11:30:00,0,22-Aug-2015,16:00:00,Cleared,Done,24-Aug-2015,24-Aug-2015,VG-VSandBFProGreek,6
+9930132297,"301, ICC Chambers, Saki Vihar Road, Andheri East (Near Gurukripa Hotel)",11:30:00,0,22-Aug-2015,16:00:00,Cleared,Done,24-Aug-2015,24-Aug-2015,EG-PanCkBFProGreek,4
+7506050997,"A-301, Anamaya Society, B D Sawant Road, Chakala",8:30:00,110,24-Aug-2015,14:00:00,Cleared,Cancelled,25-Aug-2015,25-Aug-2015,EG-CheOmOatCrud,1
+7506050997,"A-301, Anamaya Society, B D Sawant Road, Chakala",8:30:00,110,24-Aug-2015,14:00:00,Cleared,Cancelled,25-Aug-2015,25-Aug-2015,VG-AlooPLassCrud,1
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",10:15:00,100,24-Aug-2015,20:00:00,Due,Done,25-Aug-2015,25-Aug-2015,EG-CheOmOatCrud,2
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",10:15:00,100,24-Aug-2015,20:00:00,Due,Done,25-Aug-2015,25-Aug-2015,VG-AlooPLassCrud,1
+7710063909,"B-602, Lotus Apartments, Hiranandani Gardens",9:30:00,110,25-Aug-2015,8:30:00,Cleared,Done,25-Aug-2015,25-Aug-2015,VG-AlooPLassCrud,2
+9820453336,"Unit No. 4, B Wing, Krislon House, Opposite Marwah Center, Mumbai",10:30:00,110,25-Aug-2015,10:00:00,Cleared,Done,25-Aug-2015,25-Aug-2015,EG-CheOmOatCrud,1
+9820453336,"Unit No. 4, B Wing, Krislon House, Opposite Marwah Center, Mumbai",10:30:00,110,25-Aug-2015,10:00:00,Cleared,Done,25-Aug-2015,25-Aug-2015,VG-AlooPLassCrud,1
+9167646140,"A-005/006, Boomerang, Chandivali, Chandivali Farm Road, Andheri E",11:30:00,100,24-Aug-2015,18:00:00,Cleared,Done,25-Aug-2015,25-Aug-2015,EG-CheOmOatCrud,1
+9167646140,"A-1101, Shimmering heights, Powai vihar complex, Near Maple",11:30:00,100,24-Aug-2015,18:00:00,Cleared,Done,25-Aug-2015,25-Aug-2015,VG-AlooPLassCrud,1
+9967967766,"Unit No. 4, B Wing, Krislon House, Opposite Marwah Center, Mumbai",11:30:00,45,25-Aug-2015,11:00:00,Cleared,Done,25-Aug-2015,25-Aug-2015,VG-OatCrud,1
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:30:00,100,25-Aug-2015,21:00:00,Due,Done,26-Aug-2015,26-Aug-2015,VG-KathiWatermeCole,5
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:30:00,100,25-Aug-2015,21:00:00,Due,Done,26-Aug-2015,26-Aug-2015,EG-ScramWatermeCole,3
+9167646140,"A-005/006, Boomerang, Chandivali, Chandivali Farm Road, Andheri E",11:00:00,100,25-Aug-2015,20:00:00,Cleared,Done,26-Aug-2015,26-Aug-2015,VG-KathiWatermeCole,2
+9167646140,"A-1101, Shimmering heights, Powai vihar complex, Near Maple",11:00:00,100,25-Aug-2015,20:00:00,Cleared,Done,26-Aug-2015,26-Aug-2015,EG-ScramWatermeCole,1
+9820453336,"Unit No. 4, B Wing, Krislon House, Opposite Marwah Center, Mumbai",11:00:00,110,25-Aug-2015,14:00:00,Cleared,Done,26-Aug-2015,26-Aug-2015,VG-KathiWatermeCole,1
+7738776725,"2201, Excel Tower, IIT Market, Opp IIT Main Gate",9:00:00,110,26-Aug-2015,0:00:00,cleared,Done,26-Aug-2015,26-Aug-2015,VG-KathiWatermeCole,1
+7738776725,"2201, Excel Tower, IIT Market, Opp IIT Main Gate",9:00:00,110,26-Aug-2015,0:00:00,cleared,Done,26-Aug-2015,26-Aug-2015,EG-ScramWatermeCole,2
+9967967766,"Unit No. 4, B Wing, Krislon House, Opposite Marwah Center, Mumbai",10:30:00,60,26-Aug-2015,10:15:00,Cleared,Done,26-Aug-2015,26-Aug-2015,VG-WatermeCole,1
+7738857470,"Unit No. 4, B Wing, Krislon House, Opposite Marwah Center, Mumbai",11:45:00,110,26-Aug-2015,11:30:00,Cleared,Done,26-Aug-2015,26-Aug-2015,EG-ScramWatermeCole,1
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,26-Aug-2015,19:30:00,Due,Done,27-Aug-2015,27-Aug-2015,VG-IdliCarrotChef,4
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,26-Aug-2015,19:30:00,Due,Done,27-Aug-2015,27-Aug-2015,EG-EggBBanamelChef,4
+9769757999,"A-1101, Shimmering heights, Powai vihar complex, Near Maple",10:00:00,110,26-Aug-2015,22:30:00,Due,Done,27-Aug-2015,27-Aug-2015,VG-IdliCarrotChef,2
+9769757999,"B606, Sagar tech plaza, andheri kurla road, Saki Naka, Andheri East, Mumbai-400072",10:00:00,110,26-Aug-2015,22:30:00,Due,Done,27-Aug-2015,27-Aug-2015,EG-EggBBanamelChef,2
+9920778895,"E509 Kailas industrial complex Vir savarkar road, vikhroli west, Mumbai",10:30:00,100,26-Aug-2015,23:00:00,Cleared,Done,27-Aug-2015,27-Aug-2015,VG-IdliCarrotChef,2
+9920778895,"901-2B, DSK Madhuban, Saki Naka, Andheri East, 400072",10:30:00,100,26-Aug-2015,23:00:00,Cleared,Done,27-Aug-2015,27-Aug-2015,EG-EggBBanamelChef,2
+9820453336,"Unit No. 4, B Wing, Krislon House, Opposite Marwah Center, Mumbai",11:00:00,110,26-Aug-2015,21:00:00,Cleared,Done,27-Aug-2015,27-Aug-2015,EG-EggBBanamelChef,1
+7738857470,"Unit No. 4, B Wing, Krislon House, Opposite Marwah Center, Mumbai",11:00:00,110,27-Aug-2015,10:20:00,Cleared,Done,27-Aug-2015,27-Aug-2015,EG-EggBBanamelChef,1
+9967967766,"Unit No. 4, B Wing, Krislon House, Opposite Marwah Center, Mumbai",11:00:00,45,27-Aug-2015,10:30:00,Cleared,Done,27-Aug-2015,27-Aug-2015,VG-BananamelChef,1
+8422840723,"Ungli Chaat, Near Solaris, Saki Vihar Road, Andheri East, Opposite L & T Gate No 6, Andheri East, Mumbai, Maharashtra 400072",9:00:00,100,27-Aug-2015,9:00:00,Cleared,Done,27-Aug-2015,27-Aug-2015,VG-IdliCarrotChef,1
+8422840723,"Town Center 1, 503, Andheri East",9:00:00,100,27-Aug-2015,9:00:00,Cleared,Done,27-Aug-2015,27-Aug-2015,EG-EggBBanamelChef,1
+9820453336,"Unit No. 4, B Wing, Krislon House, Opposite Marwah Center, Mumbai",10:30:00,110,28-Aug-2015,9:00:00,Cleared,Cancelled,28-Aug-2015,28-Aug-2015,#N/A,1
+9769757999,"A-1101, Shimmering heights, Powai vihar complex, Near Maple",10:00:00,110,27-Aug-2015,21:00:00,due,Done,28-Aug-2015,28-Aug-2015,VG-PastaLimeSprout,1
+9769757999,"B606, Sagar tech plaza, andheri kurla road, Saki Naka, Andheri East, Mumbai-400072",10:00:00,110,27-Aug-2015,21:00:00,due,Done,28-Aug-2015,28-Aug-2015,NVG-RockLimeSprout,1
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,27-Aug-2015,19:00:00,due,Done,28-Aug-2015,28-Aug-2015,VG-PastaLimeSprout,3
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,27-Aug-2015,19:00:00,due,Done,28-Aug-2015,28-Aug-2015,NVG-RockLimeSprout,4
+9967967766,"Unit No. 4, B Wing, Krislon House, Opposite Marwah Center, Mumbai",10:30:00,45,28-Aug-2015,11:30:00,Cleared,Cancelled,28-Aug-2015,28-Aug-2015,VG-LimeSprout,1
+9920778895,"E509 Kailas industrial complex Vir savarkar road, vikhroli west, Mumbai",12:00:00,110,28-Aug-2015,10:45:00,Cleared,Done,28-Aug-2015,28-Aug-2015,VG-PastaLimeSprout,1
+9920778895,"901-2B, DSK Madhuban, Saki Naka, Andheri East, 400072",12:00:00,110,28-Aug-2015,10:45:00,Cleared,Done,28-Aug-2015,28-Aug-2015,NVG-RockLimeSprout,1
+9819517799,"B606, Sagar tech plaza, andheri kurla road, Saki Naka, Andheri East, Mumbai-400072",11:30:00,110,28-Aug-2015,10:45:00,Cleared,Done,28-Aug-2015,28-Aug-2015,VG-PastaLimeSprout,1
+8422840723,"Town Center 1, 503, Andheri East",9:45:00,110,28-Aug-2015,9:30:00,Cleared,Done,28-Aug-2015,28-Aug-2015,VG-PastaLimeSprout,2
+9167474127,"901-2B, DSK Madhuban, Saki Naka, Andheri East, 400072",10:30:00,110,28-Aug-2015,9:45:00,Cleared,Done,28-Aug-2015,28-Aug-2015,VG-PastaLimeSprout,1
+9831199710,"401-A, Delta building, Hiranandani Gardens,Powai",11:00:00,110,28-Aug-2015,10:00:00,due,Done,28-Aug-2015,28-Aug-2015,NVG-RockLimeSprout,3
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,28-Aug-2015,7:30:00,due,Done,29-Aug-2015,29-Aug-2015,VG-PohaFruitSalad,5
+9167474127,"901-2B, DSK Madhuban, Saki Naka, Andheri East, 400072",10:30:00,110,28-Aug-2015,15:00:00,Cleared,Cancelled,29-Aug-2015,29-Aug-2015,VG-PohaFruitSalad,1
+9867822244,"306, B-wing, kingston Apartment, High Street, near Dmart, Powai",10:00:00,110,28-Aug-2015,20:30:00,Cleared,Done,29-Aug-2015,29-Aug-2015,VG-PohaFruitSalad,4
+9769757999,"A-1101, Shimmering heights, Powai vihar complex, Near Maple",9:00:00,110,28-Aug-2015,21:00:00,due,Done,29-Aug-2015,29-Aug-2015,VG-PohaFruitSalad,2
+8422840723,"Town Center 1, 503, Andheri East",9:30:00,110,29-Aug-2015,9:00:00,Cleared,Cancelled,29-Aug-2015,29-Aug-2015,VG-PohaFruitSalad,2
+9619834032,"1st Floor, Sidham, Plot number 97, Prem Lane, Sher E Punjab Colony, Andheri East",11:00:00,110,29-Aug-2015,10:15:00,Cleared,Done,29-Aug-2015,29-Aug-2015,VG-PohaFruitSalad,1
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,30-Aug-2015,16:00:00,due,Done,31-Aug-2015,31-Aug-2015,EG-PanckOatmealGriTom,3
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,30-Aug-2015,16:00:00,due,Done,31-Aug-2015,31-Aug-2015,VG-UttapBeetGriTom,5
+9619231339,"A-wing 1001, Orchid Enclave, Nahar amrit Shakti, Chandivali",11:00:00,110,30-Aug-2015,19:00:00,due,Done,31-Aug-2015,31-Aug-2015,EG-PanckOatmealGriTom,3
+9619231339,"C-104, Hostel 13, IIT Bombay, Powai-400076",11:00:00,110,30-Aug-2015,19:00:00,due,Done,31-Aug-2015,31-Aug-2015,VG-UttapBeetGriTom,2
+8422840723,"Town Center 1, 503, Andheri East",10:00:00,110,30-Aug-2015,19:45:00,Cleared,Done,31-Aug-2015,31-Aug-2015,EG-PanckOatmealGriTom,2
+9967786732,"Flat no- 004, Building 2E, Powai Vihar, Ground Floor, Powai",8:00:00,110,30-Aug-2015,20:00:00,Cleared,Done,31-Aug-2015,31-Aug-2015,EG-PanckOatmealGriTom,1
+9967786732,"Flat no- 004, Building 2E, Powai Vihar, Ground Floor, Powai",10:00:00,110,30-Aug-2015,20:00:00,Cleared,Done,31-Aug-2015,31-Aug-2015,EG-PanckOatmealGriTom,2
+9769983724,"A-504, Evershine Sapphire, Lokmilan colony, Near SBI atm, mumbai-400072",9:30:00,55,30-Aug-2015,20:00:00,Cleared,Done,31-Aug-2015,31-Aug-2015,EG-PanckOatmealGriTom,2
+9167757115,"C-104, Hostel 13, IIT Bombay, Powai-400076",9:00:00,110,30-Aug-2015,20:30:00,Cleared,Done,31-Aug-2015,31-Aug-2015,EG-PanckOatmealGriTom,1
+9769757999,"A-1101, Shimmering heights, Powai vihar complex, Near Maple",9:00:00,110,30-Aug-2015,21:00:00,due,Done,31-Aug-2015,31-Aug-2015,EG-PanckOatmealGriTom,1
+9769757999,"B606, Sagar tech plaza, andheri kurla road, Saki Naka, Andheri East, Mumbai-400072",9:00:00,110,30-Aug-2015,21:00:00,due,Done,31-Aug-2015,31-Aug-2015,VG-UttapBeetGriTom,1
+7506110902,"Earth Sciences department, IIT Bombay, Powai,Mumbai 400076",11:30:00,110,30-Aug-2015,23:30:00,Cleared,Done,31-Aug-2015,31-Aug-2015,EG-PanckOatmealGriTom,2
+7506110902,"E603, Synchronicity, Near D-Mart, Chandivali, Mumbai 400072",11:30:00,110,30-Aug-2015,23:30:00,Cleared,Done,31-Aug-2015,31-Aug-2015,VG-UttapBeetGriTom,1
+7738857470,"Unit No. 4, B Wing, Krislon House, Opposite Marwah Center, Mumbai",10:30:00,110,30-Aug-2015,9:30:00,Cleared,Done,31-Aug-2015,31-Aug-2015,EG-PanckOatmealGriTom,1
+9819214032,"FLat no. 303, Panch Maahal, Powai vihar complex Powai Mumbai",11:30:00,110,31-Aug-2015,10:30:00,Cleared,Done,31-Aug-2015,31-Aug-2015,EG-PanckOatmealGriTom,2
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,31-Aug-2015,21:00:00,due,Done,1-Sep-2015,20-Sep-2015,VG-VsandCarrotGreek,5
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,31-Aug-2015,21:00:00,due,Done,1-Sep-2015,20-Sep-2015,EG-VchOmleBFProGreek,4
+9167757115,"C-104, Hostel 13, IIT Bombay, Powai-400076",9:00:00,100,31-Aug-2015,22:00:00,Cleared,ongoing,1-Sep-2015,1-Sep-2015,VG-VsandCarrotGreek,1
+9167757115,"C-325, Hostel 14, IIT Bombay",9:00:00,100,31-Aug-2015,22:00:00,Cleared,ongoing,2-Sep-2015,1-Sep-2015,EG-VchOmleBFProGreek,1
+9167757115,"C-325, Hostel 14, IIT Bombay",9:00:00,100,31-Aug-2015,22:00:00,Cleared,ongoing,3-Sep-2015,1-Sep-2015,NVG-StrogaWaterMCrud,1
+9167757115,"C-325, Hostel 14, IIT Bombay",9:00:00,100,31-Aug-2015,22:00:00,Cleared,ongoing,4-Sep-2015,1-Sep-2015,EG-FrncTstColeLime,1
+9167757115,"C-325, Hostel 14, IIT Bombay",9:00:00,100,31-Aug-2015,22:00:00,Cleared,ongoing,5-Sep-2015,1-Sep-2015,VG-IdliChikooPotato,1
+9167757115,"C-325, Hostel 14, IIT Bombay",9:00:00,100,31-Aug-2015,22:00:00,Cleared,ongoing,6-Sep-2015,1-Sep-2015,VG-PastaCarrotChef,1
+9167757115,"C-325, Hostel 14, IIT Bombay",9:00:00,100,31-Aug-2015,22:00:00,Cleared,ongoing,7-Sep-2015,1-Sep-2015,EG-EggBBananaMelSprout,1
+9167757115,"C-325, Hostel 14, IIT Bombay",9:00:00,100,31-Aug-2015,22:00:00,Cleared,ongoing,8-Sep-2015,1-Sep-2015,VG-VsandBeetGrilledTom,1
+9167757115,"C-325, Hostel 14, IIT Bombay",9:00:00,100,31-Aug-2015,22:00:00,Cleared,ongoing,9-Sep-2015,1-Sep-2015,NVG-ChPattiesWaterMCrud,1
+9167757115,"C-325, Hostel 14, IIT Bombay",9:00:00,100,31-Aug-2015,22:00:00,Cleared,ongoing,10-Sep-2015,1-Sep-2015,EG-CheOmBFprotGreek,1
+9167757115,"C-325, Hostel 14, IIT Bombay",9:00:00,100,31-Aug-2015,22:00:00,Cleared,ongoing,11-Sep-2015,1-Sep-2015,NVG-CSandBanMelPotaSal,1
+9167757115,"C-325, Hostel 14, IIT Bombay",9:00:00,100,31-Aug-2015,22:00:00,Cleared,ongoing,12-Sep-2015,1-Sep-2015,VG-PastaLemonColes,1
+9167757115,"C-325, Hostel 14, IIT Bombay",9:00:00,100,31-Aug-2015,22:00:00,Cleared,ongoing,13-Sep-2015,1-Sep-2015,VG-AlooPFruitSalad,1
+9167757115,"C-325, Hostel 14, IIT Bombay",9:00:00,100,31-Aug-2015,22:00:00,Cleared,ongoing,14-Sep-2015,1-Sep-2015,VG-VsandBeetrootGreek,1
+9167757115,"C-325, Hostel 14, IIT Bombay",9:00:00,100,31-Aug-2015,22:00:00,Cleared,ongoing,15-Sep-2015,1-Sep-2015,EG-SbldBfprtnGrilledTom,1
+9167757115,"C-325, Hostel 14, IIT Bombay",9:00:00,100,31-Aug-2015,22:00:00,Cleared,ongoing,16-Sep-2015,1-Sep-2015,NVG-ChckStrogCarrotChefstyle,1
+9167757115,"C-325, Hostel 14, IIT Bombay",9:00:00,100,31-Aug-2015,22:00:00,Cleared,ongoing,17-Sep-2015,1-Sep-2015,EG-VegChzOmltChickooSprouts,1
+9167757115,"C-325, Hostel 14, IIT Bombay",9:00:00,100,31-Aug-2015,22:00:00,Cleared,ongoing,18-Sep-2015,1-Sep-2015,EG-FrenchTPotCpscmGuava,1
+9167757115,"C-325, Hostel 14, IIT Bombay",9:00:00,100,31-Aug-2015,22:00:00,Cleared,ongoing,19-Sep-2015,1-Sep-2015,NVG-ChSandWaterMgazVegCrud,1
+9167757115,"C-325, Hostel 14, IIT Bombay",9:00:00,100,31-Aug-2015,22:00:00,Cleared,ongoing,20-Sep-2015,1-Sep-2015,VG-PennePinkFruit Salad,1
+9167757115,"C-325, Hostel 14, IIT Bombay",9:00:00,100,31-Aug-2015,22:00:00,Cleared,ongoing,21-Sep-2015,1-Sep-2015,VG-GrnPeasKbbBfProteinGreek,1
+9167757115,"C-325, Hostel 14, IIT Bombay",9:00:00,100,31-Aug-2015,22:00:00,Cleared,ongoing,22-Sep-2015,1-Sep-2015,VG-VidliOatmealSprouts,1
+9167757115,"C-325, Hostel 14, IIT Bombay",9:00:00,100,31-Aug-2015,22:00:00,Cleared,ongoing,23-Sep-2015,1-Sep-2015,NVG-ChkPattiesGuavaChef'sStyle,1
+9167757115,"C-325, Hostel 14, IIT Bombay",9:00:00,100,31-Aug-2015,22:00:00,Cleared,ongoing,24-Sep-2015,1-Sep-2015,EG-PancakeVegCrudBanaMel,1
+9167757115,"C-325, Hostel 14, IIT Bombay",9:00:00,100,31-Aug-2015,22:00:00,Cleared,ongoing,25-Sep-2015,1-Sep-2015,EG-ScramBfproteinGreek,1
+9167757115,"C-325, Hostel 14, IIT Bombay",9:00:00,100,31-Aug-2015,22:00:00,Cleared,ongoing,26-Sep-2015,1-Sep-2015,VG-VSandBFProGreek,1
+9167757115,"C-325, Hostel 14, IIT Bombay",9:00:00,100,31-Aug-2015,22:00:00,Cleared,ongoing,27-Sep-2015,1-Sep-2015,VG-FruitChaatSalad,1
+9167757115,"C-325, Hostel 14, IIT Bombay",9:00:00,100,31-Aug-2015,22:00:00,Cleared,ongoing,28-Sep-2015,1-Sep-2015,EG-VomletteFruitOatmeal,1
+9167757115,"C-325, Hostel 14, IIT Bombay",9:00:00,100,31-Aug-2015,22:00:00,Cleared,ongoing,29-Sep-2015,1-Sep-2015,EG-FrenchTstGuavaSprouts,1
+9167757115,"C-325, Hostel 14, IIT Bombay",9:00:00,100,31-Aug-2015,22:00:00,Cleared,ongoing,30-Sep-2015,1-Sep-2015,EG-PancakeBforestCornSalad,1
+9967786732,"Flat no- 004, Building 2E, Powai Vihar, Ground Floor, Powai",11:00:00,110,31-Aug-2015,23:00:00,Cleared,Done,1-Sep-2015,1-Sep-2015,EG-VchOmleBFProGreek,1
+7738776725,"2201, Excel Tower, IIT Market, Opp IIT Main Gate",9:30:00,110,31-Aug-2015,23:55:00,cleared,Done,1-Sep-2015,20-Sep-2015,VG-VsandCarrotGreek,1
+7738776725,"2201, Excel Tower, IIT Market, Opp IIT Main Gate",9:30:00,110,31-Aug-2015,23:55:00,cleared,Done,1-Sep-2015,20-Sep-2015,EG-VchOmleBFProGreek,1
+9167940248,"C-325, Hostel 14, IIT Bombay",8:45:00,110,31-Aug-2015,23:50:00,due,Done,1-Sep-2015,20-Sep-2015,EG-VchOmleBFProGreek,1
+9099693171,"E603, Synchronicity, Near D-Mart, Chandivali, Mumbai 400072",10:00:00,110,1-Sep-2015,8:30:00,Cleared,Done,1-Sep-2015,1-Sep-2015,EG-VchOmleBFProGreek,1
+8527617627,"2102 mirabils, nahar amrit shakti, chandivali, Sakinaka Mumbai",11:30:00,110,1-Sep-2015,10:30:00,Cleared,Done,1-Sep-2015,1-Sep-2015,VG-VsandCarrotGreek,1
+8527617627,"B 1202 Gundecha Altura, Kanjur marg west, L.B.S Marg Mumbai 400078",11:30:00,110,1-Sep-2015,10:30:00,Cleared,Done,1-Sep-2015,1-Sep-2015,EG-VchOmleBFProGreek,1
+8971696903,"2102 mirabils, nahar amrit shakti, chandivali, Sakinaka Mumbai",11:30:00,110,31-Aug-2015,22:05:00,Cleared,Done,1-Sep-2015,1-Sep-2015,VG-VsandCarrotGreek,1
+8971696903,"503, Sigma Building,, Hiranandani Gardens, Powai,, Mumbai – 400076",11:30:00,110,31-Aug-2015,22:05:00,Cleared,Done,1-Sep-2015,1-Sep-2015,EG-VchOmleBFProGreek,1
+9820453336,"Unit No. 4, B Wing, Krislon House, Opposite Marwah Center, Mumbai",12:00:00,110,1-Sep-2015,11:00:00,Cleared,Done,1-Sep-2015,1-Sep-2015,VG-VsandCarrotGreek,1
+9820392422,Hanuman Road opp Bishops house iit market powai,10:00:00,0,1-Sep-2015,9:00:00,Cleared,Done,1-Sep-2015,1-Sep-2015,VG-VsandCarrotGreek,1
+9820392422,"Purple Squirrel Eduventures Pvt. Ltd., 2nd Floor, B wing, Supreme Business Park, Kensington Rear Exit Road, Hiranandani Gardens, Powai, Mumbai, Maharashtra 400076",10:00:00,0,1-Sep-2015,9:00:00,Cleared,Done,1-Sep-2015,1-Sep-2015,EG-VchOmleBFProGreek,2
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,1-Sep-2015,22:00:00,due,ongoing,2-Sep-2015,20-Sep-2015,EG-VchOmleBFProGreek,4
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,1-Sep-2015,22:00:00,due,ongoing,2-Sep-2015,20-Sep-2015,VG-AlooPButterChef,6
+9619101829,"Unit No. 4, B Wing, Krislon House, Opposite Marwah Center, Mumbai",10:00:00,110,1-Sep-2015,22:00:00,due,Done,2-Sep-2015,20-Sep-2015,EG-VchOmleBFProGreek,2
+9619101829,"811, Crescent Business Park, Sakinaka, Andheri(E) - 400072",10:00:00,110,1-Sep-2015,22:00:00,due,Done,2-Sep-2015,20-Sep-2015,VG-AlooPButterChef,1
+9820453336,"Unit No. 4, B Wing, Krislon House, Opposite Marwah Center, Mumbai",10:00:00,110,1-Sep-2015,22:00:00,Cleared,Done,2-Sep-2015,2-Sep-2015,VG-AlooPButterChef,1
+8971696903,"2102 mirabils, nahar amrit shakti, chandivali, Sakinaka Mumbai",11:00:00,110,1-Sep-2015,22:00:00,Cleared,Cancelled,2-Sep-2015,2-Sep-2015,EG-VchOmleBFProGreek,1
+8971696903,"503, Sigma Building,, Hiranandani Gardens, Powai,, Mumbai – 400076",11:00:00,110,1-Sep-2015,22:00:00,Cleared,Cancelled,2-Sep-2015,2-Sep-2015,VG-AlooPButterChef,1
+8527617627,"2102 mirabils, nahar amrit shakti, chandivali, Sakinaka Mumbai",11:30:00,110,1-Sep-2015,22:00:00,Cleared,Done,2-Sep-2015,2-Sep-2015,EG-VchOmleBFProGreek,1
+8527617627,"B 1202 Gundecha Altura, Kanjur marg west, L.B.S Marg Mumbai 400078",11:30:00,110,1-Sep-2015,22:00:00,Cleared,Done,2-Sep-2015,2-Sep-2015,VG-AlooPButterChef,1
+9769027833,B1407 trikutta towers powai,8:45:00,0,1-Sep-2015,22:30:00,Cleared,Done,2-Sep-2015,2-Sep-2015,EG-VchOmleBFProGreek,1
+7506429299,"B 1202 Gundecha Altura, Kanjur marg west, L.B.S Marg Mumbai 400078",8:30:00,110,1-Sep-2015,23:00:00,Cleared,Done,2-Sep-2015,2-Sep-2015,VG-AlooPButterChef,1
+8976542631,"503, Sigma Building,, Hiranandani Gardens, Powai,, Mumbai – 400076",11:00:00,110,1-Sep-2015,20:00:00,Cleared,Done,2-Sep-2015,2-Sep-2015,EG-VchOmleBFProGreek,1
+8976542631,"room no 416, tansa house, iit bombay, powai",11:00:00,110,1-Sep-2015,20:00:00,Cleared,Done,2-Sep-2015,2-Sep-2015,VG-AlooPButterChef,1
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",10:45:00,100,2-Sep-2015,22:00:00,due,Done,3-Sep-2015,1-Dec-2015,VG-PastaWaterMCrud,7
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",10:45:00,100,2-Sep-2015,22:00:00,due,Done,3-Sep-2015,1-Dec-2015,NVG-StrogaWaterMCrud,3
+7710002803,"Purple Squirrel Eduventures Pvt. Ltd., 2nd Floor, B wing, Supreme Business Park, Kensington Rear Exit Road, Hiranandani Gardens, Powai, Mumbai, Maharashtra 400076",11:00:00,100,2-Sep-2015,19:00:00,due,Done,3-Sep-2015,1-Dec-2015,VG-PastaWaterMCrud,5
+7710002803,"4th floor, E wing, Oberoi Gardens, Chandivali, Powai",11:00:00,100,2-Sep-2015,19:00:00,due,Done,3-Sep-2015,1-Dec-2015,NVG-StrogaWaterMCrud,5
+7710002803,"4th floor, E wing, Oberoi Gardens, Chandivali, Powai",11:00:00,100,2-Sep-2015,19:00:00,due,Done,3-Sep-2015,1-Dec-2015,VG-PancBforestChef,5
+9820453336,"Unit No. 4, B Wing, Krislon House, Opposite Marwah Center, Mumbai",10:00:00,110,3-Sep-2015,8:00:00,Cleared,Cancelled,3-Sep-2015,3-Sep-2015,VG-PastaWaterMCrud,1
+8527617627,"2102 mirabils, nahar amrit shakti, chandivali, Sakinaka Mumbai",11:30:00,110,2-Sep-2015,22:00:00,Cleared,Cancelled,3-Sep-2015,3-Sep-2015,VG-PastaWaterMCrud,1
+8527617627,"B 1202 Gundecha Altura, Kanjur marg west, L.B.S Marg Mumbai 400078",11:30:00,110,2-Sep-2015,22:00:00,Cleared,Cancelled,3-Sep-2015,3-Sep-2015,NVG-StrogaWaterMCrud,1
+9619993074,"811, Crescent Business Park, Sakinaka, Andheri(E) - 400072",11:00:00,0,2-Sep-2015,22:00:00,Cleared,Cancelled,3-Sep-2015,1-Dec-2015,VG-PastaWaterMCrud,2
+9619993074,"Room No. 319, Tansa House, C Wing, IIT Bombay, Powai - 400076",11:00:00,0,2-Sep-2015,22:00:00,Cleared,Cancelled,3-Sep-2015,1-Dec-2015,VG-PancBforestChef,3
+9967501421,"Coverfox Insurance Broking Pvt. Ltd., 3rd Floor, Wing B, Krislon House, Opp Marwa House, Ganesh Nagar Saki Vihar Road, Saki Naka, Andheri East, Mumbai, Maharashtra 400072",11:00:00,0,2-Sep-2015,22:00:00,Cleared,Cancelled,3-Sep-2015,1-Dec-2015,VG-PastaWaterMCrud,2
+9967501421,"Room No. 26, Hostel 1, IIT Bombay, Powai - 400076",11:00:00,0,2-Sep-2015,22:00:00,Cleared,Cancelled,3-Sep-2015,1-Dec-2015,VG-PancBforestChef,3
+9167940248,"C-325, Hostel 14, IIT Bombay",10:00:00,110,3-Sep-2015,9:00:00,due,Done,3-Sep-2015,1-Dec-2015,NVG-StrogaWaterMCrud,1
+7738776725,"2201, Excel Tower, IIT Market, Opp IIT Main Gate",8:15:00,110,3-Sep-2015,21:00:00,Cleared,Done,4-Sep-2015,1-Dec-2015,VG-ParatSabLassiColes,1
+7738776725,"2201, Excel Tower, IIT Market, Opp IIT Main Gate",8:15:00,110,3-Sep-2015,21:00:00,Cleared,Done,4-Sep-2015,1-Dec-2015,EG-FrncTstColeLime,1
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,3-Sep-2015,21:00:00,due,Done,4-Sep-2015,1-Dec-2015,VG-ParatSabLassiColes,6
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,3-Sep-2015,21:00:00,due,Done,4-Sep-2015,1-Dec-2015,EG-FrncTstColeLime,4
+9769983724,"A-504, Evershine Sapphire, Lokmilan colony, Near SBI atm, mumbai-400072",10:00:00,110,3-Sep-2015,23:00:00,Cleared,Done,4-Sep-2015,4-Sep-2015,EG-FrncTstColeLime,1
+9967786732,"Flat no- 004, Building 2E, Powai Vihar, Ground Floor, Powai",11:45:00,110,4-Sep-2015,1:15:00,due,Done,4-Sep-2015,4-Sep-2015,EG-FrncTstColeLime,1
+7710002803,"Purple Squirrel Eduventures Pvt. Ltd., 2nd Floor, B wing, Supreme Business Park, Kensington Rear Exit Road, Hiranandani Gardens, Powai, Mumbai, Maharashtra 400076",11:45:00,110,4-Sep-2015,11:00:00,due,Done,4-Sep-2015,4-Sep-2015,EG-FrncTstColeLime,1
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,4-Sep-2015,22:00:00,due,Done,5-Sep-2015,1-Dec-2015,VG-IdliChikooPotato,6
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,4-Sep-2015,22:00:00,due,Done,5-Sep-2015,1-Dec-2015,NVG-ChSandChikooPotato,3
+7710060692,"101, Timmy Arcade, Makwana road, near marol metro station, 400059",11:00:00,100,4-Sep-2015,22:00:00,due,Done,5-Sep-2015,1-Dec-2015,VG-IdliChikooPotato,2
+9967786732,"Flat no- 004, Building 2E, Powai Vihar, Ground Floor, Powai",11:45:00,110,5-Sep-2015,22:00:00,due,Done,5-Sep-2015,5-Sep-2015,NVG-ChSandChikooPotato,1
+9167474127,"901-2B, DSK Madhuban, Saki Naka, Andheri East, 400072",10:00:00,110,5-Sep-2015,9:00:00,Cleared,Done,5-Sep-2015,5-Sep-2015,VG-IdliChikooPotato,1
+9757090750,"D-1004, Raheja vistas, Raheja Vihar, Chandivali, powai",10:00:00,110,5-Sep-2015,19:00:00,due,Done,6-Sep-2015,6-Sep-2015,VG-PastaCarrotChef,1
+9757090750,"D-1004, Raheja vistas, Raheja Vihar, Chandivali, powai",10:00:00,110,5-Sep-2015,19:00:00,due,Done,6-Sep-2015,6-Sep-2015,EG-FrenchTBforestChef,1
+9757090750,"D-1004, Raheja vistas, Raheja Vihar, Chandivali, powai",10:00:00,110,5-Sep-2015,19:00:00,due,Done,6-Sep-2015,6-Sep-2015,NVG-ChiStrogBforestChef,4
+7738648963,"room no 416, tansa house, iit bombay, powai",10:00:00,110,5-Sep-2015,22:00:00,Cleared,Done,6-Sep-2015,6-Sep-2015,NVG-ChiStrogBforestChef,1
+7738776725,"2201, Excel Tower, IIT Market, Opp IIT Main Gate",8:15:00,100,5-Sep-2015,16:00:00,cleared,done,6-Sep-2015,1-Dec-2015,VG-PastaCarrotChef,1
+7738776725,"2201, Excel Tower, IIT Market, Opp IIT Main Gate",8:15:00,100,5-Sep-2015,16:00:00,cleared,done,6-Sep-2015,1-Dec-2015,NVG-ChiStrogBforestChef,1
+7738776725,"2201, Excel Tower, IIT Market, Opp IIT Main Gate",8:15:00,100,5-Sep-2015,16:00:00,cleared,done,7-Sep-2015,1-Dec-2015,VG-KathiButterMSprout,1
+7738776725,"2201, Excel Tower, IIT Market, Opp IIT Main Gate",8:15:00,100,5-Sep-2015,16:00:00,cleared,done,7-Sep-2015,1-Dec-2015,EG-EggBBananaMelSprout,1
+7738776725,"2201, Excel Tower, IIT Market, Opp IIT Main Gate",8:15:00,100,5-Sep-2015,16:00:00,cleared,done,8-Sep-2015,1-Dec-2015,VG-VsandBeetGrilledTom,1
+7738776725,"2201, Excel Tower, IIT Market, Opp IIT Main Gate",8:15:00,100,5-Sep-2015,16:00:00,cleared,done,8-Sep-2015,1-Dec-2015,EG-ScramOatmealGrilledTom,1
+7738776725,"2201, Excel Tower, IIT Market, Opp IIT Main Gate",8:15:00,100,5-Sep-2015,16:00:00,cleared,done,9-Sep-2015,1-Dec-2015,VG-IdliChikooCrud,1
+7738776725,"2201, Excel Tower, IIT Market, Opp IIT Main Gate",8:15:00,100,5-Sep-2015,16:00:00,cleared,done,9-Sep-2015,1-Dec-2015,NVG-ChPattiesWaterMCrud,1
+7738776725,"2201, Excel Tower, IIT Market, Opp IIT Main Gate",8:15:00,100,5-Sep-2015,16:00:00,cleared,done,10-Sep-2015,1-Dec-2015,VG-ParatSabLassiGreek,1
+7738776725,"2201, Excel Tower, IIT Market, Opp IIT Main Gate",8:15:00,100,5-Sep-2015,16:00:00,cleared,done,10-Sep-2015,1-Dec-2015,EG-CheOmBFprotGreek,1
+7738776725,"2201, Excel Tower, IIT Market, Opp IIT Main Gate",8:15:00,100,5-Sep-2015,16:00:00,cleared,done,11-Sep-2015,1-Dec-2015,VG-UttapCarrotPotatoSal,1
+7738776725,"2201, Excel Tower, IIT Market, Opp IIT Main Gate",8:15:00,100,5-Sep-2015,16:00:00,cleared,done,11-Sep-2015,1-Dec-2015,NVG-CSandBanMelPotaSal,1
+7738776725,"2201, Excel Tower, IIT Market, Opp IIT Main Gate",8:15:00,100,5-Sep-2015,16:00:00,cleared,done,12-Sep-2015,1-Dec-2015,VG-PastaLemonColes,1
+7738776725,"2201, Excel Tower, IIT Market, Opp IIT Main Gate",8:15:00,100,5-Sep-2015,16:00:00,cleared,done,12-Sep-2015,1-Dec-2015,EG-PancGuavColes,1
+9820392422,Hanuman Road opp Bishops house iit market powai,9:30:00,0,5-Sep-2015,23:00:00,Cleared,Done,6-Sep-2015,6-Sep-2015,VG-PastaCarrotChef,1
+9820392422,"Purple Squirrel Eduventures Pvt. Ltd., 2nd Floor, B wing, Supreme Business Park, Kensington Rear Exit Road, Hiranandani Gardens, Powai, Mumbai, Maharashtra 400076",9:30:00,0,5-Sep-2015,23:00:00,Cleared,Done,6-Sep-2015,6-Sep-2015,EG-FrenchTBforestChef,1
+9820392422,"Purple Squirrel Eduventures Pvt. Ltd., 2nd Floor, B wing, Supreme Business Park, Kensington Rear Exit Road, Hiranandani Gardens, Powai, Mumbai, Maharashtra 400076",9:30:00,0,5-Sep-2015,23:00:00,Cleared,Done,6-Sep-2015,6-Sep-2015,NVG-ChiStrogBforestChef,1
+9967786732,"Flat no- 004, Building 2E, Powai Vihar, Ground Floor, Powai",11:45:00,110,5-Sep-2015,22:00:00,due,Done,6-Sep-2015,1-Dec-2015,NVG-ChiStrogBforestChef,1
+8971696903,"2102 mirabils, nahar amrit shakti, chandivali, Sakinaka Mumbai",10:15:00,110,6-Sep-2015,9:30:00,Cleared,Done,6-Sep-2015,6-Sep-2015,EG-FrenchTBforestChef,1
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,6-Sep-2015,22:00:00,due,Done,7-Sep-2015,1-Dec-2015,VG-KathiButterMSprout,6
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,6-Sep-2015,22:00:00,due,Done,7-Sep-2015,1-Dec-2015,EG-EggBBananaMelSprout,4
+9967786732,"Flat no- 004, Building 2E, Powai Vihar, Ground Floor, Powai",11:30:00,110,6-Sep-2015,22:00:00,due,Done,7-Sep-2015,1-Dec-2015,VG-KathiButterMSprout,1
+7710060692,"101, Timmy Arcade, Makwana road, near marol metro station, 400059",11:00:00,100,6-Sep-2015,22:00:00,due,Done,7-Sep-2015,1-Dec-2015,VG-KathiButterMSprout,1
+7710060692,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",11:00:00,100,6-Sep-2015,22:00:00,due,Done,7-Sep-2015,1-Dec-2015,EG-EggBBananaMelSprout,1
+9820453336,"Unit No. 4, B Wing, Krislon House, Opposite Marwah Center, Mumbai",10:15:00,110,7-Sep-2015,1:30:00,Cleared,Done,7-Sep-2015,7-Sep-2015,EG-EggBBananaMelSprout,1
+9967967766,"Unit No. 4, B Wing, Krislon House, Opposite Marwah Center, Mumbai",11:00:00,60,7-Sep-2015,10:00:00,Cleared,Done,7-Sep-2015,7-Sep-2015,VG-SproutButter,1
+8971696903,"2102 mirabils, nahar amrit shakti, chandivali, Sakinaka Mumbai",10:15:00,110,7-Sep-2015,9:30:00,Cleared,Done,7-Sep-2015,7-Sep-2015,EG-EggBBananaMelSprout,1
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,8-Sep-2015,9:00:00,due,Done,8-Sep-2015,1-Dec-2015,VG-VsandBeetGrilledTom,5
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,8-Sep-2015,9:00:00,due,Done,8-Sep-2015,1-Dec-2015,EG-ScramOatmealGrilledTom,4
+7710060692,"101, Timmy Arcade, Makwana road, near marol metro station, 400059",11:00:00,100,7-Sep-2015,18:00:00,due,Done,8-Sep-2015,1-Dec-2015,VG-VsandBeetGrilledTom,1
+7710060692,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",11:00:00,100,7-Sep-2015,18:00:00,due,Done,8-Sep-2015,1-Dec-2015,EG-ScramOatmealGrilledTom,1
+9757090750,"D-1004, Raheja vistas, Raheja Vihar, Chandivali, powai",9:15:00,110,8-Sep-2015,0:45:00,due,Done,8-Sep-2015,1-Dec-2015,VG-VsandBeetGrilledTom,1
+9757090750,"D-1004, Raheja vistas, Raheja Vihar, Chandivali, powai",9:15:00,110,8-Sep-2015,0:45:00,due,Done,8-Sep-2015,1-Dec-2015,EG-ScramOatmealGrilledTom,5
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,8-Sep-2015,19:00:00,due,ongoing,9-Sep-2015,1-Dec-2015,VG-IdliChikooCrud,6
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,8-Sep-2015,19:00:00,due,ongoing,9-Sep-2015,1-Dec-2015,NVG-ChPattiesWaterMCrud,3
+7710060692,"101, Timmy Arcade, Makwana road, near marol metro station, 400059",11:00:00,100,8-Sep-2015,19:00:00,due,ongoing,9-Sep-2015,1-Dec-2015,VG-IdliChikooCrud,1
+7710060692,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",11:00:00,100,8-Sep-2015,19:00:00,due,ongoing,9-Sep-2015,1-Dec-2015,NVG-ChPattiesWaterMCrud,1
+8527617627,"2102 mirabils, nahar amrit shakti, chandivali, Sakinaka Mumbai",10:00:00,110,8-Sep-2015,23:00:00,Cleared,ongoing,9-Sep-2015,9-Sep-2015,NVG-ChPattiesWaterMCrud,1
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,11-Sep-2015,18:00:00,due,Done,12-Sep-2015,1-Dec-2015,VG-PastaLemonColes,5
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,11-Sep-2015,18:00:00,due,Done,12-Sep-2015,1-Dec-2015,EG-PancGuavColes,4
+7710060692,"101, Timmy Arcade, Makwana road, near marol metro station, 400059",11:00:00,100,11-Sep-2015,18:00:00,due,Done,12-Sep-2015,1-Dec-2015,VG-PastaLemonColes,1
+9769253205,"4th floor, E wing, Oberoi Gardens, Chandivali, Powai",11:15:00,100,11-Sep-2015,19:00:00,due,Done,12-Sep-2015,1-Dec-2015,VG-PastaLemonColes,3
+9833436459,"Room No. 319, Tansa House, C Wing, IIT Bombay, Powai - 400076",8:30:00,110,11-Sep-2015,19:00:00,due,Done,12-Sep-2015,1-Dec-2015,VG-PastaLemonColes,1
+9833436459,"Room no 121, Hostel no 1, IIT Bombay, Powai, Near Sunrise Dhaba. Mumbai 400076",8:30:00,110,11-Sep-2015,19:00:00,due,Done,12-Sep-2015,1-Dec-2015,EG-PancGuavColes,2
+9769027833,B1407 trikutta towers powai,8:45:00,110,11-Sep-2015,22:00:00,due,Done,12-Sep-2015,12-Sep-2015,VG-PastaLemonColes,1
+8879393166,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",10:30:00,110,12-Sep-2015,0:30:00,Cleared,Done,12-Sep-2015,12-Sep-2015,EG-PancGuavColes,1
+9167949125,"Room No. 26, Hostel 1, IIT Bombay, Powai - 400076",9:45:00,110,11-Sep-2015,23:30:00,Cleared,Done,12-Sep-2015,12-Sep-2015,EG-PancGuavColes,1
+8879393166,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",10:30:00,0,12-Sep-2015,0:30:00,Cleared,Done,12-Sep-2015,12-Sep-2015,VG-PastaLemonColes,1
+8879393166,Hostel 2 IIT bombay,10:30:00,0,12-Sep-2015,0:30:00,Cleared,Done,12-Sep-2015,12-Sep-2015,EG-PancGuavColes,1
+9769253205,"4th floor, E wing, Oberoi Gardens, Chandivali, Powai",11:15:00,0,11-Sep-2015,18:30:00,due,Done,12-Sep-2015,12-Sep-2015,EG-PancGuavColes,2
+9619647014,"D-1004, Raheja vistas, Raheja Vihar, Chandivali, powai",9:00:00,110,12-Sep-2015,1:30:00,due,Done,12-Sep-2015,12-Sep-2015,EG-PancGuavColes,2
+9930192806,"301, ICC Chambers, Saki Vihar Road, Andheri East (Near Gurukripa Hotel)",11:30:00,110,12-Sep-2015,10:30:00,due,Done,12-Sep-2015,12-Sep-2015,VG-PastaLemonColes,1
+8971696903,"2102 mirabils, nahar amrit shakti, chandivali, Sakinaka Mumbai",10:30:00,110,12-Sep-2015,10:00:00,Cleared,Done,12-Sep-2015,12-Sep-2015,EG-PancGuavColes,1
+8527617627,"2102 mirabils, nahar amrit shakti, chandivali, Sakinaka Mumbai",11:30:00,110,12-Sep-2015,10:00:00,due,Done,12-Sep-2015,1-Dec-2015,EG-PancGuavColes,1
+9757090750,"D-1004, Raheja vistas, Raheja Vihar, Chandivali, powai",9:15:00,110,8-Sep-2015,22:00:00,due,Done,9-Sep-2015,1-Dec-2015,NVG-ChPattiesWaterMCrud,2
+9819517799,"B606, Sagar tech plaza, andheri kurla road, Saki Naka, Andheri East, Mumbai-400072",10:00:00,110,9-Sep-2015,10:00:00,Cleared,Done,9-Sep-2015,9-Sep-2015,VG-IdliChikooCrud,1
+9820453336,"Unit No. 4, B Wing, Krislon House, Opposite Marwah Center, Mumbai",10:00:00,110,9-Sep-2015,8:00:00,Cleared,Done,9-Sep-2015,9-Sep-2015,VG-IdliChikooCrud,1
+8976542631,"503, Sigma Building,, Hiranandani Gardens, Powai,, Mumbai – 400076",10:00:00,110,9-Sep-2015,8:00:00,Cleared,Done,9-Sep-2015,9-Sep-2015,VG-IdliChikooCrud,1
+8976542631,"room no 416, tansa house, iit bombay, powai",10:00:00,110,9-Sep-2015,8:00:00,Cleared,Done,9-Sep-2015,9-Sep-2015,NVG-ChPattiesWaterMCrud,1
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,9-Sep-2015,22:00:00,due,Done,10-Sep-2015,1-Dec-2015,VG-ParatSabLassiGreek,6
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,9-Sep-2015,22:00:00,due,Done,10-Sep-2015,1-Dec-2015,EG-CheOmBFprotGreek,3
+7710060692,"101, Timmy Arcade, Makwana road, near marol metro station, 400059",11:00:00,100,9-Sep-2015,22:00:00,due,Done,10-Sep-2015,1-Dec-2015,VG-ParatSabLassiGreek,1
+7710060692,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",11:00:00,100,9-Sep-2015,22:00:00,due,Done,10-Sep-2015,1-Dec-2015,EG-CheOmBFprotGreek,1
+9757090750,"D-1004, Raheja vistas, Raheja Vihar, Chandivali, powai",9:15:00,110,9-Sep-2015,22:00:00,due,Done,10-Sep-2015,1-Dec-2015,EG-CheOmBFprotGreek,4
+8976542631,"503, Sigma Building,, Hiranandani Gardens, Powai,, Mumbai – 400076",10:00:00,110,10-Sep-2015,10:00:00,Cleared,Done,10-Sep-2015,10-Sep-2015,EG-CheOmBFprotGreek,1
+9769253205,"4th floor, E wing, Oberoi Gardens, Chandivali, Powai",11:15:00,110,10-Sep-2015,10:00:00,due,Done,10-Sep-2015,1-Dec-2015,VG-ParatSabLassiGreek,3
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,9-Sep-2015,22:00:00,due,Done,11-Sep-2015,1-Dec-2015,VG-UttapCarrotPotatoSal,6
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,9-Sep-2015,22:00:00,due,Done,11-Sep-2015,1-Dec-2015,NVG-CSandBanMelPotaSal,3
+7710060692,"101, Timmy Arcade, Makwana road, near marol metro station, 400059",11:00:00,100,9-Sep-2015,22:00:00,due,Done,11-Sep-2015,1-Dec-2015,VG-UttapCarrotPotatoSal,1
+7710060692,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",11:00:00,100,9-Sep-2015,22:00:00,due,Done,11-Sep-2015,1-Dec-2015,NVG-CSandBanMelPotaSal,1
+9757090750,"D-1004, Raheja vistas, Raheja Vihar, Chandivali, powai",9:15:00,110,9-Sep-2015,22:00:00,due,Done,11-Sep-2015,1-Dec-2015,NVG-CSandBanMelPotaSal,4
+9769253205,"4th floor, E wing, Oberoi Gardens, Chandivali, Powai",11:15:00,110,10-Sep-2015,10:00:00,due,Done,11-Sep-2015,1-Dec-2015,VG-UttapCarrotPotatoSal,3
+9757090750,"D-1004, Raheja vistas, Raheja Vihar, Chandivali, powai",9:15:00,110,11-Sep-2015,10:00:00,due,Done,12-Sep-2015,1-Dec-2015,VG-PastaLemonColes,3
+9757090750,"D-1004, Raheja vistas, Raheja Vihar, Chandivali, powai",9:15:00,110,11-Sep-2015,10:00:00,due,Done,12-Sep-2015,1-Dec-2015,EG-PancGuavColes,2
+9769253205,"4th floor, E wing, Oberoi Gardens, Chandivali, Powai",11:15:00,110,13-Sep-2015,10:00:00,due,Done,13-Sep-2015,1-Dec-2015,VG-AlooPFruitSalad,1
+7710060692,"101, Timmy Arcade, Makwana road, near marol metro station, 400059",11:00:00,100,13-Sep-2015,10:00:00,due,Done,13-Sep-2015,1-Dec-2015,VG-AlooPFruitSalad,1
+9757090750,"D-1004, Raheja vistas, Raheja Vihar, Chandivali, powai",9:30:00,110,13-Sep-2015,10:00:00,due,Done,13-Sep-2015,1-Dec-2015,VG-AlooPFruitSalad,3
+9769983724,"A-504, Evershine Sapphire, Lokmilan colony, Near SBI atm, mumbai-400072",9:00:00,110,13-Sep-2015,10:00:00,Cleared,Done,13-Sep-2015,1-Dec-2015,VG-AlooPFruitSalad,1
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,13-Sep-2015,22:00:00,due,Done,14-Sep-2015,1-Dec-2015,VG-VsandBeetrootGreek,6
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,13-Sep-2015,22:00:00,due,Done,14-Sep-2015,1-Dec-2015,EG-EggbdOatmealGreek,5
+9769253205,"4th floor, E wing, Oberoi Gardens, Chandivali, Powai",11:15:00,110,13-Sep-2015,18:00:00,due,Done,14-Sep-2015,1-Dec-2015,VG-VsandBeetrootGreek,3
+7710060692,"101, Timmy Arcade, Makwana road, near marol metro station, 400059",11:00:00,100,13-Sep-2015,20:00:00,due,Done,14-Sep-2015,1-Dec-2015,VG-VsandBeetrootGreek,1
+7710060692,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",11:00:00,100,13-Sep-2015,20:00:00,due,Done,14-Sep-2015,1-Dec-2015,EG-EggbdOatmealGreek,1
+9757090750,"D-1004, Raheja vistas, Raheja Vihar, Chandivali, powai",9:15:00,110,14-Sep-2015,8:00:00,due,Done,14-Sep-2015,1-Dec-2015,EG-EggbdOatmealGreek,4
+7738690556,"room 301, Hostel 3, IIT bombay",8:30:00,110,14-Sep-2015,8:00:00,Cleared,Done,14-Sep-2015,14-Sep-2015,VG-VsandBeetrootGreek,3
+7738690556,"6th floor, Nucleus House, Saki vihar road",8:30:00,110,14-Sep-2015,8:00:00,Cleared,Done,14-Sep-2015,14-Sep-2015,EG-EggbdOatmealGreek,3
+9167926093,"Chemistry dept., IIT Bombay",10:30:00,110,14-Sep-2015,9:00:00,due,Done,14-Sep-2015,1-Dec-2015,VG-VsandBeetrootGreek,4
+9167926093,"CoverFox-3rd Floor, Wing B, Krislon House, Opp Marwa House, Ganesh Nagar Saki Vihar Road, Saki Naka, Andheri East, Mumbai, Maharashtra 400072",10:30:00,110,14-Sep-2015,9:00:00,due,Done,14-Sep-2015,1-Dec-2015,EG-EggbdOatmealGreek,2
+9619446401,"A-505, Adityavardhan Apartment, OPposite Boomerang Gate no.2, Chandivali - 400072",8:15:00,110,14-Sep-2015,8:00:00,Cleared,Done,14-Sep-2015,14-Sep-2015,VG-VsandBeetrootGreek,1
+9819214032,"FLat no. 303, Panch Maahal, Powai vihar complex Powai Mumbai",11:30:00,110,14-Sep-2015,8:00:00,due,Done,14-Sep-2015,15-Sep-2015,VG-VsandBeetrootGreek,1
+9619446401,"A-505, Adityavardhan Apartment, OPposite Boomerang Gate no.2, Chandivali - 400072",8:15:00,100,14-Sep-2015,22:00:00,Cleared,Done,15-Sep-2015,16-Sep-2015,EG-SbldBfprtnGrilledTom,1
+9619446401,"Hostel 8, iit bombay",8:15:00,100,14-Sep-2015,22:00:00,Cleared,Done,16-Sep-2015,16-Sep-2015,NVG-ChckStrogCarrotChefstyle,1
+9757090750,"D-1004, Raheja vistas, Raheja Vihar, Chandivali, powai",9:15:00,110,14-Sep-2015,22:00:00,due,Done,15-Sep-2015,1-Dec-2015,EG-SbldBfprtnGrilledTom,5
+9769253205,"4th floor, E wing, Oberoi Gardens, Chandivali, Powai",11:15:00,110,14-Sep-2015,22:00:00,due,Done,15-Sep-2015,1-Dec-2015,VG-KathiButterMGrilledTom,3
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,14-Sep-2015,23:00:00,due,Done,15-Sep-2015,1-Dec-2015,VG-KathiButterMGrilledTom,6
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,14-Sep-2015,23:00:00,due,Done,15-Sep-2015,1-Dec-2015,EG-SbldBfprtnGrilledTom,4
+7710060692,"101, Timmy Arcade, Makwana road, near marol metro station, 400059",11:00:00,100,14-Sep-2015,22:00:00,due,Done,15-Sep-2015,1-Dec-2015,VG-KathiButterMGrilledTom,1
+7710060692,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",11:00:00,100,14-Sep-2015,22:00:00,due,Done,15-Sep-2015,1-Dec-2015,EG-SbldBfprtnGrilledTom,1
+8879393166,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",10:00:00,110,14-Sep-2015,22:00:00,Cleared,Done,15-Sep-2015,16-Sep-2015,VG-KathiButterMGrilledTom,1
+8879393166,Hostel 2 IIT bombay,10:00:00,110,14-Sep-2015,22:00:00,Cleared,Done,15-Sep-2015,16-Sep-2015,EG-SbldBfprtnGrilledTom,1
+8879393166,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",10:00:00,0,14-Sep-2015,22:00:00,Cleared,Done,15-Sep-2015,16-Sep-2015,VG-KathiButterMGrilledTom,2
+8879393166,Hostel 2 IIT bombay,10:00:00,0,14-Sep-2015,22:00:00,Cleared,Done,15-Sep-2015,16-Sep-2015,EG-SbldBfprtnGrilledTom,1
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,15-Sep-2015,22:00:00,due,Done,16-Sep-2015,1-Dec-2015,VG-VegIdliBananaChefStyle,5
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,15-Sep-2015,22:00:00,due,Done,16-Sep-2015,1-Dec-2015,NVG-ChckStrogCarrotChefstyle,5
+9769253205,"4th floor, E wing, Oberoi Gardens, Chandivali, Powai",11:15:00,110,15-Sep-2015,22:00:00,due,Done,16-Sep-2015,1-Dec-2015,VG-VegIdliBananaChefStyle,3
+8879393166,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",10:00:00,110,15-Sep-2015,22:00:00,due,Done,16-Sep-2015,1-Dec-2015,VG-VegIdliBananaChefStyle,1
+8879393166,Hostel 2 IIT bombay,10:00:00,110,15-Sep-2015,22:00:00,due,Done,16-Sep-2015,1-Dec-2015,NVG-ChckStrogCarrotChefstyle,1
+7710060692,"101, Timmy Arcade, Makwana road, near marol metro station, 400059",11:00:00,100,15-Sep-2015,22:00:00,due,Done,16-Sep-2015,1-Dec-2015,VG-VegIdliBananaChefStyle,1
+7710060692,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",11:00:00,100,15-Sep-2015,22:00:00,due,Done,16-Sep-2015,1-Dec-2015,NVG-ChckStrogCarrotChefstyle,1
+9619446401,"A-505, Adityavardhan Apartment, OPposite Boomerang Gate no.2, Chandivali - 400072",8:15:00,90,16-Sep-2015,22:00:00,cleared,ongoing,17-Sep-2015,1-Dec-2015,EG-VegChzOmltChickooSprouts,1
+9619446401,"Hostel 8, iit bombay",8:15:00,90,16-Sep-2015,22:00:00,cleared,ongoing,18-Sep-2015,1-Dec-2015,EG-FrenchTPotCpscmGuava,1
+9619446401,"Hostel 8, iit bombay",8:15:00,90,16-Sep-2015,22:00:00,cleared,ongoing,19-Sep-2015,1-Dec-2015,NVG-ChSandWaterMgazVegCrud,1
+9619446401,"Hostel 8, iit bombay",8:15:00,90,16-Sep-2015,22:00:00,cleared,ongoing,20-Sep-2015,1-Dec-2015,VG-PennePinkFruit Salad,1
+9619446401,"Hostel 8, iit bombay",8:15:00,90,16-Sep-2015,22:00:00,cleared,ongoing,21-Sep-2015,1-Dec-2015,EG-EggBBFProGreek,1
+9619446401,"Hostel 8, iit bombay",8:15:00,90,16-Sep-2015,22:00:00,cleared,ongoing,22-Sep-2015,1-Dec-2015,EG-VchOmleOatMealSprouts,1
+9619446401,"Hostel 8, iit bombay",8:15:00,90,16-Sep-2015,22:00:00,cleared,ongoing,23-Sep-2015,1-Dec-2015,NVG-ChkPattiesGuavaChef'sStyle,1
+9833436459,"Room No. 319, Tansa House, C Wing, IIT Bombay, Powai - 400076",8:30:00,110,16-Sep-2015,8:00:00,due,Done,16-Sep-2015,1-Dec-2015,VG-VegIdliBananaChefStyle,1
+9833436459,"Room no 121, Hostel no 1, IIT Bombay, Powai, Near Sunrise Dhaba. Mumbai 400076",8:30:00,110,16-Sep-2015,8:00:00,due,Done,16-Sep-2015,1-Dec-2015,NVG-ChckStrogCarrotChefstyle,1
+9167384147,room no-353-Hostel 3 IIT Bombay,9:00:00,110,16-Sep-2015,8:00:00,Cleared,Done,16-Sep-2015,16-Sep-2015,NVG-ChckStrogCarrotChefstyle,2
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,16-Sep-2015,19:00:00,due,Done,17-Sep-2015,1-Dec-2015,VG-ParathaSabChickooSprouts,4
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,16-Sep-2015,19:00:00,due,Done,17-Sep-2015,1-Dec-2015,EG-VegChzOmltChickooSprouts,7
+7710060692,"101, Timmy Arcade, Makwana road, near marol metro station, 400059",11:00:00,100,16-Sep-2015,19:00:00,due,Done,17-Sep-2015,1-Dec-2015,VG-ParathaSabChickooSprouts,1
+9769253205,"4th floor, E wing, Oberoi Gardens, Chandivali, Powai",11:15:00,110,16-Sep-2015,18:00:00,due,Done,17-Sep-2015,1-Dec-2015,VG-ParathaSabChickooSprouts,3
+9769253205,"Chemistry dept., IIT Bombay",11:15:00,110,16-Sep-2015,18:00:00,due,Done,17-Sep-2015,1-Dec-2015,EG-VegChzOmltChickooSprouts,2
+8879393166,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",10:00:00,110,17-Sep-2015,8:00:00,Cleared,Done,17-Sep-2015,1-Dec-2015,VG-ParathaSabChickooSprouts,2
+8879048961,"Room-107, Hostel-8, IIT BOMBAY Powai, Mumbai 400076",10:30:00,110,17-Sep-2015,8:00:00,due,Done,17-Sep-2015,1-Dec-2015,EG-VegChzOmltChickooSprouts,1
+9967347421,"1503, Yarrow, Amrit Nahar, Chanidivali, Powai",10:00:00,110,17-Sep-2015,9:00:00,due,Done,17-Sep-2015,1-Dec-2015,VG-ParathaSabChickooSprouts,1
+9619647014,"D-1004, Raheja vistas, Raheja Vihar, Chandivali, powai",9:00:00,110,17-Sep-2015,8:00:00,due,Done,17-Sep-2015,1-Dec-2015,EG-VegChzOmltChickooSprouts,1
+9769474360,"Room no 121, Hostel no 1, IIT Bombay, Powai, Near Sunrise Dhaba. Mumbai 400076",11:30:00,110,17-Sep-2015,11:00:00,due,Done,17-Sep-2015,1-Dec-2015,EG-VegChzOmltChickooSprouts,1
+8451833778,"Unit No. 4, B Wing, Krislon House, Opposite Marwah Center, Mumbai",8:45:00,100,17-Sep-2015,8:00:00,Cleared,Done,17-Sep-2015,1-Dec-2015,VG-ParathaSabChickooSprouts,2
+9004030150,"A-505, Adityavardhan Apartment, OPposite Boomerang Gate no.2, Chandivali - 400072",8:30:00,110,17-Sep-2015,8:00:00,due,Done,17-Sep-2015,1-Dec-2015,EG-VegChzOmltChickooSprouts,1
+8879393166,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",10:00:00,0,17-Sep-2015,8:00:00,Cleared,Done,17-Sep-2015,17-Sep-2015,EG-VegChzOmltChickooSprouts,3
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,17-Sep-2015,22:00:00,due,Done,18-Sep-2015,1-Dec-2015,VG-VPancakePotatCpscmGuava,5
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,17-Sep-2015,22:00:00,due,Done,18-Sep-2015,1-Dec-2015,EG-FrenchTPotCpscmGuava,4
+7710060692,"101, Timmy Arcade, Makwana road, near marol metro station, 400059",11:00:00,100,17-Sep-2015,19:00:00,due,Done,18-Sep-2015,1-Dec-2015,VG-VPancakePotatCpscmGuava,1
+7710060692,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",11:00:00,100,17-Sep-2015,19:00:00,due,Done,18-Sep-2015,1-Dec-2015,EG-FrenchTPotCpscmGuava,1
+9004030150,"A-505, Adityavardhan Apartment, OPposite Boomerang Gate no.2, Chandivali - 400072",8:15:00,110,17-Sep-2015,22:00:00,due,Done,18-Sep-2015,1-Dec-2015,EG-FrenchTPotCpscmGuava,1
+9769253205,"4th floor, E wing, Oberoi Gardens, Chandivali, Powai",11:15:00,110,17-Sep-2015,22:00:00,due,Done,18-Sep-2015,1-Dec-2015,VG-VPancakePotatCpscmGuava,3
+9769983724,Hostel 2 IIT bombay,10:00:00,110,17-Sep-2015,22:00:00,due,Done,18-Sep-2015,1-Dec-2015,VG-VPancakePotatCpscmGuava,1
+9619834032,"1st Floor, Sidham, Plot number 97, Prem Lane, Sher E Punjab Colony, Andheri East",9:00:00,110,17-Sep-2015,22:00:00,Cleared,Done,18-Sep-2015,18-Sep-2015,VG-VPancakePotatCpscmGuava,3
+8879393166,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",10:00:00,110,17-Sep-2015,22:00:00,due,Done,18-Sep-2015,18-Sep-2015,VG-VPancakePotatCpscmGuava,1
+8879393166,Hostel 2 IIT bombay,10:00:00,110,17-Sep-2015,22:00:00,due,Done,18-Sep-2015,18-Sep-2015,EG-FrenchTPotCpscmGuava,2
+9967786732,"Flat no- 004, Building 2E, Powai Vihar, Ground Floor, Powai",9:45:00,110,17-Sep-2015,22:00:00,due,Done,18-Sep-2015,1-Dec-2015,VG-VPancakePotatCpscmGuava,1
+7710002803,"Purple Squirrel Eduventures Pvt. Ltd., 2nd Floor, B wing, Supreme Business Park, Kensington Rear Exit Road, Hiranandani Gardens, Powai, Mumbai, Maharashtra 400076",10:30:00,110,17-Sep-2015,23:00:00,due,Done,18-Sep-2015,18-Sep-2015,VG-VPancakePotatCpscmGuava,1
+7710002803,"4th floor, E wing, Oberoi Gardens, Chandivali, Powai",10:30:00,110,17-Sep-2015,23:00:00,due,Done,18-Sep-2015,18-Sep-2015,EG-FrenchTPotCpscmGuava,1
+8422840723,"Town Center 1, 503, Andheri East",10:00:00,110,17-Sep-2015,23:00:00,due,Cancelled,18-Sep-2015,18-Sep-2015,#N/A,2
+7738776725,"2201, Excel Tower, IIT Market, Opp IIT Main Gate",8:00:00,100,17-Sep-2015,23:00:00,due,Done,18-Sep-2015,1-Dec-2015,VG-VPancakePotatCpscmGuava,3
+7738776725,"2201, Excel Tower, IIT Market, Opp IIT Main Gate",8:00:00,100,17-Sep-2015,23:00:00,due,Done,18-Sep-2015,1-Dec-2015,EG-FrenchTPotCpscmGuava,3
+9820869199,"1402, Evita, Central Avenue, Hiranandani Gardens, Powai-400076",9:45:00,110,18-Sep-2015,0:30:00,Cleared,Done,18-Sep-2015,18-Sep-2015,VG-VPancakePotatCpscmGuava,1
+9820869199,"1406 B-wing Lake Primrose, Lake Homes, Powai",9:45:00,110,18-Sep-2015,0:30:00,Cleared,Done,18-Sep-2015,18-Sep-2015,EG-FrenchTPotCpscmGuava,1
+9869037968,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",10:00:00,110,18-Sep-2015,0:30:00,due,Done,18-Sep-2015,18-Sep-2015,VG-VPancakePotatCpscmGuava,1
+9833436459,"Room No. 319, Tansa House, C Wing, IIT Bombay, Powai - 400076",9:45:00,110,18-Sep-2015,2:30:00,due,Done,18-Sep-2015,1-Dec-2015,EG-FrenchTPotCpscmGuava,1
+9819960817,"2002, Johnquille , Nahar amrit Shakti, Chandivali",8:30:00,110,18-Sep-2015,2:45:00,due,Done,18-Sep-2015,18-Sep-2015,VG-VPancakePotatCpscmGuava,1
+8451833778,"Unit No. 4, B Wing, Krislon House, Opposite Marwah Center, Mumbai",10:00:00,110,18-Sep-2015,9:00:00,Cleared,Done,18-Sep-2015,18-Sep-2015,VG-VPancakePotatCpscmGuava,1
+9619101829,"Unit No. 4, B Wing, Krislon House, Opposite Marwah Center, Mumbai",10:00:00,0,18-Sep-2015,9:00:00,Cleared,Done,18-Sep-2015,18-Sep-2015,EG-FrenchTPotCpscmGuava,1
+7799733017,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",10:00:00,110,18-Sep-2015,9:00:00,due,Done,18-Sep-2015,1-Dec-2015,VG-VPancakePotatCpscmGuava,1
+9769474360,"Room no 121, Hostel no 1, IIT Bombay, Powai, Near Sunrise Dhaba. Mumbai 400076",10:20:00,110,18-Sep-2015,9:00:00,Cleared,Done,18-Sep-2015,18-Sep-2015,EG-FrenchTPotCpscmGuava,1
+9819517799,"B606, Sagar tech plaza, andheri kurla road, Saki Naka, Andheri East, Mumbai-400072",9:45:00,110,18-Sep-2015,9:00:00,Cleared,Done,18-Sep-2015,18-Sep-2015,VG-VPancakePotatCpscmGuava,1
+9004030150,"A-505, Adityavardhan Apartment, OPposite Boomerang Gate no.2, Chandivali - 400072",8:15:00,110,18-Sep-2015,22:00:00,due,Done,19-Sep-2015,1-Dec-2015,VG-UttapaVegCrudWaterGaz,1
+9004030150,"Shop No.188, Galleria, Hiranandani Business Park, Powai, Mumbai, Maharashtra 400076",8:15:00,110,18-Sep-2015,22:00:00,due,Done,19-Sep-2015,1-Dec-2015,NVG-ChSandWaterMgazVegCrud,2
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,18-Sep-2015,22:00:00,due,Done,19-Sep-2015,1-Dec-2015,VG-UttapaVegCrudWaterGaz,4
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,18-Sep-2015,22:00:00,due,Done,19-Sep-2015,1-Dec-2015,NVG-ChSandWaterMgazVegCrud,5
+7710060692,"101, Timmy Arcade, Makwana road, near marol metro station, 400059",11:00:00,100,18-Sep-2015,22:00:00,due,Done,19-Sep-2015,1-Dec-2015,NVG-ChSandWaterMgazVegCrud,1
+9892437180,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",10:00:00,110,18-Sep-2015,22:00:00,due,Done,19-Sep-2015,1-Dec-2015,VG-UttapaVegCrudWaterGaz,1
+9833436459,"Room No. 319, Tansa House, C Wing, IIT Bombay, Powai - 400076",9:45:00,110,18-Sep-2015,22:00:00,due,Done,19-Sep-2015,1-Dec-2015,VG-UttapaVegCrudWaterGaz,1
+9769253205,"4th floor, E wing, Oberoi Gardens, Chandivali, Powai",11:15:00,110,18-Sep-2015,22:00:00,due,Done,19-Sep-2015,1-Dec-2015,VG-UttapaVegCrudWaterGaz,3
+7698636861,"1305, Vinca, Nahar Amrit Shakti Chandivali",9:00:00,110,19-Sep-2015,0:30:00,Cleared,Done,19-Sep-2015,19-Sep-2015,VG-UttapaVegCrudWaterGaz,1
+7799733017,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",10:00:00,110,19-Sep-2015,0:30:00,due,Done,19-Sep-2015,1-Dec-2015,VG-UttapaVegCrudWaterGaz,1
+9769474360,"Room no 121, Hostel no 1, IIT Bombay, Powai, Near Sunrise Dhaba. Mumbai 400076",11:30:00,110,19-Sep-2015,8:00:00,Cleared,Done,19-Sep-2015,19-Sep-2015,VG-UttapaVegCrudWaterGaz,1
+9769474360,"615-D Lokadrahsan, Military Road",11:30:00,110,19-Sep-2015,8:00:00,Cleared,Done,19-Sep-2015,19-Sep-2015,NVG-ChSandWaterMgazVegCrud,1
+9769303167,"901-2B, DSK Madhuban, Saki Naka, Andheri East, 400072",12:00:00,110,19-Sep-2015,10:00:00,Cleared,Done,19-Sep-2015,19-Sep-2015,VG-UttapaVegCrudWaterGaz,1
+9769303167,"Flat no: 802, Vinca, Nahar Amrit Shakti, Chandivali, Powai, Mumbai - 400072",12:00:00,110,19-Sep-2015,10:00:00,Cleared,Done,19-Sep-2015,19-Sep-2015,NVG-ChSandWaterMgazVegCrud,1
+8879393166,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",10:00:00,110,19-Sep-2015,10:00:00,due,Done,19-Sep-2015,1-Dec-2015,VG-UttapaVegCrudWaterGaz,1
+9538007269,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",10:00:00,40,19-Sep-2015,10:00:00,due,Done,19-Sep-2015,1-Dec-2015,VG-WatermelonGazpacho,1
+8976542631,"503, Sigma Building,, Hiranandani Gardens, Powai,, Mumbai – 400076",10:30:00,110,19-Sep-2015,10:00:00,Cleared,Done,19-Sep-2015,19-Sep-2015,VG-UttapaVegCrudWaterGaz,1
+8976542631,"room no 416, tansa house, iit bombay, powai",10:30:00,110,19-Sep-2015,10:00:00,Cleared,Done,19-Sep-2015,19-Sep-2015,NVG-ChSandWaterMgazVegCrud,1
+9004030150,"A-505, Adityavardhan Apartment, OPposite Boomerang Gate no.2, Chandivali - 400072",10:00:00,110,19-Sep-2015,10:00:00,Cleared,Done,19-Sep-2015,19-Dec-2015,NVG-ChSandWaterMgazVegCrud,1
+9004030150,"A-505, Adityavardhan Apartment, OPposite Boomerang Gate no.2, Chandivali - 400072",8:15:00,110,19-Sep-2015,10:00:00,due,ongoing,20-Sep-2015,1-Dec-2015,VG-PennePinkFruit Salad,4
+9833436459,"Room No. 319, Tansa House, C Wing, IIT Bombay, Powai - 400076",10:30:00,110,19-Sep-2015,22:00:00,due,ongoing,20-Sep-2015,1-Dec-2015,VG-PennePinkFruit Salad,1
+9769983724,"A-504, Evershine Sapphire, Lokmilan colony, Near SBI atm, mumbai-400072",9:30:00,100,19-Sep-2015,18:00:00,due,ongoing,20-Sep-2015,1-Dec-2015,VG-PennePinkFruit Salad,1
+9769983724,"FLat no. 303, Panch Maahal, Powai vihar complex Powai Mumbai",9:30:00,100,19-Sep-2015,18:00:00,due,ongoing,21-Sep-2015,1-Dec-2015,EG-EggBBFProGreek,1
+9769983724,"FLat no. 303, Panch Maahal, Powai vihar complex Powai Mumbai",9:30:00,100,19-Sep-2015,18:00:00,due,ongoing,22-Sep-2015,1-Dec-2015,VG-VidliOatmealSprouts,1
+9769983724,"FLat no. 303, Panch Maahal, Powai vihar complex Powai Mumbai",9:30:00,100,19-Sep-2015,18:00:00,due,ongoing,23-Sep-2015,1-Dec-2015,VG-KathiRollGuavaChef'sStyle,1
+9769983724,"FLat no. 303, Panch Maahal, Powai vihar complex Powai Mumbai",9:30:00,100,19-Sep-2015,18:00:00,due,ongoing,24-Sep-2015,1-Dec-2015,VG-VpancakeVegCrudBananMel,1
+9769983724,"FLat no. 303, Panch Maahal, Powai vihar complex Powai Mumbai",9:30:00,100,19-Sep-2015,18:00:00,due,ongoing,25-Sep-2015,1-Dec-2015,EG-ScramBfproteinGreek,1
+9769983724,"FLat no. 303, Panch Maahal, Powai vihar complex Powai Mumbai",9:30:00,100,19-Sep-2015,18:00:00,due,ongoing,26-Sep-2015,1-Dec-2015,EG-ScramBfproteinGreek,1
+9769983724,"FLat no. 303, Panch Maahal, Powai vihar complex Powai Mumbai",9:30:00,100,19-Sep-2015,18:00:00,due,ongoing,27-Sep-2015,1-Dec-2015,VG-FruitChaatSalad,1
+9769983724,"FLat no. 303, Panch Maahal, Powai vihar complex Powai Mumbai",9:30:00,100,19-Sep-2015,18:00:00,due,ongoing,28-Sep-2015,1-Dec-2015,EG-VomletteFruitOatmeal,1
+9769983724,"FLat no. 303, Panch Maahal, Powai vihar complex Powai Mumbai",9:30:00,100,19-Sep-2015,18:00:00,due,ongoing,29-Sep-2015,1-Dec-2015,VG-AlooParGuavaSprouts,1
+9769983724,"FLat no. 303, Panch Maahal, Powai vihar complex Powai Mumbai",9:30:00,100,19-Sep-2015,18:00:00,due,ongoing,30-Sep-2015,1-Dec-2015,VG-UttapamBforestCornSalad,1
+9769983724,"FLat no. 303, Panch Maahal, Powai vihar complex Powai Mumbai",9:30:00,100,19-Sep-2015,18:00:00,due,ongoing,1-Oct-2015,1-Dec-2015,EG-EggbdCarrotGrilledTom,1
+9769983724,"FLat no. 303, Panch Maahal, Powai vihar complex Powai Mumbai",9:30:00,100,19-Sep-2015,18:00:00,due,ongoing,2-Oct-2015,1-Dec-2015,VG-VegPancBananaMelFruit,1
+9769983724,"FLat no. 303, Panch Maahal, Powai vihar complex Powai Mumbai",9:30:00,100,19-Sep-2015,18:00:00,due,ongoing,3-Oct-2015,1-Dec-2015,VG-VegIdliChikooVegCrudites,1
+9769983724,"FLat no. 303, Panch Maahal, Powai vihar complex Powai Mumbai",9:30:00,100,19-Sep-2015,18:00:00,due,ongoing,4-Oct-2015,1-Dec-2015,VG-FruitSaladVegUpma,1
+9769983724,"FLat no. 303, Panch Maahal, Powai vihar complex Powai Mumbai",9:30:00,100,19-Sep-2015,18:00:00,due,ongoing,5-Oct-2015,1-Dec-2015,EG-FrenchMelonCorn,1
+9769983724,"FLat no. 303, Panch Maahal, Powai vihar complex Powai Mumbai",9:30:00,100,19-Sep-2015,18:00:00,due,ongoing,6-Oct-2015,1-Dec-2015,VG-VsandwichOatsGreek,1
+9769983724,"FLat no. 303, Panch Maahal, Powai vihar complex Powai Mumbai",9:30:00,100,19-Sep-2015,18:00:00,due,ongoing,7-Oct-2015,1-Dec-2015,VG-PenneArrLemonColeslaw,1
+9769983724,"FLat no. 303, Panch Maahal, Powai vihar complex Powai Mumbai",9:30:00,100,19-Sep-2015,18:00:00,due,ongoing,8-Oct-2015,1-Dec-2015,VG_KathiBeetrootCrudites,1
+9769983724,"FLat no. 303, Panch Maahal, Powai vihar complex Powai Mumbai",9:30:00,100,19-Sep-2015,18:00:00,due,ongoing,9-Oct-2015,1-Dec-2015,VG-GreenPeasGuavaMixedSprouts,1
+9769983724,"FLat no. 303, Panch Maahal, Powai vihar complex Powai Mumbai",9:30:00,100,19-Sep-2015,18:00:00,due,ongoing,10-Oct-2015,1-Dec-2015,VG-VegIdliBForestFruitSalad,1
+9769983724,"FLat no. 303, Panch Maahal, Powai vihar complex Powai Mumbai",9:30:00,100,19-Sep-2015,18:00:00,due,ongoing,11-Oct-2015,1-Dec-2015,VG-VegLasagnaWhiteTomato,1
+9769983724,"FLat no. 303, Panch Maahal, Powai vihar complex Powai Mumbai",9:30:00,100,19-Sep-2015,18:00:00,due,ongoing,12-Oct-2015,1-Dec-2015,VG-VpancakesChikooGrilledToamto,1
+9571300769,#N/A,9:00:00,100,19-Sep-2015,19:00:00,due,ongoing,20-Sep-2015,1-Dec-2015,VG-PennePinkFruit Salad,1
+9571300769,"F-1403, Raj Legacy Co-operative Society, LBS marg, Vikhroli-400079",9:00:00,100,19-Sep-2015,19:00:00,due,ongoing,21-Sep-2015,1-Dec-2015,EG-EggBBFProGreek,1
+9571300769,"F-1403, Raj Legacy Co-operative Society, LBS marg, Vikhroli-400079",9:00:00,100,19-Sep-2015,19:00:00,due,ongoing,22-Sep-2015,1-Dec-2015,EG-VchOmleOatMealSprouts,1
+9571300769,"F-1403, Raj Legacy Co-operative Society, LBS marg, Vikhroli-400079",9:00:00,100,19-Sep-2015,19:00:00,due,ongoing,23-Sep-2015,1-Dec-2015,NVG-ChkPattiesGuavaChef'sStyle,1
+9571300769,"F-1403, Raj Legacy Co-operative Society, LBS marg, Vikhroli-400079",9:00:00,100,19-Sep-2015,19:00:00,due,ongoing,24-Sep-2015,1-Dec-2015,EG-PancakeVegCrudBanaMel,1
+9571300769,"F-1403, Raj Legacy Co-operative Society, LBS marg, Vikhroli-400079",9:00:00,100,19-Sep-2015,19:00:00,due,ongoing,25-Sep-2015,1-Dec-2015,EG-ScramBfproteinGreek,1
+9571300769,"F-1403, Raj Legacy Co-operative Society, LBS marg, Vikhroli-400079",9:00:00,100,19-Sep-2015,19:00:00,due,ongoing,26-Sep-2015,1-Dec-2015,VG-VSandBFProGreek,1
+9769253205,"A 503, Raheja nest, lake homes, Chandivali",10:00:00,110,19-Sep-2015,22:00:00,due,ongoing,20-Sep-2015,1-Dec-2015,VG-PennePinkFruit Salad,1
+7738776725,"2201, Excel Tower, IIT Market, Opp IIT Main Gate",8:30:00,100,20-Sep-2015,1:00:00,due,ongoing,20-Sep-2015,1-Dec-2015,VG-PennePinkFruit Salad,6
+7738776725,"2201, Excel Tower, IIT Market, Opp IIT Main Gate",11:00:00,100,20-Sep-2015,10:00:00,due,ongoing,20-Sep-2015,1-Dec-2015,VG-PennePinkFruit Salad,2
+9869037968,"101, Pearl Building, Gem Society, Powai",11:00:00,110,20-Sep-2015,10:00:00,due,ongoing,20-Sep-2015,1-Dec-2015,VG-PennePinkFruit Salad,1
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,20-Sep-2015,22:00:00,due,ongoing,21-Sep-2015,1-Dec-2015,EG-EggBBFProGreek,5
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,20-Sep-2015,22:00:00,due,ongoing,21-Sep-2015,1-Dec-2015,VG-GrnPeasKbbBfProteinGreek,5
+7710060692,"101, Timmy Arcade, Makwana road, near marol metro station, 400059",11:00:00,100,20-Sep-2015,22:00:00,due,ongoing,21-Sep-2015,1-Dec-2015,EG-EggBBFProGreek,1
+7710060692,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",11:00:00,100,20-Sep-2015,22:00:00,due,ongoing,21-Sep-2015,1-Dec-2015,VG-GrnPeasKbbBfProteinGreek,1
+9769253205,"4th floor, E wing, Oberoi Gardens, Chandivali, Powai",11:15:00,110,20-Sep-2015,22:00:00,due,ongoing,21-Sep-2015,1-Dec-2015,VG-GrnPeasKbbBfProteinGreek,2
+8879006465,"6th floor, Nucleus House, Saki vihar road",11:30:00,110,20-Sep-2015,16:00:00,due,ongoing,21-Sep-2015,1-Dec-2015,EG-EggBBFProGreek,5
+8879006465,"Manavsthal heights, flat no 1003, f wing, military road",11:30:00,110,20-Sep-2015,16:00:00,due,ongoing,21-Sep-2015,1-Dec-2015,VG-GrnPeasKbbBfProteinGreek,5
+7710063909,"B-602, Lotus Apartments, Hiranandani Gardens",9:30:00,110,20-Sep-2015,15:00:00,due,ongoing,21-Sep-2015,1-Dec-2015,EG-EggBBFProGreek,1
+7710063909,"B-602, Lotus Apartments, Hiranandani Gardens",9:30:00,110,20-Sep-2015,15:00:00,due,ongoing,21-Sep-2015,1-Dec-2015,VG-GrnPeasKbbBfProteinGreek,1
+9619647014,"D-1004, Raheja vistas, Raheja Vihar, Chandivali, powai",8:30:00,110,20-Sep-2015,17:00:00,due,ongoing,21-Sep-2015,1-Dec-2015,VG-GrnPeasKbbBfProteinGreek,2
+9004030150,"A-505, Adityavardhan Apartment, OPposite Boomerang Gate no.2, Chandivali - 400072",8:15:00,90,20-Sep-2015,18:00:00,due,ongoing,21-Sep-2015,1-Dec-2015,EG-EggBBFProGreek,2
+9004030150,"Shop No.188, Galleria, Hiranandani Business Park, Powai, Mumbai, Maharashtra 400076",8:15:00,90,20-Sep-2015,18:00:00,due,ongoing,21-Sep-2015,1-Dec-2015,VG-GrnPeasKbbBfProteinGreek,2
+7799733017,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",10:00:00,110,21-Sep-2015,8:00:00,due,ongoing,21-Sep-2015,1-Dec-2015,VG-GrnPeasKbbBfProteinGreek,1
+9892437180,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",10:00:00,110,21-Sep-2015,8:00:00,due,ongoing,21-Sep-2015,1-Dec-2015,EG-EggBBFProGreek,1
+9999992534,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",10:00:00,110,21-Sep-2015,8:00:00,due,ongoing,21-Sep-2015,1-Dec-2015,EG-EggBBFProGreek,1
+8451833778,"Unit No. 4, B Wing, Krislon House, Opposite Marwah Center, Mumbai",10:00:00,110,21-Sep-2015,9:00:00,due,ongoing,21-Sep-2015,1-Dec-2015,VG-GrnPeasKbbBfProteinGreek,1
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,21-Sep-2015,21:00:00,due,ongoing,22-Sep-2015,1-Dec-2015,VG-VidliOatmealSprouts,5
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,21-Sep-2015,21:00:00,due,ongoing,22-Sep-2015,1-Dec-2015,EG-VchOmleOatMealSprouts,6
+7506793054,"6th floor, Nucleus House, Saki vihar road",10:30:00,110,21-Sep-2015,22:00:00,due,ongoing,22-Sep-2015,1-Dec-2015,VG-VidliOatmealSprouts,5
+7506793054,"B wing, 601, Woodland Heights, near Sangharsh Nagar Bus stop, Chandivali.",10:30:00,110,21-Sep-2015,22:00:00,due,ongoing,22-Sep-2015,1-Dec-2015,EG-VchOmleOatMealSprouts,5
+9920130681,"CoverFox-3rd Floor, Wing B, Krislon House, Opp Marwa House, Ganesh Nagar Saki Vihar Road, Saki Naka, Andheri East, Mumbai, Maharashtra 400072",10:00:00,110,21-Sep-2015,22:00:00,due,ongoing,22-Sep-2015,1-Dec-2015,VG-VidliOatmealSprouts,5
+9920130681,"504, Panch Mahal, near SM Shetty school, Hiranandani",10:00:00,110,21-Sep-2015,22:00:00,due,ongoing,22-Sep-2015,1-Dec-2015,EG-VchOmleOatMealSprouts,5
+8879393166,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",10:00:00,110,21-Sep-2015,22:00:00,due,ongoing,22-Sep-2015,1-Dec-2015,EG-VchOmleOatMealSprouts,1
+9869037968,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",10:00:00,110,21-Sep-2015,22:00:00,due,ongoing,22-Sep-2015,1-Dec-2015,EG-VchOmleOatMealSprouts,1
+9769253205,"4th floor, E wing, Oberoi Gardens, Chandivali, Powai",11:15:00,110,21-Sep-2015,22:00:00,due,ongoing,22-Sep-2015,1-Dec-2015,VG-VidliOatmealSprouts,2
+8879006352,"A-505, Adityavardhan Apartment, OPposite Boomerang Gate no.2, Chandivali - 400072",8:15:00,90,21-Sep-2015,22:00:00,due,ongoing,22-Sep-2015,1-Dec-2015,EG-VchOmleOatMealSprouts,2
+9004030150,"A-505, Adityavardhan Apartment, OPposite Boomerang Gate no.2, Chandivali - 400072",8:15:00,90,21-Sep-2015,22:00:00,due,ongoing,22-Sep-2015,1-Dec-2015,EG-VchOmleOatMealSprouts,1
+7738776725,"2201, Excel Tower, IIT Market, Opp IIT Main Gate",8:00:00,110,21-Sep-2015,22:00:00,due,ongoing,22-Sep-2015,1-Dec-2015,VG-VidliOatmealSprouts,4
+7738776725,"2201, Excel Tower, IIT Market, Opp IIT Main Gate",8:00:00,110,21-Sep-2015,22:00:00,due,ongoing,22-Sep-2015,1-Dec-2015,EG-VchOmleOatMealSprouts,3
+7710060692,"101, Timmy Arcade, Makwana road, near marol metro station, 400059",11:00:00,100,21-Sep-2015,22:00:00,due,ongoing,22-Sep-2015,1-Dec-2015,VG-VidliOatmealSprouts,1
+7710060692,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",11:00:00,100,21-Sep-2015,22:00:00,due,ongoing,22-Sep-2015,1-Dec-2015,EG-VchOmleOatMealSprouts,1
+9833436459,"Room No. 319, Tansa House, C Wing, IIT Bombay, Powai - 400076",9:30:00,110,21-Sep-2015,18:00:00,due,ongoing,22-Sep-2015,1-Dec-2015,VG-VidliOatmealSprouts,1
+9930012939,"Hostel 8, iit bombay",11:30:00,0,21-Sep-2015,22:00:00,cleared,ongoing,22-Sep-2015,1-Dec-2015,VG-VidliOatmealSprouts,1
+9930012939,"Nahar Amrit Shakti, Tilia, 1302",11:30:00,0,21-Sep-2015,22:00:00,cleared,ongoing,22-Sep-2015,1-Dec-2015,EG-VchOmleOatMealSprouts,1
+8828294215,"Tansa house, iit bombay",11:30:00,110,21-Sep-2015,22:00:00,due,ongoing,22-Sep-2015,1-Dec-2015,EG-VchOmleOatMealSprouts,1
+7799733017,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",10:00:00,110,21-Sep-2015,22:00:00,due,ongoing,22-Sep-2015,1-Dec-2015,VG-VidliOatmealSprouts,1
+8106477111,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",10:00:00,110,21-Sep-2015,22:00:00,due,ongoing,22-Sep-2015,1-Dec-2015,EG-VchOmleOatMealSprouts,1
+9619835620,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",10:00:00,110,21-Sep-2015,22:00:00,due,ongoing,22-Sep-2015,1-Dec-2015,EG-VchOmleOatMealSprouts,1
+7698636861,"1305, Vinca, Nahar Amrit Shakti Chandivali",9:30:00,110,21-Sep-2015,8:00:00,cleared,ongoing,22-Sep-2015,22-Sep-2015,EG-VchOmleOatMealSprouts,1
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,21-Sep-2015,22:00:00,due,ongoing,23-Sep-2015,1-Dec-2015,VG-KathiRollGuavaChef'sStyle,4
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,21-Sep-2015,22:00:00,due,ongoing,23-Sep-2015,1-Dec-2015,NVG-ChkPattiesGuavaChef'sStyle,5
+7710060692,"101, Timmy Arcade, Makwana road, near marol metro station, 400059",11:00:00,100,21-Sep-2015,22:00:00,due,ongoing,23-Sep-2015,1-Dec-2015,VG-KathiRollGuavaChef'sStyle,1
+7710060692,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",11:00:00,100,21-Sep-2015,22:00:00,due,ongoing,23-Sep-2015,1-Dec-2015,NVG-ChkPattiesGuavaChef'sStyle,1
+7738776725,"2201, Excel Tower, IIT Market, Opp IIT Main Gate",8:00:00,110,21-Sep-2015,22:00:00,due,ongoing,23-Sep-2015,1-Dec-2015,VG-KathiRollGuavaChef'sStyle,4
+7738776725,"2201, Excel Tower, IIT Market, Opp IIT Main Gate",8:00:00,110,21-Sep-2015,22:00:00,due,ongoing,23-Sep-2015,1-Dec-2015,NVG-ChkPattiesGuavaChef'sStyle,3
+9004030150,"A-505, Adityavardhan Apartment, OPposite Boomerang Gate no.2, Chandivali - 400072",8:15:00,90,21-Sep-2015,22:00:00,due,ongoing,23-Sep-2015,1-Dec-2015,VG-KathiRollGuavaChef'sStyle,1
+9004030150,"Shop No.188, Galleria, Hiranandani Business Park, Powai, Mumbai, Maharashtra 400076",8:15:00,90,21-Sep-2015,22:00:00,due,ongoing,23-Sep-2015,1-Dec-2015,NVG-ChkPattiesGuavaChef'sStyle,1
+8879006352,"A-505, Adityavardhan Apartment, OPposite Boomerang Gate no.2, Chandivali - 400072",8:15:00,90,21-Sep-2015,22:00:00,due,ongoing,23-Sep-2015,1-Dec-2015,NVG-ChkPattiesGuavaChef'sStyle,2
+9769253205,"4th floor, E wing, Oberoi Gardens, Chandivali, Powai",11:15:00,110,22-Sep-2015,22:00:00,due,ongoing,23-Sep-2015,1-Dec-2015,VG-KathiRollGuavaChef'sStyle,2
+7710063909,"B-602, Lotus Apartments, Hiranandani Gardens",9:30:00,110,22-Sep-2015,22:00:00,due,ongoing,23-Sep-2015,1-Dec-2015,VG-KathiRollGuavaChef'sStyle,1
+9999992534,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",10:00:00,110,22-Sep-2015,22:00:00,due,ongoing,23-Sep-2015,1-Dec-2015,VG-KathiRollGuavaChef'sStyle,1
+9833436459,"Room No. 319, Tansa House, C Wing, IIT Bombay, Powai - 400076",8:30:00,110,22-Sep-2015,22:00:00,due,ongoing,23-Sep-2015,1-Dec-2015,VG-KathiRollGuavaChef'sStyle,1
+9833436459,"Room no 121, Hostel no 1, IIT Bombay, Powai, Near Sunrise Dhaba. Mumbai 400076",8:30:00,110,22-Sep-2015,22:00:00,due,ongoing,23-Sep-2015,1-Dec-2015,NVG-ChkPattiesGuavaChef'sStyle,1
+9167940248,"C-325, Hostel 14, IIT Bombay",9:30:00,110,22-Sep-2015,22:00:00,due,ongoing,23-Sep-2015,1-Dec-2015,NVG-ChkPattiesGuavaChef'sStyle,1
+7738625323,"Ungli Chaat, Near Solaris, Saki Vihar Road, Andheri East, Opposite L & T Gate No 6, Andheri East, Mumbai, Maharashtra 400072",,0,22-Sep-2015,22:00:00,cleared,ongoing,23-Sep-2015,23-Sep-2015,VG-KathiRollGuavaChef'sStyle,1
+7738625323,"C2L BIZ Solutions Pvt. Ltd.,Unit 119, 1st floor,B wing, Solaris-1,In front of L & T gate no. 6,Saki vihar road, Andheri east,Mumbai",,0,22-Sep-2015,22:00:00,cleared,ongoing,23-Sep-2015,23-Sep-2015,NVG-ChkPattiesGuavaChef'sStyle,1
+9930012939,"Hostel 8, iit bombay",11:30:00,0,22-Sep-2015,22:00:00,cleared,ongoing,23-Sep-2015,1-Dec-2015,NVG-ChkPattiesGuavaChef'sStyle,1
+8108908000,"B-1104, synchrony city near nahar medical center, chandivali, mumbai 400072",9:30:00,110,22-Sep-2015,22:00:00,due,ongoing,23-Sep-2015,1-Dec-2015,VG-KathiRollGuavaChef'sStyle,1
+9819373623,"CoverFox-3rd Floor, Wing B, Krislon House, Opp Marwa House, Ganesh Nagar Saki Vihar Road, Saki Naka, Andheri East, Mumbai, Maharashtra 400072",11:30:00,110,22-Sep-2015,22:00:00,due,ongoing,23-Sep-2015,1-Dec-2015,VG-KathiRollGuavaChef'sStyle,1
+7738690556,"room 301, Hostel 3, IIT bombay",11:00:00,0,22-Sep-2015,22:00:00,cleared,ongoing,23-Sep-2015,23-Dec-2015,NVG-ChkPattiesGuavaChef'sStyle,2
+8451833778,"Unit No. 4, B Wing, Krislon House, Opposite Marwah Center, Mumbai",10:00:00,110,23-Sep-2015,22:00:00,cleared,ongoing,23-Sep-2015,1-Dec-2015,VG-KathiRollGuavaChef'sStyle,1
+7799733017,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",10:00:00,110,23-Sep-2015,8:00:00,due,ongoing,23-Sep-2015,1-Dec-2015,VG-KathiRollGuavaChef'sStyle,1
+9769930880,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",10:00:00,60,23-Sep-2015,9:00:00,due,ongoing,23-Sep-2015,1-Dec-2015,VG-Chef'sStyleSaladGuavaShake,1
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,23-Sep-2015,22:00:00,due,ongoing,24-Sep-2015,1-Dec-2015,VG-VpancakeVegCrudBananMel,5
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,23-Sep-2015,22:00:00,due,ongoing,24-Sep-2015,1-Dec-2015,EG-PancakeVegCrudBanaMel,5
+7710060692,"101, Timmy Arcade, Makwana road, near marol metro station, 400059",11:00:00,100,23-Sep-2015,22:00:00,due,ongoing,24-Sep-2015,1-Dec-2015,VG-VpancakeVegCrudBananMel,1
+7738776725,"2201, Excel Tower, IIT Market, Opp IIT Main Gate",8:00:00,100,23-Sep-2015,22:00:00,due,ongoing,24-Sep-2015,1-Dec-2015,VG-VpancakeVegCrudBananMel,4
+7738776725,"2201, Excel Tower, IIT Market, Opp IIT Main Gate",8:00:00,100,23-Sep-2015,22:00:00,due,ongoing,24-Sep-2015,1-Dec-2015,EG-PancakeVegCrudBanaMel,4
+9769253205,"4th floor, E wing, Oberoi Gardens, Chandivali, Powai",11:15:00,110,23-Sep-2015,22:00:00,due,ongoing,24-Sep-2015,1-Dec-2015,VG-VpancakeVegCrudBananMel,2
+9833648104,"B606, Sagar tech plaza, andheri kurla road, Saki Naka, Andheri East, Mumbai-400072",10:30:00,110,23-Sep-2015,22:00:00,due,ongoing,24-Sep-2015,1-Dec-2015,VG-VpancakeVegCrudBananMel,3
+9833648104,"Hostel 4, IIT Bombay",10:30:00,110,23-Sep-2015,22:00:00,due,ongoing,24-Sep-2015,1-Dec-2015,EG-PancakeVegCrudBanaMel,3
+9004030150,"A-505, Adityavardhan Apartment, OPposite Boomerang Gate no.2, Chandivali - 400072",8:15:00,90,23-Sep-2015,22:00:00,due,ongoing,24-Sep-2015,1-Dec-2015,EG-PancakeVegCrudBanaMel,1
+8879006352,"A-505, Adityavardhan Apartment, OPposite Boomerang Gate no.2, Chandivali - 400072",8:15:00,90,23-Sep-2015,22:00:00,due,ongoing,24-Sep-2015,1-Dec-2015,VG-VpancakeVegCrudBananMel,1
+8879006352,"102, Parvati nagar, jb nagar, near chakal metro",8:15:00,90,23-Sep-2015,22:00:00,due,ongoing,24-Sep-2015,1-Dec-2015,EG-PancakeVegCrudBanaMel,1
+9619446401,"A-505, Adityavardhan Apartment, OPposite Boomerang Gate no.2, Chandivali - 400072",8:15:00,90,23-Sep-2015,22:00:00,cleared,ongoing,24-Sep-2015,1-Dec-2015,EG-PancakeVegCrudBanaMel,1
+7799733017,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",10:00:00,110,23-Sep-2015,8:00:00,due,ongoing,24-Sep-2015,1-Dec-2015,VG-VpancakeVegCrudBananMel,1
+9892437180,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",10:00:00,110,23-Sep-2015,8:00:00,due,ongoing,24-Sep-2015,1-Dec-2015,EG-PancakeVegCrudBanaMel,1
+7506683440,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",10:00:00,110,23-Sep-2015,8:00:00,due,ongoing,24-Sep-2015,1-Dec-2015,EG-PancakeVegCrudBanaMel,1
+7710063909,"B-602, Lotus Apartments, Hiranandani Gardens",9:30:00,110,23-Sep-2015,22:00:00,due,ongoing,24-Sep-2015,1-Dec-2015,VG-VpancakeVegCrudBananMel,1
+8108908000,"B-1104, synchrony city near nahar medical center, chandivali, mumbai 400072",9:00:00,110,23-Sep-2015,22:00:00,due,ongoing,24-Sep-2015,1-Dec-2015,EG-PancakeVegCrudBanaMel,1
+9004030150,"A-505, Adityavardhan Apartment, OPposite Boomerang Gate no.2, Chandivali - 400072",10:00:00,110,24-Sep-2015,9:30:00,due,ongoing,24-Sep-2015,1-Dec-2015,VG-VpancakeVegCrudBananMel,1
+9619101829,"Unit No. 4, B Wing, Krislon House, Opposite Marwah Center, Mumbai",10:00:00,110,24-Sep-2015,9:30:00,due,ongoing,24-Sep-2015,1-Dec-2015,EG-PancakeVegCrudBanaMel,1
+8451833778,"615-D Lokadrahsan, Military Road",10:30:00,110,24-Sep-2015,10:00:00,due,ongoing,24-Sep-2015,1-Dec-2015,VG-VpancakeVegCrudBananMel,1
+9999992534,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",10:00:00,110,24-Sep-2015,8:00:00,due,done,24-Sep-2015,1-Dec-2015,VG-VpancakeVegCrudBananMel,1
+9619835620,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",10:00:00,110,24-Sep-2015,9:30:00,due,done,24-Sep-2015,1-Dec-2015,EG-PancakeVegCrudBanaMel,1
+9769930880,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",10:00:00,110,24-Sep-2015,9:30:00,due,done,24-Sep-2015,1-Dec-2015,VG-VpancakeVegCrudBananMel,1
+9850126160,"E1004, Phase 1, Lake Homes, Chandivali , Powai",10:30:00,110,24-Sep-2015,10:00:00,cleared,done,24-Sep-2015,1-Dec-2015,EG-PancakeVegCrudBanaMel,1
+9619446401,"A-505, Adityavardhan Apartment, OPposite Boomerang Gate no.2, Chandivali - 400072",8:15:00,90,24-Sep-2015,10:00:00,cleared,done,24-Sep-2015,24-Dec-2015,VG-FruitChaatSalad,1
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,25-Sep-2015,22:00:00,due,done,26-Sep-2015,1-Dec-2015,VG-VSandBFProGreek,5
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,25-Sep-2015,22:00:00,due,done,26-Sep-2015,1-Dec-2015,EG-ScramBfproteinGreek,5
+7710060692,"101, Timmy Arcade, Makwana road, near marol metro station, 400059",11:00:00,100,25-Sep-2015,22:00:00,due,done,26-Sep-2015,1-Dec-2015,VG-VSandBFProGreek,1
+7710060692,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",11:00:00,100,25-Sep-2015,22:00:00,due,done,26-Sep-2015,1-Dec-2015,EG-ScramBfproteinGreek,1
+9004030150,"A-505, Adityavardhan Apartment, OPposite Boomerang Gate no.2, Chandivali - 400072",8:15:00,90,25-Sep-2015,22:00:00,due,done,26-Sep-2015,1-Dec-2015,EG-ScramBfproteinGreek,1
+8879006352,"A-505, Adityavardhan Apartment, OPposite Boomerang Gate no.2, Chandivali - 400072",8:15:00,90,25-Sep-2015,22:00:00,due,done,26-Sep-2015,1-Dec-2015,EG-ScramBfproteinGreek,2
+7738776725,"2201, Excel Tower, IIT Market, Opp IIT Main Gate",8:00:00,100,25-Sep-2015,22:00:00,due,done,26-Sep-2015,1-Dec-2015,VG-VSandBFProGreek,4
+7738776725,"2201, Excel Tower, IIT Market, Opp IIT Main Gate",8:00:00,100,25-Sep-2015,22:00:00,due,done,26-Sep-2015,1-Dec-2015,EG-ScramBfproteinGreek,4
+9769253205,"4th floor, E wing, Oberoi Gardens, Chandivali, Powai",11:15:00,110,25-Sep-2015,22:00:00,due,done,26-Sep-2015,1-Dec-2015,VG-VSandBFProGreek,2
+9619101829,"Unit No. 4, B Wing, Krislon House, Opposite Marwah Center, Mumbai",11:30:00,110,25-Sep-2015,22:00:00,due,done,26-Sep-2015,1-Dec-2015,EG-ScramBfproteinGreek,1
+9004030150,"A-505, Adityavardhan Apartment, OPposite Boomerang Gate no.2, Chandivali - 400072",8:15:00,80,26-Sep-2015,22:00:00,due,done,27-Sep-2015,1-Dec-2015,VG-FruitChaatSalad,1
+8879006352,"A-505, Adityavardhan Apartment, OPposite Boomerang Gate no.2, Chandivali - 400072",8:15:00,80,26-Sep-2015,22:00:00,due,done,27-Sep-2015,1-Dec-2015,VG-FruitChaatSalad,2
+9850126160,"E1004, Phase 1, Lake Homes, Chandivali , Powai",10:30:00,80,26-Sep-2015,10:00:00,cleared,done,27-Sep-2015,1-Dec-2015,VG-FruitChaatSalad,2
+7799733017,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",10:30:00,80,26-Sep-2015,10:00:00,due,done,27-Sep-2015,1-Dec-2015,VG-FruitChaatSalad,1
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,27-Sep-2015,22:00:00,due,ongoing,28-Sep-2015,1-Dec-2015,VG_KathiFruitOatmeal,5
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,27-Sep-2015,22:00:00,due,ongoing,28-Sep-2015,1-Dec-2015,EG-VomletteFruitOatmeal,5
+9981513074,"101, Timmy Arcade, Makwana road, near marol metro station, 400059",11:00:00,100,27-Sep-2015,22:00:00,due,ongoing,28-Sep-2015,1-Dec-2015,VG_KathiFruitOatmeal,1
+9004030150,"A-505, Adityavardhan Apartment, OPposite Boomerang Gate no.2, Chandivali - 400072",8:15:00,90,27-Sep-2015,22:00:00,due,ongoing,28-Sep-2015,1-Dec-2015,VG_KathiFruitOatmeal,1
+9004030150,"Shop No.188, Galleria, Hiranandani Business Park, Powai, Mumbai, Maharashtra 400076",8:15:00,90,27-Sep-2015,22:00:00,due,ongoing,28-Sep-2015,1-Dec-2015,VG-Kathi+2oatmeal+bfprotein+FruitSalad,1
+8879006352,"A-505, Adityavardhan Apartment, OPposite Boomerang Gate no.2, Chandivali - 400072",8:15:00,90,27-Sep-2015,22:00:00,due,ongoing,28-Sep-2015,1-Dec-2015,VG_KathiFruitOatmeal,1
+8879006352,"102, Parvati nagar, jb nagar, near chakal metro",8:15:00,90,27-Sep-2015,22:00:00,due,ongoing,28-Sep-2015,1-Dec-2015,EG-VomletteFruitOatmeal,1
+7738776725,"2201, Excel Tower, IIT Market, Opp IIT Main Gate",8:00:00,100,27-Sep-2015,22:00:00,due,ongoing,28-Sep-2015,1-Dec-2015,VG_KathiFruitOatmeal,4
+7738776725,"2201, Excel Tower, IIT Market, Opp IIT Main Gate",8:00:00,100,27-Sep-2015,22:00:00,due,ongoing,28-Sep-2015,1-Dec-2015,EG-VomletteFruitOatmeal,3
+9769253205,"4th floor, E wing, Oberoi Gardens, Chandivali, Powai",11:15:00,110,27-Sep-2015,22:00:00,due,ongoing,28-Sep-2015,1-Dec-2015,VG_KathiFruitOatmeal,2
+8806971451,"Shop No.188, Galleria, Hiranandani Business Park, Powai, Mumbai, Maharashtra 400076",10:30:00,0,27-Sep-2015,22:00:00,cleared,ongoing,28-Sep-2015,1-Dec-2015,VG_KathiFruitOatmeal,1
+8806971451,"A-204, CENTRAL AVENUE, HIRANANDANI gardens,, Powai.",10:30:00,0,27-Sep-2015,22:00:00,cleared,ongoing,28-Sep-2015,1-Dec-2015,EG-VomletteFruitOatmeal,1
+9571300769,#N/A,9:00:00,100,27-Sep-2015,19:00:00,due,ongoing,28-Sep-2015,1-Dec-2015,EG-VomletteFruitOatmeal,1
+9571300769,"F-1403, Raj Legacy Co-operative Society, LBS marg, Vikhroli-400079",9:00:00,100,27-Sep-2015,19:00:00,due,ongoing,29-Sep-2015,1-Dec-2015,EG-FrenchToast+GuavaShake,1
+9571300769,"F-1403, Raj Legacy Co-operative Society, LBS marg, Vikhroli-400079",9:00:00,100,27-Sep-2015,19:00:00,due,ongoing,30-Sep-2015,1-Dec-2015,EG-PancakeBforestCornSalad,1
+9571300769,"F-1403, Raj Legacy Co-operative Society, LBS marg, Vikhroli-400079",9:00:00,100,27-Sep-2015,19:00:00,due,ongoing,1-Oct-2015,1-Dec-2015,VG-GreenpeasCarrotGrilledTom,1
+9571300769,"F-1403, Raj Legacy Co-operative Society, LBS marg, Vikhroli-400079",9:00:00,100,27-Sep-2015,19:00:00,due,ongoing,2-Oct-2015,1-Dec-2015,NVG-ChcStrongBananaMelFruit,1
+9571300769,"F-1403, Raj Legacy Co-operative Society, LBS marg, Vikhroli-400079",9:00:00,100,27-Sep-2015,19:00:00,due,ongoing,3-Oct-2015,1-Dec-2015,VG-VegIdliChikooVegCrudites,1
+9571300769,"F-1403, Raj Legacy Co-operative Society, LBS marg, Vikhroli-400079",9:00:00,100,27-Sep-2015,19:00:00,due,ongoing,4-Oct-2015,1-Dec-2015,VG-FruitSaladVegUpma,1
+8879650880,"1406 B-wing Lake Primrose, Lake Homes, Powai",9:00:00,110,27-Sep-2015,22:00:00,due,ongoing,28-Sep-2015,28-Sep-2015,VG_KathiFruitOatmeal,1
+8879650880,"Flat No. 301, Pearl Building, Gems Society, Powai Vihar,, Behind Maple Restaurant",9:00:00,110,27-Sep-2015,22:00:00,due,ongoing,28-Sep-2015,28-Sep-2015,EG-VomletteFruitOatmeal,2
+7799733017,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",10:00:00,110,28-Sep-2015,8:00:00,due,ongoing,28-Sep-2015,1-Dec-2015,VG_KathiFruitOatmeal,1
+9892437180,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",10:00:00,110,28-Sep-2015,8:00:00,due,ongoing,28-Sep-2015,1-Dec-2015,EG-VomletteFruitOatmeal,1
+9769930880,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",10:00:00,30,28-Sep-2015,8:00:00,due,ongoing,28-Sep-2015,1-Dec-2015,VG-Oatmeal,1
+7506683440,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",10:00:00,80,28-Sep-2015,8:00:00,due,ongoing,28-Sep-2015,1-Dec-2015,EG- VomletteFruitSalad,1
+9833431658,"349 Powai Plaza, HIranandani Gardens, Powai",10:00:00,110,28-Sep-2015,8:00:00,cleared,ongoing,28-Sep-2015,29-Sep-2015,EG-VomletteFruitOatmeal,1
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,28-Sep-2015,22:00:00,due,ongoing,29-Sep-2015,1-Dec-2015,VG-AlooParGuavaSprouts,5
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,28-Sep-2015,22:00:00,due,ongoing,29-Sep-2015,1-Dec-2015,EG-FrenchTstGuavaSprouts,5
+9981513074,"101, Timmy Arcade, Makwana road, near marol metro station, 400059",11:00:00,100,28-Sep-2015,22:00:00,due,ongoing,29-Sep-2015,1-Dec-2015,VG-AlooParGuavaSprouts,1
+9004030150,"A-505, Adityavardhan Apartment, OPposite Boomerang Gate no.2, Chandivali - 400072",8:15:00,90,28-Sep-2015,22:00:00,due,ongoing,29-Sep-2015,1-Dec-2015,VG-AlooParGuavaSprouts,1
+9004030150,"Shop No.188, Galleria, Hiranandani Business Park, Powai, Mumbai, Maharashtra 400076",8:15:00,90,28-Sep-2015,22:00:00,due,ongoing,29-Sep-2015,1-Dec-2015,EG-Frnch+2Guava+Bfprotein+Sprouts,1
+8879006352,"A-505, Adityavardhan Apartment, OPposite Boomerang Gate no.2, Chandivali - 400072",8:15:00,90,28-Sep-2015,22:00:00,due,ongoing,29-Sep-2015,1-Dec-2015,EG-FrenchTstGuavaSprouts,2
+7738776725,"2201, Excel Tower, IIT Market, Opp IIT Main Gate",8:00:00,100,28-Sep-2015,22:00:00,due,ongoing,29-Sep-2015,1-Dec-2015,VG-AlooParGuavaSprouts,4
+7738776725,"2201, Excel Tower, IIT Market, Opp IIT Main Gate",8:00:00,100,28-Sep-2015,22:00:00,due,ongoing,29-Sep-2015,1-Dec-2015,EG-FrenchTstGuavaSprouts,3
+9769253205,"4th floor, E wing, Oberoi Gardens, Chandivali, Powai",11:15:00,110,28-Sep-2015,22:00:00,due,ongoing,29-Sep-2015,1-Dec-2015,VG-AlooParGuavaSprouts,2
+9619647014,"D-1004, Raheja vistas, Raheja Vihar, Chandivali, powai",8:00:00,110,28-Sep-2015,22:00:00,due,ongoing,29-Sep-2015,1-Dec-2015,EG-FrenchTstGuavaSprouts,1
+7710063909,"B-602, Lotus Apartments, Hiranandani Gardens",9:15:00,110,28-Sep-2015,22:00:00,cleared,ongoing,29-Sep-2015,29-Sep-2015,EG-FrenchTstGuavaSprouts,1
+9820869199,"1402, Evita, Central Avenue, Hiranandani Gardens, Powai-400076",8:30:00,110,28-Sep-2015,22:00:00,cleared,ongoing,29-Sep-2015,29-Sep-2015,EG-FrenchTstGuavaSprouts,2
+9833431658,"349 Powai Plaza, HIranandani Gardens, Powai",10:00:00,110,29-Sep-2015,8:00:00,due,ongoing,29-Sep-2015,1-Dec-2015,EG-FrenchTstGuavaSprouts,1
+7698636861,"1305, Vinca, Nahar Amrit Shakti Chandivali",10:00:00,110,29-Sep-2015,10:00:00,due,ongoing,29-Sep-2015,1-Dec-2015,EG-FrenchTstGuavaSprouts,1
+9930872631,602 hillside a wing raheja Vihar powai - 400072,10:00:00,110,29-Sep-2015,10:00:00,cleared,ongoing,29-Sep-2015,29-Sep-2015,VG-AlooParGuavaSprouts,1
+9869037968,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",10:00:00,110,29-Sep-2015,8:00:00,due,ongoing,29-Sep-2015,1-Dec-2015,VG-AlooParGuavaSprouts,1
+8106477111,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",10:00:00,110,29-Sep-2015,8:00:00,due,ongoing,29-Sep-2015,1-Dec-2015,VG-AlooParGuavaSprouts,1
+8451833778,"615-D Lokadrahsan, Military Road",10:00:00,110,29-Sep-2015,9:00:00,due,ongoing,29-Sep-2015,1-Dec-2015,VG-AlooParGuavaSprouts,1
+9987625337,"Padmabhushan Vasantdada Patil Pratishthan's College of Engineering, Vasantdada Patil Education Complex, Eastern Express Highway, Sion - Chunabatti, Near Everard Nagar, Mumbai, Maharashtra 400022",7:00:00,50,26-Sep-2015,22:00:00,due,done,29-Sep-2015,1-Dec-2015,VG-AlooParathaMuffinLemonade,50
+9987625337,"Plot No. 12, Sector-22, Opp. Nerul Railway Station, Phase-II, Nerul West, Navi Mumbai, Maharashtra 400706",8:00:00,50,24-Sep-2015,22:00:00,due,done,29-Sep-2015,1-Dec-2015,VG-AlooParathaMuffinLemonade,50
+9987625337,"Padmabhushan Vasantdada Patil Pratishthan's College of Engineering, Vasantdada Patil Education Complex, Eastern Express Highway, Sion - Chunabatti, Near Everard Nagar, Mumbai, Maharashtra 400022",7:00:00,50,26-Sep-2015,22:00:00,due,done,30-Sep-2015,1-Dec-2015,VG-AlooParathaMuffinLemonade,50
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,28-Sep-2015,22:00:00,due,ongoing,30-Sep-2015,1-Dec-2015,VG-UttapamBforestCornSalad,6
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,28-Sep-2015,22:00:00,due,ongoing,30-Sep-2015,1-Dec-2015,EG-PancakeBforestCornSalad,5
+9981513074,"101, Timmy Arcade, Makwana road, near marol metro station, 400059",11:00:00,100,29-Sep-2015,22:00:00,due,ongoing,30-Sep-2015,1-Dec-2015,VG-UttapamBforestCornSalad,1
+9004030150,"A-505, Adityavardhan Apartment, OPposite Boomerang Gate no.2, Chandivali - 400072",8:15:00,90,29-Sep-2015,22:00:00,due,ongoing,30-Sep-2015,1-Dec-2015,EG-PancakeBforestCornSalad,1
+9004030150,"Shop No.188, Galleria, Hiranandani Business Park, Powai, Mumbai, Maharashtra 400076",8:15:00,90,29-Sep-2015,22:00:00,due,ongoing,30-Sep-2015,1-Dec-2015,EG-Pancake+2bforest+cornSalad,1
+8879006352,"A-505, Adityavardhan Apartment, OPposite Boomerang Gate no.2, Chandivali - 400072",8:15:00,90,29-Sep-2015,22:00:00,due,ongoing,30-Sep-2015,1-Dec-2015,VG-UttapamBforestCornSalad,1
+8879006352,"102, Parvati nagar, jb nagar, near chakal metro",8:15:00,90,29-Sep-2015,22:00:00,due,ongoing,30-Sep-2015,1-Dec-2015,EG-PancakeBforestCornSalad,1
+7738776725,"2201, Excel Tower, IIT Market, Opp IIT Main Gate",8:00:00,100,29-Sep-2015,22:00:00,due,ongoing,30-Sep-2015,1-Dec-2015,VG-UttapamBforestCornSalad,4
+7738776725,"2201, Excel Tower, IIT Market, Opp IIT Main Gate",8:00:00,100,29-Sep-2015,22:00:00,due,ongoing,30-Sep-2015,1-Dec-2015,EG-PancakeBforestCornSalad,3
+9769253205,"4th floor, E wing, Oberoi Gardens, Chandivali, Powai",11:15:00,110,29-Sep-2015,22:00:00,due,ongoing,30-Sep-2015,1-Dec-2015,VG-UttapamBforestCornSalad,2
+8655549007,"B303, Jheel Darshan Apartment, Near Powai Police Station, Powai - 400076",9:45:00,110,29-Sep-2015,11:00:00,due,ongoing,30-Sep-2015,30-Sep-2015,EG-PancakeBforestCornSalad,1
+9820951727,"A-201, Gagangiri, 2nd floor, Hanuman nagar, Carter Road, Above Mad Over Donuts, Bandra West",9:30:00,0,29-Sep-2015,22:00:00,cleared,ongoing,30-Sep-2015,30-Sep-2015,EG-PancakeBforestCornSalad,2
+9820951727,"1102, Sai Sapphire, Powai Vihar Complex, Powai",9:30:00,0,29-Sep-2015,22:00:00,cleared,ongoing,30-Sep-2015,30-Sep-2015,VG-IdliBforestCornSalad,2
+9820951727,"1102, Sai Sapphire, Powai Vihar Complex, Powai",9:30:00,0,29-Sep-2015,22:00:00,cleared,ongoing,30-Sep-2015,30-Sep-2015,NVG-ChickenPattiesBforestCornSalad,2
+9571300769,#N/A,9:00:00,100,29-Sep-2015,19:00:00,due,ongoing,30-Sep-2015,1-Dec-2015,EG-PancakeBforestCornSalad,1
+8348523409,"Flat no: 802, Vinca, Nahar Amrit Shakti, Chandivali, Powai, Mumbai - 400072",8:30:00,110,30-Sep-2015,2:00:00,due,ongoing,30-Sep-2015,30-Sep-2015,EG-PancakeBforestCornSalad,1
+9869037968,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",10:00:00,110,30-Sep-2015,8:00:00,due,ongoing,30-Sep-2015,1-Dec-2015,EG-PancakeBforestCornSalad,1
+7506683440,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",10:00:00,110,30-Sep-2015,8:00:00,due,ongoing,30-Sep-2015,1-Dec-2015,EG-PancakeBforestCornSalad,2
+8879393166,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",10:00:00,110,30-Sep-2015,8:00:00,due,ongoing,30-Sep-2015,1-Dec-2015,EG-PancakeBforestCornSalad,1
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,30-Sep-2015,22:00:00,due,ongoing,1-Oct-2015,1-Dec-2015,VG-GreenpeasCarrotGrilledTom,6
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,30-Sep-2015,22:00:00,due,ongoing,1-Oct-2015,1-Dec-2015,EG-EggbdCarrotGrilledTom,5
+9981513074,"101, Timmy Arcade, Makwana road, near marol metro station, 400059",11:00:00,100,30-Sep-2015,22:00:00,due,ongoing,1-Oct-2015,1-Dec-2015,VG-GreenpeasCarrotGrilledTom,1
+9004030150,"A-505, Adityavardhan Apartment, OPposite Boomerang Gate no.2, Chandivali - 400072",8:15:00,90,30-Sep-2015,22:00:00,due,ongoing,1-Oct-2015,1-Dec-2015,EG-EggbdCarrotGrilledTom,2
+8879006352,"A-505, Adityavardhan Apartment, OPposite Boomerang Gate no.2, Chandivali - 400072",8:15:00,90,30-Sep-2015,22:00:00,due,ongoing,1-Oct-2015,1-Dec-2015,VG-GreenpeasCarrotGrilledTom,1
+7738776725,"2201, Excel Tower, IIT Market, Opp IIT Main Gate",8:00:00,100,30-Sep-2015,22:00:00,due,ongoing,1-Oct-2015,1-Dec-2015,VG-GreenpeasCarrotGrilledTom,4
+7738776725,"2201, Excel Tower, IIT Market, Opp IIT Main Gate",8:00:00,100,30-Sep-2015,22:00:00,due,ongoing,1-Oct-2015,1-Dec-2015,EG-EggbdCarrotGrilledTom,3
+9769253205,"4th floor, E wing, Oberoi Gardens, Chandivali, Powai",11:15:00,110,30-Sep-2015,22:00:00,due,ongoing,1-Oct-2015,1-Dec-2015,VG-GreenpeasCarrotGrilledTom,2
+9619446401,"F-1403, Raj Legacy Co-operative Society, LBS marg, Vikhroli-400079",8:30:00,90,30-Sep-2015,22:00:00,due,ongoing,1-Oct-2015,1-Dec-2015,VG-GreenpeasCarrotGrilledTom,1
+9619446401,"Hostel 8, iit bombay",8:30:00,90,30-Sep-2015,22:00:00,due,ongoing,1-Oct-2015,1-Dec-2015,EG-EggbdCarrotGrilledTom,2
+9769930880,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",10:30:00,110,1-Oct-2015,10:00:00,due,ongoing,1-Oct-2015,1-Dec-2015,VG-GreenpeasCarrotGrilledTom,1
+9769474360,"Room no 121, Hostel no 1, IIT Bombay, Powai, Near Sunrise Dhaba. Mumbai 400076",11:00:00,110,1-Oct-2015,11:00:00,cleared,Done,1-Oct-2015,1-Dec-2015,EG-EggbdCarrotGrilledTom,1
+9004030150,"A-505, Adityavardhan Apartment, OPposite Boomerang Gate no.2, Chandivali - 400072",8:15:00,90,1-Oct-2015,22:00:00,due,ongoing,2-Oct-2015,1-Dec-2015,VG-VegPancBananaMelFruit,1
+9004030150,"Shop No.188, Galleria, Hiranandani Business Park, Powai, Mumbai, Maharashtra 400076",8:15:00,90,1-Oct-2015,22:00:00,due,ongoing,2-Oct-2015,1-Dec-2015,NVG-ChcStrongBananaMelFruit,1
+8879006352,"A-505, Adityavardhan Apartment, OPposite Boomerang Gate no.2, Chandivali - 400072",8:15:00,90,1-Oct-2015,22:00:00,due,ongoing,2-Oct-2015,1-Dec-2015,NVG-ChcStrongBananaMelFruit,2
+7738776725,"2201, Excel Tower, IIT Market, Opp IIT Main Gate",8:00:00,100,1-Oct-2015,22:00:00,due,ongoing,2-Oct-2015,1-Dec-2015,VG-VegPancBananaMelFruit,4
+7738776725,"2201, Excel Tower, IIT Market, Opp IIT Main Gate",8:00:00,100,1-Oct-2015,22:00:00,due,ongoing,2-Oct-2015,1-Dec-2015,NVG-ChcStrongBananaMelFruit,3
+7710063909,"B-602, Lotus Apartments, Hiranandani Gardens",10:00:00,110,1-Oct-2015,22:00:00,due,ongoing,2-Oct-2015,1-Dec-2015,VG-VegPancBananaMelFruit,2
+7506793054,"Manavsthal heights, flat no 1003, f wing, military road",10:00:00,110,1-Oct-2015,22:00:00,cleared,done,2-Oct-2015,2-Oct-2015,VG-VegPancBananaMelFruit,2
+9920734061,"Unit No. 4, B Wing, Krislon House, Opposite Marwah Center, Mumbai",10:00:00,110,1-Oct-2015,22:00:00,cleared,ongoing,2-Oct-2015,2-Oct-2015,NVG-ChcStrongBananaMelFruit,1
+9769474360,"Room no 121, Hostel no 1, IIT Bombay, Powai, Near Sunrise Dhaba. Mumbai 400076",11:30:00,110,2-Oct-2015,10:00:00,cleared,ongoing,2-Oct-2015,2-Oct-2015,NVG-ChcStrongBananaMelFruit,2
+7506122690,"Hostel 8, iit bombay",10:30:00,0,2-Oct-2015,10:30:00,cleared,ongoing,2-Oct-2015,2-Oct-2015,NVG-ChcStrongBananaMelFruit,1
+9833036079,"B wing, 601, Woodland Heights, near Sangharsh Nagar Bus stop, Chandivali.",10:30:00,110,2-Oct-2015,10:30:00,cleared,ongoing,2-Oct-2015,2-Oct-2015,VG-VegPancBananaMelFruit,1
+9833036079,"General Mills, 902, Ventura Building, Hiranandani",10:30:00,110,2-Oct-2015,10:30:00,cleared,ongoing,2-Oct-2015,2-Oct-2015,NVG-ChcStrongBananaMelFruit,1
+9599030732,"102, Parvati nagar, jb nagar, near chakal metro",11:00:00,110,2-Oct-2015,10:30:00,cleared,ongoing,2-Oct-2015,2-Oct-2015,VG-VegPancBananaMelFruit,1
+9967459113,"Nahar Amrit Shakti, Tilia, 1302",10:00:00,110,2-Oct-2015,9:00:00,cleared,ongoing,2-Oct-2015,2-Oct-2015,VG-VegPancBananaMelFruit,1
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,2-Oct-2015,22:00:00,due,ongoing,3-Oct-2015,1-Dec-2015,VG-VegIdliChikooVegCrudites,4
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,2-Oct-2015,22:00:00,due,ongoing,3-Oct-2015,1-Dec-2015,EG-ScramChikooVgCrudites,3
+9981513074,"101, Timmy Arcade, Makwana road, near marol metro station, 400059",11:00:00,100,2-Oct-2015,22:00:00,due,ongoing,3-Oct-2015,1-Dec-2015,VG-VegIdliChikooVegCrudites,1
+9004030150,"A-505, Adityavardhan Apartment, OPposite Boomerang Gate no.2, Chandivali - 400072",8:15:00,90,2-Oct-2015,22:00:00,due,ongoing,3-Oct-2015,1-Dec-2015,VG-VegIdliChikooVegCrudites,1
+9004030150,"Shop No.188, Galleria, Hiranandani Business Park, Powai, Mumbai, Maharashtra 400076",8:15:00,90,2-Oct-2015,22:00:00,due,ongoing,3-Oct-2015,1-Dec-2015,EG-ScramChikooVgCrudites,1
+8879006352,"A-505, Adityavardhan Apartment, OPposite Boomerang Gate no.2, Chandivali - 400072",8:15:00,90,2-Oct-2015,22:00:00,due,ongoing,3-Oct-2015,1-Dec-2015,EG-ScramChikooVgCrudites,2
+7738776725,"2201, Excel Tower, IIT Market, Opp IIT Main Gate",8:00:00,100,2-Oct-2015,22:00:00,due,ongoing,3-Oct-2015,1-Dec-2015,VG-VegIdliChikooVegCrudites,4
+7738776725,"2201, Excel Tower, IIT Market, Opp IIT Main Gate",8:00:00,100,2-Oct-2015,22:00:00,due,ongoing,3-Oct-2015,1-Dec-2015,EG-ScramChikooVgCrudites,3
+9769253205,"4th floor, E wing, Oberoi Gardens, Chandivali, Powai",11:15:00,110,2-Oct-2015,22:00:00,due,ongoing,3-Oct-2015,1-Dec-2015,VG-VegIdliChikooVegCrudites,2
+7710060692,"101, Timmy Arcade, Makwana road, near marol metro station, 400059",11:00:00,100,2-Oct-2015,22:00:00,due,ongoing,3-Oct-2015,1-Dec-2015,EG-ScramChikooVgCrudites,1
+9999992534,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",10:00:00,110,2-Oct-2015,22:00:00,due,ongoing,3-Oct-2015,3-Oct-2015,EG-ScramChikooVgCrudites,1
+9619835620,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",10:00:00,110,2-Oct-2015,22:00:00,due,ongoing,3-Oct-2015,3-Oct-2015,EG-ScramChikooVgCrudites,1
+9833436459,"Room No. 319, Tansa House, C Wing, IIT Bombay, Powai - 400076",9:45:00,110,2-Oct-2015,8:00:00,due,ongoing,3-Oct-2015,1-Dec-2015,VG-VegIdliChikooVegCrudites,1
+9833436459,"Room no 121, Hostel no 1, IIT Bombay, Powai, Near Sunrise Dhaba. Mumbai 400076",9:45:00,110,2-Oct-2015,8:00:00,due,ongoing,3-Oct-2015,1-Dec-2015,EG-ScramChikooVgCrudites,1
+8451833778,"Unit No. 4, B Wing, Krislon House, Opposite Marwah Center, Mumbai",8:15:00,110,3-Oct-2015,8:00:00,due,ongoing,3-Oct-2015,1-Dec-2015,VG-VegIdliChikooVegCrudites,1
+7710063909,"B-602, Lotus Apartments, Hiranandani Gardens",9:00:00,110,3-Oct-2015,22:00:00,cleared,done,3-Oct-2015,1-Dec-2015,VG-VegIdliChikooVegCrudites,1
+7710063909,"B-602, Lotus Apartments, Hiranandani Gardens",9:00:00,110,3-Oct-2015,22:00:00,cleared,done,3-Oct-2015,1-Dec-2015,EG-ScramChikooVgCrudites,1
+9833427046,"D-1004, Raheja vistas, Raheja Vihar, Chandivali, powai",10:00:00,110,3-Oct-2015,22:00:00,due,ongoing,3-Oct-2015,1-Dec-2015,EG-ScramChikooVgCrudites,3
+9167940248,"C-325, Hostel 14, IIT Bombay",10:00:00,110,3-Oct-2015,22:00:00,cleared,ongoing,3-Oct-2015,1-Dec-2015,EG-ScramChikooVgCrudites,1
+8879393166,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",10:00:00,60,3-Oct-2015,22:00:00,due,ongoing,3-Oct-2015,1-Dec-2015,VG-ChikooShake,2
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,4-Oct-2015,22:00:00,due,ongoing,5-Oct-2015,1-Dec-2015,VG-AlooMelonCorn,5
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,4-Oct-2015,22:00:00,due,ongoing,5-Oct-2015,1-Dec-2015,EG-FrenchMelonCorn,5
+9981513074,"101, Timmy Arcade, Makwana road, near marol metro station, 400059",11:00:00,100,4-Oct-2015,22:00:00,due,ongoing,5-Oct-2015,1-Dec-2015,VG-AlooMelonCorn,1
+9004030150,"A-505, Adityavardhan Apartment, OPposite Boomerang Gate no.2, Chandivali - 400072",8:15:00,90,4-Oct-2015,22:00:00,due,ongoing,5-Oct-2015,1-Dec-2015,VG-AlooMelonCorn,1
+9004030150,"Shop No.188, Galleria, Hiranandani Business Park, Powai, Mumbai, Maharashtra 400076",8:15:00,90,4-Oct-2015,22:00:00,due,ongoing,5-Oct-2015,1-Dec-2015,EG-FrenchMelonCorn,1
+8879006352,"A-505, Adityavardhan Apartment, OPposite Boomerang Gate no.2, Chandivali - 400072",8:15:00,90,4-Oct-2015,22:00:00,due,ongoing,5-Oct-2015,1-Dec-2015,EG-FrenchMelonCorn,2
+7738776725,"2201, Excel Tower, IIT Market, Opp IIT Main Gate",8:00:00,100,4-Oct-2015,22:00:00,due,ongoing,5-Oct-2015,1-Dec-2015,VG-AlooMelonCorn,4
+7738776725,"2201, Excel Tower, IIT Market, Opp IIT Main Gate",8:00:00,100,4-Oct-2015,22:00:00,due,ongoing,5-Oct-2015,1-Dec-2015,EG-FrenchMelonCorn,3
+9769253205,"4th floor, E wing, Oberoi Gardens, Chandivali, Powai",11:15:00,110,4-Oct-2015,22:00:00,due,ongoing,5-Oct-2015,1-Dec-2015,VG-AlooMelonCorn,2
+7710060692,"101, Timmy Arcade, Makwana road, near marol metro station, 400059",11:00:00,100,4-Oct-2015,22:00:00,due,ongoing,5-Oct-2015,1-Dec-2015,EG-FrenchMelonCorn,1
+9571300769,#N/A,9:00:00,100,4-Oct-2015,19:00:00,due,ongoing,5-Oct-2015,1-Dec-2015,EG-FrenchMelonCorn,1
+9004030150,"A-505, Adityavardhan Apartment, OPposite Boomerang Gate no.2, Chandivali - 400072",8:15:00,90,3-Oct-2015,22:00:00,due,ongoing,4-Oct-2015,1-Dec-2015,VG-FruitSaladVegUpma,2
+8879006352,"A-505, Adityavardhan Apartment, OPposite Boomerang Gate no.2, Chandivali - 400072",8:15:00,90,3-Oct-2015,22:00:00,due,ongoing,4-Oct-2015,1-Dec-2015,VG-FruitSaladVegUpma,2
+7738776725,"2201, Excel Tower, IIT Market, Opp IIT Main Gate",8:00:00,100,3-Oct-2015,22:00:00,due,ongoing,4-Oct-2015,1-Dec-2015,VG-FruitSaladVegUpma,7
+9819517501,"Green Fields Housing Society, B-5, Flat 41, JVLR, Near Fantasy Land, Andheri East, Mumbai - 400093",10:00:00,110,4-Oct-2015,22:00:00,cleared,ongoing,4-Oct-2015,1-Dec-2015,VG-FruitSaladVegUpma,1
+7710063909,"B-602, Lotus Apartments, Hiranandani Gardens",10:00:00,110,4-Oct-2015,22:00:00,cleared,ongoing,4-Oct-2015,1-Dec-2015,VG-FruitSaladVegUpma,1
+9619647014,"D-1004, Raheja vistas, Raheja Vihar, Chandivali, powai",8:15:00,110,5-Oct-2015,22:00:00,due,Done,5-Oct-2015,1-Dec-2015,EG-FrenchMelonCorn,2
+9619101829,"Unit No. 4, B Wing, Krislon House, Opposite Marwah Center, Mumbai",10:00:00,110,5-Oct-2015,22:00:00,due,Done,5-Oct-2015,1-Dec-2015,EG-FrenchMelonCorn,1
+7738450940,"504, Panch Mahal, near SM Shetty school, Hiranandani",10:00:00,110,5-Oct-2015,22:00:00,due,Done,5-Oct-2015,1-Dec-2015,VG-AlooMelonCorn,1
+7738450940,#N/A,10:00:00,110,5-Oct-2015,22:00:00,due,Done,5-Oct-2015,1-Dec-2015,EG-FrenchMelonCorn,1
+7698636861,"1305, Vinca, Nahar Amrit Shakti Chandivali",8:45:00,110,5-Oct-2015,9:00:00,due,Done,5-Oct-2015,1-Dec-2015,VG-AlooMelonCorn,1
+8106477111,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",10:00:00,110,5-Oct-2015,8:00:00,cleared,ongoing,5-Oct-2015,1-Dec-2015,EG-FrenchMelonCorn,2
+9930847270,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",10:00:00,110,5-Oct-2015,8:00:00,cleared,ongoing,5-Oct-2015,1-Dec-2015,EG-FrenchMelonCorn,1
+7799733017,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",10:00:00,110,5-Oct-2015,8:00:00,cleared,ongoing,5-Oct-2015,1-Dec-2015,VG-AlooMelonCorn,1
+7506683440,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",10:00:00,110,5-Oct-2015,8:00:00,cleared,ongoing,5-Oct-2015,1-Dec-2015,EG-FrenchMelonCorn,1
+9999992534,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",10:00:00,110,5-Oct-2015,8:00:00,cleared,ongoing,5-Oct-2015,1-Dec-2015,EG-FrenchMelonCorn,1
+9538007269,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",10:00:00,110,5-Oct-2015,8:00:00,cleared,ongoing,5-Oct-2015,1-Dec-2015,EG-FrenchMelonCorn,1
+8087815173,"Terna College of Engineering, Plot no 12, Sector-22, opp. nerul railway station, phase-II, Nerul West, Navi Mumbai",5:30:00,50,2-Oct-2015,22:00:00,due,done,5-Oct-2015,1-Dec-2015,VG-AlooParathaMuffinLemonade,50
+8087815173,"Terna College of Engineering, Plot no 12, Sector-22, opp. nerul railway station, phase-II, Nerul West, Navi Mumbai",6:30:00,50,2-Oct-2015,22:00:00,due,done,5-Oct-2015,1-Dec-2015,VG-AlooParathaMuffinLemonade,50
+8087815173,"Terna College of Engineering, Plot no 12, Sector-22, opp. nerul railway station, phase-II, Nerul West, Navi Mumbai",6:00:00,50,2-Oct-2015,22:00:00,due,done,5-Oct-2015,1-Dec-2015,VG-AlooParathaMuffinLemonade,50
+8087815173,"Terna College of Engineering, Plot no 12, Sector-22, opp. nerul railway station, phase-II, Nerul West, Navi Mumbai",5:30:00,50,5-Oct-2015,22:00:00,due,ongoing,8-Oct-2015,1-Dec-2015,VG-AlooParathaMuffinLemonade,50
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,5-Oct-2015,22:00:00,due,ongoing,6-Oct-2015,1-Dec-2015,VG-VsandwichOatsGreek,5
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,5-Oct-2015,22:00:00,due,ongoing,6-Oct-2015,1-Dec-2015,NVG-ChickenPatOatsGreek,4
+9981513074,"101, Timmy Arcade, Makwana road, near marol metro station, 400059",11:00:00,100,5-Oct-2015,22:00:00,due,ongoing,6-Oct-2015,1-Dec-2015,VG-VsandwichOatsGreek,1
+9004030150,"A-505, Adityavardhan Apartment, OPposite Boomerang Gate no.2, Chandivali - 400072",8:15:00,90,5-Oct-2015,22:00:00,due,ongoing,6-Oct-2015,1-Dec-2015,NVG-ChickenPatOatsGreek,1
+8879006352,"A-505, Adityavardhan Apartment, OPposite Boomerang Gate no.2, Chandivali - 400072",8:15:00,90,5-Oct-2015,22:00:00,due,ongoing,6-Oct-2015,1-Dec-2015,VG-VsandwichOatsGreek,1
+8879006352,"102, Parvati nagar, jb nagar, near chakal metro",8:15:00,90,5-Oct-2015,22:00:00,due,ongoing,6-Oct-2015,1-Dec-2015,NVG-ChickenPatOatsGreek,1
+7738776725,"2201, Excel Tower, IIT Market, Opp IIT Main Gate",8:00:00,100,5-Oct-2015,22:00:00,due,ongoing,6-Oct-2015,1-Dec-2015,VG-VsandwichOatsGreek,3
+7738776725,"2201, Excel Tower, IIT Market, Opp IIT Main Gate",8:00:00,100,5-Oct-2015,22:00:00,due,ongoing,6-Oct-2015,1-Dec-2015,NVG-ChickenPatOatsGreek,4
+9769253205,"4th floor, E wing, Oberoi Gardens, Chandivali, Powai",11:15:00,110,5-Oct-2015,22:00:00,due,ongoing,6-Oct-2015,1-Dec-2015,VG-VsandwichOatsGreek,2
+7710060692,"101, Timmy Arcade, Makwana road, near marol metro station, 400059",11:00:00,100,5-Oct-2015,22:00:00,due,ongoing,6-Oct-2015,1-Dec-2015,NVG-ChickenPatOatsGreek,1
+9571300769,#N/A,9:00:00,100,5-Oct-2015,19:00:00,due,ongoing,6-Oct-2015,1-Dec-2015,NVG-ChickenPatOatsGreek,1
+9619446401,"D-1004, Raheja vistas, Raheja Vihar, Chandivali, powai",8:15:00,90,5-Oct-2015,22:00:00,due,ongoing,6-Oct-2015,1-Dec-2015,NVG-ChickenPatOatsGreek,1
+9819587830,"D-1501, lakehomes, phase-III, powai",9:00:00,100,5-Oct-2015,22:00:00,cleared,ongoing,6-Oct-2015,6-Oct-2015,VG-VsandwichOatsGreek,1
+7710063909,"B-602, Lotus Apartments, Hiranandani Gardens",9:30:00,110,5-Oct-2015,22:00:00,due,ongoing,6-Oct-2015,1-Dec-2015,VG-VsandwichOatsGreek,1
+7710063909,"B-602, Lotus Apartments, Hiranandani Gardens",9:30:00,110,5-Oct-2015,22:00:00,due,ongoing,6-Oct-2015,1-Dec-2015,NVG-ChickenPatOatsGreek,1
+9833436459,"Room No. 319, Tansa House, C Wing, IIT Bombay, Powai - 400076",8:00:00,110,5-Oct-2015,22:00:00,due,ongoing,6-Oct-2015,1-Dec-2015,VG-VsandwichOatsGreek,1
+9833436459,"Room no 121, Hostel no 1, IIT Bombay, Powai, Near Sunrise Dhaba. Mumbai 400076",8:00:00,110,5-Oct-2015,22:00:00,due,ongoing,6-Oct-2015,1-Dec-2015,NVG-ChickenPatOatsGreek,1
+8106477111,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",10:00:00,110,5-Oct-2015,8:00:00,cleared,ongoing,6-Oct-2015,6-Oct-2015,VG-VsandwichOatsGreek,3
+8106477111,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",10:00:00,110,5-Oct-2015,8:00:00,cleared,ongoing,6-Oct-2015,6-Oct-2015,VG-VsandwichOatsGreek,2
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,6-Oct-2015,22:00:00,due,ongoing,7-Oct-2015,1-Dec-2015,VG-PenneArrLemonColeslaw,5
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,6-Oct-2015,22:00:00,due,ongoing,7-Oct-2015,1-Dec-2015,EG-VcOmeletteLemonColeslaw,5
+9981513074,"101, Timmy Arcade, Makwana road, near marol metro station, 400059",11:00:00,100,6-Oct-2015,22:00:00,due,ongoing,7-Oct-2015,1-Dec-2015,VG-PenneArrLemonColeslaw,1
+9004030150,"A-505, Adityavardhan Apartment, OPposite Boomerang Gate no.2, Chandivali - 400072",8:15:00,90,6-Oct-2015,22:00:00,due,ongoing,7-Oct-2015,1-Dec-2015,EG-VcOmeletteLemonColeslaw,1
+8879006352,"A-505, Adityavardhan Apartment, OPposite Boomerang Gate no.2, Chandivali - 400072",8:15:00,90,6-Oct-2015,22:00:00,due,ongoing,7-Oct-2015,1-Dec-2015,VG-PenneArrLemonColeslaw,1
+8879006352,"102, Parvati nagar, jb nagar, near chakal metro",8:15:00,90,6-Oct-2015,22:00:00,due,ongoing,7-Oct-2015,1-Dec-2015,EG-VcOmeletteLemonColeslaw,1
+7738776725,"2201, Excel Tower, IIT Market, Opp IIT Main Gate",8:00:00,100,6-Oct-2015,22:00:00,due,ongoing,7-Oct-2015,1-Dec-2015,VG-PenneArrLemonColeslaw,4
+7738776725,"2201, Excel Tower, IIT Market, Opp IIT Main Gate",8:00:00,100,6-Oct-2015,22:00:00,due,ongoing,7-Oct-2015,1-Dec-2015,EG-VcOmeletteLemonColeslaw,3
+9769253205,"4th floor, E wing, Oberoi Gardens, Chandivali, Powai",11:15:00,110,6-Oct-2015,22:00:00,due,ongoing,7-Oct-2015,1-Dec-2015,VG-PenneArrLemonColeslaw,2
+7710060692,"101, Timmy Arcade, Makwana road, near marol metro station, 400059",11:00:00,100,6-Oct-2015,22:00:00,due,ongoing,7-Oct-2015,1-Dec-2015,EG-VcOmeletteLemonColeslaw,1
+9571300769,#N/A,9:00:00,100,6-Oct-2015,19:00:00,due,ongoing,7-Oct-2015,1-Dec-2015,VG-PenneArrLemonColeslaw,1
+9619446401,"A-505, Adityavardhan Apartment, OPposite Boomerang Gate no.2, Chandivali - 400072",8:15:00,90,6-Oct-2015,22:00:00,due,ongoing,7-Oct-2015,1-Dec-2015,EG-VcOmeletteLemonColeslaw,1
+9892437180,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",8:30:00,110,6-Oct-2015,8:00:00,cleared,ongoing,7-Oct-2015,7-Oct-2015,EG-VcOmeletteLemonColeslaw,2
+9999992534,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",8:30:00,110,6-Oct-2015,8:00:00,cleared,ongoing,7-Oct-2015,7-Oct-2015,EG-VcOmeletteLemonColeslaw,1
+9833436459,"Room No. 319, Tansa House, C Wing, IIT Bombay, Powai - 400076",8:30:00,110,6-Oct-2015,22:00:00,due,ongoing,7-Oct-2015,1-Dec-2015,VG-PenneArrLemonColeslaw,1
+9833436459,"Room no 121, Hostel no 1, IIT Bombay, Powai, Near Sunrise Dhaba. Mumbai 400076",8:30:00,110,6-Oct-2015,22:00:00,due,ongoing,7-Oct-2015,1-Dec-2015,EG-VcOmeletteLemonColeslaw,1
+9819517501,"Green Fields Housing Society, B-5, Flat 41, JVLR, Near Fantasy Land, Andheri East, Mumbai - 400093",8:30:00,110,6-Oct-2015,22:00:00,cleared,ongoing,7-Oct-2015,7-Oct-2015,VG-PenneArrLemonColeslaw,1
+7799733017,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",8:30:00,110,7-Oct-2015,8:00:00,cleared,ongoing,7-Oct-2015,7-Oct-2015,VG-PenneArrLemonColeslaw,1
+9538007269,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",8:30:00,110,7-Oct-2015,8:00:00,cleared,ongoing,7-Oct-2015,7-Oct-2015,VG-PenneArrLemonColeslaw,1
+7673904604,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",8:30:00,110,7-Oct-2015,8:00:00,cleared,ongoing,7-Oct-2015,7-Oct-2015,VG-PenneArrLemonColeslaw,1
+9166228277,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",8:30:00,110,7-Oct-2015,8:00:00,cleared,ongoing,7-Oct-2015,7-Oct-2015,VG-PenneArrLemonColeslaw,1
+9757090750,"D-1004, Raheja vistas, Raheja Vihar, Chandivali, powai",8:30:00,110,7-Oct-2015,8:00:00,due,Done,7-Oct-2015,6-Sep-2015,VG-PenneArrLemonColeslaw,2
+9757090750,"D-1004, Raheja vistas, Raheja Vihar, Chandivali, powai",8:30:00,110,7-Oct-2015,8:00:00,due,Done,7-Oct-2015,6-Sep-2015,EG-VcOmeletteLemonColeslaw,4
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,7-Oct-2015,22:00:00,due,ongoing,8-Oct-2015,1-Dec-2015,VG_KathiBeetrootCrudites,5
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,7-Oct-2015,22:00:00,due,ongoing,8-Oct-2015,1-Dec-2015,EG-EggbenedictBeetrootCrudites,4
+9981513074,"101, Timmy Arcade, Makwana road, near marol metro station, 400059",11:00:00,100,7-Oct-2015,22:00:00,due,ongoing,8-Oct-2015,1-Dec-2015,VG_KathiBeetrootCrudites,1
+9004030150,"A-505, Adityavardhan Apartment, OPposite Boomerang Gate no.2, Chandivali - 400072",8:15:00,90,7-Oct-2015,22:00:00,due,ongoing,8-Oct-2015,1-Dec-2015,EG-EggbenedictBeetrootCrudites,1
+8879006352,"A-505, Adityavardhan Apartment, OPposite Boomerang Gate no.2, Chandivali - 400072",8:15:00,90,7-Oct-2015,22:00:00,due,ongoing,8-Oct-2015,1-Dec-2015,VG_KathiBeetrootCrudites,1
+8879006352,"102, Parvati nagar, jb nagar, near chakal metro",8:15:00,90,7-Oct-2015,22:00:00,due,ongoing,8-Oct-2015,1-Dec-2015,EG-EggbenedictBeetrootCrudites,1
+7738776725,"2201, Excel Tower, IIT Market, Opp IIT Main Gate",8:00:00,100,7-Oct-2015,22:00:00,due,ongoing,8-Oct-2015,1-Dec-2015,VG_KathiBeetrootCrudites,4
+7738776725,"2201, Excel Tower, IIT Market, Opp IIT Main Gate",8:00:00,100,7-Oct-2015,22:00:00,due,ongoing,8-Oct-2015,1-Dec-2015,EG-EggbenedictBeetrootCrudites,3
+9769253205,"4th floor, E wing, Oberoi Gardens, Chandivali, Powai",11:15:00,110,7-Oct-2015,22:00:00,due,ongoing,8-Oct-2015,1-Dec-2015,VG_KathiBeetrootCrudites,2
+7710060692,"101, Timmy Arcade, Makwana road, near marol metro station, 400059",11:00:00,100,7-Oct-2015,22:00:00,due,ongoing,8-Oct-2015,1-Dec-2015,EG-EggbenedictBeetrootCrudites,1
+9571300769,#N/A,9:00:00,100,7-Oct-2015,19:00:00,due,ongoing,8-Oct-2015,1-Dec-2015,VG_KathiBeetrootCrudites,1
+9619446401,"A-505, Adityavardhan Apartment, OPposite Boomerang Gate no.2, Chandivali - 400072",8:15:00,90,7-Oct-2015,22:00:00,due,ongoing,8-Oct-2015,1-Dec-2015,EG-EggbenedictBeetrootCrudites,1
+9167927242,"C2L BIZ Solutions Pvt. Ltd.,Unit 119, 1st floor,B wing, Solaris-1,In front of L & T gate no. 6,Saki vihar road, Andheri east,Mumbai",11:30:00,110,7-Oct-2015,8:00:00,cleared,ongoing,8-Oct-2015,8-Oct-2015,EG-EggbenedictBeetrootCrudites,1
+7506793069,"702 B WING,Skyline villa,powai",9:00:00,110,7-Oct-2015,8:00:00,cleared,ongoing,8-Oct-2015,8-Oct-2015,VG_KathiBeetrootCrudites,1
+8828200078,"Unit No. 4, B Wing, Krislon House, Opposite Marwah Center, Mumbai",10:00:00,110,7-Oct-2015,8:00:00,cleared,ongoing,8-Oct-2015,8-Oct-2015,EG-EggbenedictBeetrootCrudites,1
+8976542631,"503, Sigma Building,, Hiranandani Gardens, Powai,, Mumbai – 400076",10:15:00,110,7-Oct-2015,20:00:00,cleared,Done,8-Oct-2015,8-Oct-2015,EG-EggbenedictBeetrootCrudites,1
+9561182624,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",10:00:00,110,7-Oct-2015,8:00:00,cleared,Done,8-Oct-2015,8-Oct-2015,EG-EggbenedictBeetrootCrudites,1
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,8-Oct-2015,22:00:00,due,ongoing,9-Oct-2015,1-Dec-2015,VG-GreenPeasGuavaMixedSprouts,5
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,8-Oct-2015,22:00:00,due,ongoing,9-Oct-2015,1-Dec-2015,NVG-StrogaGuavaMixedSprouts,4
+9981513074,"101, Timmy Arcade, Makwana road, near marol metro station, 400059",11:00:00,100,8-Oct-2015,22:00:00,due,ongoing,9-Oct-2015,1-Dec-2015,VG-GreenPeasGuavaMixedSprouts,1
+9004030150,"A-505, Adityavardhan Apartment, OPposite Boomerang Gate no.2, Chandivali - 400072",8:15:00,90,8-Oct-2015,22:00:00,due,ongoing,9-Oct-2015,1-Dec-2015,NVG-StrogaGuavaMixedSprouts,1
+8879006352,"A-505, Adityavardhan Apartment, OPposite Boomerang Gate no.2, Chandivali - 400072",8:15:00,90,8-Oct-2015,22:00:00,due,ongoing,9-Oct-2015,1-Dec-2015,VG-GreenPeasGuavaMixedSprouts,1
+8879006352,"102, Parvati nagar, jb nagar, near chakal metro",8:15:00,90,8-Oct-2015,22:00:00,due,ongoing,9-Oct-2015,1-Dec-2015,NVG-StrogaGuavaMixedSprouts,1
+7738776725,"2201, Excel Tower, IIT Market, Opp IIT Main Gate",8:00:00,100,8-Oct-2015,22:00:00,due,ongoing,9-Oct-2015,1-Dec-2015,VG-GreenPeasGuavaMixedSprouts,4
+7738776725,"2201, Excel Tower, IIT Market, Opp IIT Main Gate",8:00:00,100,8-Oct-2015,22:00:00,due,ongoing,9-Oct-2015,1-Dec-2015,NVG-StrogaGuavaMixedSprouts,3
+9769253205,"1103, I wing, Raheja vista, Raheja vihar",11:15:00,110,8-Oct-2015,22:00:00,due,ongoing,9-Oct-2015,1-Dec-2015,VG-GreenPeasGuavaMixedSprouts,2
+7710060692,"101, Timmy Arcade, Makwana road, near marol metro station, 400059",11:00:00,100,8-Oct-2015,22:00:00,due,ongoing,9-Oct-2015,1-Dec-2015,NVG-StrogaGuavaMixedSprouts,1
+9571300769,#N/A,9:00:00,100,8-Oct-2015,19:00:00,due,ongoing,9-Oct-2015,1-Dec-2015,VG-GreenPeasGuavaMixedSprouts,1
+9619446401,"A-505, Adityavardhan Apartment, OPposite Boomerang Gate no.2, Chandivali - 400072",8:15:00,90,8-Oct-2015,22:00:00,due,ongoing,9-Oct-2015,1-Dec-2015,NVG-StrogaGuavaMixedSprouts,1
+9167927242,"C2L BIZ Solutions Pvt. Ltd.,Unit 119, 1st floor,B wing, Solaris-1,In front of L & T gate no. 6,Saki vihar road, Andheri east,Mumbai",11:00:00,110,8-Oct-2015,8:00:00,cleared,ongoing,9-Oct-2015,8-Oct-2015,NVG-StrogaGuavaMixedSprouts,1
+9987136560,"1601, IVY Nahar Amrit Shakti, Chandivali, Andheri East - 400072",8:45:00,110,8-Oct-2015,8:00:00,cleared,ongoing,9-Oct-2015,8-Oct-2015,VG-GreenPeasGuavaMixedSprouts,1
+9769775794,"Hostel 4, IIT Bombay",10:00:00,0,8-Oct-2015,8:00:00,cleared,ongoing,9-Oct-2015,8-Oct-2015,NVG-StrogaGuavaMixedSprouts,1
+7870942617,"Hostel 15, IIT Bombay",10:00:00,110,8-Oct-2015,8:00:00,cleared,ongoing,9-Oct-2015,8-Oct-2015,VG-GreenPeasGuavaMixedSprouts,1
+7870942617,#N/A,10:00:00,110,8-Oct-2015,8:00:00,cleared,ongoing,9-Oct-2015,8-Oct-2015,NVG-StrogaGuavaMixedSprouts,2
+8976542631,"B104, Raheja Nest, Chandivali",11:00:00,110,9-Oct-2015,20:00:00,cleared,Done,9-Oct-2015,8-Oct-2015,NVG-StrogaGuavaMixedSprouts,1
+7799733017,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",10:00:00,110,9-Oct-2015,8:00:00,due,Done,9-Oct-2015,1-Dec-2015,NVG-StrogaGuavaMixedSprouts,1
+8106477111,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",10:00:00,110,9-Oct-2015,8:00:00,due,Done,9-Oct-2015,1-Dec-2015,NVG-StrogaGuavaMixedSprouts,3
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,9-Oct-2015,22:00:00,due,ongoing,10-Oct-2015,1-Dec-2015,VG-VegIdliBForestFruitSalad,4
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,9-Oct-2015,22:00:00,due,ongoing,10-Oct-2015,1-Dec-2015,EG-PancakesBforestFruitSalad,4
+9981513074,"101, Timmy Arcade, Makwana road, near marol metro station, 400059",11:00:00,100,9-Oct-2015,22:00:00,due,ongoing,10-Oct-2015,1-Dec-2015,VG-VegIdliBForestFruitSalad,1
+9004030150,"A-505, Adityavardhan Apartment, OPposite Boomerang Gate no.2, Chandivali - 400072",8:15:00,90,9-Oct-2015,22:00:00,due,ongoing,10-Oct-2015,1-Dec-2015,EG-PancakesBforestFruitSalad,1
+8879006352,"A-505, Adityavardhan Apartment, OPposite Boomerang Gate no.2, Chandivali - 400072",8:15:00,90,9-Oct-2015,22:00:00,due,ongoing,10-Oct-2015,1-Dec-2015,VG-VegIdliBForestFruitSalad,1
+8879006352,"102, Parvati nagar, jb nagar, near chakal metro",8:15:00,90,9-Oct-2015,22:00:00,due,ongoing,10-Oct-2015,1-Dec-2015,EG-PancakesBforestFruitSalad,1
+7738776725,"2201, Excel Tower, IIT Market, Opp IIT Main Gate",8:00:00,100,9-Oct-2015,22:00:00,due,ongoing,10-Oct-2015,1-Dec-2015,VG-VegIdliBForestFruitSalad,4
+7738776725,"2201, Excel Tower, IIT Market, Opp IIT Main Gate",8:00:00,100,9-Oct-2015,22:00:00,due,ongoing,10-Oct-2015,1-Dec-2015,EG-PancakesBforestFruitSalad,3
+9769253205,"4th floor, E wing, Oberoi Gardens, Chandivali, Powai",11:15:00,110,9-Oct-2015,22:00:00,due,ongoing,10-Oct-2015,1-Dec-2015,VG-VegIdliBForestFruitSalad,2
+7710060692,"101, Timmy Arcade, Makwana road, near marol metro station, 400059",11:00:00,100,9-Oct-2015,22:00:00,due,ongoing,10-Oct-2015,1-Dec-2015,EG-PancakesBforestFruitSalad,1
+9571300769,#N/A,9:00:00,100,9-Oct-2015,19:00:00,due,ongoing,10-Oct-2015,1-Dec-2015,EG-PancakesBforestFruitSalad,1
+9619446401,"A-505, Adityavardhan Apartment, OPposite Boomerang Gate no.2, Chandivali - 400072",8:15:00,90,9-Oct-2015,22:00:00,due,ongoing,10-Oct-2015,1-Dec-2015,EG-PancakesBforestFruitSalad,1
+8879020550,"Flat no- 004, Building 2E, Powai Vihar, Ground Floor, Powai",7:45:00,110,9-Oct-2015,22:00:00,cleared,ongoing,10-Oct-2015,10-Oct-2015,EG-PancakesBforestFruitSalad,1
+8108050477,"Flat No. 902, Building No. 7, Saki Vihar Complex,' Saki Naka, Chandivali- 72",8:15:00,0,9-Oct-2015,22:00:00,cleared,ongoing,10-Oct-2015,10-Oct-2015,EG-PancakesBforestFruitSalad,1
+9895697648,"A-204, CENTRAL AVENUE, HIRANANDANI gardens,, Powai.",9:30:00,0,9-Oct-2015,22:00:00,cleared,ongoing,10-Oct-2015,10-Oct-2015,EG-PancakesBforestFruitSalad,1
+9953597147,"Flat No. 301, Pearl Building, Gems Society, Powai Vihar,, Behind Maple Restaurant",9:30:00,110,9-Oct-2015,22:00:00,cleared,ongoing,10-Oct-2015,10-Oct-2015,VG-VegIdliBForestFruitSalad,1
+8552922912,"Flat No. 301, Pearl Building, Gems Society, Powai Vihar,, Behind Maple Restaurant",9:30:00,0,9-Oct-2015,22:00:00,cleared,ongoing,10-Oct-2015,10-Oct-2015,VG-VegIdliBForestFruitSalad,1
+9850126160,"E1004, Phase 1, Lake Homes, Chandivali , Powai",10:00:00,110,9-Oct-2015,22:00:00,cleared,ongoing,10-Oct-2015,10-Oct-2015,VG-VegIdliBForestFruitSalad,1
+9674603689,"Flat No. 102, 1st floor, Jyoti Enclave,, Plot No. 206, Sher-e-punjab society, Andheri East- 93.",10:00:00,0,9-Oct-2015,22:00:00,cleared,ongoing,10-Oct-2015,10-Oct-2015,EG-PancakesBforestFruitSalad,1
+9769025053,"Flat No. 102, 1st floor, Jyoti Enclave,, Plot No. 206, Sher-e-punjab society, Andheri East- 93.",10:00:00,0,9-Oct-2015,22:00:00,cleared,ongoing,10-Oct-2015,10-Oct-2015,VG-VegIdliBForestFruitSalad,1
+9819083662,"C/35,Anand Prakash Satyam CHS. Ltd,, Ram Krishna Mandir Road, Andheri East- 69, Near Akruti Trade Centre",10:00:00,0,9-Oct-2015,22:00:00,cleared,ongoing,10-Oct-2015,10-Oct-2015,VG-VegIdliBForestFruitSalad,1
+9819504974,"901, Panch Ritu Complex, Panch Shrishti Building, near S. M Shetty school, Powai",10:00:00,110,9-Oct-2015,22:00:00,cleared,ongoing,10-Oct-2015,10-Oct-2015,VG-VegIdliBForestFruitSalad,1
+9730012310,"FLat no. 303, Panch Maahal, Powai vihar complex Powai Mumbai",10:30:00,0,9-Oct-2015,22:00:00,cleared,ongoing,10-Oct-2015,10-Oct-2015,EG-PancakesBforestFruitSalad,1
+8108908000,"B-1104, synchrony city near nahar medical center, chandivali, mumbai 400072",9:30:00,110,9-Oct-2015,22:00:00,due,ongoing,10-Oct-2015,1-Dec-2015,VG-VegIdliBForestFruitSalad,2
+8348523409,"Flat no: 802, Vinca, Nahar Amrit Shakti, Chandivali, Powai, Mumbai - 400072",8:00:00,110,30-Sep-2015,22:00:00,cleared,ongoing,10-Oct-2015,10-Oct-2015,EG-PancakesBforestFruitSalad,1
+9769253205,"1103, I wing, Raheja vista, Raheja vihar",8:45:00,110,10-Oct-2015,22:00:00,due,ongoing,10-Oct-2015,1-Dec-2015,VG-VegIdliBForestFruitSalad,1
+9967786732,"Flat no- 004, Building 2E, Powai Vihar, Ground Floor, Powai",10:00:00,110,10-Oct-2015,22:00:00,due,ongoing,10-Oct-2015,1-Dec-2015,VG-VegIdliBForestFruitSalad,1
+9930153177,"205, Zara, Nahar amrit Shakti",10:00:00,110,10-Oct-2015,22:00:00,cleared,ongoing,10-Oct-2015,1-Dec-2015,VG-VegIdliBForestFruitSalad,1
+9930153177,#N/A,10:00:00,110,10-Oct-2015,22:00:00,cleared,ongoing,10-Oct-2015,1-Dec-2015,EG-PancakesBforestFruitSalad,1
+8655549007,"B303, Jheel Darshan Apartment, Near Powai Police Station, Powai - 400076",10:30:00,110,10-Oct-2015,10:00:00,cleared,ongoing,10-Oct-2015,10-Oct-2015,EG-PancakesBforestFruitSalad,1
+8828200078,"Unit No. 4, B Wing, Krislon House, Opposite Marwah Center, Mumbai",11:00:00,110,10-Oct-2015,8:00:00,cleared,ongoing,10-Oct-2015,1-Dec-2015,VG-VegIdliBForestFruitSalad,1
+9571300769,#N/A,11:00:00,199,10-Oct-2015,19:00:00,due,ongoing,11-Oct-2015,1-Dec-2015,VG-VegLasagnaWhiteTomato,1
+9619446401,"F-1403, Raj Legacy Co-operative Society, LBS marg, Vikhroli-400079",9:00:00,199,10-Oct-2015,19:00:00,due,ongoing,11-Oct-2015,1-Dec-2015,VG-VegLasagnaWhiteTomato,1
+9004030150,"A-505, Adityavardhan Apartment, OPposite Boomerang Gate no.2, Chandivali - 400072",10:00:00,199,10-Oct-2015,19:00:00,due,ongoing,11-Oct-2015,1-Dec-2015,VG-VegLasagnaWhiteTomato,1
+7710063909,"B-602, Lotus Apartments, Hiranandani Gardens",10:00:00,199,10-Oct-2015,19:00:00,due,ongoing,11-Oct-2015,11-Oct-2015,VG-VegLasagnaWhiteTomato,1
+9967786732,"Flat no- 004, Building 2E, Powai Vihar, Ground Floor, Powai",9:00:00,199,10-Oct-2015,19:00:00,cleared,ongoing,11-Oct-2015,11-Oct-2015,VG-VegLasagnaWhiteTomato,3
+9769253205,"1103, I wing, Raheja vista, Raheja vihar",9:30:00,199,10-Oct-2015,19:00:00,due,ongoing,11-Oct-2015,1-Dec-2015,VG-VegLasagnaWhiteTomato,1
+8879006352,"A-505, Adityavardhan Apartment, OPposite Boomerang Gate no.2, Chandivali - 400072",9:00:00,90,10-Oct-2015,22:00:00,due,ongoing,11-Oct-2015,1-Dec-2015,VG-VsandBforestFruitSalad,2
+7738776725,"2201, Excel Tower, IIT Market, Opp IIT Main Gate",9:00:00,199,10-Oct-2015,19:00:00,due,ongoing,11-Oct-2015,1-Dec-2015,VG-VegLasagnaWhiteTomato,5
+9981513074,"1102, Sai Sapphire, Powai Vihar Complex, Powai",10:30:00,199,10-Oct-2015,19:00:00,due,ongoing,11-Oct-2015,1-Dec-2015,VG-VegLasagnaWhiteTomato,1
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,11-Oct-2015,22:00:00,due,ongoing,12-Oct-2015,1-Dec-2015,VG-VpancakesChikooGrilledToamto,4
+8828338153,"B-3084, Oberoi Garden Estates, Near Boomerang, Chandivali",11:00:00,100,11-Oct-2015,22:00:00,due,ongoing,12-Oct-2015,1-Dec-2015,NVG-RockChickChikooGrillTomato,4
+9981513074,"101, Timmy Arcade, Makwana road, near marol metro station, 400059",11:00:00,100,11-Oct-2015,22:00:00,due,ongoing,12-Oct-2015,1-Dec-2015,VG-VpancakesChikooGrilledToamto,1
+7710060692,"101, Timmy Arcade, Makwana road, near marol metro station, 400059",11:00:00,100,11-Oct-2015,22:00:00,due,ongoing,12-Oct-2015,1-Dec-2015,NVG-RockChickChikooGrillTomato,1
+7738776725,"2201, Excel Tower, IIT Market, Opp IIT Main Gate",8:00:00,100,11-Oct-2015,22:00:00,due,ongoing,12-Oct-2015,1-Dec-2015,VG-VpancakesChikooGrilledToamto,3
+7738776725,"2201, Excel Tower, IIT Market, Opp IIT Main Gate",8:00:00,100,11-Oct-2015,22:00:00,due,ongoing,12-Oct-2015,1-Dec-2015,NVG-RockChickChikooGrillTomato,3
+9769253205,"1103, I wing, Raheja vista, Raheja vihar",9:00:00,110,11-Oct-2015,22:00:00,due,ongoing,12-Oct-2015,1-Dec-2015,VG-VpancakesChikooGrilledToamto,1
+9571300769,#N/A,9:00:00,100,11-Oct-2015,19:00:00,due,ongoing,12-Oct-2015,1-Dec-2015,NVG-RockChickChikooGrillTomato,1
+7710063909,"B-602, Lotus Apartments, Hiranandani Gardens",9:30:00,110,11-Oct-2015,19:00:00,due,ongoing,12-Oct-2015,11-Oct-2015,VG-VpancakesChikooGrilledToamto,1
+9004030150,"A-505, Adityavardhan Apartment, OPposite Boomerang Gate no.2, Chandivali - 400072",8:15:00,90,11-Oct-2015,22:00:00,due,ongoing,12-Oct-2015,1-Dec-2015,NVG-RockChickChikooGrillTomato,1
+8879006352,"A-505, Adityavardhan Apartment, OPposite Boomerang Gate no.2, Chandivali - 400072",8:15:00,90,11-Oct-2015,22:00:00,due,ongoing,12-Oct-2015,1-Dec-2015,VG-VpancakesChikooGrilledToamto,1
+8879006352,"102, Parvati nagar, jb nagar, near chakal metro",8:15:00,90,11-Oct-2015,22:00:00,due,ongoing,12-Oct-2015,1-Dec-2015,NVG-RockChickChikooGrillTomato,1
+9619446401,"A-505, Adityavardhan Apartment, OPposite Boomerang Gate no.2, Chandivali - 400072",8:15:00,90,11-Oct-2015,22:00:00,due,ongoing,12-Oct-2015,1-Dec-2015,NVG-RockChickChikooGrillTomato,1
+9538007269,"Ground Floor, E wing, Tex Centre, Chandivali Farm Road, Chandivali, Andheri East",10:00:00,110,11-Oct-2015,19:00:00,due,ongoing,12-Oct-2015,11-Oct-2015,VG-VpancakesChikooGrilledToamto,1
+9538007269,"A-201, Gagangiri, 2nd floor, Hanuman nagar, Carter Road, Above Mad Over Donuts, Bandra West",10:00:00,110,11-Oct-2015,19:00:00,due,ongoing,12-Oct-2015,11-Oct-2015,NVG-RockChickChikooGrillTomato,1
+9769469377,"702 Neptune, Suncity, 7th floor",7:45:00,110,11-Oct-2015,19:00:00,cleared,ongoing,12-Oct-2015,11-Oct-2015,NVG-RockChickChikooGrillTomato,1
+9819393197,"General Mills, 902, Ventura Building, Hiranandani",10:30:00,0,11-Oct-2015,19:00:00,cleared,ongoing,12-Oct-2015,11-Oct-2015,VG-VpancakesChikooGrilledToamto,1
+7709865448,"General Mills, 902, Ventura Building, Hiranandani",10:30:00,0,11-Oct-2015,19:00:00,cleared,ongoing,12-Oct-2015,11-Oct-2015,NVG-RockChickChikooGrillTomato,1
+9930591620,"General Mills, 902, Ventura Building, Hiranandani",10:30:00,0,11-Oct-2015,19:00:00,cleared,ongoing,12-Oct-2015,11-Oct-2015,NVG-RockChickChikooGrillTomato,1
+7738933359,"Aranca, 2nd Floor, Wing B, Supreme Business Park, Powai",10:45:00,0,11-Oct-2015,19:00:00,cleared,ongoing,12-Oct-2015,11-Oct-2015,NVG-RockChickChikooGrillTomato,1
+9999999999,"Aranca, 2nd Floor, Wing B, Supreme Business Park, Powai",10:45:00,0,11-Oct-2015,19:00:00,cleared,ongoing,12-Oct-2015,11-Oct-2015,NVG-RockChickChikooGrillTomato,1
+8888888888,"Aranca, 2nd Floor, Wing B, Supreme Business Park, Powai",10:45:00,0,11-Oct-2015,19:00:00,cleared,ongoing,12-Oct-2015,11-Oct-2015,VG-VpancakesChikooGrilledToamto,1
