@@ -55,7 +55,7 @@ class Delivery < ActiveRecord::Base
   end
 
   def Delivery.get_chef_view_rows
-    deliveries = Delivery.where(delivery_date: Time.zone.today).where("delivery_status_id = ? OR delivery_status_id = ?", DeliveryStatus.find_by(name: 'Tentative'), DeliveryStatus.find_by(name: 'Confirmed')).order(at: :asc)
+    deliveries = Delivery.where(delivery_date: Time.zone.today).order(at: :asc)
     times = {}
     deliveries.each do |delivery|
       delivery.packs.each do |pack|

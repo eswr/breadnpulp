@@ -2,7 +2,7 @@ class DeliveriesController < ApplicationController
 
 	before_action :logged_in_user
 	before_action :admin_user,			only: [:edit, :update, :index, :destroy, :todays_orders, :recent_orders, :future_orders, :chef_view]
-	# before_action :correct_user,		only: [:edit, :update, :destroy ]
+	before_action :correct_user,		only: [:new, :create]
 	# before_action :editable_delivery,	only: [:edit, :update]
 
 	def new
@@ -128,11 +128,11 @@ class DeliveriesController < ApplicationController
 		end
 	end
 
-	# def correct_user
-	# 	return true if current_user.admin?
-	# 	user = current_user
-	# 	redirect_to root_path unless current_user?(user)
-	# end
+	def correct_user
+		return true if current_user.admin?
+		user = current_user
+		redirect_to root_path unless current_user?(user)
+	end
 
 	def send_sms (delivery)
 		url = URI.parse(URI.encode("http://trx.orangesms.net/api/sendmsg.php?user=breadnpulp&pass=qweqwe&sender=BRDPLP" +
