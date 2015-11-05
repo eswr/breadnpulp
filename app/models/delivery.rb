@@ -76,9 +76,9 @@ class Delivery < ActiveRecord::Base
 
   def self.to_csv
     CSV.generate do |csv|
-      csv << ["Id", "Date"]
+      csv << ["Id", "Date", "User Id", "Time", "Delivery Status Id"]
       all.each do |delivery|
-        csv << [delivery.id, delivery.delivery_date]
+        csv << [delivery.id, delivery.delivery_date, delivery.user_id, delivery.at, delivery.delivery_status_id]
       end
     end
   end

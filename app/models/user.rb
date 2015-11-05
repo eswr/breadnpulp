@@ -126,9 +126,9 @@ class User < ActiveRecord::Base
 
     def self.to_csv
     	CSV.generate do |csv|
-    		csv << column_names
+    		csv << ["Id", "Name", "Phone Number", "Email", "No of orders"]
     		all.each do |user|
-    			csv << [user.name, user.phone_number, user.source, user.deliveries_count]
+    			csv << [user.id, user.name, user.phone_number, user.email, user.deliveries_count]
     		end
     	end
     end
