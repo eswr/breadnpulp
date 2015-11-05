@@ -35,6 +35,14 @@ class AddressesController < ApplicationController
 		end
 	end
 
+	def index
+		@addresses = Address.order(created_at: :asc)
+		respond_to do |format|
+			format.html
+			format.csv { render text: @addresses.to_csv}
+		end
+	end
+
 	private
 
 		def address_params

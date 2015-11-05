@@ -30,4 +30,13 @@ class Address < ActiveRecord::Base
 		"#{name}: #{full_address} - #{pincode}"
 	end
 
+	def self.to_csv
+		CSV.generate do |csv|
+			csv << ["Id", "Name", "Full Address", "Pincode"]
+			all.each do |address|
+				csv << [address.id, address.name, address.full_address, address.pincode]
+			end
+		end
+	end
+
 end
