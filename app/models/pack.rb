@@ -17,7 +17,7 @@ class Pack < ActiveRecord::Base
   belongs_to :kickerr
 
   def get_unit_price
-  	self.unit_price.nil? ? self.menu.get_price : self.unit_price
+  	unit_price.nil? ? menu.get_price : unit_price
   end
 
 	def self.to_csv

@@ -18,31 +18,13 @@
                 </div>
             </div>
             <div class="row">
-                <% if @menus.count == 1 %>
-                    <% offset = 4 %>
-                    <% xs = 12 %>
-                    <% sm = 12 %>
-                    <% md = 4 %>
-                    <% lg = 4 %>
-                <% elsif @menus.count == 2 %>
-                    <% offset = 2 %>
-                    <% xs = 12 %>
-                    <% sm = 12 %>
-                    <% md = 4 %>
-                    <% lg = 4 %>
-                <% else %>
-                    <% offset = 0 %>
-                    <% xs = 12 %>
-                    <% sm = 12 %>
-                    <% md = 4 %>
-                    <% lg = 4 %>
-                <% end %>
-                <div class="col-xs-<%= offset %> col-sm-<%= offset %> col-md-<%= offset %> col-lg-<%= offset %>"></div>
                 <% @menus.each do |menu| %>
-                    <%= render menu %>
-                <% end %>
-                <div class="col-xs-<%= offset %> col-sm-<%= offset %> col-md-<%= offset %> col-lg-<%= offset %>"></div>
-                
+                    <div class="col-md-4">
+                        <div class="panel panel-default" style="padding: 10px;">
+                            <%= render menu %>
+                        </div>
+                    </div>
+                <% end %>        
             </div>
             <div style="text-align: center;">
                 <% if logged_in? %>

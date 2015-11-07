@@ -1,6 +1,8 @@
-<%= image_tag kickerr.food_items.where(show_image: true).first.image.url :medium %>
-<div class="portfolio-caption">
-	<h4><%= kickerr.name %></h4>
-	<p class="text-muted"><%= kickerr.description %></p>
-	<h6 class="text-muted" style="color: <%= kickerr.colorize %>; font-size: 120%;"><%= kickerr.veg_type %></h6>
+<h4 class="panel-title" style="padding-top: 10px;"><%= kickerr.name %></h4>
+<div class="panel-body">
+	<div class="row">
+		<%= image_tag kickerr.food_items.where(show_image: true).first.image.url :medium %>
+	</div>
+	<p><%= kickerr.description %></p>
 </div>
+<h6 class="text-muted" style="color: <%= kickerr.colorize %>; font-size: 120%;"><%= kickerr.veg_type %></h6>
