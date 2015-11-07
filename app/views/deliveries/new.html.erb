@@ -10,7 +10,7 @@
 	<div class="row">
 		<% for pack in @delivery.packs %>
 			<div class="col-md-4">
-				<div class="panel panel-default" style="padding: 10px;">
+				<div class="panel panel-default">
 					<%= render pack.menu %>
 					<div class="panel-footer">
 						<%= fields_for "delivery[packs_attributes][]", pack do |pack_fields| %>

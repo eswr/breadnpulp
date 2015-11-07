@@ -1,8 +1,14 @@
-<h4 class="panel-title" style="padding-top: 10px;"><%= kickerr.name %></h4>
-<div class="panel-body">
-	<div class="row">
-		<%= image_tag kickerr.food_items.where(show_image: true).first.image.url :medium %>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title"><%= kickerr.name %></h4>
 	</div>
-	<p><%= kickerr.description %></p>
+	<div class="panel-body">
+		<div class="row">
+			<%= image_tag kickerr.food_items.where(show_image: true).first.image.url :medium %>
+		</div>
+		<br>
+		<p><%= kickerr.description %></p>
+		<h6 class="text-muted" style="color: <%= kickerr.colorize %>; font-size: 120%;"><%= kickerr.veg_type %></h6>
+	</div>
 </div>
-<h6 class="text-muted" style="color: <%= kickerr.colorize %>; font-size: 120%;"><%= kickerr.veg_type %></h6>
+
