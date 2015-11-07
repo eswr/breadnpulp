@@ -22,7 +22,7 @@ class Subscription < ActiveRecord::Base
 	after_create	:create_deliveries
 	
 	belongs_to 		:user
-	has_many		:deliveries
+	has_many		:deliveries, dependent: :destroy
 	has_one			:payment_status
 
 	private
