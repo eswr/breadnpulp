@@ -14,7 +14,7 @@ module ApplicationHelper
 	end
 
 	def active_menu_date
-		Time.zone.now.hour < 11 ? Time.zone.today : Time.zone.tomorrow
+		Time.zone.now.hour < 12 ? Time.zone.today : Time.zone.tomorrow
 	end
 
 	def dayify(date)
