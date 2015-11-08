@@ -17,6 +17,7 @@
 #  reset_digest      :string
 #  reset_sent_at     :datetime
 #  source            :string
+#  deliveries_count  :integer          default(0)
 #
 
 class User < ActiveRecord::Base

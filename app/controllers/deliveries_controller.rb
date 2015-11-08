@@ -112,7 +112,7 @@ class DeliveriesController < ApplicationController
 
 	def active_menu_date
 		Time.zone = 'Chennai'
-		Time.zone.now.hour < 12 ? Time.zone.now.to_date : Time.zone.now.to_date.tomorrow
+		Time.zone.now.hour < 11 ? Time.zone.now.to_date : Time.zone.now.to_date.tomorrow
 	end
 
 	def admin_user
