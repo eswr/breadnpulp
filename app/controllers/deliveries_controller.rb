@@ -84,7 +84,7 @@ class DeliveriesController < ApplicationController
 	end
 
 	def future_orders
-		@deliveries = Delivery.where("delivery_date > ?", Time.zone.today).order(delivery_date: :asc, at: :asc).eager_load(:delivery_statuses, :payment_statuses, :users, :addresses, :packs, :menus, :kickerrs)
+		@deliveries = Delivery.where("delivery_date > ?", Time.zone.today).order(delivery_date: :asc, at: :asc).eager_load(:delivery_status, :payment_status, :user, :address, :packs, :menus, :kickerrs)
 	end
 
 	def recent_orders
