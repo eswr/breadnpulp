@@ -28,7 +28,7 @@ class MenusController < ApplicationController
   end
 
   def index
-    @menus = Menu.paginate(:page => params[:page]).order(available_on: :desc)
+    @menus = Menu.paginate(:page => params[:page]).order(available_on: :desc).eager_load(:kickerr, :food_items)
     respond_to do |format|
       format.html
       format.csv { render text: Menu.all.to_csv }
