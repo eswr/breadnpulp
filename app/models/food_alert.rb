@@ -14,7 +14,7 @@ class FoodAlert < ActiveRecord::Base
 
 	def FoodAlert.get_food_alerts
 		food_alerts = {}
-		FoodAlert.all.each do |fa|
+		FoodAlert.all.eager_load(:food_items, :user).each do |fa|
 			if fa.food_items.present?
 				food_alerts[fa.user_id] = []
 				fa.food_items.each do |fi|
