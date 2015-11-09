@@ -68,7 +68,7 @@ class DeliveriesController < ApplicationController
 	end
 
 	def index
-		@deliveries = Delivery.paginate(:page => params[:page]).order(delivery_date: :desc, at: :asc)
+		@deliveries = Delivery.paginate(:page => params[:page]).order(delivery_date: :desc, at: :asc).eager_load(:delivery_status, :payment_status, :user, :address, :packs, :menus, :kickerrs)
 		respond_to do |format|
 			format.html
 			format.csv { render text: Delivery.all.to_csv }
@@ -80,15 +80,15 @@ class DeliveriesController < ApplicationController
 	end
 
 	def todays_orders
-		@deliveries = Delivery.where("delivery_date = ?", Time.zone.today).where("delivery_status_id = ? OR delivery_status_id = ?", DeliveryStatus.find_by(name: 'Tentative'), DeliveryStatus.find_by(name: 'Confirmed')).order(at: :asc)
+		@deliveries = Delivery.where("delivery_date = ?", Time.zone.today).where("delivery_status_id = ? OR delivery_status_id = ?", DeliveryStatus.find_by(name: 'Tentative'), DeliveryStatus.find_by(name: 'Confirmed')).order(at: :asc).eager_load(:delivery_status, :payment_status, :user, :address, :packs, :menus, :kickerrs)
 	end
 
 	def future_orders
-		@deliveries = Delivery.where("delivery_date > ?", Time.zone.today).order(delivery_date: :asc, at: :asc)
+		@deliveries = Delivery.where("delivery_date > ?", Time.zone.today).order(delivery_date: :asc, at: :asc).eager_load(:delivery_statuses, :payment_statuses, :users, :addresses, :packs, :menus, :kickerrs)
 	end
 
 	def recent_orders
-		@deliveries = Delivery.paginate(:page => params[:page]).where("delivery_date < ?", Time.zone.today).order(delivery_date: :desc, at: :desc)
+		@deliveries = Delivery.paginate(:page => params[:page]).where("delivery_date < ?", Time.zone.today).order(delivery_date: :desc, at: :desc).eager_load(:delivery_status, :payment_status, :user, :address, :packs, :menus, :kickerrs)
 	end
 
 	def chef_view
