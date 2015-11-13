@@ -1,0 +1,10 @@
+<%= f.label :raw_material %>
+<%= f.select(:raw_material_id, @raw_materials, {}, { class: 'form-control' }) %>
+
+<%= f.label :quantity %>
+<%= f.text_field :quantity %>
+
+<%= f.label :unit %>
+<%= f.text_field :unit %>
+
+<%= f.check_box '_destroy' %>  <%= f.label "Destroy" %>

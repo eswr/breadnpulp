@@ -1,35 +1,6 @@
 <% provide(:title, "#{@food_item.name}") %>
 <div class="container">
-<h1><%= @food_item.name %></h1>
-
-<div class="row">
-	<div class="col-md-6 col-md-offset-3">
-	<%= form_for @food_item, html: { multipart: true } do |f| %>
-
-		<%= render 'shared/error_messages', object: f.object %>
-
-		<%= f.label :name %>
-		<%= f.text_field :name, class: 'form-control' %><br>
-
-		<%= f.label :course %>
-		<%= f.select :course, %w[Main Beverage Salad Side], class: 'form-control' %><br>
-
-		<%= f.label :veg_non_egg %>
-		<%= f.select :veg_non_egg, %w[Veg Non-Veg Egg], class: 'form-control' %><br>
-
-		<%= f.label :description %>
-		<%= f.text_area :description, class: 'form-control' %><br>
-
-		<%= f.label :image %><br>
-		<%= image_tag @food_item.image.url :medium %><br>
-		<%= f.file_field :image %><br>
-
-		<%= f.label :show? %><br>
-		<%= f.check_box :show_image %><br>
-
-		<%= f.submit "Save food item", class: 'btn btn-primary' %>
-	<% end %>
-	</div>
-</div>
+	<h1><%= @food_item.name %></h1>
+	<%= render 'form' %>
 </div>
 

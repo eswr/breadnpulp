@@ -32,6 +32,8 @@ Rails.application.routes.draw do
   resources :deliveries
   resources :subscriptions
   resources :packs,               only: [:index]
+  resources :ingredients
+  resources :raw_materials
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

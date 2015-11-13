@@ -5,6 +5,8 @@ class FoodItemsController < ApplicationController
 	
 	def new
 		@food_item = FoodItem.new
+		@food_item.ingredients.build
+		@raw_materials = RawMaterial.all.map { |raw_material| [raw_material.name, raw_material.id] }
 	end
 
 	def show
@@ -13,6 +15,8 @@ class FoodItemsController < ApplicationController
 
 	def edit
 		@food_item = FoodItem.find(params[:id])
+		@food_item.ingredients.build
+		@raw_materials = RawMaterial.all.map { |raw_material| [raw_material.name, raw_material.id] }
 	end
 
 	def index
@@ -50,7 +54,7 @@ class FoodItemsController < ApplicationController
 	private
 
 		def food_item_params
-			params.require(:food_item).permit(:name, :veg_non_egg, :description, :image, :course, :show_image)
+			params.require(:food_item).permit(:name, :veg_non_egg, :description, :image, :course, :show_image, ingredients_attributes: [:id, :raw_material_id, :quantity, :unit, :_destroy])
 		end
 
 		def admin_user

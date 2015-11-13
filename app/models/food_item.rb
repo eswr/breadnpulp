@@ -36,6 +36,10 @@ class FoodItem < ActiveRecord::Base
 
 	has_and_belongs_to_many :kickerrs
 	has_and_belongs_to_many :food_alerts
+	has_many 				:ingredients
+
+	accepts_nested_attributes_for :ingredients, reject_if: lambda { |attributes| attributes[:quantity] == "" },
+                                        allow_destroy: true
 
 	def colorize
 		if self.veg_non_egg == "Non-Veg"

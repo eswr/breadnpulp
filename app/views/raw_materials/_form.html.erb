@@ -1,0 +1,9 @@
+<%= form_for @raw_material do |raw_material_field| %>
+	<%= raw_material_field.label :name %>
+	<%= raw_material_field.text_field :name, class: 'form-control' %>
+
+	<%= raw_material_field.label :veg_non_egg %>
+	<%= raw_material_field.select :veg_non_egg, %w[Veg Non-Veg Egg], {}, { :class => 'form-control' } %>
+
+	<%= raw_material_field.submit "Confirm raw_material", class: 'btn btn-primary' %>
+<% end %>
