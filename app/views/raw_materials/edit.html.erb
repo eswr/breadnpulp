@@ -1,2 +1,7 @@
-<h1>RawMaterials#edit</h1>
-<p>Find me in app/views/raw_materials/edit.html.erb</p>
+<% provide(:title, "#{@raw_material.name}") %>
+<div class="container">
+	<h1><%= @raw_material.name %></h1>
+	<div class="col-md-4">
+		<%= render 'form' %>
+	</div>
+</div>
