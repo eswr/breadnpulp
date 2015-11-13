@@ -23,7 +23,7 @@ class RawMaterialsController < ApplicationController
 
   def update
   	@raw_material = RawMaterial.find(params[:id])
-  	if @raw_material.save?
+  	if @raw_material.save
   		flash[:success] = "#{@raw_material.name} updated!"
   		redirect_to raw_materials_path
   	else
