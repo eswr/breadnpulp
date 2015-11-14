@@ -28,7 +28,7 @@ class KickerrsController < ApplicationController
   end
 
   def index
-  	@kickerrs = Kickerr.paginate(:page => params[:page]).eager_load(:food_items)
+  	@kickerrs = Kickerr.order(created_at: :desc).paginate(:page => params[:page]).eager_load(:food_items)
   end
 
   def update
