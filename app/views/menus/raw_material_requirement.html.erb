@@ -17,7 +17,7 @@
 		<% @requirements.each do |key, value| %>
 			<tr>
 				<td><%= key %></td>
-				<td><%= value %></td>
+				<td><%= value.round(2) %></td>
 			</tr>
 		<% end %>
 	</table>
