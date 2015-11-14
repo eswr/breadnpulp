@@ -8,6 +8,10 @@
 		<%= submit_tag :get_requirement, class: 'btn btn-primary' %>
 	<% end %>
 
-	<%= @date %>
-	<%= @requirements %>
+	<h3>For <%= @date %></h3>
+	<% @requirements.each do |requirement| %>
+		<% requirement.each do |key, value| %>
+			<%= key %>,<%= value %><br>
+		<% end %>
+	<% end %>
 </div>
