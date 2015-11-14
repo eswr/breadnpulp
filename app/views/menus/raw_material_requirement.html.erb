@@ -3,9 +3,9 @@
 	<h1>Raw Material Requirement</h1>
 
 	<%= form_tag do %>
-		<%= select_date(date = Date.current, options = {}, html_options = { class: 'form-control' }) %>
+		<%= select_date(date = Date.current, options = {}, html_options = { class: 'col-xs-4' }) %>
 
-		<%= submit_tag :get_requirement, class: 'btn btn-primary' %>
+		<%= submit_tag :get_requirement, class: 'btn btn-primary', style: 'color: black' %>
 	<% end %>
 
 	<h3>For <%= @date %></h3>

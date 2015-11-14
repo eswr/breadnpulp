@@ -29,30 +29,25 @@
 			<%= f.check_box :show_image %><br>
 
 			<div class="row">
-				<h3>Ingredients</h3>
-				<%= f.fields_for :ingredients do |ingredient_fields| %>
-					<div class="col-md-6">
-						<div class="panel panel-default">
-							<div class="panel-heading" style="padding: 5px;">
-								<%= ingredient_fields.label :raw_material %>
-								<%= ingredient_fields.select(:raw_material_id, @raw_materials, {}, { class: 'form-control' }) %>
-							</div>
-							<div class="panel-body" style="padding: 5px;">
-								<div class="col-xs-6">
-									<%= ingredient_fields.label :quantity %>
-									<%= ingredient_fields.text_field :quantity, class: 'form-control' %>
-								</div>
-								<div class="col-xs-6">
-									<%= ingredient_fields.label :unit %>
-									<%= ingredient_fields.text_field :unit, class: 'form-control' %>
-								</div>
-							</div>
-							<div class="panel-footer" style="padding: 5px;">
-								<%= ingredient_fields.check_box '_destroy' %>  <%= ingredient_fields.label "Destroy" %>
-							</div>
-						</div>
-					</div>
-				<% end %>
+				<h3>Ingredients for <%= @food_item.name %></h3>
+				<div class="col-md-6">
+					<table class="table table-hover">
+						<tr>
+							<th>Raw Material</th>
+							<th>Quantity</th>
+							<th>Unit</th>
+							<th>Remove?</th>
+						</tr>
+						<%= f.fields_for :ingredients do |ingredient_fields| %>
+							<tr>
+								<td><%= ingredient_fields.select(:raw_material_id, @raw_materials, {}, { class: 'form-control' }) %></td>
+								<td><%= ingredient_fields.text_field :quantity, class: 'form-control' %></td>
+								<td><%= ingredient_fields.text_field :unit, class: 'form-control' %></td>
+								<td><%= ingredient_fields.check_box '_destroy' %>  <%= ingredient_fields.label "Destroy" %></td>
+							</tr>
+						<% end %>
+					</table>
+				</div>
 			</div>
 
 			<%= f.submit "Save food item", class: 'btn btn-primary' %>

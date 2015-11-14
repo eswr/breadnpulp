@@ -28,7 +28,7 @@
 		<% end %>
 	</td>
 	<td>
-		<%= delivery.user.name %>
+		<%= link_to delivery.user.name, delivery.user, class: 'btn btn-success btn-xs' %>
 		<br>
 		<%= delivery.user.phone_number %>
 		<br>

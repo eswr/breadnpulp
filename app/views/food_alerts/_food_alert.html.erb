@@ -1,5 +1,5 @@
 <ol>
 	<% @food_alert.food_items.each do |food_item| %>
-		<li><%= food_item.name %></li>	
+		<li><%= link_to food_item.name, food_item %></li>	
 	<% end %>
 </ol>
