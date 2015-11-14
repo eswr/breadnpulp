@@ -53,7 +53,11 @@ class MenusController < ApplicationController
   end
 
   def raw_material_requirement
-    @date = Time.new(params["date"]["year"], params["date"]["month"], params["date"]["day"]).to_date || Time.now.to_date
+    if !params["date"].nil?
+      @date = Time.new(params["date"]["year"], params["date"]["month"], params["date"]["day"]).to_date
+    else
+      @date = Time.now.to_date
+    end
     @requirements = Menu.get_raw_material_requirement(@date)
   end
 
