@@ -21,6 +21,9 @@ Rails.application.routes.draw do
 
   get     'assign_packs'  => 'subscriptions#assign_packs_to_subscriptions'
 
+  get     'raw_material_requirement' => 'menus#raw_material_requirement'
+  post    'raw_material_requirement' => 'menus#raw_material_requirement'
+
   resources :users
   resources :account_activations, only: [:edit]
   resources :password_resets,     only: [:new, :create, :edit, :update]

@@ -52,10 +52,15 @@ class MenusController < ApplicationController
   	redirect_to menus_path
   end
 
+  def raw_material_requirement
+    @date = Time.new(params["date"]["year"], params["date"]["month"], params["date"]["day"]).to_date
+    @requirements = Menu.get_raw_material_requirement(@date)
+  end
+
   private
 
   def menu_params
-  	params.require(:menu).permit(:available_on, :kickerr_id, :price)  	
+  	params.require(:menu).permit(:available_on, :kickerr_id, :price, :expected_consumption)  	
   end
 
   def admin_user

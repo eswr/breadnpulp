@@ -7,48 +7,28 @@
 
 <table class="table table-hover">
 	<tr>
-		<th>
-			Available on
-		</th>
-		<th>
-			Kickerr name
-		</th>
-		<th>
-			Price
-		</th>
-		<th>
-			Kickerr description
-		</th>
-		<th>
-			Food Items
-		</th>
-		<th>
-			Action(s)
-		</th>
+		<th>Available on</th>
+		<th>Kickerr name</th>
+		<th>Price</th>
+		<th>Kickerr description</th>
+		<th>Food Items</th>
+		<th>Expected Consumption</th>
+		<th>Action(s)</th>
 	</tr>
 	<%= will_paginate @menus %>
 	<% @menus.each do |menu| %>
 		<tr>
-			<td>
-				<%= menu.available_on %>
-			</td>
-			<td>
-				<%= menu.kickerr.name %>
-			</td>
-			<td>
-				<%= menu.get_price %>
-			</td>
-			<td>
-				<%= menu.kickerr.description %>
-			</td>
+			<td><%= menu.available_on %></td>
+			<td><%= menu.kickerr.name %></td>
+			<td><%= menu.get_price %></td>
+			<td><%= menu.kickerr.description %></td>
 			<td>
 				<% menu.kickerr.food_items.each do |food_item| %>
 					<%= food_item.name %> (<%= food_item.course %>)<br>
 				<% end %>
 			</td>
-			<td>
-				<%= link_to "edit", edit_menu_path(menu) %>
-			</td>
+			<td><%= menu.expected_consumption %></td>
+			<td><%= link_to "edit", edit_menu_path(menu) %></td>
 		</tr>
 	<% end %>
 </table>

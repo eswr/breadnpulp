@@ -1,0 +1,13 @@
+<% provide(:title, "Raw Material Requirement") %>
+<div class="container">
+	<h1>Raw Material Requirement</h1>
+
+	<%= form_tag do %>
+		<%= select_date(date = Date.current, options = {}, html_options = { class: 'form-control' }) %>
+
+		<%= submit_tag :get_requirement, class: 'btn btn-primary' %>
+	<% end %>
+
+	<%= @date %>
+	<%= @requirements %>
+</div>

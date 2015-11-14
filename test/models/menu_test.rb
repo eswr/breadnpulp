@@ -2,12 +2,13 @@
 #
 # Table name: menus
 #
-#  id           :integer          not null, primary key
-#  available_on :date
-#  kickerr_id   :integer
-#  created_at   :datetime         not null
-#  updated_at   :datetime         not null
-#  price        :integer
+#  id                   :integer          not null, primary key
+#  available_on         :date
+#  kickerr_id           :integer
+#  created_at           :datetime         not null
+#  updated_at           :datetime         not null
+#  price                :integer
+#  expected_consumption :integer
 #
 
 require 'test_helper'

@@ -2,12 +2,13 @@
 #
 # Table name: menus
 #
-#  id           :integer          not null, primary key
-#  available_on :date
-#  kickerr_id   :integer
-#  created_at   :datetime         not null
-#  updated_at   :datetime         not null
-#  price        :integer
+#  id                   :integer          not null, primary key
+#  available_on         :date
+#  kickerr_id           :integer
+#  created_at           :datetime         not null
+#  updated_at           :datetime         not null
+#  price                :integer
+#  expected_consumption :integer
 #
 
 class Menu < ActiveRecord::Base
@@ -33,4 +34,21 @@ class Menu < ActiveRecord::Base
 			end
 		end
 	end
+
+  def Menu.get_raw_material_requirement(date)
+    menus = Menu.where(available_on: date).eager_load(kickerr: :food_items)
+    requirements = {}
+    menus.each do |menu|
+      menu.kickerr.food_items.each do |food_item|
+        food_item.ingredients.each do |ingredient|
+          if requirements[:"#{ingredient.raw_material.name} (in #{ingredient.unit})"].nil?
+            requirements[:"#{ingredient.raw_material.name} (in #{ingredient.unit})"] = ingredient.quantity * menu.expected_consumption
+          else
+            requirements[:"#{ingredient.raw_material.name} (in #{ingredient.unit})"] += ingredient.quantity * menu.expected_consumption
+          end
+        end
+      end
+    end
+    requirements
+  end
 end
