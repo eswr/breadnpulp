@@ -30,24 +30,22 @@
 
 			<div class="row">
 				<h3>Ingredients for <%= @food_item.name %></h3>
-				<div class="col-md-6">
-					<table class="table table-hover">
+				<table class="table table-hover">
+					<tr>
+						<th>Raw Material</th>
+						<th>Quantity</th>
+						<th>Unit</th>
+						<th>Remove?</th>
+					</tr>
+					<%= f.fields_for :ingredients do |ingredient_fields| %>
 						<tr>
-							<th>Raw Material</th>
-							<th>Quantity</th>
-							<th>Unit</th>
-							<th>Remove?</th>
+							<td><%= ingredient_fields.select(:raw_material_id, @raw_materials, {}, { class: 'form-control' }) %></td>
+							<td><%= ingredient_fields.text_field :quantity, class: 'form-control' %></td>
+							<td><%= ingredient_fields.text_field :unit, class: 'form-control' %></td>
+							<td><%= ingredient_fields.check_box '_destroy' %>  <%= ingredient_fields.label "Destroy" %></td>
 						</tr>
-						<%= f.fields_for :ingredients do |ingredient_fields| %>
-							<tr>
-								<td><%= ingredient_fields.select(:raw_material_id, @raw_materials, {}, { class: 'form-control' }) %></td>
-								<td><%= ingredient_fields.text_field :quantity, class: 'form-control' %></td>
-								<td><%= ingredient_fields.text_field :unit, class: 'form-control' %></td>
-								<td><%= ingredient_fields.check_box '_destroy' %>  <%= ingredient_fields.label "Destroy" %></td>
-							</tr>
-						<% end %>
-					</table>
-				</div>
+					<% end %>
+				</table>
 			</div>
 
 			<%= f.submit "Save food item", class: 'btn btn-primary' %>
