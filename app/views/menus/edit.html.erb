@@ -18,6 +18,10 @@
 		<%= f.label :price %>
 		<%= f.text_field :price, class: 'form-control' %>
 
+		<%= f.label :expected_consumption %>
+		<%= f.number_field :expected_consumption, class: 'form-control' %>
+
+		<br>
 		<%= f.submit "Update menu", class: 'btn btn-primary' %>
 	<% end %>
 	</div>
