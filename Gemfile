@@ -15,6 +15,8 @@ gem 'aws-s3'
 
 gem 'acts_as_shopping_cart', '~> 0.2.1'
 
+gem 'httparty'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
