@@ -1,6 +1,7 @@
 <%= form_for(@address) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <div class="panel panel-default" >
+    <%= f.hidden_field :user_id, value: @address.user.id %>
     <div class="panel-heading">
       <%= f.text_field :name, placeholder: "Address name...", class: 'form-control' %>
     </div>
