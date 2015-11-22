@@ -9,6 +9,8 @@
 #  user_id      :integer
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
+#  locality     :string
+#  city         :string
 #
 
 class Address < ActiveRecord::Base

@@ -1,10 +1,16 @@
-<li id="address-<%= address.id %>" style="list-style: none;">
-  <h6><span class="address_name"><%= address.name %></span></h6>
-  <div class="full_address" style="word-wrap: bread-word;"><%= address.full_address %></div>
-  <span class="pincode"><%= address.pincode %></span><br>
-  <% if current_user?(address.user) %>
-  	<%= link_to "edit", edit_address_path(address), class: "btn btn-warning btn-xs", style: "background-color: #fed136; border-color: #ffffff; color: black;" %> | 
-  	<%= link_to "delete", address, class: "btn btn-warning btn-xs", style: "background-color: #fed136; border-color: #ffffff; color: black; ", method: :delete,
-  									data: { confirm: "You sure?" } %><br><br><br>
-  <% end %>
-</li>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<strong><%= address.name %>, <%= address.locality %>, <%= address.city %></strong>
+	</div>
+	<div class="panel-body">
+		<%= address.full_address %><br>
+		<%= address.pincode %>
+	</div>
+	<% if current_user?(address.user) || current_user.admin? %>
+		<div class="panel-footer">
+			<%= link_to "edit", edit_address_path(address), class: "btn btn-warning btn-xs", style: "background-color: #fed136; border-color: #ffffff; color: black;" %> | 
+  			<%= link_to "delete", address, class: "btn btn-warning btn-xs", style: "background-color: #fed136; border-color: #ffffff; color: black; ", method: :delete,
+  									data: { confirm: "You sure?" } %>
+		</div>
+	<% end %>
+</div>

@@ -50,6 +50,7 @@ class AddressesController < ApplicationController
 		end
 
 		def correct_user
+			return true if current_user.admin?
 		    @address = current_user.addresses.find_by(id: params[:id])
 		    redirect_to current_user if @address.nil?
     	end

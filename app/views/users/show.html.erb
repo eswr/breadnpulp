@@ -68,9 +68,7 @@
       <%= current_user?(@user)? "My addresses" : "#{@user.name}'s addresses" %>
     </h3>
     <div class="addresses">
-      <ul>
-        <%= render @addresses %>
-      </ul>
+      <%= render @addresses %>
     </div>
     <section class="address_form form-group" style="padding:5vh 0px;">
       <h4 align="center">

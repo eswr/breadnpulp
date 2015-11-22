@@ -1,12 +1,17 @@
 <%= form_for(@address) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
-  <div class="field" >
-  	<%= f.hidden_field :user_id, value: @user.id %>
-  	<%= f.text_field :name, placeholder: "Address name...", style: "margin:5px; width: 50%;" %><br>
-    <%= f.text_area :full_address, placeholder: "Add a new address...", style: "margin:5px; width: 100%;" %><br>
-    <%= f.text_field :pincode, placeholder: "Pincode...", style: "width:50%;margin:5px;" %><br>
-  </div>
-  <div class="center">
-  	<%= f.submit "Add", class: "btn btn-primary center", style: "margin: 5px; color: black; background-color: #fed136;" %>
+  <div class="panel panel-default" >
+    <div class="panel-heading">
+      <%= f.text_field :name, placeholder: "Address name...", class: 'form-control' %>
+    </div>
+    <div class="panel-body">
+      <%= f.text_area :full_address, placeholder: "Full address goes here", class: 'form-control' %><br>
+      <%= f.select :locality, Locality.all, {}, { class: 'form-control' } %><br>
+      <%= f.select :city, City.all, {}, { class: 'form-control' } %><br>
+      <%= f.text_field :pincode, placeholder: "Pincode", class: 'form-control' %><br>
+    </div>
+    <div class="panel-footer">
+      <%= f.submit "Add", class: "btn btn-primary center", style: "margin: 5px; color: black; background-color: #fed136;" %>
+    </div>
   </div>
 <% end %>
