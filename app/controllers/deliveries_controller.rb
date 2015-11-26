@@ -23,7 +23,11 @@ class DeliveriesController < ApplicationController
 	def create
 		@delivery = Delivery.new(delivery_params)
 		@delivery.delivery_date = active_menu_date
-		@delivery.delivery_status = DeliveryStatus.find_by(name: 'Tentative')
+		if current_user.admin?
+			@delivery.delivery_status = DeliveryStatus.find_by(name: 'Tentative')
+		else
+			@delivery.delivery_status = DeliveryStatus.find_by(name: 'Confirmed')
+		end
 		@delivery.payment_status = PaymentStatus.find_by(name: 'Payment Due')
 		if @delivery.address_id.nil?
 			address = @delivery.user.addresses.new(delivery_params[:addresses_attributes])
