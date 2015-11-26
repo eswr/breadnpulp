@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151122152624) do
+ActiveRecord::Schema.define(version: 20151125115221) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 20151122152624) do
     t.string   "booking_no"
     t.integer  "payment_status_id"
     t.integer  "subscription_id"
+    t.integer  "despatch_id"
   end
 
   add_index "deliveries", ["address_id"], name: "index_deliveries_on_address_id", using: :btree
@@ -52,6 +53,20 @@ ActiveRecord::Schema.define(version: 20151122152624) do
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "despatches", force: :cascade do |t|
+    t.string   "despatch_number"
+    t.string   "service_provider"
+    t.string   "external_id"
+    t.string   "despatch_status"
+    t.integer  "user_id"
+    t.integer  "address_id"
+    t.string   "order_type"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.date     "despatch_date"
+    t.time     "despatch_time"
   end
 
   create_table "food_alerts", force: :cascade do |t|

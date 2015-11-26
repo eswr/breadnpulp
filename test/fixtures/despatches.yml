@@ -1,0 +1,36 @@
+# == Schema Information
+#
+# Table name: despatches
+#
+#  id               :integer          not null, primary key
+#  despatch_number  :string
+#  service_provider :string
+#  external_id      :string
+#  despatch_status  :string
+#  user_id          :integer
+#  address_id       :integer
+#  order_type       :string
+#  created_at       :datetime         not null
+#  updated_at       :datetime         not null
+#  despatch_date    :date
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  despatch_number: MyString
+  service_provider: MyString
+  external_id: MyString
+  despatch_status: MyString
+  user_id: 1
+  address_id: 1
+  order_type: MyString
+
+two:
+  despatch_number: MyString
+  service_provider: MyString
+  external_id: MyString
+  despatch_status: MyString
+  user_id: 1
+  address_id: 1
+  order_type: MyString

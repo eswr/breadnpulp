@@ -1,0 +1,50 @@
+<div class="container">
+	<h1>New Despatch</h1>
+
+	<h3>Select date</h3>
+	<%= form_tag do %>
+		<%= select_date(date = Date.current, options = {}, html_options = { class: 'col-xs-4' }) %>
+
+		<%= submit_tag "get orders", class: 'btn btn-primary', style: 'color: black' %>
+	<% end %>
+	<h2>Showing orders for <%= @date %></h2>
+	<%= form_for @despatch do |despatch_form| %>
+		<%= despatch_form.hidden_field :despatch_date, value: @date %>
+		<div class="well">
+			<div class="row">
+				<% @deliveries.each do |delivery| %>
+					<div class="col-md-4">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<%= check_box_tag "despatch[delivery_ids][]", delivery.id %>
+								<strong><%= delivery.user.name %></strong>
+								<br>
+								<%= delivery.at.strftime("%I:%M%p") %>
+								<br>
+								<%= delivery.address.full_address %>
+							</div>
+							<div class="panel-body">
+								<%= delivery.booking_no %>
+								<br>
+								<%= delivery.delivery_status.name %>
+								<br>
+								Rs. <%= delivery.get_total_amount %>
+							</div>
+						</div>
+					</div>
+				<% end %>
+			</div>
+		</div>
+		<div class="well">
+			<%= despatch_form.label :service_provider %>
+			<%= despatch_form.select :service_provider, ["Service Provider", "Basheer", "Arvind", "Praveen", "Imran", "Atul", "Saleen", "Other"], {}, { class: 'form-control' } %>
+		</div>
+		<div class="well">
+			<%= despatch_form.label :despatch_time %>
+			<% Time.zone = "Chennai" %>
+			<%= despatch_form.time_select :despatch_time, value: Time.zone.now, class: 'form-control' %>
+		</div>
+
+		<%= despatch_form.submit :create_despatch, class: 'btn btn-primary', style: 'color: black;' %>
+	<% end %>
+</div>

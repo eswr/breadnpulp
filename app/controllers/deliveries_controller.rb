@@ -95,10 +95,15 @@ class DeliveriesController < ApplicationController
 		@rows = Delivery.get_chef_view_rows
 	end
 
+	def reset_despatch
+		Delivery.find(params[:id]).update_attribute :despatch_id, nil
+		redirect_to :back
+	end
+
 	private
 
 	def delivery_params
-		params.require(:delivery).permit(:user_id, :delivery_date, :at, :collect, :address_id, :delivery_status_id, :payment_status_id, :payment_date, :payment_mode, packs_attributes: [:id, :quantity, :menu_id, :unit_price, :payment_date, :payment_mode, :_destroy])
+		params.require(:delivery).permit(:user_id, :delivery_date, :at, :collect, :address_id, :delivery_status_id, :payment_status_id, :payment_date, :payment_mode, :despatch_id, packs_attributes: [:id, :quantity, :menu_id, :unit_price, :payment_date, :payment_mode, :_destroy])
 	end
 
 	# def editable_delivery

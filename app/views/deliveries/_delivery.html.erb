@@ -39,4 +39,20 @@
 			<%= pack.menu.kickerr.name %> : <%= pack.quantity %><br>
 		<% end %>
 	</td>
+	<td>
+		<% if delivery.despatch_id.nil? || delivery.despatch_id == 0 %>
+			<%= link_to "set despatch", new_despatch_path(
+			date:
+			{
+				year: delivery.delivery_date.year,
+				month: delivery.delivery_date.month,
+				day: delivery.delivery_date.day
+			}),
+			class: 'btn btn-info btn-xs' %>
+		<% else %>
+			<%= delivery.despatch.service_provider %><br>
+			<%= delivery.despatch.despatch_time.strftime("%I:%M%p") %><br>
+			<%= link_to "reset despatch", reset_despatch_path(:id => delivery.id) %>
+		<% end %>
+	</td>
 </tr>

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root 'static_pages#home'
+  root    'static_pages#home'
   get     'about_us'  => 'static_pages#about'
   get     'profile'   => 'users#show'
   get     'my_alerts' => 'users#my_alerts'
@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   get     'todays_orders' => 'deliveries#todays_orders'
   get     'recent_orders' => 'deliveries#recent_orders'
   get     'chef_view'     => 'deliveries#chef_view'
+  get     'reset_despatch' => 'deliveries#reset_despatch'
 
   get     'foodiecalls'   => 'food_alerts#index'
 
@@ -24,6 +25,9 @@ Rails.application.routes.draw do
 
   get     'raw_material_requirement' => 'menus#raw_material_requirement'
   post    'raw_material_requirement' => 'menus#raw_material_requirement'
+
+  get      'new_despatch' => 'despatches#new'
+  post     'new_despatch' => 'despatches#new'
 
   resources :users
   resources :account_activations, only: [:edit]
@@ -37,6 +41,7 @@ Rails.application.routes.draw do
   resources :subscriptions
   resources :packs,               only: [:index]
   resources :raw_materials
+  resources :despatches
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
