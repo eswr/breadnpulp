@@ -10,7 +10,7 @@ class DespatchesController < ApplicationController
 		}
 		@date = Time.new(params[:date][:year], params[:date][:month], params[:date][:day]).to_date
 		@despatch = Despatch.new
-		@deliveries = Delivery.where(delivery_date: @date, despatch_id: nil).where.not("delivery_status_id = ? OR delivery_status_id =?", DeliveryStatus.find_by(name: "Deactivated"), DeliveryStatus.find_by(name: "Cancelled")).eager_load(:delivery_status, :payment_status, :user, :address, :packs, :menus, :kickerrs).order(at: :asc)
+		@deliveries = Delivery.where(delivery_date: @date, despatch_id: nil).where.not("delivery_status_id = ? OR delivery_status_id =?", DeliveryStatus.find_by(name: "Deactivated").id, DeliveryStatus.find_by(name: "Cancelled").id).eager_load(:delivery_status, :payment_status, :user, :address, :packs, :menus, :kickerrs).order(at: :asc)
 	end
 
 	def create
@@ -18,7 +18,7 @@ class DespatchesController < ApplicationController
 		if @despatch.save
 			flash[:success] = "Yay!"
 			Delivery.set_despatch @despatch.id, params["despatch"]["delivery_ids"]
-			redirect_to root_path
+			redirect_to new_despatch_path
 		else
 			flash.now[:danger] = "Nooo!"
 			render 'new'
