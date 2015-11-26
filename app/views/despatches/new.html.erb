@@ -22,6 +22,8 @@
 								<%= delivery.at.strftime("%I:%M%p") %>
 								<br>
 								<%= delivery.address.full_address %>
+								<br>
+								<%= delivery.delivery_status.name %>
 							</div>
 							<div class="panel-body">
 								<%= delivery.booking_no %>

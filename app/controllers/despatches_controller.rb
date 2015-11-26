@@ -10,7 +10,7 @@ class DespatchesController < ApplicationController
 		}
 		@date = Time.new(params[:date][:year], params[:date][:month], params[:date][:day]).to_date
 		@despatch = Despatch.new
-		@deliveries = Delivery.where(delivery_date: @date, despatch_id: nil).eager_load(:delivery_status, :payment_status, :user, :address, :packs, :menus, :kickerrs).order(at: :asc)
+		@deliveries = Delivery.where(delivery_date: @date, despatch_id: nil).where.not("delivery_status_id = ? OR delivery_status_id =?", DeliveryStatus.find_by(name: "Deactivated"), DeliveryStatus.find_by(name: "Cancelled")).eager_load(:delivery_status, :payment_status, :user, :address, :packs, :menus, :kickerrs).order(at: :asc)
 	end
 
 	def create
