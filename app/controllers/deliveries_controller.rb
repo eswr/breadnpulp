@@ -15,7 +15,7 @@ class DeliveriesController < ApplicationController
 			@delivery.packs.build(menu_id: menu.id)
 		end
 		@menus = menus_on(active_menu_date)
-		@date = active_menu_date@delivery.user.name, "shubham@breadnpulp.com"
+		@date = active_menu_date
 	end
 
 	def create
