@@ -14,7 +14,9 @@ class FoodItemsController < ApplicationController
 
 	def edit
 		@food_item = FoodItem.find(params[:id])
-		@food_item.ingredients.build
+		10.times do
+			@food_item.ingredients.build
+		end
 		@raw_materials = RawMaterial.all.map { |raw_material| [raw_material.name, raw_material.id] }
 	end
 
