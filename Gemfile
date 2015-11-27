@@ -16,6 +16,7 @@ gem 'aws-s3'
 gem 'acts_as_shopping_cart', '~> 0.2.1'
 
 gem 'httparty'
+gem 'rolify'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'

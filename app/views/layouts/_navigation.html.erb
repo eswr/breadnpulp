@@ -19,27 +19,14 @@
             <ul class="nav navbar-nav navbar-right">
                 <% if logged_in? %>
                   <% if current_user.admin? %>
-                    <li><%= link_to "Users", users_path %></li>
-                    <li><%= link_to "Foodiecalls", foodiecalls_path %></li>
-                    <li><%= link_to "Orders", todays_orders_path %></li>
-                    <li><%= link_to "Food items", food_items_path %></li>
-                    <li><%= link_to "Kickerrs", kickerrs_path %></li>
-                    <li><%= link_to "Menu", menus_path %></li>
-                    <li><%= link_to "Chef View", chef_view_path %></li>
-                    <li><%= link_to "Raw Mat. Req.", raw_material_requirement_path %>
+                    <%= render '/layouts/navigation/admin_navigation' %>
+                  <% elsif current_user.has_role? :operator %>
+                    <%= render '/layouts/navigation/operator_navigation' %>
                   <% else %>
-                    <li><a>Call us: 750-62-44-659</a></li>
-                    <li><%= link_to "About us", about_us_path %>
-                    <li><%= link_to "New order", new_order_path(:delivery => { user_id: current_user.id }) %></li>
-                    <li><%= link_to "Subscribe", new_subscription_path(:subscription => { user_id: current_user.id }) %></li>
-                    <li><%= link_to "#{current_user.name.split(' ').first}", current_user %></li>
+                    <%= render '/layouts/navigation/user_navigation' %>
                   <% end %>
-                    <li><%= link_to "Log out", logout_path, method: "delete" %></li>
                 <% else %>
-                  <li><a>Call us: 750-62-44-659</a></li>
-                  <li><%= link_to "About us", about_us_path %>
-                  <li><%= link_to "Log in", login_path %></li>
-                  <li><%= link_to "Sign up", signup_path %></li>
+                  <%= render '/layouts/navigation/visitor_navigation' %>
                 <% end %>
             </ul>
         </div>

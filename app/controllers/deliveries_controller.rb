@@ -1,8 +1,8 @@
 class DeliveriesController < ApplicationController
 
 	before_action :logged_in_user
-	before_action :admin_user,			only: [:edit, :update, :index, :destroy, :todays_orders, :recent_orders, :future_orders, :chef_view]
-	before_action :correct_user,		only: [:new, :create]
+	before_action :admin_user,			only: [:edit, :update, :index, :destroy, :recent_orders, :future_orders]
+	before_action :operator_user, 		only: [:todays_orders, :chef_view, :reset_despatch]
 	# before_action :editable_delivery,	only: [:edit, :update]
 
 	def new
@@ -15,13 +15,12 @@ class DeliveriesController < ApplicationController
 			@delivery.packs.build(menu_id: menu.id)
 		end
 		@menus = menus_on(active_menu_date)
-		@date = active_menu_date
-		# send_sms_to_admin "User on new order, " + @delivery.user.name, "praveen@breadnpulp.com"
-		# send_sms_to_admin "User on new order, " + @delivery.user.name, "shubham@breadnpulp.com"
+		@date = active_menu_date@delivery.user.name, "shubham@breadnpulp.com"
 	end
 
 	def create
 		@delivery = Delivery.new(delivery_params)
+		return if !correct_user
 		@delivery.delivery_date = active_menu_date
 		if current_user.admin?
 			@delivery.delivery_status = DeliveryStatus.find_by(name: 'Confirmed')
@@ -35,14 +34,10 @@ class DeliveriesController < ApplicationController
 		end
 		if @delivery.save
 			flash[:success] = "Order successfully placed"
-			redirect_to @delivery.user
-			# send_sms_to_admin flash[:success] + ", " + @delivery.user.name + ", " + @delivery.user.phone_number + ", " + @delivery.at.to_s, "praveen@breadnpulp.com"
-			# send_sms_to_admin flash[:success] + ", " + @delivery.user.name + ", " + @delivery.user.phone_number + ", " + @delivery.at.to_s, "shubham@breadnpulp.com"
+			redirect_to @delivery.user + @delivery.user.name + ", " + @delivery.user.phone_number + ", " + @delivery.at.to_s, "shubham@breadnpulp.com"
 		else
 			flash[:danger] = "Order not placed. Please make sure you've added an address first."
-			redirect_to @delivery.user
-			# send_sms_to_admin flash[:danger] + ", " + @delivery.user.name + ", " + @delivery.user.phone_number + ", " + @delivery.at.to_s, "praveen@breadnpulp.com"
-			# send_sms_to_admin flash[:danger] + ", " + @delivery.user.name + ", " + @delivery.user.phone_number + ", " + @delivery.at.to_s, "shubham@breadnpulp.com"
+			redirect_to @delivery.user + ", " + @delivery.user.name + ", " + @delivery.user.phone_number + ", " + @delivery.at.to_s, "shubham@breadnpulp.com"
 		end
 	end
 
@@ -110,15 +105,6 @@ class DeliveriesController < ApplicationController
 		params.require(:delivery).permit(:user_id, :delivery_date, :at, :collect, :address_id, :delivery_status_id, :payment_status_id, :payment_date, :payment_mode, :despatch_id, packs_attributes: [:id, :quantity, :menu_id, :unit_price, :payment_date, :payment_mode, :_destroy])
 	end
 
-	# def editable_delivery
-	# 	return true if current_user.admin?
-	# 	status = Delivery.find(params[:id]).delivery_status.name
-	# 	if status != 'Tentative' && status != 'Confirmed'
-	# 		flash[:danger] = "That order cannot be edited.. please make a new one"
-	# 		redirect_to new_delivery_path
-	# 	end
-	# end
-
 	def active_menu_date
 		Time.zone = 'Chennai'
 		Time.zone.now.hour < 11 ? Time.zone.now.to_date : Time.zone.now.to_date.tomorrow
@@ -139,27 +125,13 @@ class DeliveriesController < ApplicationController
 
 	def correct_user
 		return true if current_user.admin?
-		user = current_user
+		user = @delivery.user
 		redirect_to root_path unless current_user?(user)
+		return false
 	end
 
-	def send_sms (delivery)
-		url = URI.parse(URI.encode("http://trx.orangesms.net/api/sendmsg.php?user=breadnpulp&pass=qweqwe&sender=BRDPLP" +
-			"&phone=#{delivery.user.phone_number}" +
-			"&text=Hi #{delivery.user.name.split(' ').first}! " +
-			"Your order for #{delivery.delivery_date.strftime("%a %e %b %Y")}: #{delivery.delivery_status.name}." +
-			" Thank you for choosing to eat with us. Congratulations on another step towards a healthy diet." +
-			"&priority=ndnd&stype=normal"))
-		req = Net::HTTP::Get.new(url.to_s)
-		res = Net::HTTP.start(url.host, url.port) {|http| http.request(req)}
-    end
-
-    def send_sms_to_admin (message, admin_email)
-		url = URI.parse(URI.encode("http://trx.orangesms.net/api/sendmsg.php?user=breadnpulp&pass=qweqwe&sender=BRDPLP" +
-			"&phone=#{User.find_by(email: admin_email).phone_number}" +
-			"&text=#{message}" +
-			"&priority=ndnd&stype=normal"))
-		req = Net::HTTP::Get.new(url.to_s)
-		res = Net::HTTP.start(url.host, url.port) {|http| http.request(req)}
+    def operator_user
+    	return true if current_user.admin?
+    	redirect_to root_path unless current_user.has_role? :operator
     end
 end

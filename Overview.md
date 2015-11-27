@@ -98,3 +98,18 @@ Despatch SMS
 				Amount
 				Mode
 				Date
+
+Order of imps
+	1. Multiple user access level
+	2. Delayed job
+	3. Modelling - FoodRider
+	4. Modelling - Operator
+	5. 
+
+Roles:
+	1. Admin
+	2. Operator
+		1. Todays' despatches
+		2. Chef view
+	3. Rider
+	

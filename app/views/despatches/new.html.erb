@@ -11,6 +11,7 @@
 	<%= form_for @despatch do |despatch_form| %>
 		<%= despatch_form.hidden_field :despatch_date, value: @date %>
 		<div class="well">
+			<%= despatch_form.label :orders %>
 			<div class="row">
 				<% @deliveries.each do |delivery| %>
 					<div class="col-md-4">
@@ -38,13 +39,22 @@
 			</div>
 		</div>
 		<div class="well">
-			<%= despatch_form.label :service_provider %>
-			<%= despatch_form.select :service_provider, ["Service Provider", "Basheer", "Arvind", "Praveen", "Imran", "Atul", "Saleen", "Other"], {}, { class: 'form-control' } %>
-		</div>
-		<div class="well">
-			<%= despatch_form.label :despatch_time %>
-			<% Time.zone = "Chennai" %>
-			<%= despatch_form.time_select :despatch_time, value: Time.zone.now, class: 'form-control' %>
+			<div class="row">
+				<div class="col-md-4">
+					<%= despatch_form.label :service_provider %>
+					<%= despatch_form.select :service_provider, ["Service Provider", "Breadnpulp Delivery", "Other"], {}, { class: 'form-control' } %>
+				</div>
+				<div class="col-md-4">
+					<%= despatch_form.label :rider %>
+					<%= despatch_form.select(:user_id, User.with_role(:rider).map{ |user| [user.name, user.id] } << [nil, nil], {}, { class: 'form-control' }) %>
+				</div>
+				<div class="col-md-4">
+					<%= despatch_form.label :despatch_time %>
+					<br>
+					<% Time.zone = "Chennai" %>
+					<%= despatch_form.time_select :despatch_time, value: Time.zone.now %>
+				</div>
+			</div>
 		</div>
 
 		<%= despatch_form.submit :create_despatch, class: 'btn btn-primary', style: 'color: black;' %>

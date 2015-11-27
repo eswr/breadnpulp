@@ -21,6 +21,7 @@
 #
 
 class User < ActiveRecord::Base
+  rolify
   attr_accessor :remember_token, :activation_token, :reset_token
 
 	before_save 						:downcase_email
