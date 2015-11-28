@@ -24,6 +24,18 @@ class Despatch < ActiveRecord::Base
 	belongs_to 		:user
 	belongs_to		:address
 
+	def rider
+		user
+	end
+
+	def send_all_sms
+		rider_text = ""
+		deliveries.each do delivery
+			Msg91.send_sms rider.phone_number, delivery.rider_text
+			Msg91.send_sms delivery.user.phone, delivery.user_text
+		end
+	end
+
 	private
 
 		def set_despatch_number
