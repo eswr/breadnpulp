@@ -3,7 +3,6 @@ class DeliveriesController < ApplicationController
 	before_action :logged_in_user
 	before_action :admin_user,			only: [:edit, :update, :index, :destroy, :recent_orders, :future_orders]
 	before_action :operator_user, 		only: [:todays_orders, :chef_view]
-	# before_action :editable_delivery,	only: [:edit, :update]
 
 	def new
 		@delivery = Delivery.new(delivery_params)
@@ -28,16 +27,12 @@ class DeliveriesController < ApplicationController
 			@delivery.delivery_status = DeliveryStatus.find_by(name: 'Tentative')
 		end
 		@delivery.payment_status = PaymentStatus.find_by(name: 'Payment Due')
-		if @delivery.address_id.nil?
-			address = @delivery.user.addresses.new(delivery_params[:addresses_attributes])
-			@delivery.address_id = address.id
-		end
 		if @delivery.save
 			flash[:success] = "Order successfully placed"
 			redirect_to @delivery.user
 		else
-			flash[:danger] = "Order not placed. Please make sure you've added an address first."
-			redirect_to @delivery.user
+			flash.now[:danger] = "Order not placed. Please make sure you've added an address first."
+			render 'new'
 		end
 	end
 
