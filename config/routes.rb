@@ -29,6 +29,9 @@ Rails.application.routes.draw do
   get      'new_despatch' => 'despatches#new'
   post     'new_despatch' => 'despatches#new'
 
+  get      'roles' => 'roles#index'
+  post     'roles' => 'roles#index'
+
   resources :users
   resources :account_activations, only: [:edit]
   resources :password_resets,     only: [:new, :create, :edit, :update]

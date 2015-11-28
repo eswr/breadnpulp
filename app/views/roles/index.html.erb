@@ -1,0 +1,25 @@
+<div class="container">
+	<h1>New Role</h1>
+	<div class="col-md-4">
+		<%= form_tag do %>
+			Enter phone number
+			<br>
+			<%= number_field_tag :phone_number, {}, { class: 'form-control' } %>
+			<br>
+			Enter role
+			<br>
+			<%= text_field_tag :role_name, nil, { class: 'form-control' } %>
+			<br>
+			<%= submit_tag :confirm, method: :create %>
+		<% end %>
+	</div>
+	<h1>All Roles</h1>
+	<% @roles.each do |role| %>
+		<h3><%= role.name.pluralize %></h3>
+		<ol>
+			<% role.users.each do |user| %>
+				<li><%= user.name %> | <%= user.phone_number %></li>
+			<% end %>
+		</ol>
+	<% end %>
+</div>
