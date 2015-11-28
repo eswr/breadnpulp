@@ -17,6 +17,7 @@ gem 'acts_as_shopping_cart', '~> 0.2.1'
 
 gem 'httparty'
 gem 'rolify'
+gem 'delayed_job_active_record'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
