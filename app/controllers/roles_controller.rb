@@ -6,7 +6,7 @@ class RolesController < ApplicationController
 		@roles = Role.all.eager_load :users
 		if params[:phone_number] && params[:role_name]
 			@user = User.find_by(phone_number: params[:phone_number])
-			if @user.add_role params[:role_name].downcase
+			if @user.add_role params[:role_name].downcase.to_sym
 				flash[:success] = "#{params[:role_name]} added to #{@user.name}"
 				redirect_to roles_path
 			else

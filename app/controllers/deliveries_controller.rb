@@ -2,7 +2,7 @@ class DeliveriesController < ApplicationController
 
 	before_action :logged_in_user
 	before_action :admin_user,			only: [:edit, :update, :index, :destroy, :recent_orders, :future_orders]
-	before_action :operator_user, 		only: [:todays_orders, :chef_view, :reset_despatch]
+	before_action :operator_user, 		only: [:todays_orders, :chef_view]
 	# before_action :editable_delivery,	only: [:edit, :update]
 
 	def new
