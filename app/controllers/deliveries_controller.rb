@@ -19,7 +19,6 @@ class DeliveriesController < ApplicationController
 
 	def create
 		@delivery = Delivery.new(delivery_params)
-		return if !correct_user
 		@delivery.delivery_date = active_menu_date
 		if current_user.admin?
 			@delivery.delivery_status = DeliveryStatus.find_by(name: 'Confirmed')
@@ -127,6 +126,5 @@ class DeliveriesController < ApplicationController
 
     def operator_user
     	return true if current_user.admin?
-    	redirect_to root_path unless current_user.has_role? :operator
     end
 end
