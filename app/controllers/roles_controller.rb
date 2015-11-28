@@ -16,6 +16,11 @@ class RolesController < ApplicationController
 		end
 	end
 
+	def remove_role
+		User.find(params[:user_id]).remove_role params[:role_name].to_sym
+		redirect_to :back
+	end
+
 	private
 		def admin_user
 			redirect_to root_path unless current_user.admin?

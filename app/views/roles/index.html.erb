@@ -21,7 +21,7 @@
 			<h3><%= role.name.pluralize %></h3>
 			<ol>
 				<% role.users.each do |user| %>
-					<li><%= user.name %> | <%= user.phone_number %></li>
+					<li><%= user.name %> | <%= user.phone_number %> | <%= link_to "remove role", remove_role_path(user_id: user.id, role_name: role.name) %> </li>
 				<% end %>
 			</ol>
 		<% end %>

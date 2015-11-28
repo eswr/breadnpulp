@@ -31,6 +31,7 @@ Rails.application.routes.draw do
 
   get      'roles' => 'roles#index'
   post     'roles' => 'roles#index'
+  get      'remove_role' => 'roles#remove_role'
 
   resources :users
   resources :account_activations, only: [:edit]
