@@ -34,10 +34,10 @@ class DeliveriesController < ApplicationController
 		end
 		if @delivery.save
 			flash[:success] = "Order successfully placed"
-			redirect_to @delivery.user + @delivery.user.name + ", " + @delivery.user.phone_number + ", " + @delivery.at.to_s, "shubham@breadnpulp.com"
+			redirect_to @delivery.user
 		else
 			flash[:danger] = "Order not placed. Please make sure you've added an address first."
-			redirect_to @delivery.user + ", " + @delivery.user.name + ", " + @delivery.user.phone_number + ", " + @delivery.at.to_s, "shubham@breadnpulp.com"
+			redirect_to @delivery.user
 		end
 	end
 
