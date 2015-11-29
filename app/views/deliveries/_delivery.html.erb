@@ -40,8 +40,8 @@
 		<% end %>
 	</td>
 	<td>
-		<% if delivery.despatch_id.nil? || delivery.despatch_id == 0 %>
-			<%= link_to "set despatch", new_despatch_path(
+		<% if delivery.drop_id.nil? %>
+			<%= link_to "set drop", new_drop_path(
 			date:
 			{
 				year: delivery.delivery_date.year,
@@ -50,8 +50,19 @@
 			}),
 			class: 'btn btn-info btn-xs' %>
 		<% else %>
-			<%= delivery.drop %><br>
-			<%= delivery.drop.expected_at.strftime("%I:%M%p") %><br>
+			<% if delivery.drop.despatch_id.nil? %>
+				<%= link_to "set despatch", new_despatch_path(
+				date:
+				{
+					year: delivery.delivery_date.year,
+					month: delivery.delivery_date.month,
+					day: delivery.delivery_date.day
+				}),
+				class: 'btn btn-info btn-xs' %>
+			<% else %>
+				<%= delivery.drop.despatch.rider.name %>
+				<%= delivery.drop.despatch.despatch_time %>
+			<% end %>
 		<% end %>
 	</td>
 </tr>
