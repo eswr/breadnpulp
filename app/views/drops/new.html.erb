@@ -1,0 +1,61 @@
+<div class="container">
+	<h1>New Drop</h1>
+
+	<h3>Select date</h3>
+	<%= form_tag do %>
+		<%= select_date(date = Date.current, options = {},
+						html_options = { class: 'col-xs-4' }) %>
+
+		<%= submit_tag "get orders", class: 'btn btn-primary',
+									 style: 'color: black' %>
+	<% end %>
+	<h2>Showing orders for <%= @date %></h2>
+	<%= form_for @drop do |drop_form| %>
+		<%= drop_form.hidden_field :drop_date, value: @date %>
+		<div class="well">
+			<%= drop_form.label :orders %>
+			<div class="row">
+				<% @deliveries.each do |delivery| %>
+					<div class="col-md-4">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<%= check_box_tag "drop[delivery_ids][]", delivery.id %>
+								<strong><%= delivery.user.name %></strong>
+								<br>
+								<%= delivery.at.strftime("%I:%M%p") %>
+								<br>
+								<%= delivery.address.full_address %>
+								<br>
+								<%= delivery.delivery_status.name %>
+							</div>
+							<div class="panel-body">
+								<%= delivery.booking_no %>
+								<br>
+								<%= delivery.delivery_status.name %>
+								<br>
+								Rs. <%= delivery.get_total_amount %>
+							</div>
+						</div>
+					</div>
+				<% end %>
+			</div>
+		</div>
+		<div class="well">
+			<div class="row">
+				<div class="col-md-4">
+					<%= drop_form.label :expected_drop_time %>
+					<br>
+					<% Time.zone = "Chennai" %>
+					<%= drop_form.time_select :expected_at, value: Time.zone.now %>
+				</div>
+				<div class="col-md-8">
+					<%= drop_form.label :drop_address %>
+					<br>
+					<%= drop_form.text_area :drop_address, class: 'form-control' %>
+				</div>
+			</div>
+		</div>
+
+		<%= drop_form.submit :create_drop, class: 'btn btn-primary', style: 'color: black;' %>
+	<% end %>
+</div>

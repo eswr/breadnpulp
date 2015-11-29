@@ -17,6 +17,7 @@
 #  payment_status_id  :integer
 #  subscription_id    :integer
 #  despatch_id        :integer
+#  drop_id            :integer
 #
 
 class Delivery < ActiveRecord::Base
@@ -28,7 +29,7 @@ class Delivery < ActiveRecord::Base
   belongs_to :delivery_status
   belongs_to :payment_status
   belongs_to :subscription
-  belongs_to :despatch
+  belongs_to :drop
 
   has_many :packs, dependent: :destroy
   has_many :menus, through: :packs
@@ -89,9 +90,9 @@ class Delivery < ActiveRecord::Base
     self.update_attribute :booking_no, self.get_b_no
   end
 
-  def Delivery.set_despatch(despatch_id, delivery_ids)
+  def Delivery.set_drop(drop_id, delivery_ids)
     delivery_ids.each do |delivery_id|
-      Delivery.find(delivery_id).update_attribute :despatch_id, despatch_id
+      Delivery.find(delivery_id).update_attribute :drop_id, drop_id
     end
   end
 end

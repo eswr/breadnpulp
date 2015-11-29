@@ -13,13 +13,14 @@
 #  created_at       :datetime         not null
 #  updated_at       :datetime         not null
 #  despatch_date    :date
+#  despatch_time    :time
 #
 
 class Despatch < ActiveRecord::Base
 
 	after_create	:set_despatch_number
 
-	has_many		:deliveries
+	has_many		:drops
 
 	belongs_to 		:user
 	belongs_to		:address

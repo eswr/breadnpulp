@@ -1,0 +1,44 @@
+<div class="container">
+	<h1>All Despatches</h1>
+
+	<h3>Select date</h3>
+	<%= form_tag do %>
+		<%= select_date(date = Date.current, options = {},
+						html_options = { class: 'col-xs-4' }) %>
+
+		<%= submit_tag "get despatches", class: 'btn btn-primary',
+									 style: 'color: black;' %>
+	<% end %>
+	<h2>Showing despatches for <%= @date %></h2>
+	<% @despatches.each do |despatch| %>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<%= despatch.service_provider %> | <%= despatch.rider.name %>
+				<br>
+				<%= despatch.rider.phone_number %> | <%= despatch.despatch_time %>
+			</div>
+			<% despatch.drops.each do |drop| %>
+				<div class="panel-body">
+					<div class="well">
+						<%= drop.drop_address %>
+						<br>
+						<%= drop.expected_at %>
+						<br>
+						<% drop.deliveries.each do |delivery| %>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<%= delivery.user.name %> | <%= delivery.user.phone_number %>
+								</div>
+								<div class="panel-body">
+									<% delivery.packs.each do |pack| %>
+										<%= pack.menu.kickerr.name %> | <%= pack.quantity %><br>
+									<% end %>
+								</div>
+							</div>
+						<% end %>
+					</div>
+				</div>
+			<% end %>
+		</div>
+	<% end %>
+</div>

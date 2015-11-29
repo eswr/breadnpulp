@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151128044818) do
+ActiveRecord::Schema.define(version: 20151129065038) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -60,6 +60,7 @@ ActiveRecord::Schema.define(version: 20151128044818) do
     t.integer  "payment_status_id"
     t.integer  "subscription_id"
     t.integer  "despatch_id"
+    t.integer  "drop_id"
   end
 
   add_index "deliveries", ["address_id"], name: "index_deliveries_on_address_id", using: :btree
@@ -84,6 +85,18 @@ ActiveRecord::Schema.define(version: 20151128044818) do
     t.date     "despatch_date"
     t.time     "despatch_time"
   end
+
+  create_table "drops", force: :cascade do |t|
+    t.integer  "despatch_id"
+    t.time     "expected_at"
+    t.time     "completed_at"
+    t.date     "drop_date"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.string   "drop_address"
+  end
+
+  add_index "drops", ["despatch_id"], name: "index_drops_on_despatch_id", using: :btree
 
   create_table "food_alerts", force: :cascade do |t|
     t.integer  "user_id"
@@ -232,6 +245,7 @@ ActiveRecord::Schema.define(version: 20151128044818) do
   add_foreign_key "addresses", "users"
   add_foreign_key "deliveries", "addresses"
   add_foreign_key "deliveries", "users"
+  add_foreign_key "drops", "despatches"
   add_foreign_key "menus", "kickerrs"
   add_foreign_key "packs", "deliveries"
   add_foreign_key "packs", "menus"

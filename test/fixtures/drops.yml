@@ -1,0 +1,27 @@
+# == Schema Information
+#
+# Table name: drops
+#
+#  id           :integer          not null, primary key
+#  despatch_id  :integer
+#  expected_at  :time
+#  completed_at :time
+#  drop_date    :date
+#  created_at   :datetime         not null
+#  updated_at   :datetime         not null
+#  drop_address :string
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  despatch_id: 
+  address_id: 
+  expected_at: 2015-11-28 19:05:49
+  completed_at: 2015-11-28 19:05:49
+
+two:
+  despatch_id: 
+  address_id: 
+  expected_at: 2015-11-28 19:05:49
+  completed_at: 2015-11-28 19:05:49

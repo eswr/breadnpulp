@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'drops/home'
+
   root    'static_pages#home'
   get     'about_us'  => 'static_pages#about'
   get     'profile'   => 'users#show'
@@ -29,6 +31,12 @@ Rails.application.routes.draw do
   get      'new_despatch' => 'despatches#new'
   post     'new_despatch' => 'despatches#new'
 
+  get      'new_drop' => 'drops#new'
+  post     'new_drop' => 'drops#new'
+
+  get      'todays_despatches' => 'despatches#index'
+  post     'todays_despatches' => 'despatches#index'
+
   get      'roles' => 'roles#index'
   post     'roles' => 'roles#index'
   get      'remove_role' => 'roles#remove_role'
@@ -46,6 +54,7 @@ Rails.application.routes.draw do
   resources :packs,               only: [:index]
   resources :raw_materials
   resources :despatches
+  resources :drops
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

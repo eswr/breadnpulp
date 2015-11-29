@@ -74,7 +74,7 @@ Invoice
 Despatch SMS
 	Activate button
 	Messages
-		FoodRider
+		Rider
 			List of orders
 				Order
 					Customer
@@ -113,3 +113,20 @@ Roles:
 		2. Chef view
 	3. Rider
 	
+Food Items
+	add column cost price
+
+Kickerr
+	calculate kickerr price from food items
+
+Drops
+	has many orders
+	belongs to a despatch
+	belongs to address
+	expected drop time
+	actual drop time
+	
+
+Despatch
+	has many drops
+

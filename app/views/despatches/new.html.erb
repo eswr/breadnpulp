@@ -5,33 +5,34 @@
 	<%= form_tag do %>
 		<%= select_date(date = Date.current, options = {}, html_options = { class: 'col-xs-4' }) %>
 
-		<%= submit_tag "get orders", class: 'btn btn-primary', style: 'color: black' %>
+		<%= submit_tag "get drops", class: 'btn btn-primary', style: 'color: black' %>
 	<% end %>
-	<h2>Showing orders for <%= @date %></h2>
+	<h2>Showing drops for <%= @date %></h2>
 	<%= form_for @despatch do |despatch_form| %>
 		<%= despatch_form.hidden_field :despatch_date, value: @date %>
 		<div class="well">
-			<%= despatch_form.label :orders %>
+			<%= despatch_form.label :drops %>
 			<div class="row">
-				<% @deliveries.each do |delivery| %>
+				<% @drops.each do |drop| %>
 					<div class="col-md-4">
 						<div class="panel panel-default">
 							<div class="panel-heading">
-								<%= check_box_tag "despatch[delivery_ids][]", delivery.id %>
-								<strong><%= delivery.user.name %></strong>
+								<%= check_box_tag "despatch[drop_ids][]", drop.id %>
+								<strong><%= drop.drop_address %></strong>
 								<br>
-								<%= delivery.at.strftime("%I:%M%p") %>
-								<br>
-								<%= delivery.address.full_address %>
-								<br>
-								<%= delivery.delivery_status.name %>
+								<%= drop.expected_at.strftime("%I:%M%p") %>
 							</div>
 							<div class="panel-body">
-								<%= delivery.booking_no %>
-								<br>
-								<%= delivery.delivery_status.name %>
-								<br>
-								Rs. <%= delivery.get_total_amount %>
+								<% drop.deliveries.each do |delivery| %>
+									<%= delivery.user.name %> |
+										 <%= delivery.user.phone_number %>
+									<br>
+									<% delivery.packs.each do |pack| %>
+										<%= pack.menu.kickerr.name %>
+										<%= pack.quantity %><br>
+									<% end %>
+									<br>
+								<% end %>
 							</div>
 						</div>
 					</div>
@@ -42,7 +43,7 @@
 			<div class="row">
 				<div class="col-md-4">
 					<%= despatch_form.label :service_provider %>
-					<%= despatch_form.select :service_provider, ["Service Provider", "Breadnpulp Delivery", "Other"], {}, { class: 'form-control' } %>
+					<%= despatch_form.select :service_provider, ["Service Provider", "Breadnpulp drop", "Other"], {}, { class: 'form-control' } %>
 				</div>
 				<div class="col-md-4">
 					<%= despatch_form.label :rider %>

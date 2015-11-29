@@ -1,7 +1,9 @@
 class DeliveriesController < ApplicationController
 
 	before_action :logged_in_user
-	before_action :admin_user,			only: [:edit, :update, :index, :destroy, :recent_orders, :future_orders]
+	before_action :admin_user,			only: [:edit, :update, :index,
+											   :destroy, :recent_orders,
+											   :future_orders]
 	before_action :operator_user, 		only: [:todays_orders, :chef_view]
 
 	def new
@@ -9,7 +11,8 @@ class DeliveriesController < ApplicationController
 		@user = @delivery.user
 		@delivery_statuses = DeliveryStatus.all
 		@payment_statuses = PaymentStatus.all
-		@addresses = @user.addresses.map { |addr| [addr.postal_address.split('').first(40).join + '...', addr.id] }
+		@addresses = @user.addresses.map { |addr| [addr.postal_address.split('')
+												   .first(40).join + '...', addr.id] }
 		menus_on(active_menu_date).each do |menu|
 			@delivery.packs.build(menu_id: menu.id)
 		end
@@ -73,7 +76,13 @@ class DeliveriesController < ApplicationController
 	end
 
 	def todays_orders
-		@deliveries = Delivery.where("delivery_date = ?", Time.zone.today).where("delivery_status_id = ? OR delivery_status_id = ?", DeliveryStatus.find_by(name: 'Tentative'), DeliveryStatus.find_by(name: 'Confirmed')).order(at: :asc).eager_load(:delivery_status, :payment_status, :user, :address, :packs, :menus, :kickerrs)
+		@deliveries = Delivery.where("delivery_date = ?", Time.zone.today)
+							  .where("delivery_status_id = ? OR delivery_status_id = ?",
+							  		 DeliveryStatus.find_by(name: 'Tentative'),
+							  		 DeliveryStatus.find_by(name: 'Confirmed'))
+							  .order(at: :asc)
+							  .eager_load(:delivery_status, :payment_status, :user,
+							  			  :address, :packs, :menus, :kickerrs)
 	end
 
 	def future_orders
