@@ -15,14 +15,14 @@
 			<div class="panel-heading">
 				<%= despatch.service_provider %> | <%= despatch.rider.name %>
 				<br>
-				<%= despatch.rider.phone_number %> | <%= despatch.despatch_time %>
+				<%= despatch.rider.phone_number %> | <%= despatch.despatch_time.strftime("%I:%M%p") %>
 			</div>
 			<% despatch.drops.each do |drop| %>
 				<div class="panel-body">
 					<div class="well">
 						<%= drop.drop_address %>
 						<br>
-						<%= drop.expected_at %>
+						<%= drop.expected_at.strftime("%I:%M%p") %>
 						<br>
 						<% drop.deliveries.each do |delivery| %>
 							<div class="panel panel-default">
