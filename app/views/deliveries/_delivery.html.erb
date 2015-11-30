@@ -61,9 +61,9 @@
 				class: 'btn btn-info btn-xs' %>
 			<% else %>
 				<% if delivery.drop.despatch.rider.present? %>
-					<%= delivery.drop.despatch.rider.name %>
+					<%= delivery.drop.despatch.rider.name %> | 
 				<% end %>
-				<%= delivery.drop.despatch.despatch_time %>
+				<%= delivery.drop.despatch.despatch_time.strftime("%I:%M%p") %>
 			<% end %>
 		<% end %>
 	</td>
