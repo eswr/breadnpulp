@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'drops/home'
-
   root    'static_pages#home'
   get     'about_us'  => 'static_pages#about'
   get     'profile'   => 'users#show'
@@ -55,6 +53,7 @@ Rails.application.routes.draw do
   resources :raw_materials
   resources :despatches
   resources :drops
+  resources :coupons
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

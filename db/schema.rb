@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151129065038) do
+ActiveRecord::Schema.define(version: 20151130031224) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,15 @@ ActiveRecord::Schema.define(version: 20151129065038) do
   end
 
   add_index "addresses", ["user_id"], name: "index_addresses_on_user_id", using: :btree
+
+  create_table "coupons", force: :cascade do |t|
+    t.string   "code"
+    t.integer  "original_price"
+    t.integer  "final_price"
+    t.boolean  "active"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
 
   create_table "delayed_jobs", force: :cascade do |t|
     t.integer  "priority",   default: 0, null: false
@@ -61,6 +70,7 @@ ActiveRecord::Schema.define(version: 20151129065038) do
     t.integer  "subscription_id"
     t.integer  "despatch_id"
     t.integer  "drop_id"
+    t.string   "coupon_code"
   end
 
   add_index "deliveries", ["address_id"], name: "index_deliveries_on_address_id", using: :btree
@@ -126,6 +136,7 @@ ActiveRecord::Schema.define(version: 20151129065038) do
     t.datetime "image_updated_at"
     t.string   "course"
     t.boolean  "show_image"
+    t.integer  "production_cost"
   end
 
   create_table "food_items_kickerrs", id: false, force: :cascade do |t|

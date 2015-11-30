@@ -1,0 +1,17 @@
+<div class="container">
+	<div class="col-md-4">
+		<h1>New Coupon</h1>
+		<%= render 'form' %>
+	</div>
+
+	<div class="col-md-8">
+		<h2>All Coupons</h2>
+		<% @coupons.each do |coupon| %>
+			<%= coupon.code %><br>
+			<%= coupon.original_price %><br>
+			<%= coupon.final_price %><br>
+			<%= coupon.active %><br>
+			<%= link_to "edit", edit_coupon_path(coupon) %><br>
+		<% end %>
+	</div>
+</div>

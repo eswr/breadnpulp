@@ -12,13 +12,15 @@
 #
 
 class Pack < ActiveRecord::Base
-  belongs_to :menu
-  belongs_to :delivery
-  belongs_to :kickerr
+	belongs_to :menu
+	belongs_to :delivery
+	belongs_to :kickerr
 
-  def get_unit_price
-  	unit_price.nil? ? menu.get_price : unit_price
-  end
+	after_create :check_coupons
+
+	def get_unit_price
+		unit_price.nil? ? menu.get_price : unit_price
+	end
 
 	def self.to_csv
 		CSV.generate do |csv|
@@ -26,6 +28,14 @@ class Pack < ActiveRecord::Base
 			all.each do |pack|
 				csv << [pack.quantity, pack.menu_id, pack.delivery_id, pack.unit_price]
 			end
+		end
+	end
+
+	def check_coupons
+		code = delivery.coupon_code
+		coupon = Coupon.find_by(code: code, original_price: menu.price, active: true)
+		if !coupon.nil?
+			update_attribute :unit_price, coupon.final_price
 		end
 	end
 end

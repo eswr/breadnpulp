@@ -28,6 +28,9 @@
 			<%= f.label :show? %><br>
 			<%= f.check_box :show_image %><br>
 
+			<%= f.label :production_cost %><br>
+			<%= f.number_field :production_cost, class: 'form-control' %><br>
+
 			<div class="row">
 				<h3>Ingredients for <%= @food_item.name %></h3>
 				<table class="table table-hover">

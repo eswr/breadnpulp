@@ -31,6 +31,10 @@
 			<h3>Delivery address</h3>
 			<%= delivery_form.select(:address_id, @addresses, {}, { :class => 'form-control' }) %>
 		</div>
+		<div class="col-md-4">
+			<h3>Coupon code</h3>
+			<%= delivery_form.text_field :coupon_code, class: 'form-control' %>
+		</div>
 	</div>
 
 	<div class="row">

@@ -1,0 +1,19 @@
+<%= form_for @coupon do |coupon_form| %>
+	<%= coupon_form.label :coupon_code %>
+	<%= coupon_form.text_field :code,
+			class: 'form-control' %>
+	<br>
+	<%= coupon_form.label :original_pack_price %>
+	<%= coupon_form.number_field :original_price,
+			class: 'form-control' %>
+	<br>
+	<%= coupon_form.label :final_pack_price %>
+	<%= coupon_form.number_field :final_price,
+			class: 'form-control' %>
+	<br>
+	<%= coupon_form.label :active? %>
+	<%= coupon_form.check_box :active,
+			class: 'form-control' %>
+	<br>
+	<%= coupon_form.submit :save, class: 'btn btn-primary' %>
+<% end %>

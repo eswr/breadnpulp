@@ -55,7 +55,7 @@ class FoodItemsController < ApplicationController
 	private
 
 		def food_item_params
-			params.require(:food_item).permit(:name, :veg_non_egg, :description, :image, :course, :show_image, ingredients_attributes: [:id, :raw_material_id, :quantity, :unit, :_destroy])
+			params.require(:food_item).permit(:name, :veg_non_egg, :description, :image, :course, :production_cost, :show_image, ingredients_attributes: [:id, :raw_material_id, :quantity, :unit, :_destroy])
 		end
 
 		def admin_user
