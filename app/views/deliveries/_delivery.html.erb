@@ -60,7 +60,9 @@
 				}),
 				class: 'btn btn-info btn-xs' %>
 			<% else %>
-				<%= delivery.drop.despatch.rider.name || "No rider" %>
+				<% if delivery.drop.despatch.rider.present? %>
+					<%= delivery.drop.despatch.rider.name %>
+				<% end %>
 				<%= delivery.drop.despatch.despatch_time %>
 			<% end %>
 		<% end %>
