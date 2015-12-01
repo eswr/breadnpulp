@@ -77,10 +77,7 @@ class DeliveriesController < ApplicationController
 
 	def todays_orders
 		@deliveries = Delivery.where("delivery_date = ?", Time.zone.today)
-							  .where("delivery_status_id = ? OR delivery_status_id = ?",
-							  		 DeliveryStatus.find_by(name: 'Tentative'),
-							  		 DeliveryStatus.find_by(name: 'Confirmed'))
-							  .order(at: :asc)
+							  .order(at: :asc, delivery_status_id: :asc)
 							  .eager_load(:delivery_status, :payment_status, :user,
 							  			  :address, :packs, :menus, :kickerrs)
 	end
