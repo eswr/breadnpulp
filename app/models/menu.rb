@@ -22,6 +22,8 @@ class Menu < ActiveRecord::Base
   validates :kickerr_id,			presence: true
   validates :price,					presence: true
 
+  attr_accessor :kickerr_name
+
   def get_price
   	self.price.nil? ? self.kickerr.price : self.price
   end
@@ -35,7 +37,7 @@ class Menu < ActiveRecord::Base
 		end
 	end
 
-  def kickerr_name
+  def get_kicker_name
     kickerr.name
   end
 
