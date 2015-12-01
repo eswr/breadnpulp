@@ -24,20 +24,11 @@
             </div>
         </div>
         <div class="row">
-            <% @menus.each do |menu| %>
-                <div class="col-md-4">
-                    <div class="panel panel-default">
-                        <%= render menu %>
-                    </div>
-                </div>
-            <% end %>        
-        </div>
-        <div class="row">
         <% @menus.group_by(&:kickerr_name).each do |kickerr_name, menus| %>
             <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class="panel panel-heading">
-                        <%= render menus.first.menu %>
+                        <%= render menus.first %>
                     </div>
                 </div>
             </div>
