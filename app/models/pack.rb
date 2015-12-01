@@ -32,10 +32,12 @@ class Pack < ActiveRecord::Base
 	end
 
 	def check_coupons
-		code = delivery.coupon_code.upcase
-		coupon = Coupon.find_by(code: code, original_price: menu.price, active: true)
-		if !coupon.nil?
-			update_attribute :unit_price, coupon.final_price
+		if delivery.coupon_code?
+			code = delivery.coupon_code.upcase
+			coupon = Coupon.find_by(code: code, original_price: menu.price, active: true)
+			if !coupon.nil?
+				update_attribute :unit_price, coupon.final_price
+			end
 		end
 	end
 end
