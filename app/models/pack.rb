@@ -18,6 +18,8 @@ class Pack < ActiveRecord::Base
 
 	after_create :check_coupons
 
+	attr_accessor :kickerr_name
+
 	def get_unit_price
 		unit_price || menu.get_price || "price not set"
 	end

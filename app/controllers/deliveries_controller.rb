@@ -14,7 +14,7 @@ class DeliveriesController < ApplicationController
 		@addresses = @user.addresses.map { |addr| [addr.postal_address.split('')
 												   .first(40).join + '...', addr.id] }
 		menus_on(active_menu_date).each do |menu|
-			@delivery.packs.build(menu_id: menu.id)
+			@delivery.packs.build(menu_id: menu.id, kickerr_name: menu.kickerr.name)
 		end
 		@menus = menus_on(active_menu_date)
 		@date = active_menu_date

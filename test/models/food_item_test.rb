@@ -14,6 +14,7 @@
 #  image_updated_at   :datetime
 #  course             :string
 #  show_image         :boolean
+#  production_cost    :integer
 #
 
 require 'test_helper'

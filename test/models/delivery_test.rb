@@ -18,6 +18,7 @@
 #  subscription_id    :integer
 #  despatch_id        :integer
 #  drop_id            :integer
+#  coupon_code        :string
 #
 
 require 'test_helper'

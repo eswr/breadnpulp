@@ -52,7 +52,7 @@ class KickerrsController < ApplicationController
   private
 
 	def kickerr_params
-		params.require(:kickerr).permit(:name, :price, :description, { food_item_ids: [] })
+		params.require(:kickerr).permit(:name, :price, :description, :kickerr_size, { food_item_ids: [] })
 	end
 
 	def admin_user

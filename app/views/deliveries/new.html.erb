@@ -20,8 +20,41 @@
 							<%= pack_fields.select(:quantity, ((0..10).map {|i| [i,i] }), {}, { :class => 'form-control' }) %>
 							<% if current_user.admin? %>
 								<%= pack_fields.label :unit_price %>
-								<%= pack_fields.text_field :unit_price %>
+								<%= pack_fields.text_field :unit_price, class: 'form-control' %>
 							<% end %>
+						<% end %>
+					</div>
+				</div>
+			</div>
+		<% end %>
+	</div>
+	<div class="row">
+		<% @delivery.packs.group_by(&:kickerr_name).each do |kickerr_name, packs| %>
+			<div class="col-md-4">
+				<div class="panel panel-default">
+					<div class="panel panel-heading">
+						<%= render packs.first.menu %>
+					</div>
+					<div class="panel-body">
+						<% packs.each do |pack| %>
+							<div class="col-sm-6">
+								<div class="panel panel-default">
+									<%= fields_for "delivery[packs_attributes][]", pack do |pack_fields| %>
+										<%= pack_fields.hidden_field :menu_id, value: pack.menu.id %>
+										<div class="panel-heading">
+											<h6><%= pack.menu.kickerr.kickerr_size %></h6>
+										</div>
+										<div class="panel-body">
+											<%= pack_fields.label :quantity %>
+											<%= pack_fields.select(:quantity, ((0..10).map {|i| [i,i] }), {}, { :class => 'form-control' }) %>
+											<% if current_user.admin? %>
+												<%= pack_fields.label :unit_price %>
+												<%= pack_fields.text_field :unit_price, class: 'form-control' %>
+											<% end %>
+										</div>
+									<% end %>
+								</div>
+							</div>
 						<% end %>
 					</div>
 				</div>
