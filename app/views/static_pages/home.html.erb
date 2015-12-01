@@ -24,16 +24,16 @@
             </div>
         </div>
         <div class="row">
-        <% @menus.group_by(&:kickerr_name).each do |kickerr_name, menus| %>
-            <div class="col-md-4">
-                <div class="panel panel-default">
-                    <div class="panel panel-heading">
-                        <%= render menus.first %>
+            <% @menus.group_by(&:kickerr_name).each do |kickerr_name, menus| %>
+                <div class="col-md-4">
+                    <div class="panel panel-default">
+                        <div class="panel panel-heading">
+                            <%= render menus.first %>
+                        </div>
                     </div>
                 </div>
-            </div>
-        <% end %>
-    </div>
+            <% end %>
+        </div>
         <div style="text-align: center;">
             <% if logged_in? %>
                 <%= link_to "Make an order", new_delivery_path(:delivery => { user_id: @user.id }), class: "btn btn-xl text-center", style: "color: black;" %>

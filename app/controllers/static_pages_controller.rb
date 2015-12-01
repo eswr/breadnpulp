@@ -1,6 +1,6 @@
 class StaticPagesController < ApplicationController
 	def home
-		@menus = menus_on(active_menu_date).map { |menu| [menu, menu.kickerr.name]}
+		@menus = Menu.where(available_on: active_menu_date).eager_load(:kickerr).map { |menu| [menu, menu.kickerr.name] }
 		@date = active_menu_date
 		@user = current_user
 	end
