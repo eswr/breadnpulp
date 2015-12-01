@@ -35,28 +35,30 @@ class SubscriptionsController < ApplicationController
 
 		# hash of menu items available valued to key as veg_type
 		availability = {}
-		menus = Menu.where(available_on: Time.zone.tomorrow)
+		menus = Menu.where(available_on: Time.zone.tomorrow).eager_load(:kickerr)
 		menus.each do |menu|
 			availability[menu.kickerr.veg_type.first.downcase.to_sym] = menu.id
 		end
 
 		deliveries = Delivery.where(delivery_date: Time.zone.tomorrow).where.not(subscription_id: nil)
 		deliveries.each do |delivery|
-			subscription = delivery.subscription
-			requirement = { n: subscription.non_veg_qty,
-							e: subscription.egg_qty,
-							v: subscription.veg_qty }
+			if delivery.packs.nil?
+				subscription = delivery.subscription
+				requirement = { n: subscription.non_veg_qty,
+								e: subscription.egg_qty,
+								v: subscription.veg_qty }
 
-			for i in 0..2
-				if availability[types[i]].nil?
-					requirement[types[i-1]] += requirement[types[i]]
-					requirement[types[i]] = 0
+				for i in 0..2
+					if availability[types[i]].nil?
+						requirement[types[i-1]] += requirement[types[i]]
+						requirement[types[i]] = 0
+					end
 				end
-			end
 
-			types.each do |type|
-				if requirement[type] > 0
-					delivery.packs.create(menu_id: availability[type], quantity: requirement[type])
+				types.each do |type|
+					if requirement[type] > 0
+						delivery.packs.create(menu_id: availability[type], quantity: requirement[type])
+					end
 				end
 			end
 		end
