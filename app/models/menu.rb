@@ -22,8 +22,6 @@ class Menu < ActiveRecord::Base
   validates :kickerr_id,			presence: true
   validates :price,					presence: true
 
-  attr_accessor :kickerr_name
-
   def get_price
   	self.price.nil? ? self.kickerr.price : self.price
   end
@@ -36,6 +34,10 @@ class Menu < ActiveRecord::Base
 			end
 		end
 	end
+
+  def kickerr_name
+    kickerr.name
+  end
 
   def Menu.get_raw_material_requirement(date)
     menus = Menu.where(available_on: date).eager_load(kickerr: :food_items)
