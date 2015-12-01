@@ -37,7 +37,7 @@ class Menu < ActiveRecord::Base
 		end
 	end
 
-  def get_kicker_name
+  def get_kickerr_name
     kickerr.name
   end
 
