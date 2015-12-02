@@ -56,6 +56,10 @@
 					<%= despatch_form.time_select :despatch_time, value: Time.zone.now %>
 				</div>
 			</div>
+			<div class="row">
+				<%= despatch_form.label :comment %>
+				<%= despatch.text_field :comment, class: 'form-control' %>
+			</div>
 		</div>
 
 		<%= despatch_form.submit :create_despatch, class: 'btn btn-primary', style: 'color: black;' %>

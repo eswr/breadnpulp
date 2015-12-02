@@ -29,7 +29,7 @@ class DespatchesController < ApplicationController
 
 	private
 		def despatch_params
-			params.require(:despatch).permit(:despatch_date, :despatch_time, :service_provider, :user_id, { drop_ids: [] })
+			params.require(:despatch).permit(:despatch_date, :despatch_time, :service_provider, :user_id, :comment, { drop_ids: [] })
 		end
 
 		def admin_user

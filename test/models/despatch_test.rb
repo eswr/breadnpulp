@@ -14,6 +14,7 @@
 #  updated_at       :datetime         not null
 #  despatch_date    :date
 #  despatch_time    :time
+#  comment          :string
 #
 
 require 'test_helper'
