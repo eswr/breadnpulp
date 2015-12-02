@@ -12,7 +12,7 @@
 			<h3>Cart</h3>
 			<%= delivery_form.fields_for :packs do |pack_fields| %>
 				<%= pack_fields.label :kickerr %>
-				<%= pack_fields.select(:menu_id, (@available_menus.map { |menu| [menu.kickerr.name, menu.id] })) %><br>
+				<%= pack_fields.select(:menu_id, (@available_menus.map { |menu| ["#{menu.kickerr.name} : #{menu.kickerr.kickerr_size}", menu.id] })) %><br>
 				<%= pack_fields.label :quantity %>
 				<%= pack_fields.select(:quantity, ((0..10).map {|i| [i,i] }), {}, { :class => 'form-control' }) %><br>
 				<% if current_user.admin? %>
