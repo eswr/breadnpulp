@@ -17,6 +17,8 @@
 	<td>
 		<%= delivery.payment_status.name %>
 		<br>
+		Coupon code: <%= delivery.coupon_code || "no coupon code" %>
+		<br>
 		<%= delivery.payment_date || "Payment date not mentioned" %>
 		<br>
 		<%= delivery.payment_mode %>
