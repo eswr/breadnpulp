@@ -12,8 +12,7 @@
 		<%= f.date_field :available_on, class: 'form-control' %>
 
 		<%= f.label "Kickerr" %>
-		<%= f.select(:kickerr_id, options_for_select(@kickerrs_array), {}, { class: 'form-control' }) %>
-
+		<h3><%= @menu.kickerr.name %> : <%= @menu.kickerr.kickerr_size %></h3>
 
 		<%= f.label :price %>
 		<%= f.text_field :price, class: 'form-control' %>
