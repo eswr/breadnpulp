@@ -8,7 +8,7 @@
 <table class="table table-hover">
 	<tr>
 		<th>Available on</th>
-		<th>Kickerr name</th>
+		<th>Kickerr name | Size</th>
 		<th>Price</th>
 		<th>Kickerr description</th>
 		<th>Food Items</th>
@@ -19,7 +19,7 @@
 	<% @menus.each do |menu| %>
 		<tr>
 			<td><%= menu.available_on %></td>
-			<td><%= menu.kickerr.name %></td>
+			<td><%= menu.kickerr.name %> | <%= menu.kickerr.kickerr_size %></td>
 			<td><%= menu.get_price %></td>
 			<td><%= menu.kickerr.description %></td>
 			<td>
