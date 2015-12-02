@@ -17,7 +17,7 @@
 				<li>
 					<%= despatch.service_provider %>
 					<br>
-					<%= despatch.rider ? "#{despatch.rider.name} | #{despatch.rider.phone_number}" || "No rider assigned" %>
+					<%= despatch.rider ? "#{despatch.rider.name} | #{despatch.rider.phone_number}" : "No rider assigned" %>
 					<br>
 					<%= despatch.despatch_time.strftime("%I:%M%p") %>
 					<br>
