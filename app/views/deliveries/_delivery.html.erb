@@ -11,7 +11,7 @@
 		<h5><%= (delivery.at - 30.minutes).strftime("%I:%M%p") %></h5>
 		<br>
 		<% if delivery.delivery_status.name == 'Confirmed' %>
-			<%= link_to "mark as despatched", delivery_path(delivery, "delivery[delivery_status_id]" => DeliveryStatus.find_by(name: 'Despatched').id), method: :put, data: { :confirm => "Are you sure you have despatched #{delivery.user.name}'s order?" }, class: 'btn btn-danger btn-xs' %>
+			<%= link_to "mark as despatched", despatch_order_path(id: delivery.id), data: { :confirm => "Are you sure you have despatched #{delivery.user.name}'s order?" }, class: 'btn btn-danger btn-xs' %>
 		<% end %>
 	</td>
 	<td>
@@ -41,34 +41,6 @@
 			<div class="panel panel-defalut">
 				<%= pack.menu.kickerr.name %> : <%= pack.menu.kickerr.kickerr_size %> : <%= pack.quantity %><br>
 			</div>
-		<% end %>
-	</td>
-	<td>
-		<% if delivery.drop_id.nil? %>
-			<%= link_to "set drop", new_drop_path(
-			date:
-			{
-				year: delivery.delivery_date.year,
-				month: delivery.delivery_date.month,
-				day: delivery.delivery_date.day
-			}),
-			class: 'btn btn-info btn-xs' %>
-		<% else %>
-			<% if delivery.drop.despatch_id.nil? %>
-				<%= link_to "set despatch", new_despatch_path(
-				date:
-				{
-					year: delivery.delivery_date.year,
-					month: delivery.delivery_date.month,
-					day: delivery.delivery_date.day
-				}),
-				class: 'btn btn-info btn-xs' %>
-			<% else %>
-				<% if delivery.drop.despatch.rider.present? %>
-					<%= delivery.drop.despatch.rider.name %> | 
-				<% end %>
-				<%= delivery.drop.despatch.despatch_time.strftime("%I:%M%p") %>
-			<% end %>
 		<% end %>
 	</td>
 </tr>

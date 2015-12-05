@@ -13,11 +13,11 @@ Rails.application.routes.draw do
 
   get     'new_order' => 'deliveries#new'
 
-  get     'future_orders' => 'deliveries#future_orders'
-  get     'todays_orders' => 'deliveries#todays_orders'
-  get     'recent_orders' => 'deliveries#recent_orders'
-  get     'chef_view'     => 'deliveries#chef_view'
-  get     'reset_despatch' => 'deliveries#reset_despatch'
+  get     'future_orders'   => 'deliveries#future_deliveries'
+  get     'todays_orders'   => 'deliveries#todays_deliveries'
+  get     'recent_orders'   => 'deliveries#recent_deliveries'
+  get     'chef_view'       => 'deliveries#chef_view'
+  get     'despatch_order'  => 'deliveries#despatch_delivery'
 
   get     'foodiecalls'   => 'food_alerts#index'
 

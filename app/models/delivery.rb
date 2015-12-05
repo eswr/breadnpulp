@@ -96,4 +96,34 @@ class Delivery < ActiveRecord::Base
       Delivery.find(delivery_id).update_attribute :drop_id, drop_id
     end
   end
+
+  def despatch_and_send_sms
+    update_attribute :delivery_status_id, 4
+    Msg91.delay.send_sms(user.phone_number, get_user_text)
+    Msg91.delay.send_sms("9820392422", get_rider_text)
+  end
+
+
+  private
+
+    def get_user_text
+      text = "Hello #{user.name}! Your order has been despatched. "
+      if payment_date == Time.zone.now.to_date
+        text += "Please pay Rs.#{get_total_amount} to the delivery boy."
+      end
+      return text
+    end
+
+    def get_rider_text
+      text = "Order for #{user.name} - #{user.phone_number}. "
+      packs.each do |pack|
+        text += "#{pack.menu.kickerr.name}: #{pack.quantity}. "
+      end
+      text += "#{address.postal_address}. "
+      text += "#{at.strftime "%I:%M%p"}."
+      if payment_date == Time.zone.now.to_date
+        text += "Rs.#{get_total_amount}"
+      end
+      return text
+    end
 end

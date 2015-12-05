@@ -11,12 +11,7 @@
 			</td>
 			<td>
 				<% row.second.each do |subrow| %>
-					<%= subrow.first %><br>
-				<% end %>
-			</td>
-			<td>
-				<% row.second.each do |subrow| %>
-					<%= subrow.second %><br>
+					<%= subrow.first %> : <%= subrow.second %><br>
 				<% end %>
 			</td>
 		</tr>

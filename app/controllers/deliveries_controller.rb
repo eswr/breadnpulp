@@ -3,8 +3,8 @@ class DeliveriesController < ApplicationController
 	before_action :logged_in_user
 	before_action :admin_user,			only: [:edit, :update, :index,
 											   :destroy, :recent_orders,
-											   :future_orders, :todays_orders]
-	before_action :operator_user, 		only: [:todays_orders, :chef_view]
+											   :future_orders, :todays_orders, :despatch_delivery]
+	before_action :operator_user, 		only: [:todays_orders, :chef_view, :despatch_delivery]
 
 	def new
 		@delivery = Delivery.new(delivery_params)
@@ -64,7 +64,9 @@ class DeliveriesController < ApplicationController
 	end
 
 	def index
-		@deliveries = Delivery.paginate(:page => params[:page]).order(delivery_date: :desc, at: :asc).eager_load(:delivery_status, :payment_status, :user, :address, :packs, :menus, :kickerrs)
+		@deliveries = Delivery.paginate(:page => params[:page])
+							  .order(delivery_date: :desc, at: :asc)
+							  .eager_load(:delivery_status, :payment_status, :user, :address, :packs, :menus, :kickerrs)
 		respond_to do |format|
 			format.html
 			format.csv { render text: Delivery.all.to_csv }
@@ -75,18 +77,18 @@ class DeliveriesController < ApplicationController
 		Delivery.find(params[:id]).destroy
 	end
 
-	def todays_orders
+	def todays_deliveries
 		@deliveries = Delivery.where("delivery_date = ?", Time.zone.today)
 							  .order(delivery_status_id: :asc, at: :asc)
 							  .eager_load(:delivery_status, :payment_status, :user,
 							  			  :address, :packs, :menus, :kickerrs)
 	end
 
-	def future_orders
+	def future_deliveries
 		@deliveries = Delivery.where("delivery_date > ?", Time.zone.today).order(delivery_date: :asc, at: :asc).eager_load(:delivery_status, :payment_status, :user, :address, :packs, :menus, :kickerrs)
 	end
 
-	def recent_orders
+	def recent_deliveries
 		@deliveries = Delivery.paginate(:page => params[:page]).where("delivery_date < ?", Time.zone.today).order(delivery_date: :desc, at: :desc).eager_load(:delivery_status, :payment_status, :user, :address, :packs, :menus, :kickerrs)
 	end
 
@@ -94,8 +96,9 @@ class DeliveriesController < ApplicationController
 		@rows = Delivery.get_chef_view_rows
 	end
 
-	def reset_despatch
-		Delivery.find(params[:id]).update_attribute :despatch_id, nil
+	def despatch_delivery
+		@delivery = Delivery.find(params[:id])
+		@delivery.despatch_and_send_sms
 		redirect_to :back
 	end
 
@@ -132,5 +135,6 @@ class DeliveriesController < ApplicationController
 
     def operator_user
     	return true if current_user.admin?
+    	redirect_to root_path unless current_user.has_role? :operator
     end
 end
