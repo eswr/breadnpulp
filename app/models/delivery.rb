@@ -116,13 +116,13 @@ class Delivery < ActiveRecord::Base
 
     def get_rider_text
       text = "Order for #{user.name} - #{user.phone_number}. "
+      text += "#{address.postal_address}. "
       packs.each do |pack|
         text += "#{pack.menu.kickerr.name}: #{pack.quantity}. "
       end
-      text += "#{address.postal_address}. "
       text += "#{at.strftime "%I:%M%p"}."
       if payment_date == Time.zone.now.to_date
-        text += "Rs.#{get_total_amount}"
+        text += "Collect Rs.#{get_total_amount} by #{payment_mode}"
       end
       return text
     end

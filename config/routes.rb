@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
   root    'static_pages#home'
   get     'about_us'  => 'static_pages#about'
+  get     'operator_view' => 'static_pages#operator_view'
+
   get     'profile'   => 'users#show'
   get     'my_alerts' => 'users#my_alerts'
   get     'signup'    => 'users#new'

@@ -16,4 +16,8 @@ class StaticPagesController < ApplicationController
 		Time.zone = 'Chennai'
 		Time.zone.now.hour < 11 ? Time.zone.now.to_date : Time.zone.now.to_date.tomorrow
 	end
+
+	def operator_view
+
+	end
 end

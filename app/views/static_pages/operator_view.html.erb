@@ -1,0 +1,43 @@
+<div class="col-md-8">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3>Despatches</h3>
+		</div>
+		<div class="panel-body">
+			
+		</div>
+	</div>
+</div>
+
+<div class="col-md-4">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3>Riders</h3>
+		</div>
+		<div class="panel-body">
+			<table class="table table-hover">
+				<tr>
+					<th class="col-xs-8">
+						Rider details
+					</th>
+					<th class="col-xs-4">
+						Status
+					</th>
+				</tr>
+				<% (1..7).each do |i| %>
+					<tr>
+						<td>
+							Rider name <%= i %><br>
+							<% 10.times do %>
+								<%= i %>
+							<% end %><br>
+						</td>
+						<td>
+							Busy<br>
+						</td>
+					</tr>
+				<% end %>
+			</table>
+		</div>
+	</div>
+</div>
