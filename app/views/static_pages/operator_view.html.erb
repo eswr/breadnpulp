@@ -24,16 +24,20 @@
 						Status
 					</th>
 				</tr>
-				<% (1..7).each do |i| %>
+				<% (3..9).each do |i| %>
 					<tr>
 						<td>
 							Rider name <%= i %><br>
-							<% 10.times do %>
-								<%= i %>
-							<% end %><br>
+							<%= "#{i}"*10 %>
 						</td>
 						<td>
-							Busy<br>
+							<% if i%3 == 0 %>
+								Busy<br>
+								<%= link_to "mark as Free", "#", class: 'btn btn-success btn-xs' %>
+							<% else %>
+								Free<br>
+								<%= link_to "mark as Busy", "#", class: 'btn btn-warning btn-xs' %>
+							<% end %>
 						</td>
 					</tr>
 				<% end %>
