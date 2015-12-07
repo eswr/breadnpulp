@@ -100,7 +100,7 @@ class Delivery < ActiveRecord::Base
   def despatch_and_send_sms
     update_attribute :delivery_status_id, 4
     Msg91.delay.send_sms(user.phone_number, get_user_text)
-    Msg91.delay.send_sms("9820392422", get_rider_text)
+    Msg91.delay.send_sms("9892500082,9167446726", get_rider_text)
   end
 
 
