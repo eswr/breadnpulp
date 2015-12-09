@@ -100,7 +100,13 @@ class Delivery < ActiveRecord::Base
   def despatch_and_send_sms
     update_attribute :delivery_status_id, 4
     Msg91.delay.send_sms(user.phone_number, get_user_text)
-    Msg91.delay.send_sms("9892500082,9167464726", get_rider_text)
+    Msg91.delay.send_sms("9892500082,9167464726,7506244659,#{rider.phone_number}", get_rider_text)
+  end
+
+  def rider
+    return nil if rider_id.nil?
+    rider = User.find rider_id
+    rider.has_role?(:rider) ? rider : nil
   end
 
 

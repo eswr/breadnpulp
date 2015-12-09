@@ -2,9 +2,10 @@ class DeliveriesController < ApplicationController
 
 	before_action :logged_in_user
 	before_action :admin_user,			only: [:edit, :update, :index,
-											   :destroy, :recent_orders,
-											   :future_orders, :todays_orders, :despatch_delivery]
-	before_action :operator_user, 		only: [:todays_orders, :chef_view, :despatch_delivery]
+											   :destroy, :recent_deliveries,
+											   :future_deliveries, :todays_deliveries, :despatch_delivery]
+	before_action :operator_user, 		only: [:todays_deliveries, :chef_view, :despatch_delivery]
+	before_action :get_riders,			only: [:todays_deliveries, :index, :recent_deliveries, :future_deliveries]
 
 	def new
 		@delivery = Delivery.new(delivery_params)
@@ -105,7 +106,7 @@ class DeliveriesController < ApplicationController
 	private
 
 	def delivery_params
-		params.require(:delivery).permit(:user_id, :delivery_date, :at, :collect, :address_id, :delivery_status_id, :payment_status_id, :payment_date, :payment_mode, :despatch_id, :coupon_code, packs_attributes: [:id, :quantity, :menu_id, :unit_price, :payment_date, :payment_mode, :_destroy])
+		params.require(:delivery).permit(:user_id, :delivery_date, :at, :collect, :address_id, :delivery_status_id, :payment_status_id, :payment_date, :payment_mode, :despatch_id, :coupon_code, :rider_id, packs_attributes: [:id, :quantity, :menu_id, :unit_price, :payment_date, :payment_mode, :_destroy])
 	end
 
 	def active_menu_date
@@ -136,5 +137,9 @@ class DeliveriesController < ApplicationController
     def operator_user
     	return true if current_user.admin?
     	redirect_to root_path unless current_user.has_role? :operator
+    end
+
+    def get_riders
+    	@riders = User.with_role(:rider).map { |rider| [rider.name, rider.id] } << nil
     end
 end

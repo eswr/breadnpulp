@@ -1,18 +1,27 @@
 <tr>
 	<td>
-		<%= delivery.booking_no %>
+		<%= link_to delivery.user.name, delivery.user, class: 'btn btn-success btn-xs' %>
 		<br>
+		<%= delivery.user.phone_number %>
+		<br>
+		<small><%= delivery.address.postal_address %></small>
+	</td>
+	<td>
+		<% delivery.packs.each do |pack| %>
+			<div class="panel panel-defalut">
+				<%= pack.menu.kickerr.name %> : <%= pack.menu.kickerr.kickerr_size %> : <%= pack.quantity %><br>
+			</div>
+		<% end %>
+	</td>
+	<td>
 		<b style="color: <%= delivery.delivery_status.colorize %>"><%= delivery.delivery_status.name %></b>
 		<br>
 		<%= link_to "edit", edit_delivery_path(delivery), class: 'btn btn-warning btn-xs' %>
 		<br>
 		<%= delivery.delivery_date %>
 		<br>
-		<h5><%= (delivery.at - 30.minutes).strftime("%I:%M%p") %></h5>
+		<h5><%= delivery.at.strftime("%I:%M%p") %></h5>
 		<br>
-		<% if delivery.delivery_status.name == 'Confirmed' %>
-			<%= link_to "mark as despatched", despatch_order_path(id: delivery.id), data: { :confirm => "Are you sure you have despatched #{delivery.user.name}'s order?" }, class: 'btn btn-danger btn-xs' %>
-		<% end %>
 	</td>
 	<td>
 		<%= delivery.payment_status.name %>
@@ -30,17 +39,26 @@
 		<% end %>
 	</td>
 	<td>
-		<%= link_to delivery.user.name, delivery.user, class: 'btn btn-success btn-xs' %>
-		<br>
-		<%= delivery.user.phone_number %>
-		<br>
-		<small><%= delivery.address.postal_address %></small>
-	</td>
-	<td>
-		<% delivery.packs.each do |pack| %>
-			<div class="panel panel-defalut">
-				<%= pack.menu.kickerr.name %> : <%= pack.menu.kickerr.kickerr_size %> : <%= pack.quantity %><br>
-			</div>
+		<% if delivery.rider.nil? %>
+			<%= "Rider not allotted" %><br>
+		<% else %>
+			<%= "Rider: #{delivery.rider.name} | #{delivery.rider.phone_number}" %><br>
+		<% end %>
+		<% if delivery.delivery_status.name == 'Confirmed' %>
+			<%= link_to "mark as despatched", despatch_order_path(id: delivery.id),
+											  data: { :confirm => "Are you sure you have despatched #{delivery.user.name}'s order?" },
+											  class: 'btn btn-danger btn-xs' %>
+			<%= form_for delivery do |delivery_form| %>
+				<%= delivery_form.label :assign_rider %><br>
+				<div class="col-xs-6">
+					<%= delivery_form.select :rider_id, @riders.reverse, {}, { class: 'form-control' } %>
+				</div>
+				<div class="col-xs-6">
+					<%= delivery_form.submit :assign_rider, 
+											 data: { :confirm => "Are you sure you want to assign rider to #{delivery.user.name}'s order?" },
+											 class: 'btn btn-info btn-sm', style: 'color: black;' %>
+				</div>
+			<% end %>
 		<% end %>
 	</td>
 </tr>
