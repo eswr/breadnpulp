@@ -4,5 +4,6 @@
 
 <table class="table table-hover">
 	<%= render 'deliveries/header' %>
+	<%= will_paginate @deliveries %>
 	<%= render @deliveries %>
 </table>
