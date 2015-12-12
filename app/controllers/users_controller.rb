@@ -59,6 +59,9 @@ class UsersController < ApplicationController
   def show_orders
     @user = User.find(params[:id])
     @deliveries = @user.deliveries.order(delivery_date: :desc)
+                                  .eager_load(:delivery_status, :payment_status, :user,
+                                              :address, :packs, :menus, :kickerrs)
+    @riders = User.with_role(:rider).map { |rider| [rider.name, rider.id] } << nil
   end
 
   private
