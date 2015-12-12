@@ -20,7 +20,7 @@
 		<br>
 		<%= delivery.delivery_date %>
 		<br>
-		<h5><%= delivery.at.strftime("%I:%M%p") %></h5>
+		<h5><%= "Despatch at: " + (delivery.at - 30.minutes).strftime("%I:%M%p") %></h5>
 		<br>
 	</td>
 	<td>
