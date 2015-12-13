@@ -14,7 +14,7 @@ class DeliveriesController < ApplicationController
 		@delivery_statuses = DeliveryStatus.all
 		@payment_statuses = PaymentStatus.all
 		@addresses = @user.addresses.map { |addr| [addr.postal_address.split('')
-												   .first(40).join + '...', addr.id] }
+												   	   .first(40).join + '...', addr.id] }
 		menus_on(active_menu_date).each do |menu|
 			@delivery.packs.build(menu_id: menu.id, kickerr_name: menu.kickerr.name)
 		end
@@ -129,10 +129,8 @@ class DeliveriesController < ApplicationController
 	end
 
 	def correct_user
-		return true if current_user.admin?
-		user = @delivery.user
-		redirect_to root_path unless current_user?(user)
-		return false
+		user_id = @delivery.user_id
+		redirect_to root_path unless current_user.id == user_id || current_user.admin?
 	end
 
     def operator_user
