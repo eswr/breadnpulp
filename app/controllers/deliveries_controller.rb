@@ -6,7 +6,6 @@ class DeliveriesController < ApplicationController
 											   :future_deliveries, :todays_deliveries, :despatch_delivery]
 	before_action :operator_user, 		only: [:todays_deliveries, :chef_view, :despatch_delivery]
 	before_action :get_riders,			only: [:todays_deliveries, :index, :recent_deliveries, :future_deliveries]
-	before_action :correct_user,		only: [:create]
 
 	def new
 		@delivery = Delivery.new(delivery_params)
@@ -31,12 +30,17 @@ class DeliveriesController < ApplicationController
 			@delivery.delivery_status = DeliveryStatus.find_by(name: 'Tentative')
 		end
 		@delivery.payment_status = PaymentStatus.find_by(name: 'Payment Due')
-		if @delivery.save
-			flash[:success] = "Order successfully placed"
-			redirect_to @delivery.user
+		if correct_user
+			if @delivery.save
+				flash[:success] = "Order successfully placed"
+				redirect_to @delivery.user
+			else
+				flash.now[:danger] = "Order not placed. Please make sure you've added an address first."
+				render 'new'
+			end
 		else
-			flash.now[:danger] = "Order not placed. Please make sure you've added an address first."
-			render 'new'
+			flash[:danger] = "haha! nice try!!"
+			redirect_to root_path
 		end
 	end
 
@@ -129,8 +133,11 @@ class DeliveriesController < ApplicationController
 	end
 
 	def correct_user
-		user_id = @delivery.user_id
-		redirect_to root_path unless current_user.id == user_id || current_user.admin?
+		if current_user.id == @delivery.user_id || current_user.admin?
+			return true
+		else
+			return false
+		end
 	end
 
     def operator_user
