@@ -6,7 +6,7 @@ class DeliveriesController < ApplicationController
 											   :future_deliveries, :todays_deliveries, :despatch_delivery]
 	before_action :operator_user, 		only: [:todays_deliveries, :chef_view, :despatch_delivery]
 	before_action :get_riders,			only: [:todays_deliveries, :index, :recent_deliveries, :future_deliveries]
-	before_action :correct_user,		only: [:new, :create]
+	before_action :correct_user,		only: [:create]
 
 	def new
 		@delivery = Delivery.new(delivery_params)
