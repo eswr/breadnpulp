@@ -82,7 +82,7 @@ class UsersController < ApplicationController
 
     # Confirms the correct user.
     def correct_user
-      return true if current_user.id == 1
+      return true if current_user.admin?
       @user = User.find(params[:id])
       redirect_to(root_url) unless current_user?(@user)
     end
