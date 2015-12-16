@@ -49,6 +49,7 @@ class DeliveriesController < ApplicationController
 				render 'new'
 			end
 		end
+		@date = active_menu_date
 	end
 
 	def show
