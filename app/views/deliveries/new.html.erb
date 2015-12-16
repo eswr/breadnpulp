@@ -1,7 +1,7 @@
 <% provide(:title, "New Order") %>
 <div class="container">
 
-<h1><%= dayify @date %> menu</h2>
+<h1><%= dayify @date %> menu</h1>
 <h5><small>Available in Powai, Chandivali, Hiranandani, Sakinaka, Marol and Andheri E</small></h5>
 
 <%= form_for @delivery do |delivery_form| %>
@@ -46,13 +46,17 @@
 		</div>
 
 		<div class="col-md-4">
-			<%= delivery_form.hidden_field :user_id, :value => @user.id %>
+			<%= delivery_form.hidden_field :user_id, :value => @delivery.user.id %>
 			<h3>Delivery address</h3>
-			<%= delivery_form.select(:address_id, @addresses, {}, { :class => 'form-control' }) %>
+			<%= delivery_form.select(:address_id,
+									 @delivery.user.addresses
+											  .map { |addr| [addr.postal_address, addr.id] },
+									 {}, { :class => 'form-control' }) %>
 		</div>
 		<div class="col-md-4">
 			<h3>Coupon code</h3>
 			<%= delivery_form.text_field :coupon_code, class: 'form-control' %>
+			<%= delivery_form.submit "Check coupon", class: 'btn btn-info', style: 'color: black;' %>
 		</div>
 	</div>
 
@@ -60,10 +64,10 @@
 		<% if current_user.admin? %>
 			<h3>Admin controls</h3>
 			<%= delivery_form.label :delivery_status %>
-			<%= delivery_form.select(:delivery_status_id, ((@delivery_statuses).map { |status| [status.name, status.id] })) %>
+			<%= delivery_form.select(:delivery_status_id, ((DeliveryStatus.all).map { |status| [status.name, status.id] })) %>
 			<br>
 			<%= delivery_form.label :payment_status %>
-			<%= delivery_form.select(:payment_status_id, ((@payment_statuses).map { |status| [status.name, status.id] })) %>
+			<%= delivery_form.select(:payment_status_id, ((PaymentStatus.all).map { |status| [status.name, status.id] })) %>
 			<br>
 			<%= delivery_form.label :payment_date %>
 			<%= delivery_form.date_field :payment_date %>

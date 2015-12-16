@@ -9,11 +9,6 @@ class DeliveriesController < ApplicationController
 
 	def new
 		@delivery = Delivery.new(delivery_params)
-		@user = @delivery.user
-		@delivery_statuses = DeliveryStatus.all
-		@payment_statuses = PaymentStatus.all
-		@addresses = @user.addresses.map { |addr| [addr.postal_address.split('')
-												   	   .first(40).join + '...', addr.id] }
 		menus_on(active_menu_date).each do |menu|
 			@delivery.packs.build(menu_id: menu.id, kickerr_name: menu.kickerr.name)
 		end
@@ -30,17 +25,29 @@ class DeliveriesController < ApplicationController
 			@delivery.delivery_status = DeliveryStatus.find_by(name: 'Tentative')
 		end
 		@delivery.payment_status = PaymentStatus.find_by(name: 'Payment Due')
-		if correct_user
-			if @delivery.save
-				flash[:success] = "Order successfully placed"
-				redirect_to @delivery.user
+		if params[:commit] == 'Place order'
+			if correct_user
+				if @delivery.save
+					flash[:success] = "Order successfully placed"
+					redirect_to @delivery.user
+				else
+					flash.now[:danger] = "Order not placed. Please make sure you've added an address first."
+					render 'new'
+				end
 			else
-				flash.now[:danger] = "Order not placed. Please make sure you've added an address first."
+				flash[:danger] = "haha! nice try!!"
+				redirect_to root_path
+			end
+		elsif params[:commit] == 'Check coupon'
+			coupon = Coupon.find_by(code: params[:delivery][:coupon_code])
+			puts coupon
+			if coupon && coupon.active?
+				flash.now[:info] = 'Coupon code validated. Please place the order'
+				render 'new'
+			else
+				flash.now[:warning] = 'Coupon code not validated'
 				render 'new'
 			end
-		else
-			flash[:danger] = "haha! nice try!!"
-			redirect_to root_path
 		end
 	end
 
