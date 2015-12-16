@@ -19,6 +19,9 @@ class DeliveriesController < ApplicationController
 	def create
 		@delivery = Delivery.new(delivery_params)
 		@delivery.delivery_date = active_menu_date
+		menus_on(active_menu_date).each do |menu|
+			@delivery.packs.build(menu_id: menu.id, kickerr_name: menu.kickerr.name)
+		end
 		if current_user.admin?
 			@delivery.delivery_status = DeliveryStatus.find_by(name: 'Confirmed')
 		else

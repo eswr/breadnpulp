@@ -9,7 +9,7 @@
 	<%= render 'shared/error_messages', object: delivery_form.object %>
 	
 	<div class="row">
-		<% @delivery.packs.group_by(&:kickerr_name).each do |kickerr_name, packs| %>
+		<% @delivery.packs.group_by(&:kickerr_name).each do |packs| %>
 			<div class="col-md-4">
 				<div class="panel panel-default">
 					<%= render packs.first.menu %>
