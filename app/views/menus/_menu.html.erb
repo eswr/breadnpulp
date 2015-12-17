@@ -1,3 +1,8 @@
 <div style="text-align: center;">
-	<%= render menu.kickerr %>
+	<%= link_to render menu.kickerr,
+				if logged_in?
+					new_delivery_path(:delivery => { user_id: @user.id })
+				else
+					login_path
+				end %>
 </div>
