@@ -5,7 +5,12 @@
 	<div class="panel-body">
 		<div class="row">
 			<%= link_to(image_tag(kickerr.food_items.where(show_image: true).first.image.url :medium),
-						new_delivery_path(:delivery => { user_id: @user.id })) %>
+						if logged_in?
+							new_delivery_path(:delivery => { user_id: @user.id })
+						else
+							login_path
+						end
+						) %>
 		</div>
 		<br>
 		<p><%= kickerr.description %></p>
