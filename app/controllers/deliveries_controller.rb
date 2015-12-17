@@ -41,16 +41,16 @@ class DeliveriesController < ApplicationController
 				flash[:danger] = "haha! nice try!!"
 				redirect_to root_path
 			end
-		elsif params[:commit] == 'Check coupon'
-			coupon = Coupon.find_by(code: params[:delivery][:coupon_code].upcase!)
-			puts coupon
-			if coupon && coupon.active?
-				flash.now[:info] = 'Coupon code validated. Please place the order'
-				render 'new'
-			else
-				flash.now[:warning] = 'Coupon code not validated'
-				render 'new'
-			end
+		# elsif params[:commit] == 'Check coupon'
+		# 	coupon = Coupon.find_by(code: params[:delivery][:coupon_code].upcase!)
+		# 	puts coupon
+		# 	if coupon && coupon.active?
+		# 		flash.now[:info] = 'Coupon code validated. Please place the order'
+		# 		render 'new'
+		# 	else
+		# 		flash.now[:warning] = 'Coupon code not validated'
+		# 		render 'new'
+		# 	end
 		end
 		@date = active_menu_date
 	end
