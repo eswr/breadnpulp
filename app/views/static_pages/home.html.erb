@@ -37,6 +37,7 @@
                 <%= link_to "Make an order", new_delivery_path(:delivery => { user_id: @user.id }), class: "btn btn-xl text-center", style: "color: black;" %>
             <% else %>
                 <%= link_to "Sign Up", new_user_path, class: "btn btn-xl text-center", style: "color: black;" %>
+                <%= link_to "Log in", login_path, class: "btn btn-xl text-center", style: "color: black;" %>
             <% end %>
             </div>
         </div>
