@@ -5,7 +5,6 @@ class StaticPagesController < ApplicationController
 			menu.kickerr_name = menu.get_kickerr_name
 		end
 		@date = active_menu_date
-		@user = current_user
 	end
 
 	def about

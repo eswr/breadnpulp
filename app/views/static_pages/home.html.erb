@@ -30,7 +30,7 @@
                 <div class="col-md-4">
                     <%= link_to render menus.first,
                         if logged_in?
-                            new_delivery_path(:delivery => { user_id: @user.id })
+                            new_delivery_path(:delivery => { user_id: current_user.id })
                         else
                             login_path
                         end %>
@@ -39,7 +39,7 @@
         </div>
         <div style="text-align: center;">
             <% if logged_in? %>
-                <%= link_to "Make an order", new_delivery_path(:delivery => { user_id: @user.id }), class: "btn btn-xl text-center", style: "color: black;" %>
+                <%= link_to "Make an order", new_delivery_path(:delivery => { user_id: current_user.id }), class: "btn btn-xl text-center", style: "color: black;" %>
             <% else %>
                 <%= link_to "Sign Up", new_user_path, class: "btn btn-xl text-center", style: "color: black;" %>
                 <%= link_to "Log in", login_path, class: "btn btn-xl text-center", style: "color: black;" %>
