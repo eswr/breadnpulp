@@ -19,9 +19,9 @@ module ApplicationHelper
 
 	def dayify(date)
 		if date == Time.zone.today
-			"Today's Breakfast"
+			"Today's Menu"
 		elsif date == Time.zone.tomorrow
-			"Tomorrow's Breakfast"
+			"Tomorrow's Menu"
 		else
 			"Next"
 		end
