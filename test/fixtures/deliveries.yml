@@ -19,6 +19,7 @@
 #  despatch_id        :integer
 #  drop_id            :integer
 #  coupon_code        :string
+#  rider_id           :integer
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

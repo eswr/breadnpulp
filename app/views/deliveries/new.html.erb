@@ -1,7 +1,7 @@
 <% provide(:title, "New Order") %>
 <div class="container">
 
-<h1><%= dayify @date %> menu</h1>
+<h1><%= dayify @date %></h1>
 <h5><small>Available in Powai, Chandivali, Hiranandani, Sakinaka, Marol and Andheri E</small></h5>
 
 <%= form_for @delivery do |delivery_form| %>
@@ -40,12 +40,12 @@
 		<% end %>
 	</div>
 	<div class="row">
-		<div class="col-md-4">
+		<div class="col-md-3">
 			<h3>Deliver before</h3>
 			<%= delivery_form.select(:at, available_slots.map { |slot| [slot.strftime("%l:%M %p"), slot]}, {}, { :class => 'form-control' }) %>
 		</div>
 
-		<div class="col-md-4">
+		<div class="col-md-3">
 			<%= delivery_form.hidden_field :user_id, :value => @delivery.user.id %>
 			<h3>Delivery address</h3>
 			<%= delivery_form.select(:address_id,
@@ -53,9 +53,14 @@
 											  .map { |addr| [addr.postal_address, addr.id] },
 									 {}, { :class => 'form-control' }) %>
 		</div>
-		<div class="col-md-4">
+		<div class="col-md-3">
 			<h3>Coupon code</h3>
 			<%= delivery_form.text_field :coupon_code, class: 'form-control' %>
+		</div>
+		<div class="col-md-3">
+			<h3>Payment mode</h3>
+			<%= delivery_form.select(:payment_mode, @payment_modes, {}, { :class => 'form-control' }) %>
+			<br>
 		</div>
 	</div>
 
@@ -70,9 +75,6 @@
 			<br>
 			<%= delivery_form.label :payment_date %>
 			<%= delivery_form.date_field :payment_date %>
-			<br>
-			<%= delivery_form.label :payment_mode %>
-			<%= delivery_form.text_field :payment_mode %>
 			<br>
 		<% end %>
 	</div>

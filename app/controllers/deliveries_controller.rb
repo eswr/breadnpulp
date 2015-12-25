@@ -14,6 +14,7 @@ class DeliveriesController < ApplicationController
 		end
 		@menus = menus_on(active_menu_date)
 		@date = active_menu_date
+		@payment_modes = ['Cash on delivery', 'Other']
 	end
 
 	def create
@@ -28,29 +29,17 @@ class DeliveriesController < ApplicationController
 			@delivery.delivery_status = DeliveryStatus.find_by(name: 'Tentative')
 		end
 		@delivery.payment_status = PaymentStatus.find_by(name: 'Payment Due')
-		if params[:commit] == 'Place order'
-			if correct_user
-				if @delivery.save
-					flash[:success] = "Order successfully placed"
-					redirect_to @delivery.user
-				else
-					flash.now[:danger] = "Order not placed. Please make sure you've added an address first."
-					render 'new'
-				end
+		if correct_user
+			if @delivery.save
+				flash[:success] = "Order successfully placed"
+				redirect_to @delivery.user
 			else
-				flash[:danger] = "haha! nice try!!"
-				redirect_to root_path
+				flash.now[:danger] = "Order not placed. Please make sure you've added an address first."
+				render 'new'
 			end
-		# elsif params[:commit] == 'Check coupon'
-		# 	coupon = Coupon.find_by(code: params[:delivery][:coupon_code].upcase!)
-		# 	puts coupon
-		# 	if coupon && coupon.active?
-		# 		flash.now[:info] = 'Coupon code validated. Please place the order'
-		# 		render 'new'
-		# 	else
-		# 		flash.now[:warning] = 'Coupon code not validated'
-		# 		render 'new'
-		# 	end
+		else
+			flash[:danger] = "haha! nice try!!"
+			redirect_to root_path
 		end
 		@date = active_menu_date
 	end

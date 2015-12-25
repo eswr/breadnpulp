@@ -19,6 +19,7 @@
 #  despatch_id        :integer
 #  drop_id            :integer
 #  coupon_code        :string
+#  rider_id           :integer
 #
 
 class Delivery < ActiveRecord::Base
@@ -46,11 +47,11 @@ class Delivery < ActiveRecord::Base
   # accepts_nested_attributes_for :address, reject_if: lambda { |attributes| attributes[:full_address].nil? }
 
   def get_total_amount
-  	total_amount = 0
+  	total_amt = 0
   	self.packs.each do |pack|
-  		total_amount += pack.get_unit_price * pack.quantity
+  		total_amt += pack.get_unit_price * pack.quantity
   	end
-  	total_amount
+  	total_amt
   end
 
   def get_b_no
