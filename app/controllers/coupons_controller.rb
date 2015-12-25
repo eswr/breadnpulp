@@ -5,7 +5,7 @@ class CouponsController < ApplicationController
 
 	def new
 		@coupon = Coupon.new
-		@coupons = Coupon.all
+		@coupons = Coupon.all.order(active: :desc)
 	end
 
 	def create
@@ -32,6 +32,13 @@ class CouponsController < ApplicationController
 			flash.now[:danger] = "Nooo! Please try again"
 			render 'edit'
 		end
+	end
+
+	def destroy
+		@coupon = Coupon.find(params[:id])
+		flash[:success] = "#{@coupon.code} deleted!"
+		@coupon.destroy
+		redirect_to new_coupon_path
 	end
 
 	private

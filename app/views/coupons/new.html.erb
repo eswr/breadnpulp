@@ -8,11 +8,20 @@
 	<div class="col-md-8">
 		<h2>All Coupons</h2>
 		<% @coupons.each do |coupon| %>
-			<%= coupon.code %><br>
-			<%= coupon.original_price %><br>
-			<%= coupon.final_price %><br>
-			<%= coupon.active %><br>
-			<%= link_to "edit", edit_coupon_path(coupon) %><br>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<%= coupon.code %>
+				</div>
+				<div class="panel-body">
+					Original price - <%= coupon.original_price %><br>
+					Final price - <%= coupon.final_price %><br>
+					Active? - <%= coupon.active %><br>
+				</div>
+				<div class="panel-footer">
+					<%= link_to "edit", edit_coupon_path(coupon) %> |
+				 <%= link_to "delete", coupon, method: :delete, data: { confirm: "You sure?" } %><br>
+			 	</div>
+		 	</div>
 		<% end %>
 	</div>
 </div>
