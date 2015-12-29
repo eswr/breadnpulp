@@ -20,6 +20,7 @@ class Ftcash
 			"checksum"	=> Ftcash.get_checksum(amount, delivery.booking_no)
 		}
 		response = self.post("/app/temp/verifymerchant.php", body: @query, debug_output: $stdout)
+		return response
 	end
 
 	private
