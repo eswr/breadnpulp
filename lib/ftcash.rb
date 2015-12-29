@@ -20,7 +20,7 @@ class Ftcash
 			"checksum"	=> Ftcash.get_checksum(amount, delivery.booking_no)
 		}
 		response = self.post("/app/temp/verifymerchant.php", body: @query, debug_output: $stdout)
-		puts response.parsed_response
+		puts "YoYo:::" + response.parsed_response
 		return response
 	end
 
