@@ -1,0 +1,8 @@
+<form action="https://www.ftcash.com/app/fmc/pay" method="post" name="myform">
+	<input type='hidden' name='mid' value='6104'>
+	<input type='hidden' name='orderid' value=<%= @delivery.booking_no %>>
+	<input type='hidden' name='amount' value=<%= delivery.get_total_amount %>>
+</form>
+<script>
+	document.myform.submit();
+</script>
