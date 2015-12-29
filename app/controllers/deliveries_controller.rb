@@ -14,7 +14,7 @@ class DeliveriesController < ApplicationController
 		end
 		@menus = menus_on(active_menu_date)
 		@date = active_menu_date
-		@payment_modes = ['Cash on delivery', 'Other']
+		@payment_modes = ['Online - FTCash', 'Cash on delivery', 'Other']
 	end
 
 	def create
@@ -31,8 +31,12 @@ class DeliveriesController < ApplicationController
 		@delivery.payment_status = PaymentStatus.find_by(name: 'Payment Due')
 		if correct_user
 			if @delivery.save
-				flash[:success] = "Order successfully placed"
-				redirect_to @delivery.user
+				if @delivery.payment_mode == 'Online - FTCash'
+					Ftcash.make_payment @delivery
+				else
+					flash[:success] = "Order successfully placed"
+					redirect_to @delivery.user
+				end
 			else
 				flash.now[:danger] = "Order not placed. Please make sure you've added an address first."
 				render 'new'

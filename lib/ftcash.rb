@@ -15,27 +15,18 @@ class Ftcash
 			"amount"	=> amount,
 			"cell"		=> user.phone_number,
 			"orderid"	=> delivery.booking_no,
-			"mid"		=> Ftcash.MID,
+			"mid"		=> ENV['FTCASH_MID'],
 			"name"		=> user.name,
 			"checksum"	=> Ftcash.get_checksum(amount, delivery.booking_no)
 		}
 		response = self.post("/app/temp/verifymerchant.php", body: @query, debug_output: $stdout)
-		puts response.body
 	end
 
 	private
 
-		def Ftcash.MID
-			"6104"
-		end
-
-		def Ftcash.SECRET
-			"EWd3O1QtPM0fDU6l"
-		end
-
 		def Ftcash.get_checksum(amount, booking_no)
-			full_string = "'" + amount.to_s + "''" + booking_no + "''" + Ftcash.MID + "'"
-			OpenSSL::HMAC.hexdigest('sha256', full_string, Ftcash.SECRET)
+			full_string = "'" + amount.to_s + "''" + booking_no + "''" + ENV["FTCASH_MID"] + "'"
+			OpenSSL::HMAC.hexdigest('sha256', ENV['FTCASH_SECRET'], full_string)
 		end
 
 end
