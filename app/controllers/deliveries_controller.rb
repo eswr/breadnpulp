@@ -33,7 +33,7 @@ class DeliveriesController < ApplicationController
 			if @delivery.save
 				if @delivery.payment_mode == 'Online - FTCash'
 					response = Ftcash.make_payment @delivery
-					render response
+					render response.parsed_response
 				else
 					flash[:success] = "Order successfully placed"
 					redirect_to @delivery.user
