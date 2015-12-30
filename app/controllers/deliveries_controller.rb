@@ -14,7 +14,7 @@ class DeliveriesController < ApplicationController
 		end
 		@menus = menus_on(active_menu_date)
 		@date = active_menu_date
-		@payment_modes = ['Online - FTCash', 'Cash on delivery', 'Other']
+		@payment_modes = ['Cash on delivery', 'Other']
 	end
 
 	def create
