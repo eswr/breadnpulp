@@ -14,7 +14,7 @@ class DeliveriesController < ApplicationController
 		end
 		@menus = menus_on(active_menu_date)
 		@date = active_menu_date
-		@payment_modes = ['Cash on delivery', 'Other']
+		@payment_modes = ['Online payment', 'Cash on delivery', 'Other']
 	end
 
 	def create
@@ -31,7 +31,7 @@ class DeliveriesController < ApplicationController
 		@delivery.payment_status = PaymentStatus.find_by(name: 'Payment Due')
 		if correct_user
 			if @delivery.save
-				if @delivery.payment_mode == 'Online - FTCash'
+				if @delivery.payment_mode == 'Online payment'
 					Ftcash.make_payment @delivery
 					url = "https://www.ftcash.com/app/fmc/pay?mid=#{ENV["FTCASH_MID"]}&orderid=#{@delivery.booking_no}&amount=#{@delivery.get_total_amount}"
 					redirect_to url
