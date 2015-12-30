@@ -32,8 +32,7 @@ class DeliveriesController < ApplicationController
 		if correct_user
 			if @delivery.save
 				if @delivery.payment_mode == 'Online payment'
-					Ftcash.make_payment @delivery
-					url = "https://www.ftcash.com/app/fmc/pay?mid=#{ENV["FTCASH_MID"]}&orderid=#{@delivery.booking_no}&amount=#{@delivery.get_total_amount}"
+					url = Ftcash.make_payment @delivery
 					redirect_to url
 				else
 					flash[:success] = "Order successfully placed"

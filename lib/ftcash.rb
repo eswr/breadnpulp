@@ -20,8 +20,7 @@ class Ftcash
 			"checksum"	=> Ftcash.get_checksum(amount, delivery.booking_no)
 		}
 		response = self.post("/app/temp/verifymerchant.php", body: @query, debug_output: $stdout)
-		puts "YoYo:::" + response.parsed_response
-		return response
+		return "https://www.ftcash.com/app/fmc/pay?mid=#{ENV["FTCASH_MID"]}&orderid=#{delivery.booking_no}&amount=#{delivery.get_total_amount}&back_to=www.breadnpulp.com/users/#{delivery.user.id}"
 	end
 
 	private
