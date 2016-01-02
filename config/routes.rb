@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   get     'recent_orders'   => 'deliveries#recent_deliveries'
   get     'chef_view'       => 'deliveries#chef_view'
   get     'despatch_order'  => 'deliveries#despatch_delivery'
+  get     'ftcash_payment'  => 'deliveries#ftcash_payment'
 
   get     'foodiecalls'   => 'food_alerts#index'
 

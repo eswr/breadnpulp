@@ -6,7 +6,7 @@ class Ftcash
 
 	base_uri "https://www.ftcash.com"
 
-	def self.make_payment(delivery)
+	def self.create_payment_order(delivery)
 		user = delivery.user
 		amount = delivery.get_total_amount
 
@@ -19,8 +19,7 @@ class Ftcash
 			"name"		=> user.name,
 			"checksum"	=> Ftcash.get_checksum(amount, delivery.booking_no)
 		}
-		response = self.post("/app/temp/verifymerchant.php", body: @query, debug_output: $stdout)
-		return "https://www.ftcash.com/app/fmc/pay?mid=#{ENV["FTCASH_MID"]}&orderid=#{delivery.booking_no}&amount=#{delivery.get_total_amount}&back_to=www.breadnpulp.com/users/#{delivery.user.id}"
+		self.post("/app/temp/verifymerchant.php", body: @query, debug_output: $stdout)
 	end
 
 	private

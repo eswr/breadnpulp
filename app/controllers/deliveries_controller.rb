@@ -32,8 +32,8 @@ class DeliveriesController < ApplicationController
 		if correct_user
 			if @delivery.save
 				if @delivery.payment_mode == 'Online payment'
-					url = Ftcash.make_payment @delivery
-					redirect_to url
+					Ftcash.create_payment_order @delivery
+					redirect_to ftcash_payment_path(id: @delivery.id)
 				else
 					flash[:success] = "Order successfully placed"
 					redirect_to @delivery.user
@@ -111,6 +111,10 @@ class DeliveriesController < ApplicationController
 		@delivery = Delivery.find(params[:id])
 		@delivery.despatch_and_send_sms
 		redirect_to :back
+	end
+
+	def ftcash_payment
+		@delivery = Delivery.find(params[:id])
 	end
 
 	private
