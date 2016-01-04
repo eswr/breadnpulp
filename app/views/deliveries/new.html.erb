@@ -59,8 +59,16 @@
 		</div>
 		<div class="col-md-3">
 			<h3>Payment mode</h3>
-			<%= delivery_form.select(:payment_mode, @payment_modes, {}, { :class => 'form-control' }) %>
-			<br>
+			<div class="field">
+				<% @payment_modes.each do |key, value| %>
+					<div style="padding: 3px;">
+						<div class="form-control">
+						    <%= delivery_form.radio_button :payment_mode, true, class: 'btn btn-primary', checked: value %>
+						    <%= delivery_form.label :payment_mode, key, :value => key  %><br>
+					    </div>
+				    </div>
+				<% end %>
+			</div>
 		</div>
 	</div>
 
