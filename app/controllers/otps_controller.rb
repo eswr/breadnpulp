@@ -36,7 +36,7 @@ class OtpsController < ApplicationController
 	private
 
 		def check_if_number
-			redirect_to login_path if params[:otp][:phone_number].nil?
+			redirect_to login_path if params[:otp].nil?
 		end
 
 		def not_logged_in
