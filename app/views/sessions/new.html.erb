@@ -4,6 +4,7 @@
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
+    <h3>Via Email</h3>
     <%= form_for(:session, url: login_path) do |f| %>
 
       <%= f.label :email %>
@@ -19,6 +20,15 @@
       <% end %>
 
       <%= f.submit "Log in", class: "btn btn-primary", style: "color: black;" %>
+    <% end %>
+
+    <h3>Or Via OTP</h3>
+
+    <%= form_for(:otp, url: get_otp_path) do |f| %>
+      <%= f.label :phone_number %>
+      <%= f.text_field :phone_number, class: 'form-control' %>
+
+      <%= f.submit "Send OTP", class: "btn btn-primary", style: "color: black;" %>
     <% end %>
 
     <h2>New user? <%= link_to "Sign up now!", signup_path, class: "btn btn-primary", style: "color: black;" %></h2>

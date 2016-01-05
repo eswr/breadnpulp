@@ -1,0 +1,17 @@
+<div class="container">
+	<h1>Enter OTP</small> </h1>
+	<h4>An sms is sent to <%= @phone_number %></h4>
+
+	<div class="row">
+		<div class="col-md-2 col-md-offset-5">
+			<%= form_for(:otp, url: check_otp_path) do |f| %>
+				<%= f.label "OTP" %>
+				<%= f.text_field :otp, class: 'form-control' %><br>
+
+				<%= f.hidden_field :phone_number, value: @phone_number %>
+
+				<%= f.submit "Log in", class: 'btn btn-primary', style: "color-black" %>
+			<% end %>
+		</div>
+	</div>
+</div>

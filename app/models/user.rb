@@ -44,13 +44,14 @@ class User < ActiveRecord::Base
 										uniqueness: { case_sensitive: false }
 
 	has_secure_password
+	has_one_time_password length: 4
+
 	validates 	:password,				presence: true,
 										length: { minimum: 6 },
 										allow_nil: true
 
 	has_many	:addresses
 	has_many	:deliveries
-	has_many	:packs, through: :deliveries
 	has_many	:subscriptions
 
 	has_one		:food_alert
@@ -95,6 +96,12 @@ class User < ActiveRecord::Base
 	# Sends activation email.
   	def send_activation_email
 	    UserMailer.account_activation(self).deliver_now
+  	end
+
+  	def send_otp
+  		Msg91.delay.send_sms(phone_number, "OTP: #{self.otp_code}")
+  		puts "OTP!!!"
+  		puts self.otp_code
   	end
 
   	# Sets the password reset attributes.

@@ -20,6 +20,9 @@ GEM
       erubis (~> 2.7.0)
       rails-dom-testing (~> 1.0, >= 1.0.5)
       rails-html-sanitizer (~> 1.0, >= 1.0.2)
+    active_model_otp (1.2.0)
+      activemodel
+      rotp
     activejob (4.2.4)
       activesupport (= 4.2.4)
       globalid (>= 0.3.0)
@@ -152,6 +155,7 @@ GEM
     rake (10.4.2)
     rdoc (4.2.0)
     rolify (5.0.0)
+    rotp (2.1.1)
     ruby-graphviz (1.2.2)
     sass (3.4.18)
     sass-rails (5.0.4)
@@ -192,6 +196,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_model_otp
   acts_as_shopping_cart (~> 0.2.1)
   aws-s3
   aws-sdk (< 2.0)

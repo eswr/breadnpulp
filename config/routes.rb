@@ -42,6 +42,10 @@ Rails.application.routes.draw do
   post     'roles' => 'roles#index'
   get      'remove_role' => 'roles#remove_role'
 
+  get      'get_otp' => 'otps#new'
+  post     'get_otp' => 'otps#new'
+  post     'check_otp' => 'otps#create'
+
   resources :users
   resources :account_activations, only: [:edit]
   resources :password_resets,     only: [:new, :create, :edit, :update]
