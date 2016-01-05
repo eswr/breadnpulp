@@ -1,6 +1,7 @@
 class OtpsController < ApplicationController
 
-	before_action :check_if_number
+	before_action :check_if_number, only: :new
+	before_action :not_logged_in,   only: :new
 
 	def new
 		@phone_number = params[:otp][:phone_number]
@@ -36,5 +37,9 @@ class OtpsController < ApplicationController
 
 		def check_if_number
 			redirect_to login_path if params[:otp][:phone_number].nil?
+		end
+
+		def not_logged_in
+			redirect_to current_user if logged_in?
 		end
 end
