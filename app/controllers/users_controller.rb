@@ -20,8 +20,8 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       @user.send_activation_email
-      @user.send_activation_otp
-      redirect_to check_otp_path otp: { phone_number: @user.phone_number }
+      @user.send_otp
+      redirect_to get_otp_path otp: { phone_number: @user.phone_number }
     else
       render 'new'
     end
