@@ -21,7 +21,7 @@ class UsersController < ApplicationController
     if @user.save
       @user.send_activation_email
       @user.send_activation_otp
-      redirect_to check_otp_path phone_number: @user.phone_number
+      redirect_to check_otp_path otp: { phone_number: @user.phone_number }
     else
       render 'new'
     end
