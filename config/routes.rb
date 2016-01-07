@@ -19,7 +19,13 @@ Rails.application.routes.draw do
   get     'todays_orders'   => 'deliveries#todays_deliveries'
   get     'recent_orders'   => 'deliveries#recent_deliveries'
   get     'chef_view'       => 'deliveries#chef_view'
+
+  get     'confirm_order'   => 'deliveries#confirmch_delivery'
+  get     'cancel_order'    => 'deliveries#cancel_delivery'
   get     'despatch_order'  => 'deliveries#despatch_delivery'
+  get     'return_order'    => 'deliveries#return_delivery'
+  get     'deliver_order'   => 'deliveries#delivery_delivery'
+
   get     'ftcash_payment'  => 'deliveries#ftcash_payment'
 
   get     'foodiecalls'   => 'food_alerts#index'

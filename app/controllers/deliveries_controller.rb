@@ -110,9 +110,33 @@ class DeliveriesController < ApplicationController
 		@rows = Delivery.get_chef_view_rows
 	end
 
+	def confirm_delivery
+		@delivery = Delivery.find(params[:id])
+		@delivery.confirm_and_send_sms
+		redirect_to :back
+	end
+
+	def cancel_delivery
+		@delivery = Delivery.find(params[:id])
+		@delivery.cancel_and_send_sms
+		redirect_to :back
+	end
+
 	def despatch_delivery
 		@delivery = Delivery.find(params[:id])
 		@delivery.despatch_and_send_sms
+		redirect_to :back
+	end
+
+	def return_delivery
+		@delivery = Delivery.find(params[:id])
+		@delivery.return_and_send_sms
+		redirect_to :back
+	end
+
+	def delivery_delivery
+		@delivery = Delivery.find(params[:id])
+		@delivery.delivery_and_send_sms
 		redirect_to :back
 	end
 

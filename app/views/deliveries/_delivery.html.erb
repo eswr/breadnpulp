@@ -44,7 +44,14 @@
 		<% else %>
 			<%= "Rider: #{delivery.rider.name} | #{delivery.rider.phone_number}" %><br>
 		<% end %>
-		<% if delivery.delivery_status.name == 'Confirmed' %>
+		<% if delivery.delivery_status.name == 'Tentative' %>
+			<%= link_to "mark as confirmed", confirm_order_path(id: delivery.id),
+											 data: { confirm: "Are you sure you have confirmed #{delivery.user.name}'s order?" },
+											 class: 'btn btn-info btn-xs' %> | 
+			<%= link_to "mark as cancelled", cancel_order_path(id: delivery.id),
+											 data: { confirm: "Are you sure you want to cancel #{delivery.user.name}'s order?" },
+											 class: 'btn btn-info warning-xs' %>
+		<% elsif delivery.delivery_status.name == 'Confirmed' %>
 			<%= link_to "mark as despatched", despatch_order_path(id: delivery.id),
 											  data: { :confirm => "Are you sure you have despatched #{delivery.user.name}'s order?" },
 											  class: 'btn btn-danger btn-xs' %>
@@ -55,6 +62,13 @@
 										 data: { :confirm => "Are you sure you want to assign rider to #{delivery.user.name}'s order?" },
 										 class: 'btn btn-info btn-sm', style: 'color: black;' %><br>
 			<% end %>
+		<%= elsif delivery.delivery_status.name == 'Despatched' %>
+			<%= link_to "mark as returned", return_order_path(id: delivery.id),
+											 data: { confirm: "Are you sure you have confirmed #{delivery.user.name}'s order?" },
+											 class: 'btn btn-info btn-xs' %> | 
+			<%= link_to "mark as delivered", deliver_order_path(id: delivery.id),
+											 data: { confirm: "Are you sure you have delivered #{delivery.user.name}'s order?" }
+											 class: 'btn btn-success btn-xs' %><br>
 		<% end %>
 	</td>
 </tr>

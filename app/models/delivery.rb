@@ -98,11 +98,30 @@ class Delivery < ActiveRecord::Base
     end
   end
 
+  def confirm_and_send_sms
+    update_attribute :delivery_status_id, 2
+    Msg91.delay.send_sms(user.phone_number, user_confirmation_text)
+  end
+
+  def cancel_and_send_sms
+    update_attribute :delivery_status_id, 8
+    # Msg91.delay.send_sms(user.phone_number, "")
+  end
+
   def despatch_and_send_sms
     update_attribute :delivery_status_id, 4
     Msg91.delay.send_sms(user.phone_number, get_user_text)
-    Msg91.delay.send_sms("9892500082,9167464726,7506244659", get_rider_text)
     Msg91.delay.send_sms("#{rider.phone_number}", get_rider_text) if rider.nil? == false
+  end
+
+  def return_and_send_sms
+    update_attribute :delivery_status_id, 7
+    # Msg91.delay.send_sms(user.phone_number, get_user_text)
+  end
+
+  def delivery_and_send_sms
+    update_attribute :delivery_status_id, 5
+    # Msg91.delay.send_sms(user.phone_number, get_user_text)
   end
 
   def rider
@@ -113,6 +132,15 @@ class Delivery < ActiveRecord::Base
 
 
   private
+
+    def user_confirmation_text
+      text = "Hi #{user.name.split(' ').first}! Your order for: "
+      packs.each do |pack|
+        text += "#{pack.menu.kickerr.name}(#{pack.menu.kickerr.kickerr_size}): #{pack.quantity}. "
+      end
+      text += "has been confirmed."
+      return text
+    end
 
     def get_user_text
       text = "Hello #{user.name}! Your order has been despatched. "
@@ -126,7 +154,7 @@ class Delivery < ActiveRecord::Base
       text = "Order for #{user.name} - #{user.phone_number}. "
       text += "#{address.postal_address}. "
       packs.each do |pack|
-        text += "#{pack.menu.kickerr.name}: #{pack.quantity}. "
+        text += "#{pack.menu.kickerr.name}(pack.menu.kickerr.kickerr_size): #{pack.quantity}. "
       end
       text += "#{at.strftime "%I:%M%p"}."
       if payment_date == Time.zone.now.to_date
