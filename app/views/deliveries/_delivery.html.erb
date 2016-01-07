@@ -61,7 +61,6 @@
 				<%= delivery_form.submit :assign_rider, 
 										 data: { :confirm => "Are you sure you want to assign rider to #{delivery.user.name}'s order?" },
 										 class: 'btn btn-info btn-sm', style: 'color: black;' %><br>
-			<% end %>
 		<% elsif delivery.delivery_status.name == 'Despatched' %>
 			<%= link_to "mark as returned", return_order_path(id: delivery.id),
 											 data: { confirm: "Are you sure you have confirmed #{delivery.user.name}'s order?" },
