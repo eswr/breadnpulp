@@ -50,7 +50,7 @@
 											 class: 'btn btn-info btn-xs' %> | 
 			<%= link_to "mark as cancelled", cancel_order_path(id: delivery.id),
 											 data: { confirm: "Are you sure you want to cancel #{delivery.user.name}'s order?" },
-											 class: 'btn btn-info warning-xs' %>
+											 class: 'btn btn-info btn-xs' %>
 		<% elsif delivery.delivery_status.name == 'Confirmed' %>
 			<%= link_to "mark as despatched", despatch_order_path(id: delivery.id),
 											  data: { :confirm => "Are you sure you have despatched #{delivery.user.name}'s order?" },
@@ -60,7 +60,7 @@
 				<%= delivery_form.select :rider_id, @riders.reverse, {}, { class: 'form-control' } %><br>
 				<%= delivery_form.submit :assign_rider, 
 										 data: { :confirm => "Are you sure you want to assign rider to #{delivery.user.name}'s order?" },
-										 class: 'btn btn-info btn-sm', style: 'color: black;' %><br>
+										 class: 'btn btn-info btn-xs', style: 'color: black;' %><br>
 			<% end %>
 		<% elsif delivery.delivery_status.name == 'Despatched' %>
 			<%= link_to "mark as returned", return_order_path(id: delivery.id),
