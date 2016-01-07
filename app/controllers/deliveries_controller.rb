@@ -50,6 +50,10 @@ class DeliveriesController < ApplicationController
 			redirect_to root_path
 		end
 		@date = active_menu_date
+		@payment_modes = {
+			"Online payment" => "",
+			"Cash on delvery" => "checked"
+		}
 	end
 
 	def show

@@ -52,7 +52,7 @@
           </div>
           <div style="padding: 15px;">
             <ul>
-              <li class="text-left" style="list-style: none;"><%= delivery.address.postal_address %></li>
+              <li class="text-left" style="list-style: none;"><%= delivery.address.present? ? delivery.address.postal_address : "No Address" %></li>
               <li class="text-left" style="list-style: none;"><%= delivery.at.strftime("at %I:%M%p") %></li>
               <li class="text-left" style="list-style: none;"><%= delivery.payment_status.name %></li>
             </ul>

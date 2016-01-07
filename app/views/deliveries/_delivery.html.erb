@@ -4,7 +4,7 @@
 		<br>
 		<%= delivery.user.phone_number %>
 		<br>
-		<small><%= delivery.address.postal_address %></small>
+		<small><%= delivery.address.present? ? delivery.address.postal_address : "No address" %></small>
 	</td>
 	<td>
 		<% delivery.packs.each do |pack| %>

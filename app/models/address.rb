@@ -28,6 +28,9 @@ class Address < ActiveRecord::Base
 										length: { is: 6 },
 										format: { with: VALID_PINCODE_REGEX }
 
+	validates		:locality,			presence: true
+	validates		:city,				presence: true
+
 	def postal_address
 		"#{name}: #{full_address} - #{pincode}"
 	end
