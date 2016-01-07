@@ -178,7 +178,7 @@ class User < ActiveRecord::Base
 	    	[name, phone_number]
 		end
 
-		def get_next_dummy_phone_number
+		def self.get_next_dummy_phone_number
 			exp_id = User.last.id + 1
 			id_length = exp_id.to_s.length
 			return '1'*(10 - id_length) + exp_id.to_s
