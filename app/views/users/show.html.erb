@@ -7,8 +7,12 @@
         </h1>
         <p align="center">
           <%= @user.email %><br>
-          <%= @user.phone_number %><br>
-          <%= link_to "edit", edit_user_path(@user) %>
+          <%= @user.phone_number %>
+          <% if @user.phone_number.first(5) == "11111" %>
+            <%= link_to "Please update phone number", edit_user_path(@user), class: 'btn btn-xs btn-danger' %>
+          <% end %>
+          <br>
+          <%= link_to "edit", edit_user_path(@user), class: 'btn btn-xs btn-primary', style: "color: black;" %>
         </p>
     </div>
     <div class="col-md-12 col-md-offset-0">

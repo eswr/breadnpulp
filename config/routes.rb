@@ -52,6 +52,9 @@ Rails.application.routes.draw do
   post     'get_otp' => 'otps#new'
   post     'check_otp' => 'otps#create'
 
+  get    'auth/:provider/callback' => 'sessions#create_omniauth'
+  get    'auth/failure' => 'static_pages#home'
+
   resources :users
   resources :account_activations, only: [:edit]
   resources :password_resets,     only: [:new, :create, :edit, :update]

@@ -142,6 +142,25 @@ class User < ActiveRecord::Base
     	end
     end
 
+    def self.from_omniauth(auth)
+    	user = where(provider: auth.provider, uid: auth.uid).first
+		unless user
+			# in that case you will find existing user doesn't connected to facebook
+			# or create new one by email
+			user = where(email: auth.info.email).first_or_initialize
+			user.provider = auth.provider # and connect him to facebook here
+			user.uid = auth.uid           # and here
+			user.name ||= auth.info.name
+			user.phone_number ||= User.get_next_dummy_phone_number
+			user.oauth_token = auth.credentials.token
+			user.oauth_expires_at = auth.credentials.token
+			user.password = User.new_token
+			# other user's data you want to update
+			user.save!
+    	end
+    	user
+    end
+
   	private
 
 	  	# Converts email to all lower-case.
@@ -157,5 +176,11 @@ class User < ActiveRecord::Base
 
 	    def accessible_attributes
 	    	[name, phone_number]
+		end
+
+		def get_next_dummy_phone_number
+			exp_id = User.last.id + 1
+			id_length = exp_id.to_s.length
+			return '1'*(10 - id_length) + exp_id.to_s
 		end
 end

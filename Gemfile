@@ -19,6 +19,7 @@ gem 'httparty'
 gem 'rolify'
 gem 'delayed_job_active_record'
 gem 'active_model_otp'
+gem 'omniauth-facebook'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'

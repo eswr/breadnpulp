@@ -22,8 +22,7 @@
       <%= f.submit "Log in", class: "btn btn-primary", style: "color: black;" %>
     <% end %>
 
-    <h3>Or Via OTP</h3>
-
+    <h3>Or Via SMS OTP</h3>
     <%= form_for(:otp, url: get_otp_path) do |f| %>
       <%= f.label :phone_number %>
       <%= f.text_field :phone_number, class: 'form-control' %>
@@ -31,7 +30,11 @@
       <%= f.submit "Send OTP", class: "btn btn-primary", style: "color: black;" %>
     <% end %>
 
-    <h2>New user? <%= link_to "Sign up now!", signup_path, class: "btn btn-primary", style: "color: black;" %></h2>
+    <h3>Or via Facebook</h3>
+    <%= link_to "Sign in with facebook", "/auth/facebook", id: "sign_in", class: 'btn btn-primary', style: "color: black;" %>
+    <br>
+    <br>
+    <h2>New user? <%= link_to "Sign up now!", signup_path, class: "btn btn-primary btn-xs", style: "color: black;" %></h2>
   </div>
 </div>
 </div>
