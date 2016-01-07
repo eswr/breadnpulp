@@ -154,7 +154,7 @@ class Delivery < ActiveRecord::Base
       text = "Order for #{user.name} - #{user.phone_number}. "
       text += "#{address.postal_address}. "
       packs.each do |pack|
-        text += "#{pack.menu.kickerr.name}(pack.menu.kickerr.kickerr_size): #{pack.quantity}. "
+        text += "#{pack.menu.kickerr.name}(#{pack.menu.kickerr.kickerr_size}): #{pack.quantity}. "
       end
       text += "#{at.strftime "%I:%M%p"}."
       if payment_date == Time.zone.now.to_date
