@@ -38,7 +38,7 @@ class DeliveriesController < ApplicationController
 					Ftcash.create_payment_order @delivery
 					redirect_to ftcash_payment_path(id: @delivery.id)
 				elsif @delivery.payment_mode == 'Cash on delivery'
-					@delivery.update_attribute payment_date: @delivery.delivery_date
+					@delivery.update_attribute :payment_date, @delivery.delivery_date
 					flash[:success] = "Order successfully placed"
 					redirect_to @delivery.user
 				end
