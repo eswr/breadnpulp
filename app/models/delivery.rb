@@ -156,9 +156,9 @@ class Delivery < ActiveRecord::Base
       packs.each do |pack|
         text += "#{pack.menu.kickerr.name}(#{pack.menu.kickerr.kickerr_size}): #{pack.quantity}. "
       end
-      text += "#{at.strftime "%I:%M%p"}."
+      text += "#{at.strftime "%I:%M%p"}. "
       if payment_date == Time.zone.now.to_date && payment_status.name == "Payment Due" && payment_mode
-        text += "Collect Rs.#{get_total_amount} by #{payment_mode}"
+        text += "Collect Rs.#{get_total_amount}"
       end
       return text
     end
