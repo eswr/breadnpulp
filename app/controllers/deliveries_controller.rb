@@ -16,7 +16,7 @@ class DeliveriesController < ApplicationController
 		@date = active_menu_date
 		@payment_modes = {
 			"Online payment" => "",
-			"Cash on delvery" => "checked"
+			"Cash on delivery" => "checked"
 		}
 	end
 
@@ -37,7 +37,8 @@ class DeliveriesController < ApplicationController
 				if @delivery.payment_mode == 'Online payment'
 					Ftcash.create_payment_order @delivery
 					redirect_to ftcash_payment_path(id: @delivery.id)
-				else
+				elsif @delivery.payment_mode == 'Cash on delivery'
+					@delivery.update_attribute payment_date: @delivery.delivery_date
 					flash[:success] = "Order successfully placed"
 					redirect_to @delivery.user
 				end
@@ -50,10 +51,6 @@ class DeliveriesController < ApplicationController
 			redirect_to root_path
 		end
 		@date = active_menu_date
-		@payment_modes = {
-			"Online payment" => "",
-			"Cash on delvery" => "checked"
-		}
 	end
 
 	def show
