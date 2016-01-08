@@ -155,6 +155,7 @@ class User < ActiveRecord::Base
 			user.oauth_token = auth.credentials.token
 			user.oauth_expires_at = auth.credentials.token
 			user.password = User.new_token
+			user.activated = true
 			# other user's data you want to update
 			user.save!
     	end
