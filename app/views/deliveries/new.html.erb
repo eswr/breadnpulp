@@ -15,16 +15,16 @@
 					<%= render packs.first.menu %>
 					<div class="panel-body">
 						<% packs.each do |pack| %>
-							<div class="col-sm-6">
+							<div class="col-xs-6">
 								<div class="panel panel-default">
 									<%= fields_for "delivery[packs_attributes][]", pack do |pack_fields| %>
 										<%= pack_fields.hidden_field :menu_id, value: pack.menu.id %>
 										<div class="panel-heading">
-											<h6 class="text-muted" style="text-transform: none; font-size: 130%;"><%= pack.menu.kickerr.kickerr_size %> | <%= pack.menu.get_price %></h6>
+											<h6 class="text-muted" style="text-transform: none; font-size: 130%;"><%= pack.menu.kickerr.kickerr_size %> | <small>Rs. <%= pack.menu.get_price %></small></h6>
+											<p><%= pack.menu.kickerr.size_description %></p>
+											<%= pack_fields.select(:quantity, ((0..10).map {|i| [i,i] }), {}, { :class => 'form-control' }) %>
 										</div>
 										<div class="panel-body">
-											<%= pack_fields.label :quantity %>
-											<%= pack_fields.select(:quantity, ((0..10).map {|i| [i,i] }), {}, { :class => 'form-control' }) %>
 											<% if current_user.admin? %>
 												<%= pack_fields.label :unit_price %>
 												<%= pack_fields.text_field :unit_price, class: 'form-control' %>

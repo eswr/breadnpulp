@@ -18,6 +18,11 @@
 #  reset_sent_at     :datetime
 #  source            :string
 #  deliveries_count  :integer          default(0)
+#  otp_secret_key    :string
+#  provider          :string
+#  uid               :string
+#  oauth_token       :string
+#  oauth_expires_at  :datetime
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
