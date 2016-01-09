@@ -144,7 +144,7 @@ class Delivery < ActiveRecord::Base
 
     def get_user_text
       text = "Hello #{user.name}! Your order has been despatched. "
-      if payment_date == Time.zone.now.to_date && payment_status.name == "Payment Due" && payment_mode
+      if payment_date == Time.zone.now.to_date && payment_status.name == "Payment Due" && payment_mode == "Cash on delivery"
         text += "Please pay Rs.#{get_total_amount} to the delivery boy."
       end
       return text
@@ -157,7 +157,7 @@ class Delivery < ActiveRecord::Base
         text += "#{pack.menu.kickerr.name}(#{pack.menu.kickerr.kickerr_size}): #{pack.quantity}. "
       end
       text += "#{at.strftime "%I:%M%p"}. "
-      if payment_date == Time.zone.now.to_date && payment_status.name == "Payment Due" && payment_mode
+      if payment_date == Time.zone.now.to_date && payment_status.name == "Payment Due" && payment_mode == "Cash on delivery"
         text += "Collect Rs.#{get_total_amount}"
       end
       return text
