@@ -32,7 +32,7 @@ class Address < ActiveRecord::Base
 	validates		:city,				presence: true
 
 	def postal_address
-		"#{name}: #{full_address} - #{pincode}"
+		"#{name}: #{full_address}, #{locality}, #{city} - #{pincode}"
 	end
 
 	def self.to_csv

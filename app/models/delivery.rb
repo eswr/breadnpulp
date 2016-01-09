@@ -101,6 +101,7 @@ class Delivery < ActiveRecord::Base
   def confirm_and_send_sms
     update_attribute :delivery_status_id, 2
     Msg91.delay.send_sms(user.phone_number, user_confirmation_text)
+    Msg91.delay.send_sms('9892500082', operator_confirmation_text)
   end
 
   def cancel_and_send_sms
@@ -110,8 +111,8 @@ class Delivery < ActiveRecord::Base
 
   def despatch_and_send_sms
     update_attribute :delivery_status_id, 4
-    Msg91.delay.send_sms(user.phone_number, get_user_text)
-    Msg91.delay.send_sms("#{rider.phone_number}", get_rider_text) if rider.nil? == false
+    Msg91.delay.send_sms(user.phone_number, user_despatch_text)
+    Msg91.delay.send_sms("#{rider.phone_number}", rider_despatch_text) if rider.nil? == false
   end
 
   def return_and_send_sms
@@ -142,7 +143,17 @@ class Delivery < ActiveRecord::Base
       return text
     end
 
-    def get_user_text
+    def operator_confirmation_text
+      text = "Order confirmed for #{user.name.split(' ').first}. "
+      packs.each do |pack|
+        text += "#{pack.menu.kickerr.name}(#{pack.menu.kickerr.kickerr_size}): #{pack.quantity}. "
+      end
+      text += "#{address.postal_address}. "
+      text += "#{at}. "
+      text += "http://www.breadnpulp.com/todays_orders"
+    end
+
+    def user_despatch_text
       text = "Hello #{user.name}! Your order has been despatched. "
       if payment_date == Time.zone.now.to_date && payment_status.name == "Payment Due" && payment_mode == "Cash on delivery"
         text += "Please pay Rs.#{get_total_amount} to the delivery boy."
@@ -150,7 +161,7 @@ class Delivery < ActiveRecord::Base
       return text
     end
 
-    def get_rider_text
+    def rider_despatch_text
       text = "Order for #{user.name} - #{user.phone_number}. "
       text += "#{address.postal_address}. "
       packs.each do |pack|
