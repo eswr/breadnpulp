@@ -101,7 +101,7 @@ class Delivery < ActiveRecord::Base
   def confirm_and_send_sms
     update_attribute :delivery_status_id, 2
     Msg91.delay.send_sms(user.phone_number, user_confirmation_text)
-    Msg91.delay.send_sms('9892500082', operator_confirmation_text)
+    Msg91.delay.send_sms('8451930080', operator_confirmation_text)
   end
 
   def cancel_and_send_sms
