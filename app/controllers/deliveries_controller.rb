@@ -157,7 +157,7 @@ class DeliveriesController < ApplicationController
 		Time.zone = 'Chennai'
 		current_time = Time.zone
 		if (current_time.now.hour == 11 && current_time.now.min < 15) || (current_time.now.hour < 11)
-			current_time
+			current_time.today
 		else
 			current_time.tomorrow
 		end	

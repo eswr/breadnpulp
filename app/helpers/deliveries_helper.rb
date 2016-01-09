@@ -23,11 +23,12 @@ module DeliveriesHelper
 		end
 
 		def active_menu_date
+			Time.zone = 'Chennai'
 			current_time = Time.zone
-		if (current_time.now.hour == 11 && current_time.now.min < 15) || (current_time.now.hour < 11)
-			current_time
-		else
-			current_time.tomorrow
-		end	
-	end
+			if (current_time.now.hour == 11 && current_time.now.min < 15) || (current_time.now.hour < 11)
+				current_time.today
+			else
+				current_time.tomorrow
+			end	
+		end
 end
