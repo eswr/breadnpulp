@@ -63,7 +63,7 @@
 				<% @payment_modes.each do |key, value| %>
 					<div style="padding: 3px;">
 						<div class="form-control">
-						    <%= delivery_form.radio_button :payment_mode, true, class: 'btn btn-primary', checked: value %>
+						    <%= delivery_form.radio_button :payment_mode, key, class: 'btn btn-primary', checked: value %>
 						    <%= delivery_form.label :payment_mode, key, :value => key  %><br>
 					    </div>
 				    </div>
