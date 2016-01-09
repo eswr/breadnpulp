@@ -1,16 +1,28 @@
 class AddressesController < ApplicationController
 	before_action	:logged_in_user,		only: [:create, :destroy, :edit]
 	before_action	:correct_user,			only: :destroy
+	# skip_before_filter :verify_authenticity_token, :only => :create
+
+	def new
+		@address = Address.new
+	end
 
 	def create
 		@address = Address.new(address_params)
 		if @address.save
-			flash[:success] = "Address created!"
-			redirect_to @address.user
-		else
-			flash[:danger] = "Address not created, please try again"
-	    	redirect_to request.referrer || root_url
-		end
+	      	respond_to do |format|
+	          	format.html { 
+	          		flash[:success] = "Address created!"
+					redirect_to :back 
+				}
+	          	format.js # { render :action => "create_success" }  #rails now looks for success.js.erb
+	        end
+	    else
+	      	respond_to do |format|
+	        	format.html { render :action => 'new'}
+	        	format.js # { render :action => "create_failure" }  #rails now looks for failure.js.erb
+	      	end
+	    end
 	end
 
 	def destroy

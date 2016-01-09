@@ -1,0 +1,18 @@
+<%= form_for(@address, authenticity_token: true, remote: true) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <div class="panel panel-default" >
+    <%= f.hidden_field :user_id, value: current_user.id %>
+    <div class="panel-heading">
+      <%= f.text_field :name, placeholder: "Address name...", class: 'form-control' %>
+    </div>
+    <div class="panel-body">
+      <%= f.text_area :full_address, placeholder: "Full address goes here", class: 'form-control' %><br>
+      <%= f.select :locality, Locality.all, {}, { class: 'form-control' } %><br>
+      <%= f.select :city, City.all, {}, { class: 'form-control' } %><br>
+      <%= f.text_field :pincode, placeholder: "Pincode", class: 'form-control' %><br>
+    </div>
+    <div class="panel-footer">
+      <%= f.submit "Add", class: "btn btn-primary center", style: "margin: 5px; color: black; background-color: #fed136;" %>
+    </div>
+  </div>
+<% end %>

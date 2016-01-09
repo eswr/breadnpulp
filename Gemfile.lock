@@ -173,6 +173,7 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rake (10.4.2)
     rdoc (4.2.0)
+    remotipart (1.2.1)
     rolify (5.0.0)
     rotp (2.1.1)
     ruby-graphviz (1.2.2)
@@ -235,6 +236,7 @@ DEPENDENCIES
   rails (= 4.2.4)
   rails-erd
   rails_12factor (= 0.0.2)
+  remotipart
   rolify
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)

@@ -24,7 +24,7 @@ Rails.application.routes.draw do
   get     'cancel_order'    => 'deliveries#cancel_delivery'
   get     'despatch_order'  => 'deliveries#despatch_delivery'
   get     'return_order'    => 'deliveries#return_delivery'
-  get     'deliver_order'   => 'deliveries#delivery_delivery'
+  get     'deliver_order'   => 'deliveries#deliver_delivery'
 
   get     'ftcash_payment'  => 'deliveries#ftcash_payment'
 

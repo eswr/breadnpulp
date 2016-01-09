@@ -3,7 +3,9 @@ class DeliveriesController < ApplicationController
 	before_action :logged_in_user
 	before_action :admin_user,			only: [:edit, :update, :index,
 											   :destroy, :recent_deliveries,
-											   :future_deliveries, :todays_deliveries, :despatch_delivery]
+											   :future_deliveries, :todays_deliveries, :despatch_delivery,
+											   :confirm_delivery, :cancel_delivery, :despatch_delivery,
+											   :return_delivery, :deliver_delivery]
 	before_action :operator_user, 		only: [:todays_deliveries, :chef_view, :despatch_delivery]
 	before_action :get_riders,			only: [:todays_deliveries, :index, :recent_deliveries, :future_deliveries]
 
@@ -135,7 +137,7 @@ class DeliveriesController < ApplicationController
 		redirect_to :back
 	end
 
-	def delivery_delivery
+	def deliver_delivery
 		@delivery = Delivery.find(params[:id])
 		@delivery.delivery_and_send_sms
 		redirect_to :back
@@ -152,8 +154,12 @@ class DeliveriesController < ApplicationController
 	end
 
 	def active_menu_date
-		Time.zone = 'Chennai'
-		Time.zone.now.hour < 11 && Time.zone.now.min < 15 ? Time.zone.today : Time.zone.tomorrow
+		current_time = Time.zone
+		if (current_time.now.hour == 11 && current_time.now.min < 15) || (current_time.now.hour < 11)
+			current_time
+		else
+			current_time.tomorrow
+		end	
 	end
 
 	def admin_user

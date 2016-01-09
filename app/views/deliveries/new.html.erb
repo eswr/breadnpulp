@@ -45,13 +45,14 @@
 			<%= delivery_form.select(:at, available_slots.map { |slot| [slot.strftime("%l:%M %p"), slot]}, {}, { :class => 'form-control' }) %>
 		</div>
 
-		<div class="col-md-3">
+		<div class="col-md-3" id="addresses">
 			<%= delivery_form.hidden_field :user_id, :value => @delivery.user.id %>
 			<h3>Delivery address</h3>
 			<%= delivery_form.select(:address_id,
 									 @delivery.user.addresses
 											  .map { |addr| [addr.postal_address, addr.id] },
-									 {}, { :class => 'form-control' }) %>
+									 {}, { :class => 'form-control', :id => 'addresses' }) %>
+			<%= link_to "New Address", new_address_path, id: 'new_address_link', remote: true %>
 		</div>
 		<div class="col-md-3">
 			<h3>Coupon code</h3>
