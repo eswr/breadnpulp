@@ -7,7 +7,7 @@ module DeliveriesHelper
 		# empty time slots
 		slots = []
 		# getting first available slot
-		slot = get_first_slot time_now if time_now > first_slot - 45.minutes
+		slot = get_first_slot time_now if time_now > first_slot - 45.minutes else slot = first_slot
 		loop do
 			slots << slot
 			slot += 15.minutes
