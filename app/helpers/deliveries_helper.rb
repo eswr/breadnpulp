@@ -2,12 +2,12 @@ module DeliveriesHelper
 	
 	def available_slots
 		time_now = Time.zone.now.at_beginning_of_minute
-		first_slot = Time.new(active_menu_date.year, active_menu_date.month, active_menu_date.day, 7, 30, 0, "+05:30")
+		slot = Time.new(active_menu_date.year, active_menu_date.month, active_menu_date.day, 7, 30, 0, "+05:30")
 		last_slot = Time.new(active_menu_date.year, active_menu_date.month, active_menu_date.day, 11, 30, 0, "+05:30")
 		# empty time slots
 		slots = []
 		# getting first available slot
-		slot = get_first_slot time_now if time_now > first_slot - 45.minutes else slot = first_slot
+		slot = get_first_slot time_now if time_now > slot - 45.minutes
 		loop do
 			slots << slot
 			slot += 15.minutes
@@ -30,5 +30,6 @@ module DeliveriesHelper
 			else
 				current_time.tomorrow
 			end	
-		end
+		end	
+	end
 end
