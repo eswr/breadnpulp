@@ -1,6 +1,4 @@
-// $('#new_address').remove();
-// $('#new_address_link').show(500);
-// $('#addresses').append($('<option>', { 
-//         value: @address.id,
-//         text : @address.postal_address 
-// }));
+$('#address_form').remove();
+$("#addresses_select").append('<option value=<%= @address.id %>><%= @address.postal_address %></option>');
+$(window).scrollTop($('#addresses').offset().top);
+

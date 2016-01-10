@@ -51,7 +51,7 @@
 			<%= delivery_form.select(:address_id,
 									 @delivery.user.addresses
 											  .map { |addr| [addr.postal_address, addr.id] },
-									 {}, { :class => 'form-control', :id => 'addresses' }) %>
+									 {}, { :class => 'form-control', :id => 'addresses_select' }) %>
 			<%= link_to "New Address", new_address_path, id: 'new_address_link', remote: true %>
 		</div>
 		<div class="col-md-3">
@@ -92,5 +92,7 @@
 		<%= delivery_form.submit "Place order", class: 'btn btn-primary', style: "color: black;" %>
 	</div>
 <% end %>
+</div>
+<div id="new_address">
 
 </div>

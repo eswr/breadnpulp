@@ -15,12 +15,12 @@ class AddressesController < ApplicationController
 	          		flash[:success] = "Address created!"
 					redirect_to :back 
 				}
-	          	format.js # { render :action => "create_success" }  #rails now looks for success.js.erb
+	          	format.js
 	        end
 	    else
 	      	respond_to do |format|
-	        	format.html { render :action => 'new'}
-	        	format.js # { render :action => "create_failure" }  #rails now looks for failure.js.erb
+	        	format.html { render 'new'}
+	        	format.js
 	      	end
 	    end
 	end

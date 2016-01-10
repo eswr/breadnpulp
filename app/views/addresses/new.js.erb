@@ -1,1 +1,2 @@
-$('#new_address_link').hide().after('<%= j render("addresses/new") %>');
+$('#new_address').html('<%= j render("addresses/new") %>');
+$(window).scrollTop($('#new_address').offset().top);
