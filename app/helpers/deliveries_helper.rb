@@ -30,6 +30,5 @@ module DeliveriesHelper
 			else
 				current_time.tomorrow
 			end	
-		end	
-	end
+		end
 end
