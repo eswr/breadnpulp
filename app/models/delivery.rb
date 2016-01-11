@@ -40,7 +40,7 @@ class Delivery < ActiveRecord::Base
 
   validates :delivery_date,		   presence: true
   validates :at,					       presence: true
-  # validates :address_id,			   presence: true
+  validates :address_id,			   presence: true
 
   accepts_nested_attributes_for :packs, reject_if: lambda { |attributes| attributes[:quantity].to_f < 1 },
                                         allow_destroy: true

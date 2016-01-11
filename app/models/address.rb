@@ -14,8 +14,13 @@
 #
 
 class Address < ActiveRecord::Base
+
+	before_validation :get_full_address
+
 	belongs_to :user
 	has_many :deliveries
+
+	attr_accessor :address_line_1, :address_line_2
 
 	validates		:user_id,			presence: true
 	validates		:name,				presence: true,
@@ -43,5 +48,10 @@ class Address < ActiveRecord::Base
 			end
 		end
 	end
+
+	private
+		def get_full_address
+			self.full_address = address_line_1 + ", " + address_line_2
+		end
 
 end

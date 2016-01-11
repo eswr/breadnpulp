@@ -58,7 +58,7 @@ class AddressesController < ApplicationController
 	private
 
 		def address_params
-			params.require(:address).permit(:user_id, :name, :full_address, :locality, :city, :pincode)
+			params.require(:address).permit(:user_id, :name, :address_line_1, :address_line_2, :locality, :city, :pincode)
 		end
 
 		def correct_user

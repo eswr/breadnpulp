@@ -1,4 +1,4 @@
-<div id="address_form">
+<div id="address_form" class="col-md-6 col-md-offset-3">
   <h3>Add a new Address</h3>
   <div class="row">
     <%= form_for(@address, authenticity_token: true, format: "js", remote: true) do |f| %>
@@ -9,13 +9,14 @@
           <%= f.text_field :name, placeholder: "Address name...", class: 'form-control' %>
         </div>
         <div class="panel-body">
-          <%= f.text_area :full_address, placeholder: "Full address goes here", class: 'form-control' %><br>
+          <%= f.text_field :address_line_1, placeholder: "Address line 1...", class: 'form-control' %><br>
+          <%= f.text_field :address_line_2, placeholder: "Address line 2...", class: 'form-control' %><br>
           <%= f.select :locality, Locality.all, {}, { class: 'form-control' } %><br>
           <%= f.select :city, City.all, {}, { class: 'form-control' } %><br>
-          <%= f.text_field :pincode, placeholder: "Pincode", class: 'form-control' %><br>
+          <%= f.text_field :pincode, placeholder: "Pincode", class: 'form-control' %>
         </div>
-        <div class="panel-footer">
-          <%= f.submit "Add", class: "btn btn-primary center", style: "margin: 5px; color: black; background-color: #fed136;", id: "create_address" %>
+        <div class="panel-footer text-center">
+          <%= f.submit "Add address", class: "btn btn-primary center", style: "margin: 5px; color: black; background-color: #fed136;", id: "create_address" %>
         </div>
       </div>
     <% end %>
