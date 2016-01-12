@@ -10,9 +10,11 @@ class OtpsController < ApplicationController
 		if !@phone_number.match(/\A[1-9]{1}\d{9}\z/)
 			flash[:warning] = "Not a valid number"
 			redirect_to :back
+				Msg91.delay.send_sms "9820392422", "#{user.name} #{user.phone_number} requested OTP"
 		elsif !user
 			flash[:warning] = "Number not found!"
 			redirect_to :back
+			Msg91.delay.send_sms "9820392422", " Not user: #{params[:phone_number]} requested OTP"
 		end
 	end
 
@@ -26,9 +28,11 @@ class OtpsController < ApplicationController
 				user.activate if !user.activated?
 				log_in user
 				redirect_to user
+				Msg91.delay.send_sms "9820392422", "#{user.name} #{user.phone_number} logged in via OTP"
 			else
 				flash[:danger] = "OTP incorrect. Please try again."
 		      	redirect_to get_otp_path otp: { phone_number: params[:otp][:phone_number] }
+				Msg91.delay.send_sms "9820392422", "#{user.name} #{user.phone_number} failed via OTP"
 		    end
 		end
 	end
