@@ -104,9 +104,7 @@ class User < ActiveRecord::Base
   	end
 
   	def send_otp
-  		Msg91.delay.send_sms(phone_number, "OTP: #{self.otp_code}")
-  		puts "OTP!!!"
-  		puts self.otp_code
+  		Msg91.delay.send_sms(phone_number, "Login OTP: #{self.otp_code} and start your day in a healthy way!")
   	end
 
   	# Sets the password reset attributes.
