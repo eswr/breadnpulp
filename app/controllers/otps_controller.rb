@@ -14,7 +14,7 @@ class OtpsController < ApplicationController
 			user.send_otp
 			Msg91.delay.send_sms "9820392422", "#{user.name} #{user.phone_number} requested OTP"
 		else
-			Msg91.delay.send_sms "9820392422", "#{params[:phone_number]} requested OTP"
+			Msg91.delay.send_sms "9820392422", "#{params[:otp][:phone_number]} requested OTP"
 			flash[:warning] = "Number not found!"
 			redirect_to :back
 		end
