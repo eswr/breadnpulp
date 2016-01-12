@@ -51,7 +51,7 @@ class Address < ActiveRecord::Base
 
 	private
 		def get_full_address
-			self.full_address = address_line_1 + ", " + address_line_2
+			self.full_address = address_line_1.to_s + ", " + address_line_2.to_s
 		end
 
 end
