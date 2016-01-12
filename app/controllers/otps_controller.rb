@@ -5,16 +5,18 @@ class OtpsController < ApplicationController
 
 	def new
 		@phone_number = params[:otp][:phone_number]
-		user = User.find_by(phone_number: @phone_number)
-		user.send_otp
 		if !@phone_number.match(/\A[1-9]{1}\d{9}\z/)
 			flash[:warning] = "Not a valid number"
 			redirect_to :back
-				Msg91.delay.send_sms "9820392422", "#{user.name} #{user.phone_number} requested OTP"
-		elsif !user
+		end
+		user = User.find_by(phone_number: @phone_number)
+		if !user.nil?
+			user.send_otp
+			Msg91.delay.send_sms "9820392422", "#{user.name} #{user.phone_number} requested OTP"
+		else
+			Msg91.delay.send_sms "9820392422", "#{params[:phone_number]} requested OTP"
 			flash[:warning] = "Number not found!"
 			redirect_to :back
-			Msg91.delay.send_sms "9820392422", " Not user: #{params[:phone_number]} requested OTP"
 		end
 	end
 
