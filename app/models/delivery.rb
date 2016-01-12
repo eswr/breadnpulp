@@ -128,7 +128,6 @@ class Delivery < ActiveRecord::Base
   def rider
     return nil if rider_id.nil?
     rider = User.find rider_id
-    return rider
   end
 
 

@@ -39,11 +39,13 @@
 		<% end %>
 	</td>
 	<td>
-		<% if delivery.rider.nil? %>
-			<%= "Rider not allotted" %><br>
-		<% else %>
-			<%= "Rider: #{delivery.rider.name} | #{delivery.rider.phone_number}" %><br>
-		<% end %>
+		<div id="rider_details_<%= delivery.id %>">
+			<% if delivery.rider.nil? %>
+				<%= "Rider not allotted" %><br>
+			<% else %>
+				<%= "Rider: #{delivery.rider.name} | #{delivery.rider.phone_number}" %><br>
+			<% end %>
+		</div>
 		<% if delivery.delivery_status.name == 'Tentative' %>
 			<%= link_to "mark as confirmed", confirm_order_path(id: delivery.id),
 											 data: { confirm: "Are you sure you have confirmed #{delivery.user.name}'s order?" },
@@ -55,7 +57,8 @@
 			<%= link_to "mark as despatched", despatch_order_path(id: delivery.id),
 											  data: { :confirm => "Are you sure you have despatched #{delivery.user.name}'s order?" },
 											  class: 'btn btn-danger btn-xs' %>
-			<%= form_for delivery do |delivery_form| %>
+			<%= form_for delivery, url: assign_rider_path, remote: true do |delivery_form| %>
+				<%= delivery_form.hidden_field :id, value: delivery.id %>
 				<%= delivery_form.label :assign_rider %><br>
 				<%= delivery_form.select :rider_id, @riders.reverse, {}, { class: 'form-control' } %><br>
 				<%= delivery_form.submit :assign_rider, 

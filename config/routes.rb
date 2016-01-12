@@ -25,6 +25,7 @@ Rails.application.routes.draw do
   get     'despatch_order'  => 'deliveries#despatch_delivery'
   get     'return_order'    => 'deliveries#return_delivery'
   get     'deliver_order'   => 'deliveries#deliver_delivery'
+  patch   'assign_rider'    => 'deliveries#assign_rider'
 
   get     'ftcash_payment'  => 'deliveries#ftcash_payment'
 

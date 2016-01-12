@@ -147,6 +147,15 @@ class DeliveriesController < ApplicationController
 		@delivery = Delivery.find(params[:id])
 	end
 
+	def assign_rider
+		@delivery = Delivery.find(params[:delivery][:id])
+		@delivery.update_attribute(:rider_id, params[:delivery][:rider_id])
+		respond_to do |format|
+			format.html { redirect_to :back }
+			format.js
+		end
+	end
+
 	private
 
 	def delivery_params
