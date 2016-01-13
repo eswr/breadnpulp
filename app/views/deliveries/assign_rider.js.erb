@@ -1,5 +1,5 @@
 <% if @delivery.rider %>
-	$('#rider_details_<%= delivery.id %>').html("<p>Rider: <%= @delivery.user.name %> | <%= @delivery.user.phone_number %>");
+	$('#rider_details_<%= @delivery.id %>').html("<p>Rider: <%= @delivery.user.name %> | <%= @delivery.user.phone_number %>");
 <% else %>
-	$('#rider_details_<%= delivery.id %>').html("<p>Rider not allotted</p>")
+	$('#rider_details_<%= @delivery.id %>').html("<p>Rider not allotted</p>")
 <% end %>
