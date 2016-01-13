@@ -1,6 +1,7 @@
 <% provide(:title, "Chef view") %>
 
 <h1>Chef View</h1>
+<h3>For <%= @date %></h3>
 <%= form_tag do %>
 	<%= select_date(date = Date.current, options = {}, html_options = { class: 'col-xs-4' }) %>
 
