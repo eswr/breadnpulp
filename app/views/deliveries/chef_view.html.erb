@@ -2,6 +2,12 @@
 
 <h1>Chef View</h1>
 
+<%= form_tag do %>
+	<%= select_date(date = Date.current, options = {}, html_options = { class: 'col-xs-4' }) %>
+
+	<%= submit_tag "get requirement", class: 'btn btn-primary', style: 'color: black' %>
+<% end %>
+
 <table class="table table-hover">
 	<%= render 'deliveries/chef_view_header' %>
 	<% @rows.each do |row| %>
