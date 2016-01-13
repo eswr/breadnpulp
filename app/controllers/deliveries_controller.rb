@@ -110,12 +110,7 @@ class DeliveriesController < ApplicationController
 	end
 
 	def chef_view
-		if !params["date"].nil?
-	      	@date = Time.new(params["date"]["year"], params["date"]["month"], params["date"]["day"]).to_date
-	    else
-	      	@date = Time.now.to_date
-	    end
-		@rows = Delivery.get_chef_view_rows(@date)
+		@rows = Delivery.get_chef_view_rows
 	end
 
 	def confirm_delivery
