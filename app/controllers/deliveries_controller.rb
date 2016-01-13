@@ -149,7 +149,7 @@ class DeliveriesController < ApplicationController
 
 	def assign_rider
 		@delivery = Delivery.find(params[:delivery][:id])
-		@delivery = @delivery.assign_rider_and_send_sms params[:delivery][:rider_id]
+		@delivery.assign_rider_and_send_sms params[:delivery][:rider_id]
 		respond_to do |format|
 			format.html { redirect_to :back }
 			format.js
