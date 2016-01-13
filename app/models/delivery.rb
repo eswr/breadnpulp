@@ -112,6 +112,7 @@ class Delivery < ActiveRecord::Base
   def despatch_and_send_sms
     update_attribute :delivery_status_id, 4
     Msg91.delay.send_sms(user.phone_number, user_despatch_text)
+    Msg91.delay(run_at: 90.minutes.from_now).send_sms(user.phone_number, user_feedback_text)
   end
 
   def return_and_send_sms
@@ -144,6 +145,10 @@ class Delivery < ActiveRecord::Base
       end
       text += "has been confirmed."
       return text
+    end
+
+    def user_feedback_text
+      text = "Hi #{user.name.split(' ').first}! How was your meal from breadnpulp today? Kindly share your reviews @ bit.ly/1OGG7Iv - Team Breadnpulp"
     end
 
     def operator_confirmation_text
