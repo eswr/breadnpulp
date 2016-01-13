@@ -60,7 +60,7 @@ class Delivery < ActiveRecord::Base
   end
 
   def Delivery.get_chef_view_rows(date)
-    deliveries = Delivery.where(delivery_date: date).order(at: :asc)
+    deliveries = Delivery.where(delivery_date: date, delivery_status_id: 2).order(at: :asc)
     times = {}
     deliveries.each do |delivery|
       delivery.packs.each do |pack|
