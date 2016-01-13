@@ -61,6 +61,7 @@ class Delivery < ActiveRecord::Base
 
   def Delivery.get_chef_view_rows(date)
     deliveries = Delivery.where(delivery_date: date, delivery_status_id: 2).order(at: :asc)
+    puts deliveries.count
     times = {}
     deliveries.each do |delivery|
       delivery.packs.each do |pack|
