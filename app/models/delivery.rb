@@ -112,7 +112,6 @@ class Delivery < ActiveRecord::Base
   def despatch_and_send_sms
     update_attribute :delivery_status_id, 4
     Msg91.delay.send_sms(user.phone_number, user_despatch_text)
-    Msg91.delay.send_sms("#{rider.phone_number}", rider_despatch_text) if rider.nil? == false
   end
 
   def return_and_send_sms
@@ -123,6 +122,11 @@ class Delivery < ActiveRecord::Base
   def delivery_and_send_sms
     update_attribute :delivery_status_id, 5
     # Msg91.delay.send_sms(user.phone_number, get_user_text)
+  end
+
+  def assign_rider_and_send_sms(rider_id)
+    update_attribute :rider_id, rider_id
+    Msg91.delay.send_sms("#{rider.phone_number}", rider_despatch_text) if rider.nil? == false
   end
 
   def rider
