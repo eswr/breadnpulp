@@ -128,6 +128,7 @@ class Delivery < ActiveRecord::Base
   def assign_rider_and_send_sms(rider_id)
     update_attribute :rider_id, rider_id
     Msg91.delay.send_sms("#{rider.phone_number}", rider_despatch_text) if rider.nil? == false
+    return self
   end
 
   def rider
