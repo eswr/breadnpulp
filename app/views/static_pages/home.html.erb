@@ -39,6 +39,11 @@
                                 end,
                                 style: 'color: black;'
                         ) %>
+                    <% menus.each do |menu| %>
+                        <div class="col-xs-6">
+                            <h6 class="text-muted" style="text-transform: none; font-size: 130%;"><%= pack.menu.kickerr.kickerr_size %> | <small>Rs. <%= pack.menu.get_price %></small></h6>
+                        </div>
+                    <% end %>
                 </div>
             <% end %>
         </div>
