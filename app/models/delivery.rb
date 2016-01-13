@@ -59,8 +59,8 @@ class Delivery < ActiveRecord::Base
     "MUM001#{self.delivery_date.strftime("%y%m%d")}#{counter}"
   end
 
-  def Delivery.get_chef_view_rows
-    deliveries = Delivery.where(delivery_date: Time.zone.today).order(at: :asc)
+  def Delivery.get_chef_view_rows(date)
+    deliveries = Delivery.where(delivery_date: date).order(at: :asc)
     times = {}
     deliveries.each do |delivery|
       delivery.packs.each do |pack|
