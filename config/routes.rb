@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   get     'todays_orders'   => 'deliveries#todays_deliveries'
   get     'recent_orders'   => 'deliveries#recent_deliveries'
   get     'chef_view'       => 'deliveries#chef_view'
+  post    'chef_view'       => 'deliveries#chef_view'
 
   get     'confirm_order'   => 'deliveries#confirm_delivery'
   get     'cancel_order'    => 'deliveries#cancel_delivery'
