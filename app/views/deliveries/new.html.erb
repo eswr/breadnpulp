@@ -77,7 +77,7 @@
 		<% if current_user.admin? %>
 			<h3>Admin controls</h3>
 			<%= delivery_form.label :delivery_status %>
-			<%= delivery_form.select(:delivery_status_id, ((DeliveryStatus.all).map { |status| [status.name, status.id] })) %>
+			<%= delivery_form.select(:delivery_status_id, ((DeliveryStatus.order(id: :asc)).map { |status| [status.name, status.id] })) %>
 			<br>
 			<%= delivery_form.label :payment_status %>
 			<%= delivery_form.select(:payment_status_id, ((PaymentStatus.all).map { |status| [status.name, status.id] })) %>
@@ -88,7 +88,7 @@
 		<% end %>
 	</div>
 
-	<div class="col-md-4 col-md-offset-4" style="margin-top: 30px;">
+	<div class="col-md-4 col-md-offset-4" id="submit_button" style="margin-top: 30px;">
 		<%= delivery_form.submit "Place order", class: 'btn btn-primary', style: "color: black;" %>
 	</div>
 <% end %>

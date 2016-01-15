@@ -1,3 +1,4 @@
 $('#address_form').remove();
+$('#submit_button').show();
 $("#addresses_select").prepend('<option select="selected" value=<%= @address.id %>><%= @address.postal_address %></option>');
 $(window).scrollTop($('#addresses').offset().top);
