@@ -28,6 +28,11 @@ class DeliveriesController < ApplicationController
 			pack.kickerr_name = pack.menu.kickerr.name
 		end
 		@delivery.delivery_date = active_menu_date
+		if current_user.admin?
+			@delivery.delivery_status = DeliveryStatus.find_by(name: 'Confirmed')
+		else
+			@delivery.delivery_status = DeliveryStatus.find_by(name: 'Tentative')
+		end
 		@delivery.payment_status = PaymentStatus.find_by(name: 'Payment Due')
 		if correct_user
 			if @delivery.save
