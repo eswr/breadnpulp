@@ -21,6 +21,7 @@ gem 'delayed_job_active_record'
 gem 'active_model_otp'
 gem 'omniauth-facebook'
 gem 'remotipart'
+gem 'active_model_serializers', '~> 0.9.4'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
