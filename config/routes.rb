@@ -75,6 +75,10 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
+
+      get   'login' => 'sessions#new'
+      post  'login' => 'sessions#create'
+
       resources :users, only: :show
     end
   end
