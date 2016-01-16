@@ -22,6 +22,7 @@ class Api::V1::SessionsController < Api::V1::BaseController
 			user.remember
 			render json: {
 				status: true,
+				info: "logged in",
 				data: {
 					user: {
 						name: user.name,
