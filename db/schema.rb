@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160115095314) do
+ActiveRecord::Schema.define(version: 20160116035633) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -60,9 +60,9 @@ ActiveRecord::Schema.define(version: 20160115095314) do
     t.integer  "collect"
     t.integer  "user_id"
     t.integer  "address_id"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
-    t.integer  "delivery_status_id"
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.integer  "delivery_status_id", default: 1
     t.date     "payment_date"
     t.string   "payment_mode"
     t.string   "booking_no"

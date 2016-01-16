@@ -10,7 +10,7 @@
 #  address_id         :integer
 #  created_at         :datetime         not null
 #  updated_at         :datetime         not null
-#  delivery_status_id :integer
+#  delivery_status_id :integer          default(1)
 #  payment_date       :date
 #  payment_mode       :string
 #  booking_no         :string
