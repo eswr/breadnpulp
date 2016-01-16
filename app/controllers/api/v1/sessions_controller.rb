@@ -2,7 +2,7 @@ class Api::V1::SessionsController < Api::V1::BaseController
 
 	def new
 		phone_number = params[:phone_number]
-		if phone_number.match(/\A[1-9]{1}\d{9}\z/)
+		if phone_number.nil? || phone_number.match(/\A[1-9]{1}\d{9}\z/)
 			user = User.find_by(phone_number: phone_number)
 			if user
 				user.send_otp
