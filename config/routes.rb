@@ -77,7 +77,7 @@ Rails.application.routes.draw do
     namespace :v1 do
 
       get   'login' => 'sessions#new'
-      post  'login' => 'sessions#create'
+      get   'check_otp' => 'sessions#create'
 
       resources :users, only: :show
     end
