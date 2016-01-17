@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :kitchens
   root    'static_pages#home'
   get     'about_us'  => 'static_pages#about'
   get     'operator_view' => 'static_pages#operator_view'

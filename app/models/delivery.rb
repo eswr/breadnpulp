@@ -20,6 +20,7 @@
 #  drop_id            :integer
 #  coupon_code        :string
 #  rider_id           :integer
+#  kitchen_id         :integer
 #
 
 class Delivery < ActiveRecord::Base
@@ -32,6 +33,7 @@ class Delivery < ActiveRecord::Base
   belongs_to :payment_status
   belongs_to :subscription
   belongs_to :drop
+  belongs_to :kitchen
 
   has_many :packs, dependent: :destroy
   has_many :menus, through: :packs

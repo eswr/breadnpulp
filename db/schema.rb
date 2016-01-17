@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160116035633) do
+ActiveRecord::Schema.define(version: 20160117134008) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -72,6 +72,7 @@ ActiveRecord::Schema.define(version: 20160116035633) do
     t.integer  "drop_id"
     t.string   "coupon_code"
     t.integer  "rider_id"
+    t.integer  "kitchen_id",         default: 1
   end
 
   add_index "deliveries", ["address_id"], name: "index_deliveries_on_address_id", using: :btree
@@ -167,6 +168,13 @@ ActiveRecord::Schema.define(version: 20160116035633) do
     t.string   "veg_type"
     t.string   "kickerr_size"
     t.string   "size_description"
+  end
+
+  create_table "kitchens", force: :cascade do |t|
+    t.string   "name"
+    t.string   "address"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "menus", force: :cascade do |t|
