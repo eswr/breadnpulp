@@ -17,9 +17,9 @@ class Api::V1::SessionsController < Api::V1::BaseController
 
 	def create
 		phone_number = params[:phone_number]
+		puts params
 		user = User.find_by(phone_number: phone_number)
 		if user && user.has_role?(:rider) && user.authenticate_otp(params[:otp], drift: 60)
-			puts params
 			user.remember
 			render json: {
 				status: true,
