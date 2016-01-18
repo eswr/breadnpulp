@@ -11,7 +11,6 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @addresses = @user.addresses.all
-    @address = @user.addresses.build if logged_in?
     @deliveries = @user.deliveries.order(delivery_date: :desc).order(at: :asc).limit(5)
     @food_alert = @user.food_alert
   end

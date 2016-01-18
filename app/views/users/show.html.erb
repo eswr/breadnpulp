@@ -74,12 +74,6 @@
     <div class="addresses">
       <%= render @addresses %>
     </div>
-    <section class="address_form form-group" style="padding:5vh 0px;">
-      <h4 align="center">
-        <%= current_user?(@user)? "My new addresses" : "#{@user.name}'s new addresses" %>
-      </h4>
-      <%= render 'shared/address_form' %>
-    </section>
   </div>
   <div class="col-md-4">
     <h3 align="center">
