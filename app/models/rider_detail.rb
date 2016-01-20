@@ -1,14 +1,14 @@
 # == Schema Information
 #
-# Table name: kitchens
+# Table name: rider_details
 #
 #  id         :integer          not null, primary key
-#  name       :string
-#  address    :string
+#  kitchen_id :integer
+#  user_id    :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
-class Kitchen < ActiveRecord::Base
-	has_many :deliveries
+class RiderDetail < ActiveRecord::Base
+
 end

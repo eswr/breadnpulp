@@ -23,6 +23,7 @@
 #  uid               :string
 #  oauth_token       :string
 #  oauth_expires_at  :datetime
+#  type              :string
 #
 
 class User < ActiveRecord::Base

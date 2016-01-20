@@ -20,7 +20,7 @@
 #  drop_id            :integer
 #  coupon_code        :string
 #  rider_id           :integer
-#  kitchen_id         :integer
+#  kitchen_id         :integer          default(1)
 #
 
 require 'test_helper'

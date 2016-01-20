@@ -26,10 +26,13 @@
 #  type              :string
 #
 
-require 'test_helper'
+class Rider < User
 
-class UserTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+	def details
+		RiderDetail.find_or_create_by(user_id: id)
+	end
+
+	def kitchen
+		Kitchen.find details.kitchen_id || 1
+	end
 end

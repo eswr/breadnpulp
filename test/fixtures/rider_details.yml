@@ -1,0 +1,20 @@
+# == Schema Information
+#
+# Table name: rider_details
+#
+#  id         :integer          not null, primary key
+#  kitchen_id :integer
+#  user_id    :integer
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  kitchen_id: 
+  rider_id: 
+
+two:
+  kitchen_id: 
+  rider_id: 

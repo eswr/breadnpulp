@@ -79,6 +79,7 @@ Rails.application.routes.draw do
 
       get   'login' => 'sessions#new'
       get   'check_otp' => 'sessions#create'
+      get   'kitchen_details' => 'riders#kitchen_details'
 
       resources :users, only: :show
     end

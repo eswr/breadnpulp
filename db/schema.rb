@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160117134008) do
+ActiveRecord::Schema.define(version: 20160120044443) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -213,6 +213,16 @@ ActiveRecord::Schema.define(version: 20160117134008) do
     t.datetime "updated_at",  null: false
   end
 
+  create_table "rider_details", force: :cascade do |t|
+    t.integer  "kitchen_id"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "rider_details", ["kitchen_id"], name: "index_rider_details_on_kitchen_id", using: :btree
+  add_index "rider_details", ["user_id"], name: "index_rider_details_on_user_id", using: :btree
+
   create_table "roles", force: :cascade do |t|
     t.string   "name"
     t.integer  "resource_id"
@@ -259,6 +269,7 @@ ActiveRecord::Schema.define(version: 20160117134008) do
     t.string   "uid"
     t.string   "oauth_token"
     t.datetime "oauth_expires_at"
+    t.string   "type"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
@@ -277,4 +288,6 @@ ActiveRecord::Schema.define(version: 20160117134008) do
   add_foreign_key "menus", "kickerrs"
   add_foreign_key "packs", "deliveries"
   add_foreign_key "packs", "menus"
+  add_foreign_key "rider_details", "kitchens"
+  add_foreign_key "rider_details", "users"
 end
