@@ -166,6 +166,10 @@ class User < ActiveRecord::Base
     	user
     end
 
+    def self.inheritance_column
+		:no_such_column_because_we_dont_want_type_casting
+	end
+
   	private
 
 	  	# Converts email to all lower-case.

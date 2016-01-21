@@ -42,7 +42,7 @@ class UsersController < ApplicationController
   end
 
   def index
-    @users = User.order(created_at: :asc).where(type: nil)
+    @users = User.order(created_at: :asc)#.where(type: nil)
     respond_to do |format|
       format.html
       format.csv { render text: @users.to_csv}
