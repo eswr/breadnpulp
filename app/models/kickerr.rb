@@ -53,15 +53,10 @@ class Kickerr < ActiveRecord::Base
 
 	def self.to_csv
 		CSV.generate do |csv|
-			csv << ["Id", "Name", "Main"]
+			csv << ["Id", "Name"]
 			all.eager_load(:food_items).each do |kickerr|
-				csv << [kickerr.id, kickerr.name, kickerr.main_course_name]
+				csv << [kickerr.id, kickerr.name]
 			end
 		end
-	end
-
-	def main_course_name
-		main = food_items.where(course: "Main").first
-		main ? main.name : "No Main Course"
 	end
 end
