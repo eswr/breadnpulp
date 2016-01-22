@@ -30,9 +30,9 @@ class Menu < ActiveRecord::Base
 
 	def self.to_csv
 		CSV.generate do |csv|
-			csv << ["Id", "Kickerr name", "Price", "Date"]
+			csv << ["Id", "Kickerr name", "Price", "Date", "Main course"]
 			all.each do |menu|
-				csv << [menu.id, menu.kickerr.name, menu.price, menu.available_on]
+				csv << [menu.id, menu.kickerr.name, menu.price, menu.available_on, menu.kickerr.food_items.where(course: 'Main').first.name]
 			end
 		end
 	end
