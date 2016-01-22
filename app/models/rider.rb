@@ -28,6 +28,8 @@
 
 class Rider < User
 
+	default_scope { where(type: 'Rider') }
+
 	def details
 		RiderDetail.find_or_create_by(user_id: id)
 	end
