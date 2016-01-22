@@ -54,7 +54,7 @@ class Kickerr < ActiveRecord::Base
 	def self.to_csv
 		CSV.generate do |csv|
 			csv << ["Id", "Name", "Main"]
-			all.each do |kickerr|
+			all.eager_load(:food_items).each do |kickerr|
 				csv << [kickerr.id, kickerr.name, kickerr.main_course_name]
 			end
 		end
