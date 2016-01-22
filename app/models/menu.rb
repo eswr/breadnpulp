@@ -31,8 +31,8 @@ class Menu < ActiveRecord::Base
 	def self.to_csv
 		CSV.generate do |csv|
 			csv << ["Id", "Kickerr name", "Price", "Date", "Main course"]
-			all.each do |menu|
-				csv << [menu.id, menu.kickerr.name, menu.price, menu.available_on, menu.kickerr.food_items.where(course: 'Main').first.name]
+			all.eager_load(:kickerr => :food_items).each do |menu|
+				csv << [menu.id, menu.kickerr.name, menu.price, menu.available_on, menu.main_course_name]
 			end
 		end
 	end
@@ -40,6 +40,12 @@ class Menu < ActiveRecord::Base
   def get_kickerr_name
     kickerr.name
   end
+
+  def main_course_name
+    main = kickerr.food_items.where(course: "Main").first
+    main ? main.name : "No Main Course"
+  end
+
 
   def Menu.get_raw_material_requirement(date)
     menus = Menu.where(available_on: date).eager_load(kickerr: :food_items)
