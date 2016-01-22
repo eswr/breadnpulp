@@ -50,5 +50,20 @@ class Kickerr < ActiveRecord::Base
 		self.veg_type = "NA" unless self.food_items.present?
 		self.save
 	end
-			
+
+	def self.to_csv
+		CSV.generate do |csv|
+			csv << ["Id", "Name", "Main"]
+			all.each do |kickerr|
+				csv << [kickerr.id, kickerr.name, kickerr.main_course_name]
+			end
+		end
+	end
+
+	private
+
+		def main_course_name
+			main = food_items.where(course: "Main").first
+			main ? main.name : "No Main Course"
+		end
 end

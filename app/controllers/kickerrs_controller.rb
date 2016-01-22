@@ -29,6 +29,10 @@ class KickerrsController < ApplicationController
 
   def index
   	@kickerrs = Kickerr.order(created_at: :desc).paginate(:page => params[:page]).eager_load(:food_items)
+    respond_to do |format|
+      format.html
+      format.csv { render text: Kickerr.all.to_csv }
+    end
   end
 
   def update
