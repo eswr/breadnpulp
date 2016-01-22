@@ -60,10 +60,8 @@ class Kickerr < ActiveRecord::Base
 		end
 	end
 
-	private
-
-		def main_course_name
-			main = food_items.where(course: "Main").first
-			main ? main.name : "No Main Course"
-		end
+	def main_course_name
+		main = food_items.where(course: "Main").first
+		main ? main.name : "No Main Course"
+	end
 end
