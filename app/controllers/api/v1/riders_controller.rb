@@ -19,4 +19,7 @@ class Api::V1::RidersController < Api::V1::BaseController
 			}
 		end
 	end
+
+	# def despatches
+		
 end
